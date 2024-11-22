@@ -4,9 +4,9 @@ use IEEE.std_logic_1164.all;
 
 entity pre_drop_control is 
   port(
-        curr_center: in std_logic_vector(4 downto 0);
+        curr_center: in unsigned(4 downto 0);
         NES_controller: in std_logic_vector (7 downto 0);
-        new_center: out std_logic_vector(4 downto 0)
+        new_center: out unsigned(4 downto 0)
     );
 
 
