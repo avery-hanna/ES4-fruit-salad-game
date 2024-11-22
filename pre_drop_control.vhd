@@ -10,6 +10,7 @@ entity pre_drop_control is
 
 
 architecture synth of pre_drop_control is
+signal curr_center : unsigned(3 downto 0);
   curr_center = default_value;
 
   
@@ -20,7 +21,7 @@ architecture synth of pre_drop_control is
     if NES_controller == "00000010": -- left
         curr_center -= 2;
   
-    else if NES_controller == "00000001": -- right
+    elsif NES_controller == "00000001": -- right
         curr_center += 2;
   
     -- else don't update
