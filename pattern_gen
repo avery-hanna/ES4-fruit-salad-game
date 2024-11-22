@@ -3,9 +3,10 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 entity pattern_gen is
   port(
-    valid : in std_logic;
+	valid : in std_logic;
 	row : in std_logic_vector(9 downto 0);
 	col : in std_logic_vector(9 downto 0);
+	center : in unsigned (4 downto 0); -- 50 wide , 2 to 47
 	RGB : out std_logic_vector(5 downto 0)
 );
 end entity pattern_gen;
@@ -13,12 +14,16 @@ end entity pattern_gen;
 
 architecture synth of pattern_gen is
 
+
+-- signal fruit : unsigned;
+-- type COLOR is (BLUEBERRY, CHERRY, ORANGE, GRAPEFRUIT , WATERMELLON);
+-- signal color : COLOR := BLUEBERRY;
+
 begin
 
-rgb <= "000000" when valid = '0' -- can be changed here and below
-	else "111111" when unsigned(col)
-	< 320 and unsigned(row) < 100
+rgb <= "000000" when valid = '0'
+	else "FF0000" when ( (center + 49) < unsigned(col)
+	< (center + ) and unsigned(row) < 100
 	else "000000";
-
 
 end;
