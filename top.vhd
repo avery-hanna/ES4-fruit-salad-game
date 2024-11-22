@@ -12,16 +12,12 @@ entity top is
   signal curr_state : STATE := START;
   signal center : 
   begin
-
-
-    component predropcontroller is (
+    component pre_drop_controller is (
       state: in std_logic_vector(1 downto 0);
       NES_controller: in std_logic_vector(6 downto 0)
       );
 
-    instance: predropcontroller
-    port map predropcontroller(NES_controller, center, new_center);
-
+    center_update : pre_drop_controller port map(NES_controller, center, new_center);
 
     -- State machine logic
     process(clk) begin
@@ -37,18 +33,15 @@ entity top is
               if NES_controller == "00000100" then -- clicked to drop
                   curr_state <= DROP;
           when DROP =>
-              
+              -- TODO input drop logic
+              curr_state <= OVER;
           when OVER =>
               time.wait(3);
               curr_state <= START;
           when others =>
-              curr_state <= START;
-              
+              curr_state <= START;         
 
         end case;
-
       end if;
-
     end process;
-
   end;
