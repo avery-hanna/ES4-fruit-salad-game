@@ -20,8 +20,8 @@ begin
         else curr_center <= curr_center - 2;
   
     elsif NES_controller == "00000001": -- right
-        if curr_center <"101010"
-        curr_center = curr_center + 2;
+        if curr_center <"101010" then
+          curr_center = curr_center + 2;
         else curr_center <= curr_center;
 end;
 
