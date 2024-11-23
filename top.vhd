@@ -3,14 +3,19 @@ use IEEE.std_logic_1164.all;
 
 entity top is
   port(
-      NESinput: in std_logic_vector(7 downto 0);
-      clk: in std_logic
+      NESinput : in std_logic_vector(7 downto 0);
+      clk : in std_logic;
+      HSYNC : out std_logic;
+      VSYNC : out std_logic
     );
 
   architecture toparch of top is
   type STATE is (START, PLAY, DROP, OVER);
   signal curr_state : STATE := START;
-  signal center : 
+  signal center : unsigned(4 downto 0);
+  signal new_center : unsigned(4 downto 0);
+  signal new_color : std_logic;
+  signal color : std_logic_vector(4 downto 0);
   begin
     component pre_drop_controller is (
       state: in std_logic_vector(1 downto 0);
@@ -25,6 +30,7 @@ entity top is
         begin case curr_state
           when START =>
               -- on any input switch to PLAY
+              center <= 5d"24";
               if NES_controller /= 8b"0" then
                   curr_state <= PLAY;
               end if;
@@ -33,6 +39,7 @@ entity top is
               if NES_controller == "00000100" then -- clicked to drop
                   curr_state <= DROP;
           when DROP =>
+              center <= 5d"24";
               -- TODO input drop logic
               curr_state <= OVER;
           when OVER =>
