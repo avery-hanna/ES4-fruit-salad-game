@@ -14,16 +14,23 @@ end entity pattern_gen;
 
 architecture synth of pattern_gen is
 
-
+signal center : unsigned (4 downto 0); -- 50 wide , 2 to 47
 -- signal fruit : unsigned;
 -- type COLOR is (BLUEBERRY, CHERRY, ORANGE, GRAPEFRUIT , WATERMELLON);
 -- signal color : COLOR := BLUEBERRY;
 
 begin
 
-rgb <= "000000" when valid = '0'
-	else "FF0000" when ( (center + 49) < unsigned(col)
-	< (center + ) and unsigned(row) < 100
-	else "000000";
+center <= "00111";
+
+
+rgb <= "000000" when valid = '0' -- can be changed here and below
+	else "111111" when unsigned(col) = center and unsigned(row) < 100 else "000000";
 
 end;
+
+
+--rgb <= "000000" when valid = '0' -- can be changed here and below
+	--else "111111" when unsigned(col)
+	--< 320 and unsigned(row) < 100
+	--else "000000";
