@@ -29,7 +29,7 @@ begin
 	
 	
 	rgb <= "000000" when valid = '0' -- can be changed here and below
-		else "111111" when unsigned(col) = center and unsigned(row) < 100 else "000000";
+		else "111111" when unsigned(col) = center and unsigned(row) < 100 else "000000"; -- gives a random line
 
 end;
 
