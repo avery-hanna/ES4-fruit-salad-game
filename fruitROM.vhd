@@ -1270,6 +1270,8 @@ begin
 					color <= "111111";
 				when "1100011000" =>
 					color <= "111111";
+				when others =>
+					color <= "111111";
 			end case;
 
 		end if;
