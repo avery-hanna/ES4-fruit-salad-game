@@ -48,6 +48,7 @@ end component;
 		valid : in std_logic;
 		row : in std_logic_vector(9 downto 0);
 		col : in std_logic_vector(9 downto 0);
+		clk : in std_logic;
 		RGB : out std_logic_vector(5 downto 0)
 	);
 end component pattern_gen;
@@ -76,8 +77,8 @@ thirdblock : pattern_gen
 		valid => valid,
 		row => row,
 		col => col,
-		RGB => RGB
-		
+		RGB => RGB,
+		clk => clk
 	);
 
 end synth;
