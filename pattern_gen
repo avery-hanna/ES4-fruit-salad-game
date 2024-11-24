@@ -28,8 +28,9 @@ begin
 	fruit_1 : fruitROM port map(row - fruit_1_tl_row , col - fruit_1_tl_col, "100000", clk, fruit_1_RGB);
 	
 	
-	rgb <= "000000" when valid = '0' -- can be changed here and below
-		else "111111" when unsigned(col) = center and unsigned(row) < 100 else "000000"; -- gives a random line
+	RGB <= "000000" when valid = '0' -- can be changed here and below
+		else fruit_1_RGB;
+	--	else "111111" when unsigned(col) = center and unsigned(row) < 100 else "000000"; -- gives a random line
 
 end;
 
