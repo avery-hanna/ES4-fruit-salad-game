@@ -123,22 +123,6 @@
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/nesclk_top.vhd(6): </Dynamic>
-            <Dynamic>top</Dynamic>
-            <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/nesclk_top.vhd</Navigation>
-            <Navigation>6</Navigation>
-        </Message>
-        <Message>
-            <ID>35921010</ID>
-            <Severity>1</Severity>
-            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/nesclk_top.vhd(16): </Dynamic>
-            <Dynamic>synth</Dynamic>
-            <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/nesclk_top.vhd</Navigation>
-            <Navigation>16</Navigation>
-        </Message>
-        <Message>
-            <ID>35921012</ID>
-            <Severity>1</Severity>
             <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(4): </Dynamic>
             <Dynamic>pattern_gen</Dynamic>
             <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd</Navigation>

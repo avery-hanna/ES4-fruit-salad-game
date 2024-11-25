@@ -4,8 +4,8 @@ use IEEE.numeric_std.all;
 
 entity fruitROM is
   port(
-	  row : in std_logic_vector(4 downto 0);
-	  col : in std_logic_vector(4 downto 0);
+	  ROM_row : in std_logic_vector(4 downto 0);
+	  ROM_col : in std_logic_vector(4 downto 0);
 	  fruit_color : in std_logic_vector(5 downto 0);
 	  clk : in std_logic;
 	  color : out std_logic_vector(5 downto 0)
@@ -1277,5 +1277,5 @@ begin
 		end if;
 	end process;
 
-	address <= row & col;
+	address <= ROM_row & ROM_col;
 end;

@@ -2,18 +2,18 @@
 <RadiantProject version="4.2" radiant="2023.1.0.43.3" title="fruitSalad" device="iCE40UP5K-SG48I" performance_grade="High-Performance_1.2V" default_implementation="impl_1">
     <Options/>
     <Implementation title="impl_1" dir="impl_1" description="impl_1" synthesis="lse" default_strategy="Strategy1">
-        <Options def_top="ROM"/>
+        <Options def_top="fruitROM"/>
         <Source name="source/impl_1/vga.vhd" type="VHDL" type_short="VHDL">
-            <Options top_module="vga"/>
-        </Source>
-        <Source name="source/impl_1/vga_controller.vhd" type="VHDL" type_short="VHDL">
             <Options/>
         </Source>
+        <Source name="source/impl_1/vga_controller.vhd" type="VHDL" type_short="VHDL">
+            <Options top_module="vga_controller"/>
+        </Source>
         <Source name="source/impl_1/fruit_rom.vhd" type="VHDL" type_short="VHDL">
-            <Options top_module="ROM"/>
+            <Options top_module="fruitROM"/>
         </Source>
         <Source name="source/impl_1/nesclk_top.vhd" type="VHDL" type_short="VHDL">
-            <Options top_module="top"/>
+            <Options/>
         </Source>
         <Source name="source/impl_1/pattern_gen.vhd" type="VHDL" type_short="VHDL">
             <Options/>
