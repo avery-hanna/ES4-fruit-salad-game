@@ -9,7 +9,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Nov 25 14:28:28 2024
+Mon Nov 25 15:20:47 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
@@ -177,6 +177,6 @@ Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd
 
 INFO <35921012> - z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(4): analyzing entity pattern_gen. VHDL-1012
 INFO <35921010> - z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(16): analyzing architecture synth. VHDL-1010
-z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(36): 0 definitions of operator &quot;-&quot; match here. VHDL-1052
+z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(43): 0 definitions of operator &quot;=&quot; match here. VHDL-1052
 child process exited abnormally
 Fail to run synthesis -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
