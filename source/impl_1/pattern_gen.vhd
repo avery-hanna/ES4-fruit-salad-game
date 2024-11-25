@@ -14,9 +14,17 @@ end entity pattern_gen;
 
 
 architecture synth of pattern_gen is
-
-signal fruit_1_tl_row : unsigned (4 downto 0); -- TODO update: 50 wide , 2 to 47 
-signal fruit_1_tl_col : unsigned (4 downto 0); -- TODO update: 50 wide , 2 to 47 
+component fruitROM is
+  port(
+	  row : in unsigned(4 downto 0);
+	  col : in unsigned(4 downto 0);
+	  fruit_color : in std_logic_vector(5 downto 0);
+	  clk : in std_logic;
+	  color : out std_logic_vector(5 downto 0)
+  );
+end component;
+signal fruit_1_tl_row : unsigned (4 downto 0) := "00000"; -- TODO update: 50 wide , 2 to 47 
+signal fruit_1_tl_col : unsigned (4 downto 0) := "00000"; -- TODO update: 50 wide , 2 to 47 
 signal fruit_1_RGB : unsigned (5 downto 0); -- we will get these values from all the different ROM and compare to decide what to render
 -- signal fruit : unsigned;
 -- type COLOR is (BLUEBERRY, CHERRY, ORANGE, GRAPEFRUIT , WATERMELLON);

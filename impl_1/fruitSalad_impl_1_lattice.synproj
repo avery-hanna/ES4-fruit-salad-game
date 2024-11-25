@@ -50,7 +50,6 @@
 "Z:/es4/finalproj/fruitSalad/source/impl_1/update_color.vhd"
 
 
--top ROM
 -udb "fruitSalad_impl_1_rtl.udb"
 -output_hdl "fruitSalad_impl_1.vm"
 

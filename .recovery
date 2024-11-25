@@ -13,7 +13,7 @@
             <Options top_module="ROM"/>
         </Source>
         <Source name="source/impl_1/nesclk_top.vhd" type="VHDL" type_short="VHDL">
-            <Options/>
+            <Options top_module="top"/>
         </Source>
         <Source name="source/impl_1/pattern_gen.vhd" type="VHDL" type_short="VHDL">
             <Options/>
@@ -22,7 +22,7 @@
             <Options/>
         </Source>
         <Source name="source/impl_1/shift8.vhd" type="VHDL" type_short="VHDL">
-            <Options top_module="shift8"/>
+            <Options/>
         </Source>
         <Source name="source/impl_1/top.vhd" type="VHDL" type_short="VHDL">
             <Options/>

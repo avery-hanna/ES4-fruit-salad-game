@@ -6,6 +6,10 @@
             <Severity>1</Severity>
         </Message>
         <Message>
+            <ID>35001476</ID>
+            <Severity>256</Severity>
+        </Message>
+        <Message>
             <ID>35935050</ID>
             <Severity>16</Severity>
             <Dynamic>TRIM9</Dynamic>
@@ -88,7 +92,7 @@
             <ID>35921012</ID>
             <Severity>1</Severity>
             <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/vga_controller.vhd(5): </Dynamic>
-            <Dynamic>top</Dynamic>
+            <Dynamic>vga_controller</Dynamic>
             <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/vga_controller.vhd</Navigation>
             <Navigation>5</Navigation>
         </Message>
@@ -104,7 +108,7 @@
             <ID>35921012</ID>
             <Severity>1</Severity>
             <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/fruit_rom.vhd(5): </Dynamic>
-            <Dynamic>rom</Dynamic>
+            <Dynamic>fruitrom</Dynamic>
             <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/fruit_rom.vhd</Navigation>
             <Navigation>5</Navigation>
         </Message>
@@ -119,14 +123,6 @@
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/nesclk_top.vhd(6): </Dynamic>
-            <Dynamic>top</Dynamic>
-            <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/nesclk_top.vhd</Navigation>
-            <Navigation>6</Navigation>
-        </Message>
-        <Message>
-            <ID>35921177</ID>
-            <Severity>4096</Severity>
             <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/nesclk_top.vhd(6): </Dynamic>
             <Dynamic>top</Dynamic>
             <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/nesclk_top.vhd</Navigation>
@@ -155,14 +151,6 @@
             <Dynamic>synth</Dynamic>
             <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd</Navigation>
             <Navigation>16</Navigation>
-        </Message>
-        <Message>
-            <ID>35929241</ID>
-            <Severity>4096</Severity>
-            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(28): </Dynamic>
-            <Dynamic>fruitrom</Dynamic>
-            <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd</Navigation>
-            <Navigation>28</Navigation>
         </Message>
     </Task>
 </BaliMessageLog>

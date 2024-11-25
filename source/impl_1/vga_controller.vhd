@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity top is
+entity vga_controller is
   port(
   external_osc : in std_logic;
   RGB: out std_logic_vector(5 downto 0);
@@ -11,9 +11,9 @@ entity top is
   ext_osc_test : out std_logic
   );
   
-  end entity top;
+  end entity vga_controller;
   
-  architecture synth of top is
+  architecture synth of vga_controller is
 	signal ref_clk_i : std_logic;
 	signal rst_n_i: std_logic;
 	signal outglobal_o : std_logic;
