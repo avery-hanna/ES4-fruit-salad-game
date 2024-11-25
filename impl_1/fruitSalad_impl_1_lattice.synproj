@@ -36,6 +36,8 @@
 
 -use_io_insertion 1
 -resolve_mixed_drivers 0
+-sdc "fruitSalad_impl_1_cpe.ldc"
+-path "Z:/es4/finalproj/fruitSalad/mypll"
 -path "C:/lscc/radiant/2023.1/ispfpga/ice40tp/data" "Z:/es4/finalproj/fruitSalad/impl_1" "Z:/es4/finalproj/fruitSalad"
 -ver "C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.v"
 -lib pmi -vhd "C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.vhd"
@@ -48,8 +50,11 @@
 "Z:/es4/finalproj/fruitSalad/source/impl_1/shift8.vhd"
 "Z:/es4/finalproj/fruitSalad/source/impl_1/top.vhd"
 "Z:/es4/finalproj/fruitSalad/source/impl_1/update_color.vhd"
+-ver "Z:/es4/finalproj/fruitSalad/mypll/rtl/mypll.v"
 
 
+-path "Z:/es4/finalproj/fruitSalad"
+-top vga_controller
 -udb "fruitSalad_impl_1_rtl.udb"
 -output_hdl "fruitSalad_impl_1.vm"
 

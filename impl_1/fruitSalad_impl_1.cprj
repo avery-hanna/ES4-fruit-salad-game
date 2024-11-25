@@ -1,0 +1,8 @@
+-ver "C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.vhd"
+-lib "work" -vhd "Z:/es4/finalproj/fruitSalad/source/impl_1/vga.vhd" "Z:/es4/finalproj/fruitSalad/source/impl_1/vga_controller.vhd" "Z:/es4/finalproj/fruitSalad/source/impl_1/fruit_rom.vhd" "Z:/es4/finalproj/fruitSalad/source/impl_1/nesclk_top.vhd" "Z:/es4/finalproj/fruitSalad/source/impl_1/pattern_gen.vhd" "Z:/es4/finalproj/fruitSalad/source/impl_1/pre_drop_control.vhd" "Z:/es4/finalproj/fruitSalad/source/impl_1/shift8.vhd" "Z:/es4/finalproj/fruitSalad/source/impl_1/top.vhd" "Z:/es4/finalproj/fruitSalad/source/impl_1/update_color.vhd"
+-path "Z:/es4/finalproj/fruitSalad"
+-vh2008
+-top vga_controller
+-isTop
+-a "iCE40UP"

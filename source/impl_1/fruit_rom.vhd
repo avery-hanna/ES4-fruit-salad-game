@@ -4,8 +4,8 @@ use IEEE.numeric_std.all;
 
 entity fruitROM is
   port(
-	  ROM_row : in std_logic_vector(4 downto 0);
-	  ROM_col : in std_logic_vector(4 downto 0);
+	  row : in std_logic_vector(4 downto 0);
+	  col : in std_logic_vector(4 downto 0);
 	  fruit_color : in std_logic_vector(5 downto 0);
 	  clk : in std_logic;
 	  color : out std_logic_vector(5 downto 0)
@@ -18,7 +18,6 @@ begin
 	process(clk) is
 	begin
 		if rising_edge(clk) then
-			-- color <= 24d"0" when 
 			case address is 
 				when "0000000000" =>
 					color <= "111111";
@@ -1277,5 +1276,5 @@ begin
 		end if;
 	end process;
 
-	address <= ROM_row & ROM_col;
+	address <= row & col;
 end;

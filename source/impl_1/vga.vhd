@@ -45,6 +45,6 @@ col <= std_logic_vector(horizontal);
 HSYNC <= '0' when ( horizontal >= 656 AND horizontal < 752) else '1';
 VSYNC <= '0' when (vertical >= 490 AND vertical < 492) else '1';
 
-valid <= '0' when ( horizontal >=640 AND horizontal < 800 AND vertical >= 480 AND vertical < 525) else '1';
+valid <= '0' when ( horizontal >=640 AND horizontal < 800) OR ( vertical >= 480 AND vertical < 525) else '1';
 
 end;

@@ -1,0 +1,206 @@
+                         Lattice Mapping Report File
+Design:  vga_controller
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:  High-Performance_1.2V
+
+Mapper:    version Radiant Software (64-bit) 2023.1.0.43.3
+Mapped on: Mon Nov 25 17:12:57 2024
+
+Design Information
+------------------
+
+Command line:   map -i fruitSalad_impl_1_syn.udb -pdc
+     Z:/es4/finalproj/fruitSalad/pin_layout.pdc -o fruitSalad_impl_1_map.udb -mp
+     fruitSalad_impl_1.mrp -hierrpt -gui
+
+Design Summary
+--------------
+
+   Number of slice registers:  20 out of  5280 (<1%)
+   Number of I/O registers:      0 out of   117 (0%)
+   Number of LUT4s:            81 out of  5280 (2%)
+      Number of logic LUT4s:              37
+      Number of ripple logic:             22 (44 LUT4s)
+   Number of IO sites used:   10 out of 39 (26%)
+      Number of IO sites used for general PIO: 10
+      Number of IO sites used for I3C: 0 out of 2 (0%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for PIO+I3C: 10 out of 36 (28%)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+      (note: If RGB LED drivers are not used, sites can be used as OD outputs,
+       see TN1288 iCE40 LED Driver Usage Guide)
+      Number of IO sites used for PIO+I3C+OD+RGB: 10 out of 39 (26%)
+   Number of DSPs:             0 out of 8 (0%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  0 out of 1 (0%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             2 out of 30 (6%)
+   Number of PLLs:             1 out of 1 (100%)
+   Number of Clocks:  2
+      Net clk: 14 loads, 14 rising, 0 falling (Driver: Pin
+     firstblock.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
+      Net external_osc_c: 1 loads, 1 rising, 0 falling (Driver: Port
+     external_osc)
+   Number of Clock Enables:  2
+      Net RGB_pad[2].vcc: 6 loads, 0 SLICEs
+      Net secondblock.col_0__N_50: 6 loads, 6 SLICEs
+   Number of LSRs:  2
+      Net secondblock.col_0__N_50: 6 loads, 6 SLICEs
+      Net secondblock.row_0__N_30: 6 loads, 6 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net RGB_pad[2].vcc: 17 loads
+      Net secondblock.col_0__N_50: 12 loads
+      Net secondblock.row_0__N_30: 7 loads
+
+                                    Page 1
+
+
+
+
+
+Design Summary (cont)
+---------------------
+      Net col[7]: 6 loads
+      Net col[8]: 6 loads
+      Net col[9]: 6 loads
+      Net row[9]: 6 loads
+      Net col[5]: 5 loads
+      Net col[6]: 5 loads
+      Net row[4]: 5 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+-------+-------+-----------+
+| IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
+|                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
++---------------------+-----------+-----------+-------+-------+-----------+
+| RGB[2]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| RGB[1]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| external_osc        | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| ext_osc_test        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| VSYNC               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| RGB[3]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| HSYNC               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| RGB[0]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| RGB[4]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| RGB[5]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+
+Removed logic
+-------------
+
+Block i1 was optimized away.
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                 Pin/Node Value
+  PLL Instance Name:                            firstblock/lscc_pll_inst/u_PLL_B
+
+                                    Page 2
+
+
+
+
+
+PLL/DLL Summary (cont)
+----------------------
+  Input Reference Clock:               PIN      external_osc_c
+  Output Clock(CoreA):                 PIN      ext_osc_test_c
+  Output Clock(GlobalA):               NODE     clk
+  Output Clock(CoreB):                          NONE
+  Output Clock(GlobalB):                        NONE
+  Feedback input:                      NODE
+       firstblock.lscc_pll_inst.feedback_w
+  Internal Feedback output:            NODE
+       firstblock.lscc_pll_inst.feedback_w
+  BYPASS signal:                                GND
+  LATCH signal:                                 GND
+  Lock Signal:                                  NONE
+  Input Clock Frequency (MHz):                  NA
+  Reference Divider:                            0
+  Feedback Divider:                             66
+  VCO Divider:                                  5
+  ENABLE_ICEGATE_PORTA:                         0
+  ENABLE_ICEGATE_PORTB:                         0
+  PLLOUT_SELECT_PORTA:                          GENCLK
+  PLLOUT_SELECT_PORTB:                          GENCLK
+  SHIFTREG_DIV_MODE:                            0
+  DELAY_ADJUSTMENT_MODE_RELATIVE:               FIXED
+  FDA_RELATIVE:                                 0
+  FEEDBACK_PATH:                                SIMPLE
+  DELAY_ADJUSTMENT_MODE_FEEDBACK:               FIXED
+  FDA_FEEDBACK:                                 0
+  FILTER_RANGE:                                 1
+  EXTERNAL_DIVIDE_FACTOR:                       NONE
+  TEST Mode:                                    0
+
+ASIC Components
+---------------
+
+Instance Name: thirdblock/fruit_1/get_col_0__I_0
+         Type: EBR
+Instance Name: thirdblock/fruit_1/get_col_0__I_0_2
+         Type: EBR
+Instance Name: firstblock/lscc_pll_inst/u_PLL_B
+         Type: PLL
+
+Constraint Summary
+------------------
+
+   Total number of constraints: 11
+   Total number of constraints dropped: 0
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs
+   Total REAL Time: 0 secs
+   Peak Memory Usage: 57 MB
+
+
+
+
+
+
+                                    Page 3
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor
+     Corporation,  All rights reserved.

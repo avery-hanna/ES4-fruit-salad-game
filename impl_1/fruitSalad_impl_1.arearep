@@ -1,0 +1,63 @@
+----------------------------------------------------------------------
+Report for cell vga_controller.TECH
+Register bits:  20 of 5280 (0.379%)
+I/O cells:      10
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2          100.0
+                               CCU2        22          100.0
+                            FD1P3XZ        20          100.0
+                                 IB         1          100.0
+                               LUT4        36          100.0
+                                 OB         9          100.0
+                              PLL_B         1          100.0
+SUB MODULES
+                           fruitROM         1
+                              mypll         1
+mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")         1
+                        pattern_gen         1
+                                vga         1
+                              TOTAL        96
+----------------------------------------------------------------------
+Report for cell pattern_gen.v1
+Instance Path : thirdblock
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2          100.0
+                                FA2        10           45.5
+                               LUT4        14           38.9
+SUB MODULES
+                           fruitROM         1
+                              TOTAL        27
+----------------------------------------------------------------------
+Report for cell fruitROM.v1
+Instance Path : thirdblock.fruit_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2          100.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell vga.v1
+Instance Path : secondblock
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        12           54.5
+                            FD1P3XZ        20          100.0
+                               LUT4        22           61.1
+                              TOTAL        54
+----------------------------------------------------------------------
+Report for cell mypll.v1
+Instance Path : firstblock
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              PLL_B         1          100.0
+SUB MODULES
+mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")         1
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000").v1
+Instance Path : firstblock.lscc_pll_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              PLL_B         1          100.0
+                              TOTAL         1

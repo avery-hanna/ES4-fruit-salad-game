@@ -8,6 +8,9 @@ set para(gui_mode) 1
 set para(prj_dir) "Z:/es4/finalproj/fruitSalad"
 # synthesize IPs
 # synthesize VMs
+# propgate constraints
+file delete -force -- fruitSalad_impl_1_cpe.ldc
+run_engine_newmsg cpe -f "fruitSalad_impl_1.cprj" "mypll.cprj" -a "iCE40UP"  -o fruitSalad_impl_1_cpe.ldc
 # synthesize top design
 file delete -force -- fruitSalad_impl_1.vm fruitSalad_impl_1.ldc
 run_engine_newmsg synthesis -f "fruitSalad_impl_1_lattice.synproj"
