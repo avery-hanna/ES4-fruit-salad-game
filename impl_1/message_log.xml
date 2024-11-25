@@ -312,10 +312,10 @@
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/vga_controller.vhd(16): </Dynamic>
+            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/vga_controller.vhd(17): </Dynamic>
             <Dynamic>synth</Dynamic>
             <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/vga_controller.vhd</Navigation>
-            <Navigation>16</Navigation>
+            <Navigation>17</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
@@ -344,10 +344,10 @@
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(15): </Dynamic>
+            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(16): </Dynamic>
             <Dynamic>synth</Dynamic>
             <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd</Navigation>
-            <Navigation>15</Navigation>
+            <Navigation>16</Navigation>
         </Message>
         <Message>
             <ID>35935049</ID>
@@ -358,16 +358,6 @@
             <ID>35935049</ID>
             <Severity>16</Severity>
             <Dynamic>sdi_i</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001771</ID>
-            <Severity>16</Severity>
-            <Dynamic>gnd</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001771</ID>
-            <Severity>16</Severity>
-            <Dynamic>pwr</Dynamic>
         </Message>
         <Message>
             <ID>35001771</ID>
@@ -441,11 +431,6 @@
         </Message>
     </Task>
     <Task name="Export">
-        <Message>
-            <ID>1081100</ID>
-            <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
-        </Message>
         <Message>
             <ID>1191031</ID>
             <Severity>1</Severity>

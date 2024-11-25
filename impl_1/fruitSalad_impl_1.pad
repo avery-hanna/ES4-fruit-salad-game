@@ -6,7 +6,7 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Mon Nov 25 17:13:03 2024
+Mon Nov 25 17:31:30 2024
 
 Pinout by Port Name:
 +--------------+----------+--------------+-------+------------------------------------------+
@@ -20,7 +20,8 @@ Pinout by Port Name:
 | RGB[4]       | 46/2     | LVCMOS33_OUT | PL6A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | RGB[5]       | 2/2      | LVCMOS33_OUT | PL9A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | VSYNC        | 32/0     | LVCMOS33_OUT | PR17A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| ext_osc_test | 34/0     | LVCMOS33_OUT | PR14B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| button       | 43/0     | LVCMOS33_IN  | PR10A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| ext_osc_test | 37/0     | LVCMOS33_OUT | PR14A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | external_osc | 20/1     | LVCMOS33_IN  | PL20B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
 +--------------+----------+--------------+-------+------------------------------------------+
 
@@ -61,16 +62,16 @@ Pinout by Pin Number:
 | 28/0     |     unused, PULL:UP |            |              | PR18A |                  |
 | 31/0     |     unused, PULL:UP |            |              | PR17B |                  |
 | 32/0     | VSYNC               | LOCATED    | LVCMOS33_OUT | PR17A |                  |
-| 34/0     | ext_osc_test        |            | LVCMOS33_OUT | PR14B |                  |
+| 34/0     |     unused, PULL:UP |            |              | PR14B |                  |
 | 35/0     | HSYNC               | LOCATED    | LVCMOS33_OUT | PR13B | GPLL_IN/PCLKT0_1 |
 | 36/0     |     unused, PULL:UP |            |              | PR10B |                  |
-| 37/0     |     unused, PULL:UP |            |              | PR14A | PCLKT0_0         |
+| 37/0     | ext_osc_test        |            | LVCMOS33_OUT | PR14A | PCLKT0_0         |
 | 38/0     |     unused, PULL:UP |            |              | PR9B  |                  |
 | 39/0     |                     |            |              | PR5A  | RGB0             |
 | 40/0     |                     |            |              | PR6A  | RGB1             |
 | 41/0     |                     |            |              | PR7A  | RGB2             |
 | 42/0     |     unused, PULL:UP |            |              | PR9A  |                  |
-| 43/0     |     unused, PULL:UP |            |              | PR10A |                  |
+| 43/0     | button              | LOCATED    | LVCMOS33_IN  | PR10A |                  |
 | 44/2     |     unused, PULL:UP |            |              | PL7B  | PCLKT2_0         |
 | 45/2     | RGB[2]              | LOCATED    | LVCMOS33_OUT | PL8B  |                  |
 | 46/2     | RGB[4]              | LOCATED    | LVCMOS33_OUT | PL6A  |                  |
@@ -106,7 +107,8 @@ ldc_set_location -site {47} [ get_ports {RGB[3]} ]
 ldc_set_location -site {46} [ get_ports {RGB[4]} ]
 ldc_set_location -site {2} [ get_ports {RGB[5]} ]
 ldc_set_location -site {32} [ get_ports {VSYNC} ]
-ldc_set_location -site {34} [ get_ports {ext_osc_test} ]
+ldc_set_location -site {43} [ get_ports {button} ]
+ldc_set_location -site {37} [ get_ports {ext_osc_test} ]
 ldc_set_location -site {20} [ get_ports {external_osc} ]
 
 
@@ -115,5 +117,5 @@ ldc_set_location -site {20} [ get_ports {external_osc} ]
 
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Mon Nov 25 17:13:03 2024
+Mon Nov 25 17:31:31 2024
 

@@ -4,6 +4,7 @@ use IEEE.numeric_std.all;
 
 entity vga_controller is
   port(
+  button : in std_logic;
   external_osc : in std_logic;
   RGB: out std_logic_vector(5 downto 0);
   HSYNC : out std_logic;
@@ -45,6 +46,7 @@ end component;
 
 	component pattern_gen is
 	  port(
+		button : in std_logic;
 		valid : in std_logic;
 		row : in std_logic_vector(9 downto 0);
 		col : in std_logic_vector(9 downto 0);
@@ -74,6 +76,7 @@ secondblock : vga
 
 thirdblock : pattern_gen
 	port map (
+		button => button,
 		valid => valid,
 		row => row,
 		col => col,

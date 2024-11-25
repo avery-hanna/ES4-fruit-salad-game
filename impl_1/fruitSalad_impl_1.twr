@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2023.1.0.43.3
 
-Mon Nov 25 17:13:05 2024
+Mon Nov 25 17:31:33 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -77,24 +77,20 @@ Clocked but unconstrained timing end points
 -------------------------------------------------------------------
          Listing 10 End Points          |           Type           
 -------------------------------------------------------------------
-secondblock/row_9__I_7/D                |    No arrival or required
-secondblock/row_9__I_8/D                |    No arrival or required
-{secondblock/row_9__I_8/SP   secondblock/row_9__I_7/SP}                           
-                                        |    No arrival or required
-{secondblock/row_9__I_8/SR   secondblock/row_9__I_7/SR}                           
-                                        |    No arrival or required
-secondblock/row_9__I_3/D                |    No arrival or required
-secondblock/row_9__I_4/D                |    No arrival or required
-{secondblock/row_9__I_4/SP   secondblock/row_9__I_3/SP}                           
-                                        |    No arrival or required
-{secondblock/row_9__I_4/SR   secondblock/row_9__I_3/SR}                           
-                                        |    No arrival or required
-secondblock/col_9__I_14/D               |    No arrival or required
-secondblock/col_9__I_15/D               |    No arrival or required
+thirdblock/fruit_1_tl_col_9__I_27/D     |    No arrival or required
+thirdblock/fruit_1_tl_col_9__I_25/D     |    No arrival or required
+thirdblock/fruit_1_tl_col_9__I_26/D     |    No arrival or required
+thirdblock/fruit_1_tl_col_9__I_0/D      |    No arrival or required
+thirdblock/fruit_1_tl_col_9__I_19/D     |    No arrival or required
+thirdblock/fruit_1_tl_col_9__I_20/D     |    No arrival or required
+thirdblock/fruit_1_tl_col_9__I_23/D     |    No arrival or required
+thirdblock/fruit_1_tl_col_9__I_24/D     |    No arrival or required
+thirdblock/fruit_1_tl_col_9__I_21/D     |    No arrival or required
+thirdblock/fruit_1_tl_col_9__I_22/D     |    No arrival or required
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing end poin |                          
-ts                                      |                        38
+ts                                      |                        48
                                         |                          
 -------------------------------------------------------------------
 
@@ -112,20 +108,21 @@ create_generated_clock,
 ...
 
 -------------------------------------------------------------------
-     Listing 9 Start or End Points      |           Type           
+     Listing 10 Start or End Points     |           Type           
 -------------------------------------------------------------------
 external_osc                            |                     input
-RGB[2]                                  |                    output
+button                                  |                     input
 RGB[1]                                  |                    output
 VSYNC                                   |                    output
-RGB[3]                                  |                    output
 HSYNC                                   |                    output
+RGB[2]                                  |                    output
+RGB[3]                                  |                    output
 RGB[0]                                  |                    output
 RGB[4]                                  |                    output
 RGB[5]                                  |                    output
 -------------------------------------------------------------------
                                         |                          
-Number of I/O ports without constraint  |                         9
+Number of I/O ports without constraint  |                        10
                                         |                          
 -------------------------------------------------------------------
 

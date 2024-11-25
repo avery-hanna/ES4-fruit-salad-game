@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Nov 25 17:12:31 2024
+Mon Nov 25 17:31:19 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
@@ -159,7 +159,7 @@ Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/vga_controller.vhd
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/vga_controller.vhd
 
 INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/vga_controller.vhd(5): analyzing entity vga_controller. VHDL-1012
-INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/vga_controller.vhd(16): analyzing architecture synth. VHDL-1010
+INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/vga_controller.vhd(17): analyzing architecture synth. VHDL-1010
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/fruit_rom.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/fruit_rom.vhd
 
@@ -172,7 +172,7 @@ Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd. V
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd
 
 INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(4): analyzing entity pattern_gen. VHDL-1012
-INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(15): analyzing architecture synth. VHDL-1010
+INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(16): analyzing architecture synth. VHDL-1010
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/pre_drop_control.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/pre_drop_control.vhd
 
@@ -214,8 +214,6 @@ Top module name (VHDL, mixed language): vga_controller
                                                          
 
 
-WARNING <35001771> - synthesis: Initial value found on net gnd will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net pwr will be ignored due to unrecognized driver type
 WARNING <35001771> - synthesis: Initial value found on net get_row[4] will be ignored due to unrecognized driver type
 WARNING <35001771> - synthesis: Initial value found on net get_row[3] will be ignored due to unrecognized driver type
 WARNING <35001771> - synthesis: Initial value found on net get_row[2] will be ignored due to unrecognized driver type
@@ -237,12 +235,12 @@ WARNING <35931002> - synthesis: z:/es4/finalproj/fruitsalad/mypll/rtl/mypll.v(14
 
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 20 of 5280 (0 % )
+Number of register bits => 30 of 5280 (0 % )
 EBR_B => 2
-CCU2 => 22
-FD1P3XZ => 20
-IB => 1
-LUT4 => 36
+CCU2 => 23
+FD1P3XZ => 30
+IB => 2
+LUT4 => 49
 OB => 9
 PLL_B => 1
 ################### End Area Report ##################
@@ -261,17 +259,17 @@ Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : secondblock/col_0__N_50, loads : 20
   Net : secondblock/row_0__N_30, loads : 11
-  Net : secondblock/row[9], loads : 5
-  Net : secondblock/col[9], loads : 5
+  Net : secondblock/row[9], loads : 10
+  Net : secondblock/col[9], loads : 9
+  Net : secondblock/RGB_c_1_N_132, loads : 7
+  Net : secondblock/get_row_4__N_117, loads : 6
   Net : secondblock/col[8], loads : 5
   Net : secondblock/col[7], loads : 5
-  Net : thirdblock/get_row_0__N_115, loads : 5
-  Net : thirdblock/get_col_0__N_120, loads : 5
-  Net : secondblock/RGB_c_0_N_127, loads : 5
-  Net : secondblock/col[6], loads : 4
+  Net : thirdblock/get_col_0__N_127, loads : 5
+  Net : secondblock/row[2], loads : 5
 ################### End Clock Report ##################
 
-Peak Memory Usage: 119 MB
+Peak Memory Usage: 118 MB
 
 --------------------------------------------------------------
 Total CPU Time: 3 secs 

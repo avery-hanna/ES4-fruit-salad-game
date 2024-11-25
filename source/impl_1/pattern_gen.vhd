@@ -3,6 +3,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 entity pattern_gen is
   port(
+	button : in std_logic;
 	valid : in std_logic;
 	row : in std_logic_vector(9 downto 0); -- row of pixel we want to get color for
 	col : in std_logic_vector(9 downto 0); -- col of pixel we want to get color for
@@ -40,8 +41,8 @@ signal get_col : std_logic_vector (4 downto 0) := "00000";
 signal valid_pos : std_logic;
 
 begin
-	fruit_1_tl_row <= 10d"300";
-	fruit_1_tl_col <= 10d"500";
+	--fruit_1_tl_row <= 10d"300";
+	--fruit_1_tl_col <= 10d"500";
 
 	fruit_row <= std_logic_vector(unsigned(row) - fruit_1_tl_row);
 	fruit_col <= std_logic_vector(unsigned(col) - fruit_1_tl_col);
@@ -56,5 +57,13 @@ begin
 	RGB <= "000000" when valid = '0' -- can be changed here and below
 		else fruit_1_RGB;
 		--else "110000"; -- gives a random line
+		
+	process(clk) begin
+		if rising_edge(clk) then
+			if button = '0' and fruit_1_tl_col < 10d"615" then
+				fruit_1_tl_col <= fruit_1_tl_col + 10d"1";
+			end if;
+		end if;
+	end process;
 
 end;
