@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity ROM is
+entity GRAPEFRUITROM is
   port(
 	  row : in std_logic_vector(4 downto 0);
 	  col : in std_logic_vector(4 downto 0);
@@ -10,9 +10,9 @@ entity ROM is
 	  clk : in std_logic;
 	  color : out std_logic_vector(5 downto 0)
   );
-end ROM;
+end GRAPEFRUITROM;
 
-architecture synth of ROM is 
+architecture synth of GRAPEFRUITROM is 
 signal address : std_logic_vector(9 downto 0);
 begin
 	process(clk) is
