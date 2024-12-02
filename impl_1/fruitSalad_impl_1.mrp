@@ -6,7 +6,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2023.1.0.43.3
-Mapped on: Mon Dec  2 15:51:46 2024
+Mapped on: Mon Dec  2 17:06:22 2024
 
 Design Information
 ------------------
@@ -18,12 +18,12 @@ Command line:   map -i fruitSalad_impl_1_syn.udb -pdc
 Design Summary
 --------------
 
-   Number of slice registers:  82 out of  5280 (2%)
+   Number of slice registers: 118 out of  5280 (2%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           258 out of  5280 (5%)
-      Number of logic LUT4s:             137
-      Number of inserted feedthru LUT4s:  13
-      Number of ripple logic:             54 (108 LUT4s)
+   Number of LUT4s:           400 out of  5280 (8%)
+      Number of logic LUT4s:             245
+      Number of inserted feedthru LUT4s:  15
+      Number of ripple logic:             70 (140 LUT4s)
    Number of IO sites used:   11 out of 39 (28%)
       Number of IO sites used for general PIO: 11
       Number of IO sites used for I3C: 0 out of 2 (0%)
@@ -43,22 +43,22 @@ Design Summary
    Number of SRAMs:            0 out of 4 (0%)
    Number of WARMBOOTs:        0 out of 1 (0%)
    Number of SPIs:             0 out of 2 (0%)
-   Number of EBRs:             4 out of 30 (13%)
+   Number of EBRs:             10 out of 30 (33%)
    Number of PLLs:             1 out of 1 (100%)
    Number of Clocks:  2
-      Net clk: 66 loads, 66 rising, 0 falling (Driver: Pin
+      Net clk: 108 loads, 108 rising, 0 falling (Driver: Pin
      firstblock.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
       Net external_osc_c: 1 loads, 1 rising, 0 falling (Driver: Port
      external_osc)
-   Number of Clock Enables:  7
-      Net thirdblock.falling_counter_0__N_402: 9 loads, 9 SLICEs
-      Net RGB_pad[0].vcc: 12 loads, 0 SLICEs
-      Net fruit_1_tl_row_0__N_88: 6 loads, 6 SLICEs
-      Net thirdblock.fruit_2_tl_row_0__N_112: 10 loads, 10 SLICEs
-      Net thirdblock.game_state_1__N_55: 2 loads, 2 SLICEs
-      Net thirdblock.game_state_0__N_58: 1 loads, 1 SLICEs
-      Net col_0__N_50: 6 loads, 6 SLICEs
-   Number of LSRs:  7
+   Number of Clock Enables:  11
+      Net fruit_1_tl_row_0__N_86: 6 loads, 6 SLICEs
+      Net thirdblock.falling_counter_0__N_588: 9 loads, 9 SLICEs
+      Net thirdblock.fruit_3_tl_row_0__N_404: 10 loads, 10 SLICEs
+      Net thirdblock.fruit_2_tl_row_0__N_235: 10 loads, 10 SLICEs
+      Net RGB_pad[4].vcc: 30 loads, 0 SLICEs
+      Net thirdblock.n1926: 8 loads, 8 SLICEs
+      Net thirdblock.fruit_1_type_0__N_95: 3 loads, 3 SLICEs
+      Net thirdblock.game_state_1__N_55: 1 loads, 1 SLICEs
 
                                     Page 1
 
@@ -68,24 +68,31 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net thirdblock.falling_counter_0__N_403: 9 loads, 9 SLICEs
-      Net RGB_c_2_N_412: 6 loads, 6 SLICEs
-      Net thirdblock.fruit_2_tl_row_0__N_113: 4 loads, 4 SLICEs
-      Net thirdblock.game_state_1__N_56: 1 loads, 1 SLICEs
-      Net thirdblock.game_state_0__N_59: 2 loads, 2 SLICEs
-      Net row_0__N_30: 6 loads, 6 SLICEs
+      Net thirdblock.game_state_2__N_52: 1 loads, 1 SLICEs
+      Net thirdblock.game_state_0__N_57: 1 loads, 1 SLICEs
       Net col_0__N_50: 6 loads, 6 SLICEs
+   Number of LSRs:  10
+      Net thirdblock.falling_counter_0__N_589: 9 loads, 9 SLICEs
+      Net thirdblock.fruit_3_tl_row_2__N_399: 6 loads, 6 SLICEs
+      Net thirdblock.fruit_3_tl_row_0__N_405: 4 loads, 4 SLICEs
+      Net thirdblock.fruit_2_tl_row_2__N_230: 6 loads, 6 SLICEs
+      Net thirdblock.RGB_c_2_N_599: 14 loads, 14 SLICEs
+      Net thirdblock.fruit_2_tl_row_0__N_236: 4 loads, 4 SLICEs
+      Net thirdblock.fruit_1_type_0__N_96: 3 loads, 3 SLICEs
+      Net thirdblock.game_state_2__N_53: 1 loads, 1 SLICEs
+      Net col_0__N_50: 6 loads, 6 SLICEs
+      Net row_0__N_30: 6 loads, 6 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net RGB_pad[0].vcc: 26 loads
-      Net game_state[1]: 22 loads
-      Net game_state[2]: 22 loads
-      Net game_state[0]: 19 loads
-      Net RGB_c_2_N_412: 18 loads
+      Net RGB_pad[4].vcc: 47 loads
+      Net thirdblock.game_state[1]: 35 loads
+      Net game_state[2]: 23 loads
+      Net game_state[0]: 22 loads
+      Net thirdblock.RGB_c_2_N_599: 17 loads
+      Net n1136: 13 loads
       Net col_0__N_50: 12 loads
-      Net thirdblock.fruit_2_tl_row_0__N_112: 10 loads
-      Net n170: 9 loads
-      Net thirdblock.falling_counter_0__N_402: 9 loads
-      Net thirdblock.falling_counter_0__N_403: 9 loads
+      Net thirdblock.fruit_3_tl_row_0__N_404: 12 loads
+      Net thirdblock.n1105: 12 loads
+      Net thirdblock.n1256: 11 loads
 
 
 
@@ -105,26 +112,19 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[0]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| HSYNC               | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[1]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[2]              | OUTPUT    |           |       |       |           |
+| RGB[4]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | RGB[3]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[4]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
 | RGB[5]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| VSYNC               | OUTPUT    |           |       |       |           |
+| RGB[2]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| ext_osc_test        | OUTPUT    |           |       |       |           |
+| RGB[1]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| button              | INPUT     |           |       |       |           |
+| RGB[0]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| HSYNC               | OUTPUT    |           |       |       |           |
 
                                     Page 2
 
@@ -134,6 +134,13 @@ IO (PIO) Attributes
 
 IO (PIO) Attributes (cont)
 --------------------------
++---------------------+-----------+-----------+-------+-------+-----------+
+| VSYNC               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| ext_osc_test        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| button              | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | external_osc        | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
@@ -180,23 +187,37 @@ PLL 1:                                 Pin/Node Value
 ASIC Components
 ---------------
 
-Instance Name: thirdblock/fruit_2/grapefruit/get_col_2_0__I_0
+Instance Name: thirdblock/fruit_3/blueberry/get_col_3_0__I_0
          Type: EBR
-Instance Name: thirdblock/fruit_2/grapefruit/get_col_2_0__I_0_2
+Instance Name: thirdblock/fruit_3/blueberry/get_col_3_0__I_0_2
          Type: EBR
-Instance Name: thirdblock/fruit_1/blueberry/get_col_1_0__I_0_2
-         Type: EBR
-Instance Name: thirdblock/fruit_1/blueberry/get_col_1_0__I_0
-         Type: EBR
-Instance Name: firstblock/lscc_pll_inst/u_PLL_B
-         Type: PLL
-
 
                                     Page 3
 
 
 
 
+
+ASIC Components (cont)
+----------------------
+Instance Name: thirdblock/fruit_2/grapefruit/get_col_2_0__I_0_4
+         Type: EBR
+Instance Name: thirdblock/fruit_2/grapefruit/get_col_2_0__I_0
+         Type: EBR
+Instance Name: thirdblock/fruit_2/blueberry/get_col_2_0__I_0_3
+         Type: EBR
+Instance Name: thirdblock/fruit_2/blueberry/get_col_2_0__I_0_2
+         Type: EBR
+Instance Name: thirdblock/fruit_1/grapefruit/get_col_1_0__I_0
+         Type: EBR
+Instance Name: thirdblock/fruit_1/grapefruit/get_col_1_0__I_0_4
+         Type: EBR
+Instance Name: thirdblock/fruit_1/blueberry/get_col_1_0__I_0_3
+         Type: EBR
+Instance Name: thirdblock/fruit_1/blueberry/get_col_1_0__I_0_2
+         Type: EBR
+Instance Name: firstblock/lscc_pll_inst/u_PLL_B
+         Type: PLL
 
 Constraint Summary
 ------------------
@@ -208,29 +229,8 @@ Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 1 secs
-   Total REAL Time: 2 secs
-   Peak Memory Usage: 61 MB
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   Total REAL Time: 3 secs
+   Peak Memory Usage: 63 MB
 
 
 

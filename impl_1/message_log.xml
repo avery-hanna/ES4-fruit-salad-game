@@ -2,11 +2,6 @@
 <BaliMessageLog>
     <Task name="Export">
         <Message>
-            <ID>1081100</ID>
-            <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
-        </Message>
-        <Message>
             <ID>1191031</ID>
             <Severity>1</Severity>
         </Message>
@@ -503,6 +498,56 @@
             <Dynamic>get_col_2[0]</Dynamic>
         </Message>
         <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_row_3[4]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_row_3[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_row_3[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_row_3[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_row_3[0]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_3[4]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_3[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_3[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_3[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_3[0]</Dynamic>
+        </Message>
+        <Message>
             <ID>35001747</ID>
             <Severity>256</Severity>
             <Dynamic>9</Dynamic>
@@ -563,6 +608,24 @@
             <Dynamic>fruit_1_tl_col</Dynamic>
         </Message>
         <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>2</Dynamic>
+            <Dynamic>fruit_3_type</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>1</Dynamic>
+            <Dynamic>fruit_3_type</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>0</Dynamic>
+            <Dynamic>fruit_3_type</Dynamic>
+        </Message>
+        <Message>
             <ID>35935049</ID>
             <Severity>16</Severity>
             <Dynamic>sclk_i</Dynamic>
@@ -573,10 +636,93 @@
             <Dynamic>sdi_i</Dynamic>
         </Message>
         <Message>
+            <ID>35001774</ID>
+            <Severity>1</Severity>
+            <Dynamic>\thirdblock/fruit_2_type</Dynamic>
+            <Dynamic>one-hot</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>\thirdblock/fruit_3_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_col</Dynamic>
+        </Message>
+        <Message>
             <ID>35935040</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_col_i6</Dynamic>
+            <Dynamic>\thirdblock/game_state__i3</Dynamic>
             <Dynamic>Zero</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/game_state__i2</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_2_tl_row_i0_i2</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_2_tl_row_i0_i3</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_2_tl_row_i0_i4</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_2_tl_row_i0_i5</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_2_tl_row_i0_i7</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_2_tl_row_i0_i9</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_3_tl_row_i0_i2</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_3_tl_row_i0_i3</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_3_tl_row_i0_i4</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_3_tl_row_i0_i5</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_3_tl_row_i0_i7</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_3_tl_row_i0_i9</Dynamic>
         </Message>
         <Message>
             <ID>70001944</ID>

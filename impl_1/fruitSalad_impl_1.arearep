@@ -1,83 +1,125 @@
 ----------------------------------------------------------------------
 Report for cell vga_controller.TECH
-Register bits:  82 of 5280 (1.553%)
+Register bits:  118 of 5280 (2.235%)
 I/O cells:      11
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         4          100.0
-                               CCU2        54          100.0
-                            FD1P3XZ        82          100.0
+                              EBR_B        10          100.0
+                               CCU2        70          100.0
+                            FD1P3XZ       118          100.0
                                  IB         2          100.0
-                               LUT4       136          100.0
+                               LUT4       244          100.0
                                  OB         9          100.0
                               PLL_B         1          100.0
 SUB MODULES
                        blueberryROM         1
+                    blueberryROM_U0         1
+                    blueberryROM_U2         1
                            fruitROM         1
-                        fruitROM_U0         1
+                        fruitROM_U3         1
+                        fruitROM_U4         1
                       grapefruitROM         1
+                   grapefruitROM_U1         1
                               mypll         1
 mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")         1
                         pattern_gen         1
                                 vga         1
-                              TOTAL       296
+                              TOTAL       466
 ----------------------------------------------------------------------
 Report for cell pattern_gen.v1
 Instance Path : thirdblock
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         4          100.0
-                                FA2        42           77.8
-                            FD1P3XZ        62           75.6
-                               LUT4       115           84.6
+                              EBR_B        10          100.0
+                                FA2        58           82.9
+                            FD1P3XZ        98           83.1
+                               LUT4       226           92.6
 SUB MODULES
                        blueberryROM         1
+                    blueberryROM_U0         1
+                    blueberryROM_U2         1
                            fruitROM         1
-                        fruitROM_U0         1
+                        fruitROM_U3         1
+                        fruitROM_U4         1
                       grapefruitROM         1
-                              TOTAL       227
+                   grapefruitROM_U1         1
+                              TOTAL       400
 ----------------------------------------------------------------------
 Report for cell fruitROM.v1
-Instance Path : thirdblock.fruit_2
+Instance Path : thirdblock.fruit_3
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2           50.0
-                            FD1P3XZ         6            7.3
-SUB MODULES
-                      grapefruitROM         1
-                              TOTAL         9
-----------------------------------------------------------------------
-Report for cell grapefruitROM.v1
-Instance Path : thirdblock.fruit_2.grapefruit
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         2           50.0
-                              TOTAL         2
-----------------------------------------------------------------------
-Report for cell fruitROM_U0.v1
-Instance Path : thirdblock.fruit_1
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         2           50.0
-                            FD1P3XZ         6            7.3
+                              EBR_B         2           20.0
+                            FD1P3XZ         6            5.1
 SUB MODULES
                        blueberryROM         1
                               TOTAL         9
 ----------------------------------------------------------------------
 Report for cell blueberryROM.v1
+Instance Path : thirdblock.fruit_3.blueberry
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           20.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell fruitROM_U3.v1
+Instance Path : thirdblock.fruit_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         4           40.0
+                            FD1P3XZ         6            5.1
+SUB MODULES
+                    blueberryROM_U0         1
+                      grapefruitROM         1
+                              TOTAL        12
+----------------------------------------------------------------------
+Report for cell grapefruitROM.v1
+Instance Path : thirdblock.fruit_2.grapefruit
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           20.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell blueberryROM_U0.v1
+Instance Path : thirdblock.fruit_2.blueberry
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           20.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell fruitROM_U4.v1
+Instance Path : thirdblock.fruit_1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         4           40.0
+                            FD1P3XZ         6            5.1
+                               LUT4         7            2.9
+SUB MODULES
+                    blueberryROM_U2         1
+                   grapefruitROM_U1         1
+                              TOTAL        19
+----------------------------------------------------------------------
+Report for cell grapefruitROM_U1.v1
+Instance Path : thirdblock.fruit_1.grapefruit
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           20.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell blueberryROM_U2.v1
 Instance Path : thirdblock.fruit_1.blueberry
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2           50.0
+                              EBR_B         2           20.0
                               TOTAL         2
 ----------------------------------------------------------------------
 Report for cell vga.v1
 Instance Path : secondblock
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        12           22.2
-                            FD1P3XZ        20           24.4
-                               LUT4        12            8.8
+                                FA2        12           17.1
+                            FD1P3XZ        20           16.9
+                               LUT4        12            4.9
                               TOTAL        44
 ----------------------------------------------------------------------
 Report for cell mypll.v1
