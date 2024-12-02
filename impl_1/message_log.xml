@@ -52,6 +52,17 @@
             <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
         </Message>
     </Task>
+    <Task name="Export">
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
+        <Message>
+            <ID>1191031</ID>
+            <Severity>1</Severity>
+        </Message>
+    </Task>
     <Task name="Synthesis">
         <Message>
             <ID>35831026</ID>
@@ -362,52 +373,162 @@
         <Message>
             <ID>35001771</ID>
             <Severity>16</Severity>
-            <Dynamic>get_row[4]</Dynamic>
+            <Dynamic>get_row_1[4]</Dynamic>
         </Message>
         <Message>
             <ID>35001771</ID>
             <Severity>16</Severity>
-            <Dynamic>get_row[3]</Dynamic>
+            <Dynamic>get_row_1[3]</Dynamic>
         </Message>
         <Message>
             <ID>35001771</ID>
             <Severity>16</Severity>
-            <Dynamic>get_row[2]</Dynamic>
+            <Dynamic>get_row_1[2]</Dynamic>
         </Message>
         <Message>
             <ID>35001771</ID>
             <Severity>16</Severity>
-            <Dynamic>get_row[1]</Dynamic>
+            <Dynamic>get_row_1[1]</Dynamic>
         </Message>
         <Message>
             <ID>35001771</ID>
             <Severity>16</Severity>
-            <Dynamic>get_row[0]</Dynamic>
+            <Dynamic>get_row_1[0]</Dynamic>
         </Message>
         <Message>
             <ID>35001771</ID>
             <Severity>16</Severity>
-            <Dynamic>get_col[4]</Dynamic>
+            <Dynamic>get_col_1[4]</Dynamic>
         </Message>
         <Message>
             <ID>35001771</ID>
             <Severity>16</Severity>
-            <Dynamic>get_col[3]</Dynamic>
+            <Dynamic>get_col_1[3]</Dynamic>
         </Message>
         <Message>
             <ID>35001771</ID>
             <Severity>16</Severity>
-            <Dynamic>get_col[2]</Dynamic>
+            <Dynamic>get_col_1[2]</Dynamic>
         </Message>
         <Message>
             <ID>35001771</ID>
             <Severity>16</Severity>
-            <Dynamic>get_col[1]</Dynamic>
+            <Dynamic>get_col_1[1]</Dynamic>
         </Message>
         <Message>
             <ID>35001771</ID>
             <Severity>16</Severity>
-            <Dynamic>get_col[0]</Dynamic>
+            <Dynamic>get_col_1[0]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_row_2[4]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_row_2[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_row_2[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_row_2[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_row_2[0]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_2[4]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_2[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_2[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_2[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_2[0]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>9</Dynamic>
+            <Dynamic>fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>8</Dynamic>
+            <Dynamic>fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>7</Dynamic>
+            <Dynamic>fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>5</Dynamic>
+            <Dynamic>fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>4</Dynamic>
+            <Dynamic>fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>2</Dynamic>
+            <Dynamic>fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>1</Dynamic>
+            <Dynamic>fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>0</Dynamic>
+            <Dynamic>fruit_1_tl_col</Dynamic>
         </Message>
         <Message>
             <ID>35935049</ID>
@@ -428,12 +549,6 @@
             <ID>70001944</ID>
             <Severity>16</Severity>
             <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-    </Task>
-    <Task name="Export">
-        <Message>
-            <ID>1191031</ID>
-            <Severity>1</Severity>
         </Message>
     </Task>
 </BaliMessageLog>

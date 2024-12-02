@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Nov 25 17:31:19 2024
+Tue Nov 26 11:36:08 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
@@ -214,16 +214,36 @@ Top module name (VHDL, mixed language): vga_controller
                                                          
 
 
-WARNING <35001771> - synthesis: Initial value found on net get_row[4] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_row[3] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_row[2] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_row[1] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_row[0] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_col[4] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_col[3] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_col[2] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_col[1] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_col[0] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_1[4] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_1[3] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_1[2] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_1[1] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_1[0] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_1[4] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_1[3] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_1[2] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_1[1] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_1[0] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_2[4] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_2[3] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_2[2] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_2[1] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_2[0] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_2[4] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_2[3] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_2[2] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_2[1] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_2[0] will be ignored due to unrecognized driver type
+CRITICAL <35001747> - synthesis: Bit 9 of Register fruit_1_tl_col is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 8 of Register fruit_1_tl_col is stuck at One
+CRITICAL <35001747> - synthesis: Bit 7 of Register fruit_1_tl_col is stuck at Zero
+CRITICAL <35001747> - synthesis: Bit 6 of Register fruit_1_tl_col is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 5 of Register fruit_1_tl_col is stuck at One
+CRITICAL <35001748> - synthesis: Bit 4 of Register fruit_1_tl_col is stuck at One
+CRITICAL <35001747> - synthesis: Bit 3 of Register fruit_1_tl_col is stuck at Zero
+CRITICAL <35001747> - synthesis: Bit 2 of Register fruit_1_tl_col is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 1 of Register fruit_1_tl_col is stuck at One
+CRITICAL <35001748> - synthesis: Bit 0 of Register fruit_1_tl_col is stuck at One
 WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
 WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
 WARNING <35931002> - synthesis: z:/es4/finalproj/fruitsalad/mypll/rtl/mypll.v(139): net \firstblock/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
@@ -235,17 +255,17 @@ WARNING <35931002> - synthesis: z:/es4/finalproj/fruitsalad/mypll/rtl/mypll.v(14
 
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 30 of 5280 (0 % )
-EBR_B => 2
-CCU2 => 23
-FD1P3XZ => 30
+Number of register bits => 61 of 5280 (1 % )
+EBR_B => 4
+CCU2 => 49
+FD1P3XZ => 61
 IB => 2
-LUT4 => 49
+LUT4 => 110
 OB => 9
 PLL_B => 1
 ################### End Area Report ##################
-Number of odd-length carry chains : 0
-Number of even-length carry chains : 4
+Number of odd-length carry chains : 1
+Number of even-length carry chains : 7
 
 ################### Begin Clock Report ######################
 Clock Nets
@@ -257,21 +277,21 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : secondblock/col_0__N_50, loads : 20
+  Net : col_0__N_50, loads : 20
+  Net : thirdblock/game_state[1], loads : 20
+  Net : thirdblock/game_state[2], loads : 18
+  Net : thirdblock/falling_counter_0__N_327, loads : 18
+  Net : thirdblock/falling_counter_0__N_328, loads : 17
+  Net : thirdblock/fruit_1_tl_row_0__N_87, loads : 16
+  Net : RGB_c_0_N_344, loads : 12
+  Net : thirdblock/game_state[0], loads : 11
   Net : secondblock/row_0__N_30, loads : 11
-  Net : secondblock/row[9], loads : 10
-  Net : secondblock/col[9], loads : 9
-  Net : secondblock/RGB_c_1_N_132, loads : 7
-  Net : secondblock/get_row_4__N_117, loads : 6
-  Net : secondblock/col[8], loads : 5
-  Net : secondblock/col[7], loads : 5
-  Net : thirdblock/get_col_0__N_127, loads : 5
-  Net : secondblock/row[2], loads : 5
+  Net : fruit_1_tl_row_0__N_86, loads : 10
 ################### End Clock Report ##################
 
-Peak Memory Usage: 118 MB
+Peak Memory Usage: 122 MB
 
 --------------------------------------------------------------
 Total CPU Time: 3 secs 
-Total REAL Time: 4 secs 
+Total REAL Time: 5 secs 
 --------------------------------------------------------------

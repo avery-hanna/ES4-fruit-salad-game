@@ -1,51 +1,60 @@
 ----------------------------------------------------------------------
 Report for cell vga_controller.TECH
-Register bits:  30 of 5280 (0.568%)
+Register bits:  61 of 5280 (1.155%)
 I/O cells:      11
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2          100.0
-                               CCU2        23          100.0
-                            FD1P3XZ        30          100.0
+                              EBR_B         4          100.0
+                               CCU2        49          100.0
+                            FD1P3XZ        61          100.0
                                  IB         2          100.0
-                               LUT4        49          100.0
+                               LUT4       110          100.0
                                  OB         9          100.0
                               PLL_B         1          100.0
 SUB MODULES
                            fruitROM         1
+                        fruitROM_U0         1
                               mypll         1
 mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")         1
                         pattern_gen         1
                                 vga         1
-                              TOTAL       121
+                              TOTAL       242
 ----------------------------------------------------------------------
 Report for cell pattern_gen.v1
 Instance Path : thirdblock
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2          100.0
-                                FA2        11           47.8
-                            FD1P3XZ        10           33.3
-                               LUT4        17           34.7
+                              EBR_B         4          100.0
+                                FA2        37           75.5
+                            FD1P3XZ        41           67.2
+                               LUT4        95           86.4
 SUB MODULES
                            fruitROM         1
-                              TOTAL        41
+                        fruitROM_U0         1
+                              TOTAL       179
 ----------------------------------------------------------------------
 Report for cell fruitROM.v1
+Instance Path : thirdblock.fruit_2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         2           50.0
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell fruitROM_U0.v1
 Instance Path : thirdblock.fruit_1
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2          100.0
+                              EBR_B         2           50.0
                               TOTAL         2
 ----------------------------------------------------------------------
 Report for cell vga.v1
 Instance Path : secondblock
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        12           52.2
-                            FD1P3XZ        20           66.7
-                               LUT4        27           55.1
-                              TOTAL        59
+                                FA2        12           24.5
+                            FD1P3XZ        20           32.8
+                               LUT4        12           10.9
+                              TOTAL        44
 ----------------------------------------------------------------------
 Report for cell mypll.v1
 Instance Path : firstblock
