@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Nov 26 11:36:08 2024
+Mon Dec  2 15:51:28 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
@@ -140,6 +140,10 @@ VHDL library = work
 VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/top.vhd
 VHDL library = work
 VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/update_color.vhd
+VHDL library = work
+VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/blueberryROM.vhd
+VHDL library = work
+VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/grapefruitROM.vhd
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
 WARNING <35935050> - synthesis: input port TRIM9 is not connected on this instance. VDB-5050
 WARNING <35935050> - synthesis: input port TRIM8 is not connected on this instance. VDB-5050
@@ -228,6 +232,16 @@ Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/top.vhd
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/update_color.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/update_color.vhd
 
+Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/blueberryrom.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/blueberryrom.vhd
+
+INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/blueberryrom.vhd(5): analyzing entity blueberryrom. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/blueberryrom.vhd(14): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/grapefruitrom.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/grapefruitrom.vhd
+
+INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/grapefruitrom.vhd(5): analyzing entity grapefruitrom. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/grapefruitrom.vhd(14): analyzing architecture synth. VHDL-1010
 INFO <35921504> - synthesis: The default VHDL library search path is now "Z:/es4/finalproj/fruitSalad/impl_1". VHDL-1504
 Top module language type = VHDL.
 WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
@@ -296,22 +310,23 @@ WARNING <35931002> - synthesis: z:/es4/finalproj/fruitsalad/mypll/rtl/mypll.v(14
 
 
 
+WARNING <35935040> - synthesis: Register \thirdblock/fruit_2_tl_col_i6 clock is stuck at Zero. VDB-5040
 
 
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 61 of 5280 (1 % )
+Number of register bits => 82 of 5280 (1 % )
 EBR_B => 4
-CCU2 => 49
-FD1P3XZ => 61
+CCU2 => 54
+FD1P3XZ => 82
 IB => 2
-LUT4 => 110
+LUT4 => 136
 OB => 9
 PLL_B => 1
 ################### End Area Report ##################
 Number of odd-length carry chains : 1
-Number of even-length carry chains : 7
+Number of even-length carry chains : 8
 
 
 <A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
@@ -326,23 +341,23 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
+  Net : thirdblock/RGB_c_2_N_412, loads : 22
   Net : col_0__N_50, loads : 20
+  Net : thirdblock/game_state[2], loads : 20
   Net : thirdblock/game_state[1], loads : 20
-  Net : thirdblock/game_state[2], loads : 18
-  Net : thirdblock/falling_counter_0__N_327, loads : 18
-  Net : thirdblock/falling_counter_0__N_328, loads : 17
-  Net : thirdblock/fruit_1_tl_row_0__N_87, loads : 16
-  Net : RGB_c_0_N_344, loads : 12
-  Net : thirdblock/game_state[0], loads : 11
+  Net : thirdblock/falling_counter_0__N_402, loads : 18
+  Net : thirdblock/falling_counter_0__N_403, loads : 17
+  Net : thirdblock/game_state[0], loads : 16
   Net : secondblock/row_0__N_30, loads : 11
-  Net : fruit_1_tl_row_0__N_86, loads : 10
+  Net : thirdblock/fruit_2_tl_row_0__N_112, loads : 11
+  Net : fruit_1_tl_row_0__N_88, loads : 10
 ################### End Clock Report ##################
 
-Peak Memory Usage: 122 MB
+Peak Memory Usage: 131 MB
 
 --------------------------------------------------------------
-Total CPU Time: 3 secs 
-Total REAL Time: 5 secs 
+Total CPU Time: 8 secs 
+Total REAL Time: 15 secs 
 --------------------------------------------------------------
 
 

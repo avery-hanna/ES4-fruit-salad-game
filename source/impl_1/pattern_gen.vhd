@@ -18,13 +18,13 @@ component fruitROM is
   port(
 	  row : in std_logic_vector(4 downto 0);
 	  col : in std_logic_vector(4 downto 0);
-	  fruit_color : in std_logic_vector(5 downto 0);
+	  fruit_type : in std_logic_vector(2 downto 0);
 	  clk : in std_logic;
 	  color : out std_logic_vector(5 downto 0)
   );
 end component;
 
-type GAMESTATE is (START, FRUIT_1_POS, FRUIT_1_FALLING, FRUIT_2_POS, FRUIT_2_FALLING, GAME_OVER);
+type GAMESTATE is (START, FRUIT_1_POS, FRUIT_1_FALLING, FRUIT_2_POS, FRUIT_2_FALLING, HOLD, GAME_OVER);
 signal game_state : GAMESTATE := START;
 
 signal fruit_1_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
@@ -38,12 +38,6 @@ signal fruit_2_RGB : std_logic_vector(5 downto 0); -- we will get these values f
 signal fruit_RGB : std_logic_vector(5 downto 0);
 
 
--- signal fruit : unsigned;
--- type COLOR is (BLUEBERRY, CHERRY, ORANGE, GRAPEFRUIT , WATERMELLON);
--- signal color : COLOR := BLUEBERRY;
-
-
-
 signal fruit_1_row : std_logic_vector (9 downto 0);
 signal fruit_1_col : std_logic_vector (9 downto 0);
 signal get_row_1 : std_logic_vector (4 downto 0) := "00000";
@@ -53,6 +47,7 @@ signal fruit_2_row : std_logic_vector (9 downto 0);
 signal fruit_2_col : std_logic_vector (9 downto 0);
 signal get_row_2 : std_logic_vector (4 downto 0) := "00000";
 signal get_col_2 : std_logic_vector (4 downto 0) := "00000";
+
 
 signal button_prev : std_logic;
 signal falling_counter : unsigned(16 downto 0);
@@ -64,7 +59,7 @@ begin
 	get_row_1 <= fruit_1_row(4 downto 0) when fruit_1_row(9 downto 5) = "00000" else "11111";
 	get_col_1 <= fruit_1_col(4 downto 0) when fruit_1_col(9 downto 5) = "00000" else "11111";
 	
-	fruit_1 : fruitROM port map(get_row_1 , get_col_1, "100000", clk, fruit_1_RGB);
+	fruit_1 : fruitROM port map(get_row_1 , get_col_1, "000", clk, fruit_1_RGB);
 	
 	fruit_2_row <= std_logic_vector(unsigned(row) - fruit_2_tl_row);
 	fruit_2_col <= std_logic_vector(unsigned(col) - fruit_2_tl_col);
@@ -72,21 +67,15 @@ begin
 	get_row_2 <= fruit_2_row(4 downto 0) when fruit_2_row(9 downto 5) = "00000" else "11111";
 	get_col_2 <= fruit_2_col(4 downto 0) when fruit_2_col(9 downto 5) = "00000" else "11111";
 	
-	fruit_2 : fruitROM port map(get_row_2 , get_col_2, "100000", clk, fruit_2_RGB);
-	--fruit_2_RGB <= "110011" when fruit_2_RGB = "000000" else "111111";
-	--fruit_1_RGB <= "000011" when fruit_1_RGB = "000000" else "111111";
+	fruit_2 : fruitROM port map(get_row_2 , get_col_2, "001", clk, fruit_2_RGB);
 	
-	--fruit_RGB <= fruit_1_RGB when not (fruit_1_RGB = "000000") else fruit_2_RGB;
+	fruit_RGB <= fruit_2_RGB when not (fruit_2_RGB = "000000") else fruit_1_RGB;
 	
 	
 	RGB <= "000000" when valid = '0' -- can be changed here and below
-		else "001100" when game_state = START
-		else fruit_1_RGB when game_state = FRUIT_1_POS
-		else fruit_1_RGB when game_state = FRUIT_1_FALLING
-		else fruit_2_RGB when game_state = FRUIT_2_POS
-		else fruit_2_RGB when game_state = FRUIT_2_FALLING
-		else "110011" when game_state = GAME_OVER else "111111";
-		--else "110000"; -- gives a random line
+			else "001100" when game_state = START
+			else "110011" when game_state = GAME_OVER
+			else fruit_RGB;
 		
 	process(clk) begin
 		if rising_edge(clk) then
@@ -98,6 +87,9 @@ begin
 			if game_state = START then
 				fruit_1_tl_row <= 10d"0";
 				fruit_1_tl_col <= 10d"307";
+				fruit_2_tl_row <= 10d"700";
+				fruit_2_tl_col <= 10d"700";
+				--put every fruit except 1 offscreen
 				if button = '0' and button_prev = '1' then
 					game_state <= FRUIT_1_POS;
 				end if;
@@ -111,8 +103,10 @@ begin
 					fruit_1_tl_row <= fruit_1_tl_row + 1;
 					falling_counter <= 17d"0";
 				end if;
-				if fruit_1_tl_row > 455 then
+				if fruit_1_tl_row > 449 then
 					game_state <= FRUIT_2_POS;
+					fruit_2_tl_row <= 10d"0";
+					fruit_2_tl_col <= 10d"307";
 				end if;
 			elsif game_state = FRUIT_2_POS then
 				if button = '0' and button_prev = '1' then
@@ -124,9 +118,12 @@ begin
 					fruit_2_tl_row <= fruit_2_tl_row + 1;
 					falling_counter <= 17d"0";
 				end if;
-				if fruit_2_tl_row > 455 then
-					game_state <= GAME_OVER;
+				if fruit_2_tl_row > 449 or (fruit_1_RGB /= "000000" and fruit_2_RGB /= "000000") then
+					--game_state <= GAME_OVER;
+					game_state <= HOLD;
 				end if;
+			elsif game_state = HOLD then
+				game_state <= HOLD;
 			elsif game_state = GAME_OVER then
 				if button = '0' and button_prev = '1' then
 					game_state <= START;

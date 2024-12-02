@@ -3,26 +3,26 @@ Report for cell vga_controller
    Instance path: vga_controller
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        210        100.0
-                               LUTGATE	        112        100.0
-                                LUTCCU	         98        100.0
+                                  LUT4	        258        100.0
+                               LUTGATE	        150        100.0
+                                LUTCCU	        108        100.0
                                  IOBUF	         11        100.0
-                                PFUREG	         61        100.0
+                                PFUREG	         82        100.0
                                    EBR	          4        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
                                  mypll	          1         0.0
-                           pattern_gen	          1        78.6
-                                   vga	          1        17.1
+                           pattern_gen	          1        75.6
+                                   vga	          1        14.0
 ---------------------------------------------------
 Report for cell pattern_gen
    Instance path: vga_controller/thirdblock
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        165        78.6
-                               LUTGATE	         91        81.2
-                                LUTCCU	         74        75.5
-                                PFUREG	         41        67.2
+                                  LUT4	        195        75.6
+                               LUTGATE	        111        74.0
+                                LUTCCU	         84        77.8
+                                PFUREG	         62        75.6
                                    EBR	          4        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
@@ -33,10 +33,30 @@ Report for cell fruitROM
    Instance path: vga_controller/thirdblock/fruit_2
                      Cell usage:
                                   cell	      count    Res Usage(%)
+                                PFUREG	          6         7.3
+                                   EBR	          2        50.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                         grapefruitROM	          1         0.0
+---------------------------------------------------
+Report for cell grapefruitROM
+   Instance path: vga_controller/thirdblock/fruit_2/grapefruit
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
                                    EBR	          2        50.0
 ---------------------------------------------------
 Report for cell fruitROM_U0
    Instance path: vga_controller/thirdblock/fruit_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          6         7.3
+                                   EBR	          2        50.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                          blueberryROM	          1         0.0
+---------------------------------------------------
+Report for cell blueberryROM
+   Instance path: vga_controller/thirdblock/fruit_1/blueberry
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                    EBR	          2        50.0
@@ -45,10 +65,10 @@ Report for cell vga
    Instance path: vga_controller/secondblock
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         36        17.1
-                               LUTGATE	         12        10.7
-                                LUTCCU	         24        24.5
-                                PFUREG	         20        32.8
+                                  LUT4	         36        14.0
+                               LUTGATE	         12         8.0
+                                LUTCCU	         24        22.2
+                                PFUREG	         20        24.4
 ---------------------------------------------------
 Report for cell mypll
    Instance path: vga_controller/firstblock

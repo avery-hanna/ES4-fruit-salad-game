@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="Export">
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
+        <Message>
+            <ID>1191031</ID>
+            <Severity>1</Severity>
+        </Message>
+    </Task>
     <Task name="PAR">
         <Message>
             <ID>70001944</ID>
@@ -50,17 +61,6 @@
             <ID>70001944</ID>
             <Severity>16</Severity>
             <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-    </Task>
-    <Task name="Export">
-        <Message>
-            <ID>1081100</ID>
-            <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
-        </Message>
-        <Message>
-            <ID>1191031</ID>
-            <Severity>1</Severity>
         </Message>
     </Task>
     <Task name="Synthesis">
@@ -361,6 +361,38 @@
             <Navigation>16</Navigation>
         </Message>
         <Message>
+            <ID>35921012</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/blueberryrom.vhd(5): </Dynamic>
+            <Dynamic>blueberryrom</Dynamic>
+            <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/blueberryrom.vhd</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/blueberryrom.vhd(14): </Dynamic>
+            <Dynamic>synth</Dynamic>
+            <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/blueberryrom.vhd</Navigation>
+            <Navigation>14</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/grapefruitrom.vhd(5): </Dynamic>
+            <Dynamic>grapefruitrom</Dynamic>
+            <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/grapefruitrom.vhd</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/grapefruitrom.vhd(14): </Dynamic>
+            <Dynamic>synth</Dynamic>
+            <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/grapefruitrom.vhd</Navigation>
+            <Navigation>14</Navigation>
+        </Message>
+        <Message>
             <ID>35935049</ID>
             <Severity>16</Severity>
             <Dynamic>sclk_i</Dynamic>
@@ -539,6 +571,12 @@
             <ID>35935049</ID>
             <Severity>16</Severity>
             <Dynamic>sdi_i</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_2_tl_col_i6</Dynamic>
+            <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>70001944</ID>
