@@ -8,8 +8,7 @@ entity pattern_gen is
 	row : in std_logic_vector(9 downto 0); -- row of pixel we want to get color for
 	col : in std_logic_vector(9 downto 0); -- col of pixel we want to get color for
 	clk : in std_logic;
-	RGB : out std_logic_vector(5 downto 0); -- color for pixel (curr_row, curr_col)
-	led : out std_logic
+	RGB : out std_logic_vector(5 downto 0) -- color for pixel (curr_row, curr_col)
 );
 end entity pattern_gen;
 
@@ -85,8 +84,6 @@ begin
 	get_col_3 <= fruit_3_col(5 downto 1) when fruit_3_col(9 downto 6) = "0000" else "11111";
 	
 	fruit_3 : fruitROM port map(get_row_3 , get_col_3, std_logic_vector(fruit_3_type), clk, fruit_3_RGB);
-	
-	led <= '1' when game_state = FRUIT_3_FALLING else '0';
 	
 	
 	fruit_RGB <= fruit_3_RGB when (fruit_3_RGB /= "000000") else fruit_2_RGB when (fruit_2_RGB /= "000000") else fruit_1_RGB;

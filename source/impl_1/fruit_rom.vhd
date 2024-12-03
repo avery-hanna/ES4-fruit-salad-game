@@ -38,14 +38,34 @@ component grapefruitROM is
 	  color : out std_logic_vector(5 downto 0)
   );
 end component;
+component orangeROM is
+  port(
+	  row : in std_logic_vector(4 downto 0);
+	  col : in std_logic_vector(4 downto 0);
+	  clk : in std_logic;
+	  color : out std_logic_vector(5 downto 0)
+  );
+end component;
+component watermelonROM is
+  port(
+	  row : in std_logic_vector(4 downto 0);
+	  col : in std_logic_vector(4 downto 0);
+	  clk : in std_logic;
+	  color : out std_logic_vector(5 downto 0)
+  );
+end component;
 signal blueberryRGB : std_logic_vector(5 downto 0);
-signal grapefruitRGB : std_logic_vector(5 downto 0);
 signal cherryRGB : std_logic_vector(5 downto 0);
+signal grapefruitRGB : std_logic_vector(5 downto 0);
+signal orangeRGB : std_logic_vector(5 downto 0);
+signal watermelonRGB : std_logic_vector(5 downto 0);
 
 begin
 	blueberry : blueberryROM port map(row , col, clk, blueberryRGB);
-	grapefruit : grapefruitROM port map(row , col, clk, grapefruitRGB);
 	cherry : cherryROM port map(row , col, clk, cherryRGB);
+	grapefruit : grapefruitROM port map(row , col, clk, grapefruitRGB);
+	orange : orangeROM port map(row , col, clk, orangeRGB);
+	watermelon : cherryROM port map(row , col, clk, watermelonRGB);
 	
 	process(clk) is
 	begin
@@ -55,8 +75,12 @@ begin
 					color <= blueberryRGB;
 				when "001" =>
 					color <= cherryRGB;
-				when others =>
+				when "010" =>
 					color <= grapefruitRGB;
+				when "011" =>
+					color <= orangeRGB;
+				when others =>
+					color <= watermelonRGB;
 			end case;
 		end if;
 	end process;

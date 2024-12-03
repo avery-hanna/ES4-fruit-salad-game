@@ -54,6 +54,8 @@
 -lib "work" -vhd "Z:/es4/finalproj/fruitSalad/source/impl_1/blueberryROM.vhd"
 "Z:/es4/finalproj/fruitSalad/source/impl_1/grapefruitROM.vhd"
 "Z:/es4/finalproj/fruitSalad/source/impl_1/cherryROM.vhd"
+"Z:/es4/finalproj/fruitSalad/source/impl_1/orangeROM.vhd"
+"Z:/es4/finalproj/fruitSalad/source/impl_1/watermelonROM.vhd"
 
 
 -path "Z:/es4/finalproj/fruitSalad"
