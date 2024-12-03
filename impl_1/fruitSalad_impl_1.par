@@ -1,6 +1,6 @@
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Mon Dec  2 17:06:24 2024
+Tue Dec  3 10:49:07 2024
 
 Command Line: par -w -n 1 -t 1 -s 1 -cores 1 -exp parPathBased=ON \
 	fruitSalad_impl_1_map.udb fruitSalad_impl_1.udb 
@@ -9,16 +9,16 @@ Command Line: par -w -n 1 -t 1 -s 1 -cores 1 -exp parPathBased=ON \
 Level/       Number       Worst        Timing       Worst        Timing       Run          Run
 Cost [udb]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            -            0            -            0            29           Completed
+5_1   *      0            -            0            -            0            11           Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 30 secs 
+Total (real) run time for 1-seed: 11 secs 
 
 par done!
 
 Lattice Place and Route Report for Design "fruitSalad_impl_1_map.udb"
-Mon Dec  2 17:06:24 2024
+Tue Dec  3 10:49:07 2024
 
 PAR: Place And Route Radiant Software (64-bit) 2023.1.0.43.3.
 Command Line: par -w -t 1 -cores 1 -exp parPathBased=ON \
@@ -42,15 +42,15 @@ WARNING <70001944> - par: No master clock for
 	generated clock	create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] .
 
 WARNING: Database constraint "create_generated_clock -name {ext_osc_test_c} -source [get_pins firstblock.lscc_pll_inst.u_PLL_B/REFERENCECLK] -divide_by 32 -multiply_by 67 [get_pins firstblock.lscc_pll_inst.u_PLL_B/OUTCORE]" does not have corresponding timing constraint. Please check if the resource objects of the constraint are valid carefully!
-Number of Signals: 668
-Number of Connections: 1613
+Number of Signals: 766
+Number of Connections: 2016
 Device utilization summary:
 
-   SLICE (est.)     230/2640          9% used
-     LUT            400/5280          8% used
-     REG            118/5280          2% used
-   PIO               11/56           20% used
-                     11/36           30% bonded
+   SLICE (est.)     271/2640         10% used
+     LUT            486/5280          9% used
+     REG            124/5280          2% used
+   PIO               12/56           21% used
+                     12/36           33% bonded
    IOLOGIC            0/56            0% used
    DSP                0/8             0% used
    I2C                0/2             0% used
@@ -62,48 +62,48 @@ Device utilization summary:
    SRAM               0/4             0% used
    WARMBOOT           0/1             0% used
    SPI                0/2             0% used
-   EBR               10/30           33% used
+   EBR               14/30           47% used
    PLL                1/1           100% used
    RGBOUTBUF          0/3             0% used
    I3C                0/2             0% used
    OPENDRAIN          0/3             0% used
 
 Pin Constraint Summary:
-   10 out of 11 pins locked (90% locked).
+   11 out of 12 pins locked (91% locked).
 .
 .............
-Finished Placer Phase 0 (HIER). CPU time: 1 secs , REAL time: 2 secs 
+Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 0 secs 
 
 
 ................
-Finished Placer Phase 0 (AP).  CPU time: 2 secs , REAL time: 3 secs 
+Finished Placer Phase 0 (AP).  CPU time: 1 secs , REAL time: 0 secs 
 
-Starting Placer Phase 1. CPU time: 2 secs , REAL time: 3 secs 
+Starting Placer Phase 1. CPU time: 1 secs , REAL time: 0 secs 
 ..  ..
 ....................
 
-Placer score = 91378.
+Placer score = 116693.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE            213/2640          8% used
+   SLICE            259/2640          9% used
 
 WARNING <70001944> - par: No master clock for
 	generated clock	create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] .
 WARNING <70001944> - par: No master clock for
 	generated clock	create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] .
-Finished Placer Phase 1. CPU time: 19 secs , REAL time: 22 secs 
+Finished Placer Phase 1. CPU time: 7 secs , REAL time: 8 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  99617
-Finished Placer Phase 2.  CPU time: 20 secs , REAL time: 23 secs 
+Placer score =  132065
+Finished Placer Phase 2.  CPU time: 7 secs , REAL time: 8 secs 
 
 
 ------------------ Clock Report ------------------
 
 Global Clocks :
-  PRIMARY "clk" from OUTGLOBAL on comp "firstblock.lscc_pll_inst.u_PLL_B" on site "PLL_R13C32", clk load = 80, ce load = 0, sr load = 0
+  PRIMARY "clk" from OUTGLOBAL on comp "firstblock.lscc_pll_inst.u_PLL_B" on site "PLL_R13C32", clk load = 89, ce load = 0, sr load = 0
 
   PRIMARY  : 1 out of 8 (12%)
 
@@ -111,9 +111,9 @@ Global Clocks :
 
 
 I/O Usage Summary (final):
-   11 out of 56 (19.6%) I/O sites used.
-   11 out of 36 (30.6%) bonded I/O sites used.
-   Number of I/O components: 11; differential: 0
+   12 out of 56 (21.4%) I/O sites used.
+   12 out of 36 (33.3%) bonded I/O sites used.
+   Number of I/O components: 12; differential: 0
    Number of Vref pins used: 0
 
 I/O Bank Usage Summary:
@@ -121,16 +121,16 @@ I/O Bank Usage Summary:
 | I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
 +----------+---------------+------------+------------+------------+
 | 0        | 4 / 14 ( 28%) | 3.3V       |            |            |
-| 1        | 1 / 14 (  7%) | 3.3V       |            |            |
+| 1        | 2 / 14 ( 14%) | 3.3V       |            |            |
 | 2        | 6 / 8 ( 75%)  | 3.3V       |            |            |
 +----------+---------------+------------+------------+------------+
 
-Total Placer CPU time: 20 secs , REAL time: 23 secs 
+Total Placer CPU time: 7 secs , REAL time: 8 secs 
 
 Writing design to file fruitSalad_impl_1_par.dir/5_1.udb ...
 
 
-Start NBR router at 17:06:47 12/02/24
+Start NBR router at 10:49:15 12/03/24
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -148,14 +148,14 @@ Note: NBR uses a different method to calculate timing slacks. The
 Starting routing resource preassignment
 Preassignment Summary:
 --------------------------------------------------------------------------------
-234 connections routed with dedicated routing resources
+238 connections routed with dedicated routing resources
 1 global clock signals routed
-314 connections routed (of 1563 total) (20.09%)
+327 connections routed (of 1961 total) (16.68%)
 ---------------------------------------------------------
 Clock routing summary:
 Primary clocks (1 used out of 8 available):
 #7  Signal "clk"
-       Clock   loads: 80    out of    80 routed (100.00%)
+       Clock   loads: 89    out of    89 routed (100.00%)
 Other clocks:
     Signal "external_osc_c"
        Clock   loads: 0     out of     1 routed (  0.00%)
@@ -172,22 +172,26 @@ WARNING <70001944> - par: No master clock for
 Routing in Serial Mode ......
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Start NBR section for initial routing at 17:06:48 12/02/24
+Start NBR section for initial routing at 10:49:15 12/03/24
 Level 4, iteration 1
-25(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 5 secs 
+53(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 2 secs 
 
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 17:06:52 12/02/24
+Start NBR section for normal routing at 10:49:17 12/03/24
 Level 4, iteration 1
-3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 5 secs 
+13(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 2 secs 
 Level 4, iteration 2
-2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 5 secs 
+9(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 2 secs 
 Level 4, iteration 3
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 5 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 2 secs 
+Level 4, iteration 4
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 2 secs 
+Level 4, iteration 5
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 2 secs 
 
-Start NBR section for post-routing at 17:06:52 12/02/24
+Start NBR section for post-routing at 10:49:17 12/03/24
 
 End NBR router with 0 unrouted connection
 WARNING <70001944> - par: No master clock for
@@ -209,10 +213,10 @@ NBR Summary
 -----------
 
 
-Total CPU time 5 secs 
-Total REAL time: 6 secs 
+Total CPU time 2 secs 
+Total REAL time: 3 secs 
 Completely routed.
-End of route.  1563 routed (100.00%); 0 unrouted.
+End of route.  1961 routed (100.00%); 0 unrouted.
 
 Writing design to file fruitSalad_impl_1_par.dir/5_1.udb ...
 
@@ -228,9 +232,9 @@ PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
 PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  Time: 26 secs 
-Total REAL Time: 30 secs 
-Peak Memory Usage: 116.30 MB
+Total CPU  Time: 10 secs 
+Total REAL Time: 11 secs 
+Peak Memory Usage: 116.70 MB
 
 
 par done!

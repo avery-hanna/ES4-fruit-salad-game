@@ -53,6 +53,7 @@
 -ver "Z:/es4/finalproj/fruitSalad/mypll/rtl/mypll.v"
 -lib "work" -vhd "Z:/es4/finalproj/fruitSalad/source/impl_1/blueberryROM.vhd"
 "Z:/es4/finalproj/fruitSalad/source/impl_1/grapefruitROM.vhd"
+"Z:/es4/finalproj/fruitSalad/source/impl_1/cherryROM.vhd"
 
 
 -path "Z:/es4/finalproj/fruitSalad"

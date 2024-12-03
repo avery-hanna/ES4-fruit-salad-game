@@ -8,7 +8,8 @@ entity pattern_gen is
 	row : in std_logic_vector(9 downto 0); -- row of pixel we want to get color for
 	col : in std_logic_vector(9 downto 0); -- col of pixel we want to get color for
 	clk : in std_logic;
-	RGB : out std_logic_vector(5 downto 0) -- color for pixel (curr_row, curr_col)
+	RGB : out std_logic_vector(5 downto 0); -- color for pixel (curr_row, curr_col)
+	led : out std_logic
 );
 end entity pattern_gen;
 
@@ -64,26 +65,28 @@ begin
 	fruit_1_row <= std_logic_vector(unsigned(row) - fruit_1_tl_row);
 	fruit_1_col <= std_logic_vector(unsigned(col) - fruit_1_tl_col);
 	
-	get_row_1 <= fruit_1_row(4 downto 0) when fruit_1_row(9 downto 5) = "00000" else "11111";
-	get_col_1 <= fruit_1_col(4 downto 0) when fruit_1_col(9 downto 5) = "00000" else "11111";
+	get_row_1 <= fruit_1_row(5 downto 1) when fruit_1_row(9 downto 6) = "0000" else "11111";
+	get_col_1 <= fruit_1_col(5 downto 1) when fruit_1_col(9 downto 6) = "0000" else "11111";
 	
 	fruit_1 : fruitROM port map(get_row_1 , get_col_1, std_logic_vector(fruit_1_type), clk, fruit_1_RGB);
 	
 	fruit_2_row <= std_logic_vector(unsigned(row) - fruit_2_tl_row);
 	fruit_2_col <= std_logic_vector(unsigned(col) - fruit_2_tl_col);
 	
-	get_row_2 <= fruit_2_row(4 downto 0) when fruit_2_row(9 downto 5) = "00000" else "11111";
-	get_col_2 <= fruit_2_col(4 downto 0) when fruit_2_col(9 downto 5) = "00000" else "11111";
+	get_row_2 <= fruit_2_row(5 downto 1) when fruit_2_row(9 downto 6) = "0000" else "11111";
+	get_col_2 <= fruit_2_col(5 downto 1) when fruit_2_col(9 downto 6) = "0000" else "11111";
 	
 	fruit_2 : fruitROM port map(get_row_2 , get_col_2, std_logic_vector(fruit_2_type), clk, fruit_2_RGB);
 	
 	fruit_3_row <= std_logic_vector(unsigned(row) - fruit_3_tl_row);
 	fruit_3_col <= std_logic_vector(unsigned(col) - fruit_3_tl_col);
 	
-	get_row_3 <= fruit_3_row(4 downto 0) when fruit_3_row(9 downto 5) = "00000" else "11111";
-	get_col_3 <= fruit_3_col(4 downto 0) when fruit_3_col(9 downto 5) = "00000" else "11111";
+	get_row_3 <= fruit_3_row(5 downto 1) when fruit_3_row(9 downto 6) = "0000" else "11111";
+	get_col_3 <= fruit_3_col(5 downto 1) when fruit_3_col(9 downto 6) = "0000" else "11111";
 	
 	fruit_3 : fruitROM port map(get_row_3 , get_col_3, std_logic_vector(fruit_3_type), clk, fruit_3_RGB);
+	
+	led <= '1' when game_state = FRUIT_3_FALLING else '0';
 	
 	
 	fruit_RGB <= fruit_3_RGB when (fruit_3_RGB /= "000000") else fruit_2_RGB when (fruit_2_RGB /= "000000") else fruit_1_RGB;
@@ -104,7 +107,7 @@ begin
 			if game_state = START then
 				fruit_1_tl_row <= 10d"0";
 				fruit_1_tl_col <= 10d"307";
-				fruit_1_type <= "000";
+				fruit_1_type <= "001";
 				fruit_2_tl_row <= 10d"700";
 				fruit_2_tl_col <= 10d"700";
 				fruit_2_type <= "000";
@@ -125,7 +128,7 @@ begin
 					fruit_1_tl_row <= fruit_1_tl_row + 1;
 					falling_counter <= 17d"0";
 				end if;
-				if fruit_1_tl_row > 449 then
+				if fruit_1_tl_row > 417 then
 					game_state <= FRUIT_2_POS;
 					fruit_2_tl_row <= 10d"0";
 					fruit_2_tl_col <= 10d"307";
@@ -140,20 +143,23 @@ begin
 					fruit_2_tl_row <= fruit_2_tl_row + 1;
 					falling_counter <= 17d"0";
 				end if;
-				if fruit_1_RGB /= "000000" and fruit_2_RGB /= "000000" then
-					if fruit_1_type = fruit_2_type then
-						-- fruit 2 goes offscreen
-						fruit_2_tl_row <= 10d"700";
-						fruit_2_tl_col <= 10d"700";
+				if fruit_1_RGB /= "000000" and fruit_2_RGB /= "000000" then --collision
+					if fruit_1_type = fruit_2_type then --merge
+						-- fruit 1 goes offscreen
+						fruit_1_tl_row <= 10d"700";
+						fruit_1_tl_col <= 10d"700";
+						
+						-- fruit 2 gets fruit 1's position
+						fruit_2_tl_row <= fruit_1_tl_row;
+						fruit_2_tl_col <= fruit_1_tl_col;
 						
 						-- update fruit 1 type
-						fruit_1_type <= fruit_1_type + 3d"1" when fruit_1_type /= 3d"4" else fruit_1_type;
+						fruit_2_type <= fruit_2_type + 3d"1" when fruit_2_type /= 3d"4" else fruit_2_type;
 					end if;
 					game_state <= FRUIT_3_POS;
 					fruit_3_tl_row <= 10d"0";
 					fruit_3_tl_col <= 10d"307";
-				elsif fruit_2_tl_row > 449 then
-					--game_state <= GAME_OVER;
+				elsif fruit_2_tl_row > 417 then
 					game_state <= FRUIT_3_POS;
 					fruit_3_tl_row <= 10d"0";
 					fruit_3_tl_col <= 10d"307";
@@ -168,27 +174,38 @@ begin
 					fruit_3_tl_row <= fruit_3_tl_row + 1;
 					falling_counter <= 17d"0";
 				end if;
-				if fruit_1_RGB /= "000000" and fruit_3_RGB /= "000000" then
+				if fruit_1_RGB /= "000000" and fruit_3_RGB /= "000000" then -- collision with fruit 1
 					if fruit_1_type = fruit_3_type then
-						 -- fruit 3 goes offscreen
-						fruit_3_tl_row <= 10d"700";
-						fruit_3_tl_col <= 10d"700";
+						 -- fruit 1 goes offscreen
+						fruit_1_tl_row <= 10d"700";
+						fruit_1_tl_col <= 10d"700";
 						
-						 -- update fruit 1 type
-						fruit_1_type <= fruit_1_type + 3d"1" when fruit_1_type /= 3d"4" else fruit_1_type;
+						-- fruit 3 gets fruit 1's position
+						fruit_3_tl_row <= fruit_1_tl_row;
+						fruit_3_tl_col <= fruit_1_tl_col;
+						
+						 -- update fruit 3 type
+						fruit_3_type <= fruit_3_type + 3d"1" when fruit_3_type /= 3d"4" else fruit_3_type;
+					else
+						game_state <= HOLD;
 					end if;
-					game_state <= HOLD;
 				elsif fruit_2_RGB /= "000000" and fruit_3_RGB /= "000000" then
 					if fruit_2_type = fruit_3_type then
-						 -- fruit 3 goes offscreen
-						fruit_3_tl_row <= 10d"700";
-						fruit_3_tl_col <= 10d"700";
+						fruit_2_tl_row <= 10d"700";
+						fruit_2_tl_col <= 10d"700";
 						
-						 -- update fruit 1 type
-						fruit_2_type <= fruit_2_type + 3d"1" when fruit_2_type /= 3d"4" else fruit_2_type;
+						-- fruit 3 gets fruit 2's position
+						fruit_3_tl_row <= fruit_2_tl_row;
+						fruit_3_tl_col <= fruit_2_tl_col;
+						
+						 -- update fruit 3 type
+						fruit_3_type <= fruit_3_type + 3d"1" when fruit_3_type /= 3d"4" else fruit_3_type;
+						
+						game_state <= FRUIT_3_FALLING;
+					else
+						game_state <= HOLD;
 					end if;
-					game_state <= HOLD;
-				elsif fruit_3_tl_row > 449 then -- TODO change back to elsif and comment in above
+				elsif fruit_3_tl_row > 417 then
 					--game_state <= GAME_OVER;
 					game_state <= HOLD;
 				end if;

@@ -2,60 +2,13 @@
 <BaliMessageLog>
     <Task name="Export">
         <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
+        <Message>
             <ID>1191031</ID>
             <Severity>1</Severity>
-        </Message>
-    </Task>
-    <Task name="PAR">
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
         </Message>
     </Task>
     <Task name="Synthesis">
@@ -318,10 +271,10 @@
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/vga_controller.vhd(17): </Dynamic>
+            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/vga_controller.vhd(18): </Dynamic>
             <Dynamic>synth</Dynamic>
             <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/vga_controller.vhd</Navigation>
-            <Navigation>17</Navigation>
+            <Navigation>18</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
@@ -350,10 +303,10 @@
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(16): </Dynamic>
+            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(17): </Dynamic>
             <Dynamic>synth</Dynamic>
             <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd</Navigation>
-            <Navigation>16</Navigation>
+            <Navigation>17</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
@@ -385,6 +338,22 @@
             <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/grapefruitrom.vhd(14): </Dynamic>
             <Dynamic>synth</Dynamic>
             <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/grapefruitrom.vhd</Navigation>
+            <Navigation>14</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/cherryrom.vhd(5): </Dynamic>
+            <Dynamic>cherryrom</Dynamic>
+            <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/cherryrom.vhd</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/cherryrom.vhd(14): </Dynamic>
+            <Dynamic>synth</Dynamic>
+            <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/cherryrom.vhd</Navigation>
             <Navigation>14</Navigation>
         </Message>
         <Message>
@@ -550,80 +519,20 @@
         <Message>
             <ID>35001747</ID>
             <Severity>256</Severity>
-            <Dynamic>9</Dynamic>
-            <Dynamic>fruit_1_tl_col</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>256</Severity>
-            <Dynamic>8</Dynamic>
-            <Dynamic>fruit_1_tl_col</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>7</Dynamic>
-            <Dynamic>fruit_1_tl_col</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>6</Dynamic>
-            <Dynamic>fruit_1_tl_col</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>256</Severity>
-            <Dynamic>5</Dynamic>
-            <Dynamic>fruit_1_tl_col</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>256</Severity>
-            <Dynamic>4</Dynamic>
-            <Dynamic>fruit_1_tl_col</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>3</Dynamic>
-            <Dynamic>fruit_1_tl_col</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
             <Dynamic>2</Dynamic>
-            <Dynamic>fruit_1_tl_col</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>256</Severity>
-            <Dynamic>1</Dynamic>
-            <Dynamic>fruit_1_tl_col</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>256</Severity>
-            <Dynamic>0</Dynamic>
-            <Dynamic>fruit_1_tl_col</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>2</Dynamic>
-            <Dynamic>fruit_3_type</Dynamic>
+            <Dynamic>fruit_1_type</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
             <Severity>256</Severity>
             <Dynamic>1</Dynamic>
-            <Dynamic>fruit_3_type</Dynamic>
+            <Dynamic>fruit_1_type</Dynamic>
         </Message>
         <Message>
-            <ID>35001747</ID>
+            <ID>35001748</ID>
             <Severity>256</Severity>
             <Dynamic>0</Dynamic>
-            <Dynamic>fruit_3_type</Dynamic>
+            <Dynamic>fruit_1_type</Dynamic>
         </Message>
         <Message>
             <ID>35935049</ID>
@@ -645,7 +554,7 @@
             <ID>35001747</ID>
             <Severity>256</Severity>
             <Dynamic>6</Dynamic>
-            <Dynamic>\thirdblock/fruit_3_tl_col</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_col</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
@@ -654,10 +563,10 @@
             <Dynamic>\thirdblock/fruit_2_tl_col</Dynamic>
         </Message>
         <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/game_state__i3</Dynamic>
-            <Dynamic>Zero</Dynamic>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>\thirdblock/fruit_3_tl_col</Dynamic>
         </Message>
         <Message>
             <ID>35001779</ID>
@@ -665,64 +574,56 @@
             <Dynamic>\thirdblock/game_state__i2</Dynamic>
         </Message>
         <Message>
-            <ID>35001779</ID>
+            <ID>70001944</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_row_i0_i2</Dynamic>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
         </Message>
         <Message>
-            <ID>35001779</ID>
+            <ID>70001944</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_row_i0_i3</Dynamic>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
         </Message>
         <Message>
-            <ID>35001779</ID>
+            <ID>70001944</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_row_i0_i4</Dynamic>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
         </Message>
         <Message>
-            <ID>35001779</ID>
+            <ID>70001944</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_row_i0_i5</Dynamic>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
         </Message>
         <Message>
-            <ID>35001779</ID>
+            <ID>70001944</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_row_i0_i7</Dynamic>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
         </Message>
         <Message>
-            <ID>35001779</ID>
+            <ID>70001944</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_row_i0_i9</Dynamic>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
         </Message>
         <Message>
-            <ID>35001779</ID>
+            <ID>70001944</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_3_tl_row_i0_i2</Dynamic>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
         </Message>
         <Message>
-            <ID>35001779</ID>
+            <ID>70001944</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_3_tl_row_i0_i3</Dynamic>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
         </Message>
         <Message>
-            <ID>35001779</ID>
+            <ID>70001944</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_3_tl_row_i0_i4</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_3_tl_row_i0_i5</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_3_tl_row_i0_i7</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_3_tl_row_i0_i9</Dynamic>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
         </Message>
         <Message>
             <ID>70001944</ID>

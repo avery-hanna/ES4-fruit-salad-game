@@ -46,7 +46,7 @@ if (a)
 <A name="Timing_rpt_top">Timing Report</A><B><U><big></big></U></B>
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2023.1.0.43.3
 
-Mon Dec  2 17:06:57 2024
+Tue Dec  3 10:49:19 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -119,23 +119,24 @@ Clocked but unconstrained timing end points
 -------------------------------------------------------------------
          Listing 10 End Points          |           Type           
 -------------------------------------------------------------------
-thirdblock/fruit_1_tl_row_9__I_0/D      |    No arrival or required
-thirdblock/fruit_1_tl_row_9__I_0/SP     |    No arrival or required
-thirdblock/fruit_1_tl_row_9__I_0/SR     |    No arrival or required
-thirdblock/falling_counter_16__I_54/D   |    No arrival or required
+thirdblock/falling_counter_16__I_0/D    |    No arrival or required
 thirdblock/falling_counter_16__I_55/D   |    No arrival or required
-{thirdblock/falling_counter_16__I_55/SP   thirdblock/falling_counter_16__I_54/SP}                           
+{thirdblock/falling_counter_16__I_55/SP   thirdblock/falling_counter_16__I_0/SP}                           
                                         |    No arrival or required
-{thirdblock/falling_counter_16__I_55/SR   thirdblock/falling_counter_16__I_54/SR}                           
+{thirdblock/falling_counter_16__I_55/SR   thirdblock/falling_counter_16__I_0/SR}                           
                                         |    No arrival or required
-thirdblock/fruit_1_tl_row_9__I_19/D     |    No arrival or required
-thirdblock/fruit_1_tl_row_9__I_20/D     |    No arrival or required
-{thirdblock/fruit_1_tl_row_9__I_20/SP   thirdblock/fruit_1_tl_row_9__I_19/SP}                           
+thirdblock/falling_counter_16__I_62/D   |    No arrival or required
+thirdblock/falling_counter_16__I_63/D   |    No arrival or required
+{thirdblock/falling_counter_16__I_63/SP   thirdblock/falling_counter_16__I_62/SP}                           
                                         |    No arrival or required
+{thirdblock/falling_counter_16__I_63/SR   thirdblock/falling_counter_16__I_62/SR}                           
+                                        |    No arrival or required
+thirdblock/falling_counter_16__I_56/D   |    No arrival or required
+thirdblock/falling_counter_16__I_57/D   |    No arrival or required
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing end poin |                          
-ts                                      |                       204
+ts                                      |                       203
                                         |                          
 -------------------------------------------------------------------
 
@@ -154,19 +155,19 @@ create_generated_clock,
 -------------------------------------------------------------------
      Listing 10 Start or End Points     |           Type           
 -------------------------------------------------------------------
-button                                  |                     input
 external_osc                            |                     input
+button                                  |                     input
 RGB[4]                                  |                    output
 RGB[3]                                  |                    output
 RGB[5]                                  |                    output
-RGB[2]                                  |                    output
-RGB[1]                                  |                    output
-RGB[0]                                  |                    output
-HSYNC                                   |                    output
+led                                     |                    output
 VSYNC                                   |                    output
+HSYNC                                   |                    output
+RGB[0]                                  |                    output
+RGB[1]                                  |                    output
 -------------------------------------------------------------------
                                         |                          
-Number of I/O ports without constraint  |                        10
+Number of I/O ports without constraint  |                        11
                                         |                          
 -------------------------------------------------------------------
 

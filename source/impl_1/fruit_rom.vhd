@@ -22,6 +22,14 @@ component blueberryROM is
 	  color : out std_logic_vector(5 downto 0)
   );
 end component;
+component cherryROM is
+  port(
+	  row : in std_logic_vector(4 downto 0);
+	  col : in std_logic_vector(4 downto 0);
+	  clk : in std_logic;
+	  color : out std_logic_vector(5 downto 0)
+  );
+end component;
 component grapefruitROM is
   port(
 	  row : in std_logic_vector(4 downto 0);
@@ -32,10 +40,12 @@ component grapefruitROM is
 end component;
 signal blueberryRGB : std_logic_vector(5 downto 0);
 signal grapefruitRGB : std_logic_vector(5 downto 0);
+signal cherryRGB : std_logic_vector(5 downto 0);
 
 begin
 	blueberry : blueberryROM port map(row , col, clk, blueberryRGB);
 	grapefruit : grapefruitROM port map(row , col, clk, grapefruitRGB);
+	cherry : cherryROM port map(row , col, clk, cherryRGB);
 	
 	process(clk) is
 	begin
@@ -43,6 +53,8 @@ begin
 			case fruit_type is 
 				when "000" => 
 					color <= blueberryRGB;
+				when "001" =>
+					color <= cherryRGB;
 				when others =>
 					color <= grapefruitRGB;
 			end case;
