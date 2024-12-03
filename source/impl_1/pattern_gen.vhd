@@ -145,10 +145,12 @@ begin
 						-- fruit 1 goes offscreen
 						fruit_1_tl_row <= 10d"700";
 						fruit_1_tl_col <= 10d"700";
+						fruit_1_RGB <= "000000";
 						
 						-- fruit 2 gets fruit 1's position
 						fruit_2_tl_row <= fruit_1_tl_row;
 						fruit_2_tl_col <= fruit_1_tl_col;
+					
 						
 						-- update fruit 1 type
 						fruit_2_type <= fruit_2_type + 3d"1" when fruit_2_type /= 3d"4" else fruit_2_type;
@@ -159,7 +161,7 @@ begin
 				elsif fruit_2_tl_row > 417 then
 					game_state <= FRUIT_3_POS;
 					fruit_3_tl_row <= 10d"0";
-					fruit_3_tl_col <= 10d"307";
+					fruit_3_tl_col <= 10d"307"; -- added change... haven't figured out if it works
 				end if;
 			elsif game_state = FRUIT_3_POS then
 				if button = '0' and button_prev = '1' then
@@ -176,7 +178,8 @@ begin
 						 -- fruit 1 goes offscreen
 						fruit_1_tl_row <= 10d"700";
 						fruit_1_tl_col <= 10d"700";
-						
+						fruit_1_RGB <= "000000"; -- added change... haven't figured out if it works
+				
 						-- fruit 3 gets fruit 1's position
 						fruit_3_tl_row <= fruit_1_tl_row;
 						fruit_3_tl_col <= fruit_1_tl_col;
@@ -190,6 +193,7 @@ begin
 					if fruit_2_type = fruit_3_type then
 						fruit_2_tl_row <= 10d"700";
 						fruit_2_tl_col <= 10d"700";
+						fruit_2_RGB <= "000000"; -- added change... haven't figured out if it works
 						
 						-- fruit 3 gets fruit 2's position
 						fruit_3_tl_row <= fruit_2_tl_row;
@@ -197,14 +201,31 @@ begin
 						
 						 -- update fruit 3 type
 						fruit_3_type <= fruit_3_type + 3d"1" when fruit_3_type /= 3d"4" else fruit_3_type;
+
+						game_state <= FRUIT_3_FALLING; -- trying to force the game state to restart the if statments
+
+						-- Possible testing code, very much not necessary
+					-- end if;
+					-- if fruit_3_type = fruit_1_type then
+					-- 	fruit_1_tl_row <= 10d"700";
+					-- 	fruit_1_tl_col <= 10d"700";
+					-- 	fruit_1_RGB <= "000000"; -- added change... haven't figured out if it works
 						
-						game_state <= FRUIT_3_FALLING;
+					-- 	-- fruit 3 gets fruit 1's position
+					-- 	fruit_3_tl_row <= fruit_1_tl_row;
+					-- 	fruit_3_tl_col <= fruit_1_tl_col;
+						
+					-- 	 -- update fruit 3 type
+					-- 	fruit_3_type <= fruit_3_type + 3d"1" when fruit_3_type /= 3d"4" else fruit_3_type;
+					
 					else
 						game_state <= HOLD;
 					end if;
+						
 				elsif fruit_3_tl_row > 417 then
 					--game_state <= GAME_OVER;
 					game_state <= HOLD;
+				
 				end if;
 			
 			elsif game_state = HOLD then
