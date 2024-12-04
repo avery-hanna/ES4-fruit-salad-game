@@ -48,7 +48,7 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Tue Dec  3 10:49:15 2024
+Tue Dec  3 20:25:27 2024
 
 Pinout by Port Name:
 +--------------+----------+--------------+-------+------------------------------------------+
@@ -65,7 +65,6 @@ Pinout by Port Name:
 | button       | 43/0     | LVCMOS33_IN  | PR10A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
 | ext_osc_test | 34/0     | LVCMOS33_OUT | PR14B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | external_osc | 20/1     | LVCMOS33_IN  | PL20B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
-| led          | 19/1     | LVCMOS33_OUT | PL22B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 +--------------+----------+--------------+-------+------------------------------------------+
 
 Vccio by Bank:
@@ -95,7 +94,7 @@ Vccio by Bank:
 | 16/1     |     unused, PULL:UP |            |              | PL25B | SPI_SS           |
 | 17/1     |     unused, PULL:UP |            |              | PL24B | SPI_SI           |
 | 18/1     |     unused, PULL:UP |            |              | PL23B |                  |
-| 19/1     | led                 | LOCATED    | LVCMOS33_OUT | PL22B |                  |
+| 19/1     |     unused, PULL:UP |            |              | PL22B |                  |
 | 20/1     | external_osc        | LOCATED    | LVCMOS33_IN  | PL20B | PCLKT1_0         |
 | 21/1     |     unused, PULL:UP |            |              | PL19B |                  |
 | 23/0     |     unused, PULL:UP |            |              | PR20A |                  |
@@ -153,7 +152,6 @@ ldc_set_location -site {32} [ get_ports {VSYNC} ]
 ldc_set_location -site {43} [ get_ports {button} ]
 ldc_set_location -site {34} [ get_ports {ext_osc_test} ]
 ldc_set_location -site {20} [ get_ports {external_osc} ]
-ldc_set_location -site {19} [ get_ports {led} ]
 
 
 
@@ -161,7 +159,7 @@ ldc_set_location -site {19} [ get_ports {led} ]
 
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Tue Dec  3 10:49:15 2024
+Tue Dec  3 20:25:27 2024
 
 
 

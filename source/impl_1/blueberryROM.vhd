@@ -1630,5 +1630,5 @@ begin
  	 	 end case; 
      	 end if;  
      end process; 
- address <= row & col; 
+ address <= col & row; 
  end;

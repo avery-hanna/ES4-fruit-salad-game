@@ -145,7 +145,7 @@ begin
 						-- fruit 1 goes offscreen
 						fruit_1_tl_row <= 10d"700";
 						fruit_1_tl_col <= 10d"700";
-						fruit_1_RGB <= "000000";
+						--fruit_1_RGB <= "000000";
 						
 						-- fruit 2 gets fruit 1's position
 						fruit_2_tl_row <= fruit_1_tl_row;
@@ -178,7 +178,6 @@ begin
 						 -- fruit 1 goes offscreen
 						fruit_1_tl_row <= 10d"700";
 						fruit_1_tl_col <= 10d"700";
-						fruit_1_RGB <= "000000"; -- added change... haven't figured out if it works
 				
 						-- fruit 3 gets fruit 1's position
 						fruit_3_tl_row <= fruit_1_tl_row;
@@ -193,7 +192,6 @@ begin
 					if fruit_2_type = fruit_3_type then
 						fruit_2_tl_row <= 10d"700";
 						fruit_2_tl_col <= 10d"700";
-						fruit_2_RGB <= "000000"; -- added change... haven't figured out if it works
 						
 						-- fruit 3 gets fruit 2's position
 						fruit_3_tl_row <= fruit_2_tl_row;
@@ -209,7 +207,6 @@ begin
 					-- if fruit_3_type = fruit_1_type then
 					-- 	fruit_1_tl_row <= 10d"700";
 					-- 	fruit_1_tl_col <= 10d"700";
-					-- 	fruit_1_RGB <= "000000"; -- added change... haven't figured out if it works
 						
 					-- 	-- fruit 3 gets fruit 1's position
 					-- 	fruit_3_tl_row <= fruit_1_tl_row;
