@@ -1,14 +1,16 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use std.textio.all;
+
 entity pattern_gen is
   port(
-	button : in std_logic;
+	button : in std_logic_vector(7 downto 0);
 	valid : in std_logic;
 	row : in std_logic_vector(9 downto 0); -- row of pixel we want to get color for
 	col : in std_logic_vector(9 downto 0); -- col of pixel we want to get color for
 	clk : in std_logic;
-	RGB : out std_logic_vector(5 downto 0) -- color for pixel (curr_row, curr_col)
+	RGB : out std_logic_vector(5 downto 0)
 );
 end entity pattern_gen;
 
@@ -23,6 +25,9 @@ component fruitROM is
 	  color : out std_logic_vector(5 downto 0)
   );
 end component;
+
+
+
 
 type GAMESTATE is (START, FRUIT_1_POS, FRUIT_1_FALLING, FRUIT_2_POS, FRUIT_2_FALLING, FRUIT_3_POS, FRUIT_3_FALLING, HOLD, GAME_OVER);
 signal game_state : GAMESTATE := START;
@@ -57,10 +62,14 @@ signal get_col_3 : std_logic_vector (4 downto 0) := "00000";
 signal fruit_RGB : std_logic_vector(5 downto 0);
 
 
-signal button_prev : std_logic;
+signal button_prev : std_logic_vector(7 downto 0);
 signal falling_counter : unsigned(16 downto 0);
+signal output: std_logic_vector(7 downto 0);
+
 
 begin
+
+	
 	fruit_1_row <= std_logic_vector(unsigned(row) - fruit_1_tl_row);
 	fruit_1_col <= std_logic_vector(unsigned(col) - fruit_1_tl_col);
 	
@@ -112,11 +121,11 @@ begin
 				fruit_3_tl_col <= 10d"700";
 				fruit_3_type <= "000";
 				--put every fruit except 1 offscreen
-				if button = '0' and button_prev = '1' then
+				if button /=8b"0" then
 					game_state <= FRUIT_1_POS;
 				end if;
 			elsif game_state = FRUIT_1_POS then
-				if button = '0' and button_prev = '1' then
+				if button /= 8b"0" and button_prev=8b"0" then
 					game_state <= FRUIT_1_FALLING;
 				end if;
 			elsif game_state = FRUIT_1_FALLING then
@@ -131,7 +140,7 @@ begin
 					fruit_2_tl_col <= 10d"307";
 				end if;
 			elsif game_state = FRUIT_2_POS then
-				if button = '0' and button_prev = '1' then
+				if button /= 8b"0" and button_prev=8b"0" then
 					game_state <= FRUIT_2_FALLING;
 				end if;
 			elsif game_state = FRUIT_2_FALLING then
@@ -164,7 +173,7 @@ begin
 					fruit_3_tl_col <= 10d"307"; -- added change... haven't figured out if it works
 				end if;
 			elsif game_state = FRUIT_3_POS then
-				if button = '0' and button_prev = '1' then
+				if button /= 8b"0" and button_prev = 8b"0" then
 					game_state <= FRUIT_3_FALLING;
 				end if;
 			elsif game_state = FRUIT_3_FALLING then
@@ -228,7 +237,7 @@ begin
 			elsif game_state = HOLD then
 				game_state <= HOLD;
 			elsif game_state = GAME_OVER then
-				if button = '0' and button_prev = '1' then
+				if button /= 8b"0" and button_prev = 8b"0" then
 					game_state <= START;
 				end if;
 			else

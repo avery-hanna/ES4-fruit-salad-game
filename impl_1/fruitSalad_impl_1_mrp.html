@@ -48,7 +48,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2023.1.0.43.3
-Mapped on: Tue Dec  3 20:25:19 2024
+Mapped on: Wed Dec  4 01:16:48 2024
 
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
@@ -58,24 +58,25 @@ Command line:   map -i fruitSalad_impl_1_syn.udb -pdc
      fruitSalad_impl_1_map.udb -mp fruitSalad_impl_1.mrp -hierrpt -gui
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of slice registers: 124 out of  5280 (2%)
-   Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           490 out of  5280 (9%)
-      Number of logic LUT4s:             345
-      Number of inserted feedthru LUT4s:   7
-      Number of ripple logic:             69 (138 LUT4s)
-   Number of IO sites used:   11 out of 39 (28%)
-      Number of IO sites used for general PIO: 11
+   Number of slice registers: 155 out of  5280 (3%)
+   Number of I/O registers:      1 out of   117 (1%)
+   Number of LUT4s:           544 out of  5280 (10%)
+      Number of logic LUT4s:             367
+      Number of inserted feedthru LUT4s:  13
+      Number of replicated LUT4s:          8
+      Number of ripple logic:             78 (156 LUT4s)
+   Number of IO sites used:   22 out of 39 (56%)
+      Number of IO sites used for general PIO: 22
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 11 out of 36 (31%)
+      Number of IO sites used for PIO+I3C: 22 out of 36 (61%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 11 out of 39 (28%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 22 out of 39 (56%)
    Number of DSPs:             0 out of 8 (0%)
    Number of I2Cs:             0 out of 2 (0%)
-   Number of High Speed OSCs:  0 out of 1 (0%)
+   Number of High Speed OSCs:  1 out of 1 (100%)
    Number of Low Speed OSCs:   0 out of 1 (0%)
    Number of RGB PWM:          0 out of 1 (0%)
    Number of RGB Drivers:      0 out of 1 (0%)
@@ -85,50 +86,54 @@ Command line:   map -i fruitSalad_impl_1_syn.udb -pdc
    Number of SPIs:             0 out of 2 (0%)
    Number of EBRs:             18 out of 30 (60%)
    Number of PLLs:             1 out of 1 (100%)
-   Number of Clocks:  2
-      Net clk: 126 loads, 126 rising, 0 falling (Driver: Pin
+   Number of Clocks:  4
+      Net clk: 133 loads, 133 rising, 0 falling (Driver: Pin
      firstblock.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
       Net external_osc_c: 1 loads, 1 rising, 0 falling (Driver: Port
      external_osc)
+      Net nesblock.clk: 9 loads, 9 rising, 0 falling (Driver: Pin
+     nesblock.instanceosc/CLKHF)
+      Net CTRLclk_c: 8 loads, 8 rising, 0 falling (Driver: Pin
+     nesblock.CTRLclk_c_I_0/Z)
    Number of Clock Enables:  12
-      Net thirdblock.falling_counter_0__N_585: 9 loads, 9 SLICEs
-      Net thirdblock.fruit_1_tl_row_0__N_80: 10 loads, 10 SLICEs
-      Net thirdblock.fruit_2_tl_col_0__N_244: 9 loads, 9 SLICEs
-      Net thirdblock.fruit_3_tl_row_0__N_386: 10 loads, 10 SLICEs
-      Net thirdblock.fruit_3_tl_col_0__N_404: 9 loads, 9 SLICEs
-      Net RGB_pad[4].vcc: 54 loads, 0 SLICEs
-      Net thirdblock.fruit_3_type_0__N_412: 3 loads, 3 SLICEs
-      Net thirdblock.fruit_2_tl_row_0__N_225: 10 loads, 10 SLICEs
+      Net thirdblock.fruit_3_type_0__N_420: 3 loads, 3 SLICEs
+      Net thirdblock.falling_counter_0__N_593: 9 loads, 9 SLICEs
+      Net thirdblock.fruit_1_tl_row_0__N_88: 10 loads, 10 SLICEs
 
-      Net thirdblock.game_state_2__N_52: 1 loads, 1 SLICEs
-      Net thirdblock.game_state_0__N_57: 1 loads, 1 SLICEs
-      Net thirdblock.game_state_1__N_55: 1 loads, 1 SLICEs
+      Net thirdblock.game_state_2__N_60: 1 loads, 1 SLICEs
+      Net thirdblock.fruit_2_tl_row_0__N_233: 10 loads, 10 SLICEs
+      Net RGB_pad[3].vcc: 55 loads, 0 SLICEs
+      Net thirdblock.fruit_2_tl_col_0__N_252: 9 loads, 9 SLICEs
+      Net thirdblock.fruit_3_tl_row_0__N_394: 10 loads, 10 SLICEs
+      Net thirdblock.fruit_3_tl_col_0__N_412: 9 loads, 9 SLICEs
+      Net thirdblock.game_state_1__N_63: 1 loads, 1 SLICEs
+      Net thirdblock.game_state_0__N_65: 1 loads, 1 SLICEs
       Net secondblock.col_0__N_50: 6 loads, 6 SLICEs
    Number of LSRs:  13
-      Net thirdblock.falling_counter_0__N_586: 9 loads, 9 SLICEs
-      Net thirdblock.fruit_1_tl_row_0__N_81: 4 loads, 4 SLICEs
-      Net thirdblock.n4163: 1 loads, 1 SLICEs
-      Net thirdblock.fruit_3_type_0__N_413: 1 loads, 1 SLICEs
-      Net thirdblock.fruit_2_tl_row_0__N_226: 4 loads, 4 SLICEs
-      Net thirdblock.fruit_3_type_1__N_410: 2 loads, 2 SLICEs
-      Net thirdblock.game_state_2__N_53: 1 loads, 1 SLICEs
+      Net thirdblock.fruit_3_type_1__N_418: 2 loads, 2 SLICEs
+      Net thirdblock.falling_counter_0__N_594: 9 loads, 9 SLICEs
+      Net thirdblock.n5034: 1 loads, 1 SLICEs
+      Net thirdblock.fruit_1_tl_row_0__N_89: 4 loads, 4 SLICEs
+      Net thirdblock.game_state_2__N_61: 1 loads, 1 SLICEs
+      Net thirdblock.fruit_2_tl_row_0__N_234: 4 loads, 4 SLICEs
+      Net thirdblock.fruit_2_type_2__N_254: 1 loads, 1 SLICEs
       Net thirdblock.n6: 1 loads, 1 SLICEs
-      Net thirdblock.n6_adj_615: 1 loads, 1 SLICEs
-      Net thirdblock.n6_adj_617: 1 loads, 1 SLICEs
-      Net thirdblock.fruit_2_type_2__N_246: 1 loads, 1 SLICEs
+      Net thirdblock.n6_adj_636: 1 loads, 1 SLICEs
+      Net thirdblock.n6_adj_638: 1 loads, 1 SLICEs
+      Net thirdblock.fruit_3_type_0__N_421: 1 loads, 1 SLICEs
       Net secondblock.col_0__N_50: 6 loads, 6 SLICEs
       Net secondblock.row_0__N_30: 6 loads, 6 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net game_state[1]: 81 loads
-      Net game_state[2]: 75 loads
-      Net RGB_pad[4].vcc: 61 loads
-      Net thirdblock.game_state[0]: 35 loads
-      Net thirdblock.n630: 18 loads
-      Net thirdblock.n1835: 16 loads
-      Net thirdblock.n1837: 14 loads
-      Net thirdblock.n5: 14 loads
+      Net thirdblock.game_state[1]: 80 loads
+      Net thirdblock.game_state[2]: 78 loads
+      Net RGB_pad[3].vcc: 64 loads
+      Net thirdblock.game_state[0]: 34 loads
+      Net thirdblock.n632: 18 loads
+      Net nesblock.buttonout_c_0_N_625: 16 loads
+      Net thirdblock.n2194: 16 loads
+      Net thirdblock.n5: 15 loads
+      Net thirdblock.n2196: 14 loads
       Net thirdblock.fruit_2_type[1]: 13 loads
-      Net thirdblock.n521: 12 loads
 
 
 
@@ -151,16 +156,34 @@ Command line:   map -i fruitSalad_impl_1_syn.udb -pdc
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[4]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
 | RGB[3]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[5]              | OUTPUT    |           |       |       |           |
+| buttonout[4]        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+
+| RGB[2]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[5]        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[6]        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[7]        | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | external_osc        | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| button              | INPUT     |           |       |       |           |
-
+| data                | INPUT     |           | I     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| RGB[4]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| RGB[5]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[3]        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[2]        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[1]        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[0]        | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | ext_osc_test        | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -172,7 +195,11 @@ Command line:   map -i fruitSalad_impl_1_syn.udb -pdc
 +---------------------+-----------+-----------+-------+-------+-----------+
 | RGB[1]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[2]              | OUTPUT    |           |       |       |           |
+| NESclk              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| latch               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| CTRLclk             | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
 
@@ -194,6 +221,7 @@ PLL 1:                                 Pin/Node Value
   Output Clock(CoreB):                          NONE
   Output Clock(GlobalB):                        NONE
   Feedback input:                      NODE
+
        firstblock.lscc_pll_inst.feedback_w
   Internal Feedback output:            NODE
        firstblock.lscc_pll_inst.feedback_w
@@ -218,9 +246,15 @@ PLL 1:                                 Pin/Node Value
   EXTERNAL_DIVIDE_FACTOR:                       NONE
   TEST Mode:                                    0
 
+OSC Summary
+-----------
 
-
-
+OSC 1:                                 Pin/Node Value
+  OSC Instance Name:                            nesblock/instanceosc
+  Power UP:                            NODE     RGB_pad[3].vcc
+  Enable Signal:                       NODE     RGB_pad[3].vcc
+  OSC Output:                          NODE     nesblock.clk
+  DIV Setting:                                  00
 
 
 
@@ -247,13 +281,14 @@ Instance Name: thirdblock/fruit_2/orange/get_col_2_0__I_0_4
          Type: EBR
 Instance Name: thirdblock/fruit_2/orange/get_col_2_0__I_0
          Type: EBR
+
 Instance Name: thirdblock/fruit_2/grapefruit/get_col_2_0__I_0_2
          Type: EBR
 Instance Name: thirdblock/fruit_2/grapefruit/get_col_2_0__I_0_3
          Type: EBR
-Instance Name: thirdblock/fruit_2/cherry/get_row_2_0__I_0
-         Type: EBR
 Instance Name: thirdblock/fruit_2/cherry/get_row_2_0__I_0_4
+         Type: EBR
+Instance Name: thirdblock/fruit_2/cherry/get_row_2_0__I_0
          Type: EBR
 Instance Name: thirdblock/fruit_2/blueberry/get_row_2_0__I_0_3
          Type: EBR
@@ -265,13 +300,17 @@ Instance Name: thirdblock/fruit_1/cherry/get_row_1_0__I_0_2
          Type: EBR
 Instance Name: firstblock/lscc_pll_inst/u_PLL_B
          Type: PLL
+Instance Name: nesblock/instanceshift/data_c_I_0
+         Type: IOLOGIC
+Instance Name: nesblock/instanceosc
+         Type: HFOSC
 
 
 
 <A name="mrp_consum"></A><B><U><big>Constraint Summary</big></U></B>
 ------------------
 
-   Total number of constraints: 12
+   Total number of constraints: 21
    Total number of constraints dropped: 0
 
 
@@ -281,7 +320,24 @@ Instance Name: firstblock/lscc_pll_inst/u_PLL_B
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 65 MB
+   Peak Memory Usage: 66 MB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
