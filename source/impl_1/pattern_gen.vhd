@@ -24,8 +24,18 @@ component fruitROM is
   );
 end component;
 
-type GAMESTATE is (START, FRUIT_1_POS, FRUIT_1_FALLING, FRUIT_2_POS, FRUIT_2_FALLING, FRUIT_3_POS, FRUIT_3_FALLING, HOLD, GAME_OVER);
+type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, HOLD, GAME_OVER);
 signal game_state : GAMESTATE := START;
+
+
+signal active_fruit_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
+signal active_fruit_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
+signal active_fruit_type : unsigned(2 downto 0);
+signal active_fruit_RGB : std_logic_vector(5 downto 0); -- we will get these values from all the different ROM and compare to decide what to render
+signal active_fruit_row : std_logic_vector (9 downto 0);
+signal active_fruit_col : std_logic_vector (9 downto 0);
+signal get_row_active : std_logic_vector (4 downto 0) := "00000";
+signal get_col_active : std_logic_vector (4 downto 0) := "00000";
 
 signal fruit_1_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
 signal fruit_1_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
@@ -61,6 +71,15 @@ signal button_prev : std_logic;
 signal falling_counter : unsigned(16 downto 0);
 
 begin
+	active_fruit_row <= std_logic_vector(unsigned(row) - fruit_1_tl_row);
+	active_fruit_col <= std_logic_vector(unsigned(col) - fruit_1_tl_col);
+	
+	get_row_active <= active_fruit_row(5 downto 1) when active_fruit_row(9 downto 6) = "0000" else "11111";
+	get_col_active <= active_fruit_col(5 downto 1) when active_fruit_col(9 downto 6) = "0000" else "11111";
+	
+	active_fruit : fruitROM port map(get_row_active , get_col_active, std_logic_vector(active_fruit_type), clk, active_fruit_RGB);
+	
+
 	fruit_1_row <= std_logic_vector(unsigned(row) - fruit_1_tl_row);
 	fruit_1_col <= std_logic_vector(unsigned(col) - fruit_1_tl_col);
 	
@@ -102,8 +121,11 @@ begin
 			button_prev <= button;
 			
 			if game_state = START then
-				fruit_1_tl_row <= 10d"0";
-				fruit_1_tl_col <= 10d"307";
+				active_fruit_tl_row <= 10d"0";
+				active_fruit_tl_col <= 10d"307";
+
+				fruit_1_tl_row <= 10d"700";
+				fruit_1_tl_col <= 10d"700";
 				fruit_1_type <= "001";
 				fruit_2_tl_row <= 10d"700";
 				fruit_2_tl_col <= 10d"700";
