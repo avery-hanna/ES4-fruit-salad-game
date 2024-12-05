@@ -1,14 +1,17 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use std.textio.all;
+
 entity pattern_gen is
   port(
-	button : in std_logic;
+	button : in std_logic_vector(7 downto 0);
 	valid : in std_logic;
 	row : in std_logic_vector(9 downto 0); -- row of pixel we want to get color for
 	col : in std_logic_vector(9 downto 0); -- col of pixel we want to get color for
 	clk : in std_logic;
-	RGB : out std_logic_vector(5 downto 0) -- color for pixel (curr_row, curr_col)
+	RGB : out std_logic_vector(5 downto 0);
+	led : out std_logic
 );
 end entity pattern_gen;
 
@@ -24,6 +27,18 @@ component fruitROM is
   );
 end component;
 
+component startscreenROM is
+  port(
+	  row : in std_logic_vector(7 downto 0);
+	  col : in std_logic_vector(7 downto 0);
+	  clk : in std_logic;
+	  color : out std_logic_vector(5 downto 0)
+  );
+end component;
+
+
+
+signal startscreenRGB : std_logic_vector(5 downto 0);
 type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, SWAP, RESET, HOLD, GAME_OVER); --SWAP: move offscreen foot to actives location RESET: move active fruit up top
 signal game_state : GAMESTATE := START;
 
@@ -70,10 +85,16 @@ signal get_col_3 : std_logic_vector (4 downto 0) := "00000";
 signal fruit_RGB : std_logic_vector(5 downto 0);
 
 
-signal button_prev : std_logic;
-signal falling_counter : unsigned(16 downto 0);
+signal button_prev : std_logic_vector(7 downto 0);
+signal counter : unsigned(16 downto 0);
+signal output: std_logic_vector(7 downto 0);
+
 
 begin
+	led <= '1' when game_state = START else '0';
+	
+	start_screen : startscreenROM port map(row(9 downto 2), col(9 downto 2), clk, startscreenRGB);
+	
 	active_fruit_row <= std_logic_vector(unsigned(row) - fruit_1_tl_row);
 	active_fruit_col <= std_logic_vector(unsigned(col) - fruit_1_tl_col);
 	
@@ -112,15 +133,12 @@ begin
 	
 	
 	RGB <= "000000" when valid = '0' -- can be changed here and below
-			else "001100" when game_state = START
+			else startscreenRGB when game_state = START
 			else "110011" when game_state = GAME_OVER
 			else fruit_RGB;
 		
 	process(clk) begin
 		if rising_edge(clk) then
-			--if button = '0' and fruit_1_tl_col < 10d"615" then
-				--fruit_1_tl_col <= fruit_1_tl_col + 10d"1";
-			--end if;
 			button_prev <= button;
 			
 			if game_state = START then
@@ -138,12 +156,48 @@ begin
 				fruit_3_tl_col <= 10d"700";
 				fruit_3_type <= "000";
 				--put every fruit except 1 offscreen
-				if button = '0' and button_prev = '1' then
+				
+				-- move state forward when button = start and button_prev is off
+				if button = "11101111" and button_prev = "11111111" then
 					game_state <= FRUIT_1_POS;
 				end if;
+
 			elsif game_state = FRUIT_POS then
-				if button = '0' and button_prev = '1' then
-					game_state <= FRUIT_FALLING;
+				--Left button pressed
+				if button = "11111101" then
+					if button_prev = "11111101" then
+						counter <= counter + 1;
+					else
+						counter <= 17d"1";
+					end if;
+					
+					if counter = 17d"100000" then
+						if fruit_1_tl_col > 0 then
+							fruit_1_tl_col <= fruit_1_tl_col - 1;
+						end if;
+						counter <= 17d"0";
+					end if;
+				end if;
+				
+				 --Right button pressed
+				if button = "11111110" then
+					if button_prev = "11111110" then
+						counter <= counter + 1;
+					else
+						counter <= 17d"1";
+					end if;
+					
+					if counter = 17d"100000" then
+						if fruit_1_tl_col < 576 then
+							fruit_1_tl_col <= fruit_1_tl_col + 1;
+						end if;
+						counter <= 17d"0";
+					end if;
+				end if;
+			
+				-- button A pressed
+				if button = "01111111" and button_prev = "11111111" then
+					game_state <= FRUIT_1_FALLING;
 				end if;
 			
 			elsif game_state = FRUIT_FALLING then
@@ -205,7 +259,7 @@ begin
 			elsif game_state = HOLD then
 				game_state <= HOLD;
 			elsif game_state = GAME_OVER then
-				if button = '0' and button_prev = '1' then
+				if button /= 8b"0" and button_prev = 8b"0" then
 					game_state <= START;
 				end if;
 			else
@@ -215,3 +269,5 @@ begin
 	end process;
 
 end;
+
+
