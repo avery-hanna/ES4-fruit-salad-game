@@ -6,7 +6,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2023.1.0.43.3
-Mapped on: Wed Dec  4 16:06:06 2024
+Mapped on: Wed Dec  4 20:16:45 2024
 
 Design Information
 ------------------
@@ -18,12 +18,12 @@ Command line:   map -i fruitSalad_impl_1_syn.udb -pdc
 Design Summary
 --------------
 
-   Number of slice registers: 162 out of  5280 (3%)
+   Number of slice registers: 164 out of  5280 (3%)
    Number of I/O registers:      1 out of   117 (1%)
-   Number of LUT4s:           660 out of  5280 (13%)
-      Number of logic LUT4s:             468
+   Number of LUT4s:           1782 out of  5280 (34%)
+      Number of logic LUT4s:             1592
       Number of inserted feedthru LUT4s:  14
-      Number of replicated LUT4s:         10
+      Number of replicated LUT4s:          8
       Number of ripple logic:             84 (168 LUT4s)
    Number of IO sites used:   23 out of 39 (59%)
       Number of IO sites used for general PIO: 23
@@ -47,7 +47,7 @@ Design Summary
    Number of EBRs:             18 out of 30 (60%)
    Number of PLLs:             1 out of 1 (100%)
    Number of Clocks:  4
-      Net clk: 147 loads, 147 rising, 0 falling (Driver: Pin
+      Net clk: 149 loads, 149 rising, 0 falling (Driver: Pin
      firstblock.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
       Net external_osc_c: 1 loads, 1 rising, 0 falling (Driver: Port
      external_osc)
@@ -56,9 +56,9 @@ Design Summary
       Net CTRLclk_c: 8 loads, 8 rising, 0 falling (Driver: Pin
      nesblock.CTRLclk_c_I_0/Z)
    Number of Clock Enables:  12
-      Net thirdblock.fruit_2_tl_col_0__N_275: 10 loads, 10 SLICEs
-      Net thirdblock.fruit_3_tl_row_0__N_419: 10 loads, 10 SLICEs
-      Net thirdblock.fruit_3_type_0__N_448: 3 loads, 3 SLICEs
+      Net thirdblock.fruit_2_tl_col_0__N_282: 10 loads, 10 SLICEs
+      Net thirdblock.fruit_3_tl_row_0__N_426: 10 loads, 10 SLICEs
+      Net thirdblock.fruit_3_tl_col_0__N_447: 10 loads, 10 SLICEs
 
                                     Page 1
 
@@ -68,60 +68,60 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net thirdblock.fruit_3_tl_col_0__N_440: 10 loads, 10 SLICEs
-      Net thirdblock.fruit_1_tl_col_0__N_117: 9 loads, 9 SLICEs
-      Net RGB_pad[4].vcc: 55 loads, 0 SLICEs
-      Net thirdblock.fruit_1_tl_row_0__N_93: 10 loads, 10 SLICEs
       Net thirdblock.game_state_0__N_65: 1 loads, 1 SLICEs
+      Net thirdblock.fruit_1_tl_row_0__N_100: 10 loads, 10 SLICEs
+      Net thirdblock.fruit_1_tl_col_0__N_124: 9 loads, 9 SLICEs
       Net thirdblock.game_state_1__N_63: 1 loads, 1 SLICEs
-      Net thirdblock.fruit_2_tl_row_0__N_254: 10 loads, 10 SLICEs
+      Net thirdblock.fruit_2_tl_row_0__N_261: 10 loads, 10 SLICEs
+      Net thirdblock.fruit_3_type_0__N_455: 3 loads, 3 SLICEs
       Net thirdblock.game_state_2__N_60: 1 loads, 1 SLICEs
+      Net RGB_pad[3].vcc: 55 loads, 0 SLICEs
       Net secondblock.col_0__N_50: 6 loads, 6 SLICEs
    Number of LSRs:  33
-      Net thirdblock.fruit_1_tl_col_4__N_109: 2 loads, 2 SLICEs
+      Net thirdblock.counter_0__N_622: 1 loads, 1 SLICEs
+      Net thirdblock.fruit_1_tl_row_0__N_101: 4 loads, 4 SLICEs
+      Net thirdblock.fruit_1_tl_col_4__N_116: 2 loads, 2 SLICEs
+      Net thirdblock.counter_16__N_590: 1 loads, 1 SLICEs
+      Net thirdblock.counter_15__N_592: 1 loads, 1 SLICEs
+      Net thirdblock.counter_14__N_594: 1 loads, 1 SLICEs
+      Net thirdblock.counter_13__N_596: 1 loads, 1 SLICEs
+      Net thirdblock.counter_12__N_598: 1 loads, 1 SLICEs
+      Net thirdblock.counter_11__N_600: 1 loads, 1 SLICEs
+      Net thirdblock.counter_10__N_602: 1 loads, 1 SLICEs
+      Net thirdblock.counter_9__N_604: 1 loads, 1 SLICEs
+      Net thirdblock.counter_8__N_606: 1 loads, 1 SLICEs
+      Net thirdblock.counter_7__N_608: 1 loads, 1 SLICEs
+      Net thirdblock.counter_6__N_610: 1 loads, 1 SLICEs
+      Net thirdblock.counter_5__N_612: 1 loads, 1 SLICEs
+      Net thirdblock.counter_4__N_614: 1 loads, 1 SLICEs
+      Net thirdblock.counter_3__N_616: 1 loads, 1 SLICEs
+      Net thirdblock.counter_2__N_618: 1 loads, 1 SLICEs
+      Net thirdblock.counter_1__N_620: 1 loads, 1 SLICEs
+      Net thirdblock.fruit_2_type_2__N_284: 1 loads, 1 SLICEs
+      Net thirdblock.fruit_2_tl_row_0__N_262: 4 loads, 4 SLICEs
+      Net thirdblock.fruit_2_tl_col_6__N_270: 1 loads, 1 SLICEs
+      Net thirdblock.fruit_3_tl_col_6__N_435: 1 loads, 1 SLICEs
+      Net thirdblock.fruit_3_type_1__N_453: 2 loads, 2 SLICEs
       Net thirdblock.game_state_2__N_61: 1 loads, 1 SLICEs
-      Net thirdblock.counter_0__N_615: 1 loads, 1 SLICEs
-      Net thirdblock.fruit_2_type_2__N_277: 1 loads, 1 SLICEs
       Net thirdblock.n6: 1 loads, 1 SLICEs
-      Net thirdblock.n6_adj_658: 1 loads, 1 SLICEs
-      Net thirdblock.n4_adj_652: 1 loads, 1 SLICEs
-      Net thirdblock.counter_16__N_583: 1 loads, 1 SLICEs
-      Net thirdblock.counter_15__N_585: 1 loads, 1 SLICEs
-      Net thirdblock.counter_14__N_587: 1 loads, 1 SLICEs
-      Net thirdblock.fruit_1_tl_row_0__N_94: 4 loads, 4 SLICEs
-      Net thirdblock.counter_13__N_589: 1 loads, 1 SLICEs
-      Net thirdblock.counter_12__N_591: 1 loads, 1 SLICEs
-      Net thirdblock.n6_adj_660: 1 loads, 1 SLICEs
-      Net thirdblock.counter_11__N_593: 1 loads, 1 SLICEs
-      Net thirdblock.counter_10__N_595: 1 loads, 1 SLICEs
-      Net thirdblock.fruit_3_type_1__N_446: 2 loads, 2 SLICEs
-      Net thirdblock.counter_9__N_597: 1 loads, 1 SLICEs
-      Net thirdblock.counter_8__N_599: 1 loads, 1 SLICEs
-      Net thirdblock.counter_7__N_601: 1 loads, 1 SLICEs
-      Net thirdblock.fruit_3_tl_col_6__N_428: 1 loads, 1 SLICEs
-      Net thirdblock.fruit_2_tl_col_6__N_263: 1 loads, 1 SLICEs
-      Net thirdblock.counter_6__N_603: 1 loads, 1 SLICEs
-      Net thirdblock.counter_5__N_605: 1 loads, 1 SLICEs
-      Net thirdblock.counter_1__N_613: 1 loads, 1 SLICEs
-      Net thirdblock.counter_2__N_611: 1 loads, 1 SLICEs
-      Net thirdblock.counter_3__N_609: 1 loads, 1 SLICEs
-      Net thirdblock.counter_4__N_607: 1 loads, 1 SLICEs
-      Net thirdblock.fruit_2_tl_row_0__N_255: 4 loads, 4 SLICEs
-      Net thirdblock.fruit_3_type_0__N_449: 1 loads, 1 SLICEs
-      Net startscreenRGB_0__N_70: 1 loads, 1 SLICEs
-      Net secondblock.row_0__N_30: 6 loads, 6 SLICEs
+      Net thirdblock.n6_adj_822: 1 loads, 1 SLICEs
+      Net thirdblock.n6_adj_824: 1 loads, 1 SLICEs
+      Net thirdblock.fruit_3_type_0__N_456: 1 loads, 1 SLICEs
+      Net thirdblock.n11415: 1 loads, 1 SLICEs
+      Net thirdblock.start_screen.startscreenRGB_0__N_77: 6 loads, 6 SLICEs
       Net secondblock.col_0__N_50: 6 loads, 6 SLICEs
+      Net secondblock.row_0__N_30: 6 loads, 6 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net thirdblock.game_state[2]: 87 loads
-      Net thirdblock.game_state[1]: 80 loads
-      Net RGB_pad[4].vcc: 61 loads
-      Net thirdblock.game_state[0]: 41 loads
-      Net thirdblock.n20: 18 loads
-      Net thirdblock.n17: 17 loads
-      Net thirdblock.n3041: 17 loads
-      Net n4261: 16 loads
-      Net nesblock.buttonout_c_0_N_637: 16 loads
-      Net thirdblock.n2348: 16 loads
+      Net row[3]: 294 loads
+      Net row[2]: 288 loads
+      Net col[3]: 262 loads
+      Net col[2]: 258 loads
+      Net col[5]: 254 loads
+      Net row[4]: 245 loads
+      Net col[4]: 234 loads
+      Net row[5]: 215 loads
+      Net col[7]: 196 loads
+      Net row[6]: 180 loads
 
 
 
@@ -150,7 +150,11 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| RGB[3]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | RGB[4]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| RGB[5]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | data                | INPUT     |           | I     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -187,10 +191,6 @@ IO (PIO) Attributes
 | HSYNC               | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | RGB[0]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[1]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[2]              | OUTPUT    |           |       |       |           |
 
                                     Page 3
 
@@ -201,9 +201,9 @@ IO (PIO) Attributes
 IO (PIO) Attributes (cont)
 --------------------------
 +---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[3]              | OUTPUT    |           |       |       |           |
+| RGB[1]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[5]              | OUTPUT    |           |       |       |           |
+| RGB[2]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
 Removed logic
@@ -251,8 +251,8 @@ OSC Summary
 
 OSC 1:                                 Pin/Node Value
   OSC Instance Name:                            nesblock/instanceosc
-  Power UP:                            NODE     RGB_pad[4].vcc
-  Enable Signal:                       NODE     RGB_pad[4].vcc
+  Power UP:                            NODE     RGB_pad[3].vcc
+  Enable Signal:                       NODE     RGB_pad[3].vcc
   OSC Output:                          NODE     nesblock.clk
   DIV Setting:                                  00
 
@@ -319,9 +319,9 @@ Constraint Summary
 Run Time and Memory Usage
 -------------------------
 
-   Total CPU Time: 0 secs
+   Total CPU Time: 1 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 67 MB
+   Peak Memory Usage: 81 MB
 
 
                                     Page 5

@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Dec  4 16:05:56 2024
+Wed Dec  4 20:16:23 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/promote.xml 
@@ -268,11 +268,18 @@ Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/s
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd
 
 INFO <35921012> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(5): analyzing entity startscreenrom. VHDL-1012
-INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(14): analyzing architecture synth. VHDL-1010
+INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(15): analyzing architecture synth. VHDL-1010
 INFO <35921504> - synthesis: The default VHDL library search path is now "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/impl_1". VHDL-1504
 Top module language type = VHDL.
 WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
 WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
+WARNING <35928037> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(21): case statement does not cover all choices. 'others' clause is needed. VHDL-1037
+WARNING <35935050> - synthesis: input port fruit_color[5] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[4] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[3] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[2] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[1] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[0] is not connected on this instance. VDB-5050
 Top module name (VHDL, mixed language): vga_controller
                                                          
 
@@ -333,6 +340,12 @@ CRITICAL <35001747> - synthesis: Bit 1 of Register fruit_1_type is stuck at Zero
 CRITICAL <35001748> - synthesis: Bit 0 of Register fruit_1_type is stuck at One
 WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
 WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
+WARNING <35935050> - synthesis: input port fruit_color[5] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[4] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[3] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[2] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[1] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[0] is not connected on this instance. VDB-5050
 WARNING <35931002> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/mypll/rtl/mypll.v(139): net \firstblock/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
 WARNING <35931002> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/mypll/rtl/mypll.v(140): net \firstblock/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
 ######## Missing driver on net \firstblock/lscc_pll_inst/sclk_i. Patching with GND.
@@ -377,7 +390,6 @@ original encoding -> new encoding (one-hot encoding)
 
 
 
-CRITICAL <35001747> - synthesis: Bit 5 of Register \thirdblock/start_screen/color is stuck at Zero
 Combinational loop found : 1
 
  Net buttonout_c_0 
@@ -426,25 +438,23 @@ Combinational loop found : 8
 
  Instance \nesblock/mux_24_i8 
 
-WARNING <35935040> - synthesis: Register \thirdblock/game_state__i3 clock is stuck at Zero. VDB-5040
-Duplicate register/latch removal. \thirdblock/start_screen/color_i2 is a one-to-one match with \thirdblock/start_screen/color_i5.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/game_state__i2 will be ignored.
 WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_col_i0_i5 will be ignored.
 WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_col_i0_i4 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/game_state__i2 will be ignored.
 INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 162 of 5280 (3 % )
+Number of register bits => 164 of 5280 (3 % )
 EBR_B => 18
 CCU2 => 84
-FD1P3XZ => 162
+FD1P3XZ => 164
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 1
-LUT4 => 467
+LUT4 => 1591
 OB => 21
 PLL_B => 1
 ################### End Area Report ##################
@@ -465,23 +475,23 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/game_state[2], loads : 82
-  Net : thirdblock/game_state[1], loads : 78
-  Net : thirdblock/game_state[0], loads : 38
-  Net : secondblock/col_0__N_50, loads : 20
-  Net : thirdblock/n20, loads : 18
-  Net : thirdblock/n3041, loads : 17
-  Net : thirdblock/n17, loads : 17
-  Net : nesblock/clk, loads : 17
-  Net : thirdblock/n2348, loads : 16
-  Net : thirdblock/n4261, loads : 15
+  Net : secondblock/row[3], loads : 287
+  Net : secondblock/row[2], loads : 285
+  Net : secondblock/col[3], loads : 258
+  Net : secondblock/col[2], loads : 253
+  Net : secondblock/col[5], loads : 249
+  Net : secondblock/row[4], loads : 242
+  Net : secondblock/col[4], loads : 231
+  Net : secondblock/row[5], loads : 209
+  Net : secondblock/col[7], loads : 193
+  Net : secondblock/row[6], loads : 178
 ################### End Clock Report ##################
 
-Peak Memory Usage: 150 MB
+Peak Memory Usage: 412 MB
 
 --------------------------------------------------------------
-Total CPU Time: 4 secs 
-Total REAL Time: 9 secs 
+Total CPU Time: 12 secs 
+Total REAL Time: 21 secs 
 --------------------------------------------------------------
 
 
