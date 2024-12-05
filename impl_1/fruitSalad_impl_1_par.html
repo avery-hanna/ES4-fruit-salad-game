@@ -42,7 +42,7 @@ if (a)
 <DIV id="content" onclick="hideTocList()"><PRE>
 <A name="Par"></A>Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Tue Dec  3 20:25:19 2024
+Wed Dec  4 20:25:49 2024
 
 Command Line: par -w -n 1 -t 1 -s 1 -cores 1 -exp parPathBased=ON \
 	fruitSalad_impl_1_map.udb fruitSalad_impl_1.udb 
@@ -55,12 +55,12 @@ Cost [udb]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Ti
 5_1   *      0            -            0            -            0            11           Completed
 * : Design saved.
 
-Total (real) run time for 1-seed: 11 secs 
+Total (real) run time for 1-seed: 10 secs 
 
 par done!
 
 Lattice Place and Route Report for Design &quot;fruitSalad_impl_1_map.udb&quot;
-Tue Dec  3 20:25:19 2024
+Wed Dec  4 20:25:49 2024
 
 
 <A name="par_best"></A><B><U><big>Best Par Run</big></U></B>
@@ -117,7 +117,7 @@ Pin Constraint Summary:
    10 out of 11 pins locked (90% locked).
 .
 ..............
-Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 0 secs 
+Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 2 secs 
 
 
 ................
@@ -136,7 +136,7 @@ WARNING &lt;70001944&gt; - par: No master clock for
 	generated clock	create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] .
 WARNING &lt;70001944&gt; - par: No master clock for
 	generated clock	create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] .
-Finished Placer Phase 1. CPU time: 7 secs , REAL time: 8 secs 
+Finished Placer Phase 1. CPU time: 6 secs , REAL time: 8 secs 
 
 Starting Placer Phase 2.
 .
@@ -176,7 +176,7 @@ Total Placer CPU time: 7 secs , REAL time: 8 secs
 Writing design to file fruitSalad_impl_1_par.dir/5_1.udb ...
 
 
-Start NBR router at 20:25:27 12/03/24
+Start NBR router at 20:25:56 12/04/24
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -218,14 +218,14 @@ WARNING &lt;70001944&gt; - par: No master clock for
 Routing in Serial Mode ......
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Start NBR section for initial routing at 20:25:27 12/03/24
+Start NBR section for initial routing at 20:25:56 12/04/24
 Level 4, iteration 1
 66(0.03%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 2 secs 
 
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 20:25:29 12/03/24
+Start NBR section for normal routing at 20:25:58 12/04/24
 Level 4, iteration 1
 9(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 2 secs 
 Level 4, iteration 2
@@ -237,7 +237,7 @@ Level 4, iteration 4
 Level 4, iteration 5
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 0 (nbr) score; real time: 2 secs 
 
-Start NBR section for post-routing at 20:25:29 12/03/24
+Start NBR section for post-routing at 20:25:58 12/04/24
 
 End NBR router with 0 unrouted connection
 WARNING &lt;70001944&gt; - par: No master clock for
@@ -281,7 +281,7 @@ PAR_SUMMARY::Number of errors = 0
 
 Total CPU  Time: 10 secs 
 Total REAL Time: 11 secs 
-Peak Memory Usage: 119.20 MB
+Peak Memory Usage: 117.41 MB
 
 
 par done!

@@ -1,104 +1,116 @@
 
-tmcheck -par "fruitSalad_impl_1.par" 
-
-bitgen -w "fruitSalad_impl_1.udb" -f "fruitSalad_impl_1.t2b" 
-Loading fruitSalad_impl_1.udb ...
-Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2023.1/ispfpga.
-Package Status:                     Preliminary    Version 1.5.
-Performance Hardware Data Status:   Advanced       Version 1.0.
-
-
-
-Design:  vga_controller
-Family:  iCE40UP
-Device:  iCE40UP5K
-Package: SG48
-Performance Grade:   High-Performance_1.2V
-Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
-
-
-
-BITGEN: Bitstream Generator Radiant Software (64-bit) 2023.1.0.43.3
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-
-
-Running DRC.
-DRC detected 0 errors and 0 warnings.
-
-Preference Summary:
-+---------------------------------+---------------------------------+
-|  Preference                     |  Current Setting                |
-+---------------------------------+---------------------------------+
- *  Default setting.
- ** The specified setting matches the default setting.
-
-
-Creating bit map...
-Saving bit stream in "Z:\Es4\fruit-salad-game\ES4-fruit-salad-game\impl_1\fruitSalad_impl_1.bin".
-    <postMsg mid="1081100" type="Info" dynamic="1" navigation="0" arg0="Bitstream authenticated."  />
-Bitstream generation complete!
-
+postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -w -o fruitSalad_impl_1_syn.udb fruitSalad_impl_1.vm -ldc Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/impl_1/fruitSalad_impl_1.ldc
+POSTSYN: Post Synthesis Process Radiant Software (64-bit) 2023.1.0.43.3
+Command Line: postsyn -a iCE40UP -p iCE40UP5K -t SG48 -sp High-Performance_1.2V -oc Industrial -top -w -o fruitSalad_impl_1_syn.udb -ldc Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/impl_1/fruitSalad_impl_1.ldc -gui -msgset Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/promote.xml fruitSalad_impl_1.vm 
+   Architecture:     iCE40UP
+   Device:           iCE40UP5K
+   Package:          SG48
+   Performance:      High-Performance_1.2V
+Reading input file 'fruitSalad_impl_1.vm' ...
+CPU Time to convert: 0.25
+REAL Time to convert: 0
+convert PEAK Memory Usage: 39 MB
+convert CURRENT Memory Usage: 37 MB
+Reading constraint file 'Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/impl_1/fruitSalad_impl_1.ldc' ...
+Removing unused logic ...
+    <postMsg mid="35811146" type="Info" dynamic="1" navigation="0" arg0="thirdblock/buttonout_c_1"  />
+    <postMsg mid="35811146" type="Info" dynamic="1" navigation="0" arg0="thirdblock/buttonout_c_2"  />
+    <postMsg mid="35811146" type="Info" dynamic="1" navigation="0" arg0="thirdblock/buttonout_c_3"  />
+    <postMsg mid="35811146" type="Info" dynamic="1" navigation="0" arg0="thirdblock/buttonout_c_4"  />
+    <postMsg mid="35811146" type="Info" dynamic="1" navigation="0" arg0="thirdblock/buttonout_c_5"  />
+    <postMsg mid="35811146" type="Info" dynamic="1" navigation="0" arg0="thirdblock/buttonout_c_6"  />
+    <postMsg mid="35811146" type="Info" dynamic="1" navigation="0" arg0="thirdblock/buttonout_c_0"  />
+    <postMsg mid="35811146" type="Info" dynamic="1" navigation="0" arg0="thirdblock/buttonout_c_7"  />
+    <postMsg mid="35811146" type="Info" dynamic="1" navigation="0" arg0="CTRLclk_c"  />
+    <postMsg mid="35811146" type="Info" dynamic="1" navigation="0" arg0="NESclk_c"  />
+    <postMsg mid="35811149" type="Info" dynamic="0" navigation="0"  />
+Starting design annotation....
+    <postMsg mid="70001944" type="Warning" dynamic="1" navigation="0" arg0="create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] "  />
+    <postMsg mid="70001944" type="Warning" dynamic="1" navigation="0" arg0="create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] "  />
+ 
+Constraint Summary:
+   Total number of constraints: 2
+   Total number of constraints dropped: 0
+ 
+Writing output file 'fruitSalad_impl_1_syn.udb'.
+POSTSYN finished successfully.
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 117 MB
+Peak Memory Usage: 40 MB
 
 
-ibisgen "fruitSalad_impl_1.udb" "C:/lscc/radiant/2023.1/cae_library/ibis/iCE40UP.ibs"
-IBIS Models Generator: Lattice Radiant Software (64-bit) 2023.1.0.43.3
+map -i "fruitSalad_impl_1_syn.udb" -pdc "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/pin_layout.pdc" -o "fruitSalad_impl_1_map.udb" -mp "fruitSalad_impl_1.mrp" -hierrpt     
+map:  version Radiant Software (64-bit) 2023.1.0.43.3
 
-Tue Dec  3 20:25:33 2024
-
-Loading fruitSalad_impl_1.udb ...
-Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2023.1/ispfpga.
-Package Status:                     Preliminary    Version 1.5.
-Performance Hardware Data Status:   Advanced       Version 1.0.
-
-
-
-Design:  vga_controller
-Family:  iCE40UP
-Device:  iCE40UP5K
-Package: SG48
-Performance Grade:   High-Performance_1.2V
-Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
-
-Created design models.
-
-
-Generating: Z:\Es4\fruit-salad-game\ES4-fruit-salad-game\impl_1\IBIS\fruitSalad_impl_1.ibs
-
-
-    <postMsg mid="1191031" type="Info" dynamic="0" navigation="0"  />
-
-backanno "fruitSalad_impl_1.udb"  -o "fruitSalad_impl_1_vo.vo"      -sp "High-Performance_1.2V"  -w -neg
-backanno: version Radiant Software (64-bit) 2023.1.0.43.3
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
 
+Command line:   map -i fruitSalad_impl_1_syn.udb -pdc Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/pin_layout.pdc -o fruitSalad_impl_1_map.udb -mp fruitSalad_impl_1.mrp -hierrpt -gui 
+
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2023.1/ispfpga.
 Package Status:                     Preliminary    Version 1.5.
-Loading udb::Database ...
+
+
+
+WARNING <1026001> - Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/pin_layout.pdc (10) : No port matched &apos;button&apos;.
+WARNING <1027013> - No port matched 'button'.
+WARNING <1014301> - Can't resolve object 'button' in constraint 'ldc_set_location -site {43} [get_ports button]'.
+WARNING <1011001> - Remove invalid constraint 'ldc_set_location -site {43} [get_ports button]'.
+   Remove unused logic
+
+   Do not produce over sized UDBs.
+
 Design:  vga_controller
 Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
-Performance Grade:   High-Performance_1.2V
-Performance Hardware Data Status:   Advanced       Version 1.0.
+Performance Grade:  High-Performance_1.2V
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+Assertion failed: sig_d, file ic1maplc.c, line 618
+
+map -i "fruitSalad_impl_1_syn.udb" -pdc "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/pin_layout.pdc" -o "fruitSalad_impl_1_map.udb" -mp "fruitSalad_impl_1.mrp" -hierrpt     
+map:  version Radiant Software (64-bit) 2023.1.0.43.3
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:   map -i fruitSalad_impl_1_syn.udb -pdc Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/pin_layout.pdc -o fruitSalad_impl_1_map.udb -mp fruitSalad_impl_1.mrp -hierrpt -gui 
+
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2023.1/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
 
 
 
-Writing a verilog netlist based on the fruitSalad_impl_1 design file.
+    <postMsg mid="1026001" type="Warning" dynamic="3" navigation="2" arg0="Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/pin_layout.pdc" arg1="10" arg2="No port matched &apos;button&apos;." arg3="Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/pin_layout.pdc" arg4="10"  />
+    <postMsg mid="1027013" type="Warning" dynamic="2" navigation="0" arg0="port" arg1="button"  />
+    <postMsg mid="1014301" type="Warning" dynamic="2" navigation="0" arg0="button" arg1="ldc_set_location -site {43} [get_ports button]"  />
+    <postMsg mid="1011001" type="Warning" dynamic="1" navigation="0" arg0="ldc_set_location -site {43} [get_ports button]"  />
+   Remove unused logic
 
-Writing Verilog netlist to file fruitSalad_impl_1_vo.vo
-Writing SDF timing to file fruitSalad_impl_1_vo.sdf
-Backanno finished with 0 posted error messages.
-Total CPU Time: 1 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 101 MB
+   Do not produce over sized UDBs.
+
+Design:  vga_controller
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:  High-Performance_1.2V
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+Assertion failed: sig_d, file ic1maplc.c, line 618

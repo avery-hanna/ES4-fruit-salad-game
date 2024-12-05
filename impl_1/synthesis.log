@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Dec  3 20:25:08 2024
+Wed Dec  4 20:47:37 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/promote.xml 
@@ -90,8 +90,6 @@ VHDL design file = Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/ne
 VHDL library = work
 VHDL design file = Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/pattern_gen.vhd
 VHDL library = work
-VHDL design file = Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/pre_drop_control.vhd
-VHDL library = work
 VHDL design file = Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/shift8.vhd
 VHDL library = work
 VHDL design file = Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/top.vhd
@@ -107,6 +105,8 @@ VHDL library = work
 VHDL design file = Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/orangeROM.vhd
 VHDL library = work
 VHDL design file = Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/watermelonROM.vhd
+VHDL library = work
+VHDL design file = Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/startscreenROM.vhd
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
 WARNING <35935050> - synthesis: input port TRIM9 is not connected on this instance. VDB-5050
 WARNING <35935050> - synthesis: input port TRIM8 is not connected on this instance. VDB-5050
@@ -168,8 +168,8 @@ INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd
 
-INFO <35921012> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(5): analyzing entity vga_controller. VHDL-1012
-INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(17): analyzing architecture synth. VHDL-1010
+INFO <35921012> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(6): analyzing entity vga_controller. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(23): analyzing architecture synth. VHDL-1010
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd
 
@@ -181,11 +181,8 @@ Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/n
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd
 
-INFO <35921012> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(4): analyzing entity pattern_gen. VHDL-1012
-INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(16): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pre_drop_control.vhd. VHDL-1481
-Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pre_drop_control.vhd
-
+INFO <35921012> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(6): analyzing entity pattern_gen. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(19): analyzing architecture synth. VHDL-1010
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/shift8.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/shift8.vhd
 
@@ -220,10 +217,22 @@ Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/w
 
 INFO <35921012> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd(5): analyzing entity watermelonrom. VHDL-1012
 INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd(14): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd
+
+INFO <35921012> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(5): analyzing entity startscreenrom. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(15): analyzing architecture synth. VHDL-1010
 INFO <35921504> - synthesis: The default VHDL library search path is now "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/impl_1". VHDL-1504
 Top module language type = VHDL.
 WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
 WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
+WARNING <35928037> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(21): case statement does not cover all choices. 'others' clause is needed. VHDL-1037
+WARNING <35935050> - synthesis: input port fruit_color[5] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[4] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[3] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[2] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[1] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[0] is not connected on this instance. VDB-5050
 Top module name (VHDL, mixed language): vga_controller
                                                          
 
@@ -249,16 +258,16 @@ Top module name (VHDL, mixed language): vga_controller
                                                          
 
 
-WARNING <35001771> - synthesis: Initial value found on net get_row_1[4] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_row_1[3] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_row_1[2] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_row_1[1] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_row_1[0] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_col_1[4] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_col_1[3] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_col_1[2] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_col_1[1] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net get_col_1[0] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_active[4] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_active[3] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_active[2] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_active[1] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_row_active[0] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_active[4] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_active[3] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_active[2] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_active[1] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net get_col_active[0] will be ignored due to unrecognized driver type
 WARNING <35001771> - synthesis: Initial value found on net get_row_2[4] will be ignored due to unrecognized driver type
 WARNING <35001771> - synthesis: Initial value found on net get_row_2[3] will be ignored due to unrecognized driver type
 WARNING <35001771> - synthesis: Initial value found on net get_row_2[2] will be ignored due to unrecognized driver type
@@ -282,69 +291,122 @@ WARNING <35001771> - synthesis: Initial value found on net get_col_3[0] will be 
 CRITICAL <35001747> - synthesis: Bit 2 of Register fruit_1_type is stuck at Zero
 CRITICAL <35001747> - synthesis: Bit 1 of Register fruit_1_type is stuck at Zero
 CRITICAL <35001748> - synthesis: Bit 0 of Register fruit_1_type is stuck at One
+CRITICAL <35001747> - synthesis: Bit 2 of Register fruit_2_type is stuck at Zero
+CRITICAL <35001747> - synthesis: Bit 1 of Register fruit_2_type is stuck at Zero
+CRITICAL <35001747> - synthesis: Bit 0 of Register fruit_2_type is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 9 of Register fruit_3_tl_row is stuck at One
+CRITICAL <35001747> - synthesis: Bit 8 of Register fruit_3_tl_row is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 7 of Register fruit_3_tl_row is stuck at One
+CRITICAL <35001747> - synthesis: Bit 6 of Register fruit_3_tl_row is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 5 of Register fruit_3_tl_row is stuck at One
+CRITICAL <35001748> - synthesis: Bit 4 of Register fruit_3_tl_row is stuck at One
+CRITICAL <35001748> - synthesis: Bit 3 of Register fruit_3_tl_row is stuck at One
+CRITICAL <35001748> - synthesis: Bit 2 of Register fruit_3_tl_row is stuck at One
+CRITICAL <35001747> - synthesis: Bit 1 of Register fruit_3_tl_row is stuck at Zero
+CRITICAL <35001747> - synthesis: Bit 0 of Register fruit_3_tl_row is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 9 of Register fruit_3_tl_col is stuck at One
+CRITICAL <35001747> - synthesis: Bit 8 of Register fruit_3_tl_col is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 7 of Register fruit_3_tl_col is stuck at One
+CRITICAL <35001747> - synthesis: Bit 6 of Register fruit_3_tl_col is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 5 of Register fruit_3_tl_col is stuck at One
+CRITICAL <35001748> - synthesis: Bit 4 of Register fruit_3_tl_col is stuck at One
+CRITICAL <35001748> - synthesis: Bit 3 of Register fruit_3_tl_col is stuck at One
+CRITICAL <35001748> - synthesis: Bit 2 of Register fruit_3_tl_col is stuck at One
+CRITICAL <35001747> - synthesis: Bit 1 of Register fruit_3_tl_col is stuck at Zero
+CRITICAL <35001747> - synthesis: Bit 0 of Register fruit_3_tl_col is stuck at Zero
+CRITICAL <35001747> - synthesis: Bit 2 of Register fruit_3_type is stuck at Zero
+CRITICAL <35001747> - synthesis: Bit 1 of Register fruit_3_type is stuck at Zero
+CRITICAL <35001747> - synthesis: Bit 0 of Register fruit_3_type is stuck at Zero
 WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
 WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
+WARNING <35935050> - synthesis: input port fruit_color[5] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[4] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[3] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[2] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[1] is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port fruit_color[0] is not connected on this instance. VDB-5050
 WARNING <35931002> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/mypll/rtl/mypll.v(139): net \firstblock/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
 WARNING <35931002> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/mypll/rtl/mypll.v(140): net \firstblock/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
 ######## Missing driver on net \firstblock/lscc_pll_inst/sclk_i. Patching with GND.
 ######## Missing driver on net \firstblock/lscc_pll_inst/sdi_i. Patching with GND.
-INFO <35001774> - synthesis: Extracted state machine for register '\thirdblock/fruit_2_type' with one-hot encoding
-State machine has 8 reachable states with original encodings of:
+Removed duplicate sequential element \thirdblock/fruit_1/blueberry/color(6 bit), because it is equivalent to \thirdblock/active_fruit/blueberry/color
 
- 000 
+Removed duplicate sequential element \thirdblock/fruit_1/cherry/color(6 bit), because it is equivalent to \thirdblock/active_fruit/cherry/color
 
- 001 
+Removed duplicate sequential element \thirdblock/fruit_1/grapefruit/color(6 bit), because it is equivalent to \thirdblock/active_fruit/grapefruit/color
 
- 010 
-
- 011 
-
- 100 
-
- 101 
-
- 110 
-
- 111 
-
-original encoding -> new encoding (one-hot encoding)
-
- 000 -> 00000001
-
- 001 -> 00000010
-
- 010 -> 00000100
-
- 011 -> 00001000
-
- 100 -> 00010000
-
- 101 -> 00100000
-
- 110 -> 01000000
-
- 111 -> 10000000
+Removed duplicate sequential element \thirdblock/fruit_1/orange/color(6 bit), because it is equivalent to \thirdblock/active_fruit/orange/color
 
 
 
 
+CRITICAL <35001748> - synthesis: Bit 9 of Register \thirdblock/fruit_1_tl_row is stuck at One
+CRITICAL <35001747> - synthesis: Bit 8 of Register \thirdblock/fruit_1_tl_row is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 7 of Register \thirdblock/fruit_1_tl_row is stuck at One
+CRITICAL <35001747> - synthesis: Bit 6 of Register \thirdblock/fruit_1_tl_row is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 5 of Register \thirdblock/fruit_1_tl_row is stuck at One
+CRITICAL <35001748> - synthesis: Bit 4 of Register \thirdblock/fruit_1_tl_row is stuck at One
+CRITICAL <35001748> - synthesis: Bit 3 of Register \thirdblock/fruit_1_tl_row is stuck at One
+CRITICAL <35001748> - synthesis: Bit 2 of Register \thirdblock/fruit_1_tl_row is stuck at One
+CRITICAL <35001747> - synthesis: Bit 1 of Register \thirdblock/fruit_1_tl_row is stuck at Zero
+CRITICAL <35001747> - synthesis: Bit 0 of Register \thirdblock/fruit_1_tl_row is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 9 of Register \thirdblock/fruit_1_tl_col is stuck at One
+CRITICAL <35001747> - synthesis: Bit 8 of Register \thirdblock/fruit_1_tl_col is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 7 of Register \thirdblock/fruit_1_tl_col is stuck at One
 CRITICAL <35001747> - synthesis: Bit 6 of Register \thirdblock/fruit_1_tl_col is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 5 of Register \thirdblock/fruit_1_tl_col is stuck at One
+CRITICAL <35001748> - synthesis: Bit 4 of Register \thirdblock/fruit_1_tl_col is stuck at One
+CRITICAL <35001748> - synthesis: Bit 3 of Register \thirdblock/fruit_1_tl_col is stuck at One
+CRITICAL <35001748> - synthesis: Bit 2 of Register \thirdblock/fruit_1_tl_col is stuck at One
+CRITICAL <35001747> - synthesis: Bit 1 of Register \thirdblock/fruit_1_tl_col is stuck at Zero
+CRITICAL <35001747> - synthesis: Bit 0 of Register \thirdblock/fruit_1_tl_col is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 9 of Register \thirdblock/fruit_2_tl_row is stuck at One
+CRITICAL <35001747> - synthesis: Bit 8 of Register \thirdblock/fruit_2_tl_row is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 7 of Register \thirdblock/fruit_2_tl_row is stuck at One
+CRITICAL <35001747> - synthesis: Bit 6 of Register \thirdblock/fruit_2_tl_row is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 5 of Register \thirdblock/fruit_2_tl_row is stuck at One
+CRITICAL <35001748> - synthesis: Bit 4 of Register \thirdblock/fruit_2_tl_row is stuck at One
+CRITICAL <35001748> - synthesis: Bit 3 of Register \thirdblock/fruit_2_tl_row is stuck at One
+CRITICAL <35001748> - synthesis: Bit 2 of Register \thirdblock/fruit_2_tl_row is stuck at One
+CRITICAL <35001747> - synthesis: Bit 1 of Register \thirdblock/fruit_2_tl_row is stuck at Zero
+CRITICAL <35001747> - synthesis: Bit 0 of Register \thirdblock/fruit_2_tl_row is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 9 of Register \thirdblock/fruit_2_tl_col is stuck at One
+CRITICAL <35001747> - synthesis: Bit 8 of Register \thirdblock/fruit_2_tl_col is stuck at Zero
+CRITICAL <35001748> - synthesis: Bit 7 of Register \thirdblock/fruit_2_tl_col is stuck at One
 CRITICAL <35001747> - synthesis: Bit 6 of Register \thirdblock/fruit_2_tl_col is stuck at Zero
-CRITICAL <35001747> - synthesis: Bit 6 of Register \thirdblock/fruit_3_tl_col is stuck at Zero
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/game_state__i2 will be ignored.
+CRITICAL <35001748> - synthesis: Bit 5 of Register \thirdblock/fruit_2_tl_col is stuck at One
+CRITICAL <35001748> - synthesis: Bit 4 of Register \thirdblock/fruit_2_tl_col is stuck at One
+CRITICAL <35001748> - synthesis: Bit 3 of Register \thirdblock/fruit_2_tl_col is stuck at One
+CRITICAL <35001748> - synthesis: Bit 2 of Register \thirdblock/fruit_2_tl_col is stuck at One
+CRITICAL <35001747> - synthesis: Bit 1 of Register \thirdblock/fruit_2_tl_col is stuck at Zero
+CRITICAL <35001747> - synthesis: Bit 0 of Register \thirdblock/fruit_2_tl_col is stuck at Zero
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i1 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i2 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i3 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i4 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i5 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i6 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i7 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i8 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i9 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i0 will be ignored.
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 124 of 5280 (2 % )
-EBR_B => 18
-CCU2 => 69
-FD1P3XZ => 124
+Number of register bits => 91 of 5280 (1 % )
+EBR_B => 12
+CCU2 => 37
+FD1P3XZ => 91
 IB => 2
-LUT4 => 344
-OB => 9
+LUT4 => 1318
+OB => 21
 PLL_B => 1
 ################### End Area Report ##################
 Number of odd-length carry chains : 1
-Number of even-length carry chains : 11
+Number of even-length carry chains : 5
+
+################### Begin BlackBox Report ######################
+nesclk_top => 1
+################### End BlackBox Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
@@ -356,21 +418,21 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/game_state[1], loads : 75
-  Net : thirdblock/game_state[2], loads : 69
-  Net : thirdblock/game_state[0], loads : 31
-  Net : secondblock/col_0__N_50, loads : 20
-  Net : thirdblock/falling_counter_0__N_585, loads : 18
-  Net : thirdblock/n630, loads : 18
-  Net : thirdblock/falling_counter_0__N_586, loads : 17
-  Net : thirdblock/n1835, loads : 16
-  Net : thirdblock/n5, loads : 15
-  Net : thirdblock/n1837, loads : 14
+  Net : secondblock/col[2], loads : 283
+  Net : secondblock/col[3], loads : 272
+  Net : secondblock/row[3], loads : 257
+  Net : secondblock/row[2], loads : 244
+  Net : secondblock/col[4], loads : 244
+  Net : secondblock/row[5], loads : 231
+  Net : secondblock/row[4], loads : 223
+  Net : secondblock/col[5], loads : 204
+  Net : secondblock/row[7], loads : 185
+  Net : secondblock/col[6], loads : 183
 ################### End Clock Report ##################
 
-Peak Memory Usage: 147 MB
+Peak Memory Usage: 411 MB
 
 --------------------------------------------------------------
-Total CPU Time: 4 secs 
-Total REAL Time: 10 secs 
+Total CPU Time: 12 secs 
+Total REAL Time: 26 secs 
 --------------------------------------------------------------

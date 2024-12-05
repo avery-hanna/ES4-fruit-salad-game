@@ -1,6 +1,6 @@
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Tue Dec  3 20:25:19 2024
+Wed Dec  4 20:25:49 2024
 
 Command Line: par -w -n 1 -t 1 -s 1 -cores 1 -exp parPathBased=ON \
 	fruitSalad_impl_1_map.udb fruitSalad_impl_1.udb 
@@ -13,6 +13,6 @@ Cost [udb]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Ti
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 11 secs 
+Total (real) run time for 1-seed: 10 secs 
 
 par done!

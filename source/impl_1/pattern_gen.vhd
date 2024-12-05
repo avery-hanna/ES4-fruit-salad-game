@@ -159,7 +159,7 @@ begin
 				
 				-- move state forward when button = start and button_prev is off
 				if button = "11101111" and button_prev = "11111111" then
-					game_state <= FRUIT_1_POS;
+					game_state <= FRUIT_POS;
 				end if;
 
 			elsif game_state = FRUIT_POS then
@@ -172,8 +172,8 @@ begin
 					end if;
 					
 					if counter = 17d"100000" then
-						if fruit_1_tl_col > 0 then
-							fruit_1_tl_col <= fruit_1_tl_col - 1;
+						if active_fruit_tl_col > 0 then
+							active_fruit_tl_col <= active_fruit_tl_col - 1;
 						end if;
 						counter <= 17d"0";
 					end if;
@@ -188,8 +188,8 @@ begin
 					end if;
 					
 					if counter = 17d"100000" then
-						if fruit_1_tl_col < 576 then
-							fruit_1_tl_col <= fruit_1_tl_col + 1;
+						if active_fruit_tl_col < 576 then
+							active_fruit_tl_col <= active_fruit_tl_col + 1;
 						end if;
 						counter <= 17d"0";
 					end if;
@@ -197,14 +197,14 @@ begin
 			
 				-- button A pressed
 				if button = "01111111" and button_prev = "11111111" then
-					game_state <= FRUIT_1_FALLING;
+					game_state <= FRUIT_FALLING;
 				end if;
 			
 			elsif game_state = FRUIT_FALLING then
-				falling_counter <= falling_counter + 1;
-				if falling_counter = 17d"100000" then
+				counter <= counter + 1;
+				if counter = 17d"100000" then
 					active_fruit_tl_row <= active_fruit_tl_row + 1;
-					falling_counter <= 17d"0";
+					counter <= 17d"0";
 				end if;
 
 				if fruit_1_RGB /= "000000" and active_fruit_RGB /= "000000" then -- collision with fruit 1
@@ -244,9 +244,9 @@ begin
 				end if;
 
 			elsif game_state = SWAP then
-					next_fruit_type <= active_fruit_type
-					next_fruit_tl_col <= active_fruit_tl_row
-					next_fruit_tl_row <= active_fruit_tl_row
+					next_fruit_type <= active_fruit_type;
+					next_fruit_tl_col <= active_fruit_tl_col;
+					next_fruit_tl_row <= active_fruit_tl_row;
 					game_state <= RESET;
 			elsif game_state = RESET then
 				active_fruit_tl_row <= 10d"0";
