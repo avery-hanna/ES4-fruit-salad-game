@@ -41,6 +41,19 @@ signal game_state : GAMESTATE := START;
 
 signal startscreenRGB : std_logic_vector(5 downto 0);
 
+signal next_fruit_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
+signal next_fruit_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
+signal next_fruit_type : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
+
+signal active_fruit_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
+signal active_fruit_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
+signal active_fruit_type : unsigned(2 downto 0);
+signal active_fruit_RGB : std_logic_vector(5 downto 0); -- we will get these values from all the different ROM and compare to decide what to render
+signal active_fruit_row : std_logic_vector (9 downto 0);
+signal active_fruit_col : std_logic_vector (9 downto 0);
+signal get_row_active : std_logic_vector (4 downto 0) := "00000";
+signal get_col_active : std_logic_vector (4 downto 0) := "00000";
+
 signal fruit_1_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
 signal fruit_1_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
 signal fruit_1_type : unsigned(2 downto 0);
@@ -81,9 +94,8 @@ begin
 	
 	start_screen : startscreenROM port map(row(9 downto 2), col(9 downto 2), clk, startscreenRGB);
 	
-
-	active_fruit_row <= std_logic_vector(unsigned(row) - fruit_1_tl_row);
-	active_fruit_col <= std_logic_vector(unsigned(col) - fruit_1_tl_col);
+	active_fruit_row <= std_logic_vector(unsigned(row) - active_fruit_tl_row);
+	active_fruit_col <= std_logic_vector(unsigned(col) - active_fruit_tl_col);
 	
 	get_row_active <= active_fruit_row(5 downto 1) when active_fruit_row(9 downto 6) = "0000" else "11111";
 	get_col_active <= active_fruit_col(5 downto 1) when active_fruit_col(9 downto 6) = "0000" else "11111";
@@ -115,7 +127,7 @@ begin
 	fruit_3 : fruitROM port map(get_row_3 , get_col_3, std_logic_vector(fruit_3_type), clk, fruit_3_RGB);
 	
 	
-	fruit_RGB <= active_fruit_RGB when (active_fruit_RGB /= "000000") fruit_3_RGB when (fruit_3_RGB /= "000000") else fruit_2_RGB when (fruit_2_RGB /= "000000") else fruit_1_RGB;
+	fruit_RGB <= active_fruit_RGB when (active_fruit_RGB /= "000000") else fruit_3_RGB when (fruit_3_RGB /= "000000") else fruit_2_RGB when (fruit_2_RGB /= "000000") else fruit_1_RGB;
 	
 	
 	RGB <= "000000" when valid = '0' -- can be changed here and below
@@ -132,8 +144,8 @@ begin
 				active_fruit_tl_col <= 10d"307";
 				active_fruit_type <= "000";
 				
-				fruit_1_tl_row <= 10d"0";
-				fruit_1_tl_col <= 10d"307";
+				fruit_1_tl_row <= 10d"700";
+				fruit_1_tl_col <= 10d"700";
 				fruit_1_type <= "001";
 				fruit_2_tl_row <= 10d"700";
 				fruit_2_tl_col <= 10d"700";
@@ -187,7 +199,7 @@ begin
 			elsif game_state = FRUIT_FALLING then
 				counter <= counter + 1;
 				if counter = 17d"100000" then
-					fruit_3_tl_row <= fruit_3_tl_row + 1;
+					active_fruit_tl_row <= active_fruit_tl_row + 1;
 					counter <= 17d"0";
 				end if;
 				if fruit_1_RGB /= "000000" and active_fruit_RGB /= "000000" then -- collision with fruit 1
@@ -225,17 +237,11 @@ begin
 						
 				elsif active_fruit_tl_row > 417 then
 					game_state <= SWAP;
-				
-				end if;
-			elsif game_state = FRUIT_2_POS then
-				-- button A pressed
-				if button = "01111111" and button_prev = "11111111" then
-					game_state <= FRUIT_2_FALLING;
 				end if;
 			elsif game_state = SWAP then
-					next_fruit_type <= active_fruit_type
-					next_fruit_tl_col <= active_fruit_tl_row
-					next_fruit_tl_row <= active_fruit_tl_row
+					next_fruit_type <= active_fruit_type;
+					next_fruit_tl_col <= active_fruit_tl_col;
+					next_fruit_tl_row <= active_fruit_tl_row;
 					game_state <= RESET;
 			elsif game_state = RESET then
 				active_fruit_tl_row <= 10d"0";

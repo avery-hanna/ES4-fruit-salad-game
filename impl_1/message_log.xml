@@ -1,68 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
-    <Task name="Export">
-        <Message>
-            <ID>1081100</ID>
-            <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
-        </Message>
-        <Message>
-            <ID>1191031</ID>
-            <Severity>1</Severity>
-        </Message>
-    </Task>
-    <Task name="PAR">
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-    </Task>
     <Task name="Synthesis">
         <Message>
             <ID>35831026</ID>
@@ -509,6 +446,56 @@
         <Message>
             <ID>35001771</ID>
             <Severity>16</Severity>
+            <Dynamic>get_row_active[4]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_row_active[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_row_active[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_row_active[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_row_active[0]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_active[4]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_active[3]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_active[2]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_active[1]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
+            <Dynamic>get_col_active[0]</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>16</Severity>
             <Dynamic>get_row_1[4]</Dynamic>
         </Message>
         <Message>
@@ -675,6 +662,144 @@
             <Dynamic>fruit_1_type</Dynamic>
         </Message>
         <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>2</Dynamic>
+            <Dynamic>fruit_2_type</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>1</Dynamic>
+            <Dynamic>fruit_2_type</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>0</Dynamic>
+            <Dynamic>fruit_2_type</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>9</Dynamic>
+            <Dynamic>fruit_3_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>8</Dynamic>
+            <Dynamic>fruit_3_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>7</Dynamic>
+            <Dynamic>fruit_3_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>fruit_3_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>5</Dynamic>
+            <Dynamic>fruit_3_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>4</Dynamic>
+            <Dynamic>fruit_3_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>fruit_3_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>2</Dynamic>
+            <Dynamic>fruit_3_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>1</Dynamic>
+            <Dynamic>fruit_3_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>0</Dynamic>
+            <Dynamic>fruit_3_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>9</Dynamic>
+            <Dynamic>fruit_3_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>8</Dynamic>
+            <Dynamic>fruit_3_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>7</Dynamic>
+            <Dynamic>fruit_3_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>fruit_3_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>5</Dynamic>
+            <Dynamic>fruit_3_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>4</Dynamic>
+            <Dynamic>fruit_3_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>fruit_3_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>2</Dynamic>
+            <Dynamic>fruit_3_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>1</Dynamic>
+            <Dynamic>fruit_3_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>0</Dynamic>
+            <Dynamic>fruit_3_tl_col</Dynamic>
+        </Message>
+        <Message>
             <ID>35935049</ID>
             <Severity>16</Severity>
             <Dynamic>sclk_i</Dynamic>
@@ -685,10 +810,252 @@
             <Dynamic>sdi_i</Dynamic>
         </Message>
         <Message>
-            <ID>35001774</ID>
-            <Severity>1</Severity>
-            <Dynamic>\thirdblock/fruit_2_type</Dynamic>
-            <Dynamic>one-hot</Dynamic>
+            <ID>35001045</ID>
+            <Severity>16</Severity>
+        </Message>
+        <Message>
+            <ID>35001045</ID>
+            <Severity>16</Severity>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>9</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>8</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>7</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>5</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>4</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>2</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>1</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>0</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>9</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>8</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>7</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>5</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>4</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>2</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>1</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>0</Dynamic>
+            <Dynamic>\thirdblock/fruit_1_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>9</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>8</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>7</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>5</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>4</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>2</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>1</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>0</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_row</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>9</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>8</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>7</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>6</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>5</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>4</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>256</Severity>
+            <Dynamic>2</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>1</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_col</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>256</Severity>
+            <Dynamic>0</Dynamic>
+            <Dynamic>\thirdblock/fruit_2_tl_col</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
@@ -697,29 +1064,135 @@
             <Dynamic>\thirdblock/start_screen/color</Dynamic>
         </Message>
         <Message>
-            <ID>35935040</ID>
+            <ID>35001045</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/game_state__i3</Dynamic>
-            <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
             <ID>35001779</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_1_tl_col_i0_i5</Dynamic>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i0</Dynamic>
         </Message>
         <Message>
             <ID>35001779</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_1_tl_col_i0_i4</Dynamic>
+            <Dynamic>\thirdblock/active_fruit_tl_col_i0_i5</Dynamic>
         </Message>
         <Message>
             <ID>35001779</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/game_state__i2</Dynamic>
+            <Dynamic>\thirdblock/active_fruit_tl_col_i0_i4</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i9</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i8</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i7</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i6</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i5</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i4</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i3</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i2</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i1</Dynamic>
         </Message>
         <Message>
             <ID>35002039</ID>
             <Severity>1</Severity>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
+        </Message>
+    </Task>
+    <Task name="Export">
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
+        <Message>
+            <ID>1191031</ID>
+            <Severity>1</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
         </Message>
         <Message>
             <ID>70001944</ID>
