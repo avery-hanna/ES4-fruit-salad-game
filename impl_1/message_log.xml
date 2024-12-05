@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="Export">
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
+        <Message>
+            <ID>1191031</ID>
+            <Severity>1</Severity>
+        </Message>
+    </Task>
     <Task name="PAR">
         <Message>
             <ID>70001944</ID>
@@ -56,46 +67,6 @@
         <Message>
             <ID>35831026</ID>
             <Severity>16</Severity>
-        </Message>
-        <Message>
-            <ID>35901128</ID>
-            <Severity>4096</Severity>
-            <Dynamic>C:/lscc/radiant/2023.1/ispfpga/../cae_library/simulation/verilog/iCE40UP/legacy.v(6): </Dynamic>
-            <Dynamic>Q</Dynamic>
-            <Navigation>C:/lscc/radiant/2023.1/ispfpga/../cae_library/simulation/verilog/iCE40UP/legacy.v</Navigation>
-            <Navigation>6</Navigation>
-        </Message>
-        <Message>
-            <ID>35901128</ID>
-            <Severity>4096</Severity>
-            <Dynamic>C:/lscc/radiant/2023.1/ispfpga/../cae_library/simulation/verilog/iCE40UP/legacy.v(6): </Dynamic>
-            <Dynamic>C</Dynamic>
-            <Navigation>C:/lscc/radiant/2023.1/ispfpga/../cae_library/simulation/verilog/iCE40UP/legacy.v</Navigation>
-            <Navigation>6</Navigation>
-        </Message>
-        <Message>
-            <ID>35901128</ID>
-            <Severity>4096</Severity>
-            <Dynamic>C:/lscc/radiant/2023.1/ispfpga/../cae_library/simulation/verilog/iCE40UP/legacy.v(6): </Dynamic>
-            <Dynamic>E</Dynamic>
-            <Navigation>C:/lscc/radiant/2023.1/ispfpga/../cae_library/simulation/verilog/iCE40UP/legacy.v</Navigation>
-            <Navigation>6</Navigation>
-        </Message>
-        <Message>
-            <ID>35901128</ID>
-            <Severity>4096</Severity>
-            <Dynamic>C:/lscc/radiant/2023.1/ispfpga/../cae_library/simulation/verilog/iCE40UP/legacy.v(6): </Dynamic>
-            <Dynamic>D</Dynamic>
-            <Navigation>C:/lscc/radiant/2023.1/ispfpga/../cae_library/simulation/verilog/iCE40UP/legacy.v</Navigation>
-            <Navigation>6</Navigation>
-        </Message>
-        <Message>
-            <ID>35901128</ID>
-            <Severity>4096</Severity>
-            <Dynamic>C:/lscc/radiant/2023.1/ispfpga/../cae_library/simulation/verilog/iCE40UP/legacy.v(6): </Dynamic>
-            <Dynamic>R</Dynamic>
-            <Navigation>C:/lscc/radiant/2023.1/ispfpga/../cae_library/simulation/verilog/iCE40UP/legacy.v</Navigation>
-            <Navigation>6</Navigation>
         </Message>
         <Message>
             <ID>35935050</ID>
@@ -259,6 +230,14 @@
             <Navigation>63</Navigation>
         </Message>
         <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>C:/lscc/radiant/2023.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v(756): </Dynamic>
+            <Dynamic>HSOSC</Dynamic>
+            <Navigation>C:/lscc/radiant/2023.1/ispfpga/../cae_library/synthesis/verilog/iCE40UP.v</Navigation>
+            <Navigation>756</Navigation>
+        </Message>
+        <Message>
             <ID>35001786</ID>
             <Severity>1</Severity>
         </Message>
@@ -344,18 +323,18 @@
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(5): </Dynamic>
+            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(6): </Dynamic>
             <Dynamic>vga_controller</Dynamic>
             <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd</Navigation>
-            <Navigation>5</Navigation>
+            <Navigation>6</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(17): </Dynamic>
+            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(23): </Dynamic>
             <Dynamic>synth</Dynamic>
             <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd</Navigation>
-            <Navigation>17</Navigation>
+            <Navigation>23</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
@@ -376,18 +355,50 @@
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(4): </Dynamic>
+            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd(6): </Dynamic>
+            <Dynamic>nesclk_top</Dynamic>
+            <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd(17): </Dynamic>
+            <Dynamic>synth</Dynamic>
+            <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd</Navigation>
+            <Navigation>17</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(6): </Dynamic>
             <Dynamic>pattern_gen</Dynamic>
             <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(19): </Dynamic>
+            <Dynamic>synth</Dynamic>
+            <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd</Navigation>
+            <Navigation>19</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/shift8.vhd(4): </Dynamic>
+            <Dynamic>shift8</Dynamic>
+            <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/shift8.vhd</Navigation>
             <Navigation>4</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(16): </Dynamic>
+            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/shift8.vhd(12): </Dynamic>
             <Dynamic>synth</Dynamic>
-            <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd</Navigation>
-            <Navigation>16</Navigation>
+            <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/shift8.vhd</Navigation>
+            <Navigation>12</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
@@ -467,6 +478,22 @@
             <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd(14): </Dynamic>
             <Dynamic>synth</Dynamic>
             <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd</Navigation>
+            <Navigation>14</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(5): </Dynamic>
+            <Dynamic>startscreenrom</Dynamic>
+            <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(14): </Dynamic>
+            <Dynamic>synth</Dynamic>
+            <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd</Navigation>
             <Navigation>14</Navigation>
         </Message>
         <Message>
@@ -666,25 +693,33 @@
         <Message>
             <ID>35001747</ID>
             <Severity>256</Severity>
-            <Dynamic>6</Dynamic>
-            <Dynamic>\thirdblock/fruit_1_tl_col</Dynamic>
+            <Dynamic>5</Dynamic>
+            <Dynamic>\thirdblock/start_screen/color</Dynamic>
         </Message>
         <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>6</Dynamic>
-            <Dynamic>\thirdblock/fruit_2_tl_col</Dynamic>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/game_state__i3</Dynamic>
+            <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>6</Dynamic>
-            <Dynamic>\thirdblock/fruit_3_tl_col</Dynamic>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_1_tl_col_i0_i5</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_1_tl_col_i0_i4</Dynamic>
         </Message>
         <Message>
             <ID>35001779</ID>
             <Severity>16</Severity>
             <Dynamic>\thirdblock/game_state__i2</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002039</ID>
+            <Severity>1</Severity>
         </Message>
         <Message>
             <ID>70001944</ID>
@@ -695,17 +730,6 @@
             <ID>70001944</ID>
             <Severity>16</Severity>
             <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-    </Task>
-    <Task name="Export">
-        <Message>
-            <ID>1081100</ID>
-            <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
-        </Message>
-        <Message>
-            <ID>1191031</ID>
-            <Severity>1</Severity>
         </Message>
     </Task>
 </BaliMessageLog>

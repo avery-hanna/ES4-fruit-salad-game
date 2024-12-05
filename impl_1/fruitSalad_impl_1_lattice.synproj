@@ -46,7 +46,6 @@
 "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/fruit_rom.vhd"
 "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/nesclk_top.vhd"
 "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/pattern_gen.vhd"
-"Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/pre_drop_control.vhd"
 "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/shift8.vhd"
 "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/top.vhd"
 "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/update_color.vhd"
@@ -56,6 +55,7 @@
 "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/cherryROM.vhd"
 "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/orangeROM.vhd"
 "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/watermelonROM.vhd"
+"Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/startscreenROM.vhd"
 
 
 -path "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game"
