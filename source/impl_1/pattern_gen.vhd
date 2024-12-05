@@ -39,11 +39,9 @@ end component;
 type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, SWAP, RESET, HOLD, GAME_OVER); --SWAP: move offscreen foot to actives location RESET: move active fruit up top
 signal game_state : GAMESTATE := START;
 
-signal startscreenRGB : std_logic_vector(5 downto 0);
+signal swap_fruit : unsigned (3 downto 0); -- state variable of which fruit we're swapping in 
 
-signal next_fruit_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
-signal next_fruit_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
-signal next_fruit_type : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
+signal startscreenRGB : std_logic_vector(5 downto 0);
 
 signal active_fruit_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
 signal active_fruit_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
@@ -134,6 +132,7 @@ begin
 			else startscreenRGB when game_state = START
 			else "110011" when game_state = GAME_OVER
 			else fruit_RGB;
+
 		
 	process(clk) begin
 		if rising_edge(clk) then
@@ -144,15 +143,15 @@ begin
 				active_fruit_tl_col <= 10d"307";
 				active_fruit_type <= "000";
 				
+				swap_fruit <= "000";
+		
+				-- start all fruits off screen
 				fruit_1_tl_row <= 10d"700";
 				fruit_1_tl_col <= 10d"700";
-				fruit_1_type <= "001";
 				fruit_2_tl_row <= 10d"700";
 				fruit_2_tl_col <= 10d"700";
-				fruit_2_type <= "000";
 				fruit_3_tl_row <= 10d"700";
 				fruit_3_tl_col <= 10d"700";
-				fruit_3_type <= "000";
 				--put every fruit except 1 offscreen
 				
 				-- move state forward when button = start and button_prev is off
@@ -197,13 +196,15 @@ begin
 					game_state <= FRUIT_FALLING;
 				end if;
 			elsif game_state = FRUIT_FALLING then
+				-- Falling counter logic
 				counter <= counter + 1;
 				if counter = 17d"100000" then
 					active_fruit_tl_row <= active_fruit_tl_row + 1;
 					counter <= 17d"0";
 				end if;
+				
 				if fruit_1_RGB /= "000000" and active_fruit_RGB /= "000000" then -- collision with fruit 1
-					if fruit_1_type = fruit_3_type then
+					if fruit_1_type = active_fruit_type then
 						 -- fruit 1 goes offscreen
 						fruit_1_tl_row <= 10d"700";
 						fruit_1_tl_col <= 10d"700";
@@ -213,9 +214,9 @@ begin
 						active_fruit_tl_col <= fruit_1_tl_col;
 						
 						 -- update active fruit type
-						active_fruit_type <= active_fruit_type + 3d"1" when active_fruit_type /= 3d"4" else fruit_3_type;
+						active_fruit_type <= active_fruit_type + 3d"1" when active_fruit_type /= 3d"4" else active_fruit_type;
 					else
-						game_state <= SWAP;
+						game_state <= RESET;
 					end if;
 				elsif fruit_2_RGB /= "000000" and active_fruit_RGB /= "000000" then
 					if fruit_2_type = active_fruit_type then
@@ -227,30 +228,36 @@ begin
 						active_fruit_tl_col <= fruit_2_tl_col;
 						
 						 -- update active fruit type
-						fruit_3_type <= active_fruit_type + 3d"1" when active_fruit_type /= 3d"4" else active_fruit_type;
+						active_fruit_type <= active_fruit_type + 3d"1" when active_fruit_type /= 3d"4" else active_fruit_type;
 
 						game_state <= FRUIT_FALLING; -- trying to force the game state to restart the if statments
 
 					else
-						game_state <= SWAP;
+						game_state <= RESET;
 					end if;
 						
 				elsif active_fruit_tl_row > 417 then
-					game_state <= SWAP;
-				end if;
-			elsif game_state = SWAP then
-					next_fruit_type <= active_fruit_type;
-					next_fruit_tl_col <= active_fruit_tl_col;
-					next_fruit_tl_row <= active_fruit_tl_row;
 					game_state <= RESET;
+				end if;
 			elsif game_state = RESET then
+				if swap_fruit = "000" then
+					-- the next fruit we'll swap in is fruit 1
+					fruit_1_tl_row <= active_fruit_tl_row;
+					fruit_1_tl_col <= active_fruit_tl_col;
+					fruit_1_type <= active_fruit_type;
+				elsif swap_fruit = "001" then
+					-- the next fruit we'll swap in is fruit 2
+					fruit_2_tl_row <= active_fruit_tl_row;
+					fruit_2_tl_col <= active_fruit_tl_col;
+					fruit_2_type <= active_fruit_type;
+				end if;
+			
 				active_fruit_tl_row <= 10d"0";
 				active_fruit_tl_col <= 10d"307";
 				active_fruit_type <= "000"; -- TODO update to randomize new fruit type
 
-				--TODO logic for updating next fruit
+				swap_fruit <= swap_fruit + "001"; -- increment swap_fruit state
 				game_state <= FRUIT_POS;
-			
 			elsif game_state = HOLD then
 				game_state <= HOLD;
 			elsif game_state = GAME_OVER then
