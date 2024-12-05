@@ -14,7 +14,8 @@ entity vga_controller is
   NESclk: out std_logic;
   latch: out std_logic;
   data: in std_logic;
-  buttonout: out std_logic_vector(7 downto 0)
+  buttonout: out std_logic_vector(7 downto 0);
+  led : out std_logic
   );
   
   end entity vga_controller;
@@ -71,8 +72,8 @@ component pattern_gen is
 		row : in std_logic_vector(9 downto 0); -- row of pixel we want to get color for
 		col : in std_logic_vector(9 downto 0); -- col of pixel we want to get color for
 		clk : in std_logic;
-		RGB : out std_logic_vector(5 downto 0) -- color for pixel (curr_row, curr_col);
-	
+		RGB : out std_logic_vector(5 downto 0); -- color for pixel (curr_row, curr_col);
+		led : out std_logic
 );
 end component;
 
@@ -85,8 +86,8 @@ end component;
 	signal row : std_logic_vector(9 downto 0);
 	signal col : std_logic_vector(9 downto 0); 
 	signal patterndata:std_logic;
-	signal output: std_logic_vector(7 downto 0):=8b"0";
-	signal button: std_logic_vector(7 downto 0):=8b"0";
+	signal output: std_logic_vector(7 downto 0);
+	signal button: std_logic_vector(7 downto 0);
 	signal counter: unsigned(2 downto 0);
 begin
  
@@ -131,7 +132,8 @@ thirdblock : pattern_gen
 		row => row,
 		col => col,
 		RGB => RGB,
-		clk => clk
+		clk => clk,
+		led => led
 	);
 
 

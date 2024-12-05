@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="Export">
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
+        <Message>
+            <ID>1191031</ID>
+            <Severity>1</Severity>
+        </Message>
+    </Task>
     <Task name="PAR">
         <Message>
             <ID>70001944</ID>
@@ -320,10 +331,10 @@
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(22): </Dynamic>
+            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(23): </Dynamic>
             <Dynamic>synth</Dynamic>
             <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd</Navigation>
-            <Navigation>22</Navigation>
+            <Navigation>23</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
@@ -368,10 +379,10 @@
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(18): </Dynamic>
+            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(19): </Dynamic>
             <Dynamic>synth</Dynamic>
             <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd</Navigation>
-            <Navigation>18</Navigation>
+            <Navigation>19</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
@@ -470,6 +481,22 @@
             <Navigation>14</Navigation>
         </Message>
         <Message>
+            <ID>35921012</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(5): </Dynamic>
+            <Dynamic>startscreenrom</Dynamic>
+            <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(14): </Dynamic>
+            <Dynamic>synth</Dynamic>
+            <Navigation>z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd</Navigation>
+            <Navigation>14</Navigation>
+        </Message>
+        <Message>
             <ID>35935049</ID>
             <Severity>16</Severity>
             <Dynamic>sclk_i</Dynamic>
@@ -478,46 +505,6 @@
             <ID>35935049</ID>
             <Severity>16</Severity>
             <Dynamic>sdi_i</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001771</ID>
-            <Severity>16</Severity>
-            <Dynamic>button[7]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001771</ID>
-            <Severity>16</Severity>
-            <Dynamic>button[6]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001771</ID>
-            <Severity>16</Severity>
-            <Dynamic>button[5]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001771</ID>
-            <Severity>16</Severity>
-            <Dynamic>button[4]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001771</ID>
-            <Severity>16</Severity>
-            <Dynamic>button[3]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001771</ID>
-            <Severity>16</Severity>
-            <Dynamic>button[2]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001771</ID>
-            <Severity>16</Severity>
-            <Dynamic>button[1]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001771</ID>
-            <Severity>16</Severity>
-            <Dynamic>button[0]</Dynamic>
         </Message>
         <Message>
             <ID>35001771</ID>
@@ -706,20 +693,24 @@
         <Message>
             <ID>35001747</ID>
             <Severity>256</Severity>
-            <Dynamic>6</Dynamic>
-            <Dynamic>\thirdblock/fruit_1_tl_col</Dynamic>
+            <Dynamic>5</Dynamic>
+            <Dynamic>\thirdblock/start_screen/color</Dynamic>
         </Message>
         <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>6</Dynamic>
-            <Dynamic>\thirdblock/fruit_2_tl_col</Dynamic>
+            <ID>35935040</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/game_state__i3</Dynamic>
+            <Dynamic>Zero</Dynamic>
         </Message>
         <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>6</Dynamic>
-            <Dynamic>\thirdblock/fruit_3_tl_col</Dynamic>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_1_tl_col_i0_i5</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001779</ID>
+            <Severity>16</Severity>
+            <Dynamic>\thirdblock/fruit_1_tl_col_i0_i4</Dynamic>
         </Message>
         <Message>
             <ID>35001779</ID>
@@ -739,12 +730,6 @@
             <ID>70001944</ID>
             <Severity>16</Severity>
             <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-    </Task>
-    <Task name="Export">
-        <Message>
-            <ID>1191031</ID>
-            <Severity>1</Severity>
         </Message>
     </Task>
 </BaliMessageLog>

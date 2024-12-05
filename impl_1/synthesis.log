@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Dec  4 01:16:38 2024
+Wed Dec  4 16:05:56 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/promote.xml 
@@ -105,6 +105,8 @@ VHDL library = work
 VHDL design file = Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/orangeROM.vhd
 VHDL library = work
 VHDL design file = Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/watermelonROM.vhd
+VHDL library = work
+VHDL design file = Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/source/impl_1/startscreenROM.vhd
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
 WARNING <35935050> - synthesis: input port TRIM9 is not connected on this instance. VDB-5050
 WARNING <35935050> - synthesis: input port TRIM8 is not connected on this instance. VDB-5050
@@ -167,7 +169,7 @@ Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/v
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd
 
 INFO <35921012> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(6): analyzing entity vga_controller. VHDL-1012
-INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(22): analyzing architecture synth. VHDL-1010
+INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(23): analyzing architecture synth. VHDL-1010
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd
 
@@ -182,7 +184,7 @@ Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/p
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd
 
 INFO <35921012> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(6): analyzing entity pattern_gen. VHDL-1012
-INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(18): analyzing architecture synth. VHDL-1010
+INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(19): analyzing architecture synth. VHDL-1010
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/shift8.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/shift8.vhd
 
@@ -219,6 +221,11 @@ Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/w
 
 INFO <35921012> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd(5): analyzing entity watermelonrom. VHDL-1012
 INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd(14): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd
+
+INFO <35921012> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(5): analyzing entity startscreenrom. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/fruit-salad-game/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(14): analyzing architecture synth. VHDL-1010
 INFO <35921504> - synthesis: The default VHDL library search path is now "Z:/Es4/fruit-salad-game/ES4-fruit-salad-game/impl_1". VHDL-1504
 Top module language type = VHDL.
 WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
@@ -248,14 +255,6 @@ Top module name (VHDL, mixed language): vga_controller
                                                          
 
 
-WARNING <35001771> - synthesis: Initial value found on net button[7] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net button[6] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net button[5] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net button[4] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net button[3] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net button[2] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net button[1] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net button[0] will be ignored due to unrecognized driver type
 WARNING <35001771> - synthesis: Initial value found on net get_row_1[4] will be ignored due to unrecognized driver type
 WARNING <35001771> - synthesis: Initial value found on net get_row_1[3] will be ignored due to unrecognized driver type
 WARNING <35001771> - synthesis: Initial value found on net get_row_1[2] will be ignored due to unrecognized driver type
@@ -335,9 +334,7 @@ original encoding -> new encoding (one-hot encoding)
 
 
 
-CRITICAL <35001747> - synthesis: Bit 6 of Register \thirdblock/fruit_1_tl_col is stuck at Zero
-CRITICAL <35001747> - synthesis: Bit 6 of Register \thirdblock/fruit_2_tl_col is stuck at Zero
-CRITICAL <35001747> - synthesis: Bit 6 of Register \thirdblock/fruit_3_tl_col is stuck at Zero
+CRITICAL <35001747> - synthesis: Bit 5 of Register \thirdblock/start_screen/color is stuck at Zero
 Combinational loop found : 1
 
  Net buttonout_c_0 
@@ -386,23 +383,27 @@ Combinational loop found : 8
 
  Instance \nesblock/mux_24_i8 
 
+WARNING <35935040> - synthesis: Register \thirdblock/game_state__i3 clock is stuck at Zero. VDB-5040
+Duplicate register/latch removal. \thirdblock/start_screen/color_i2 is a one-to-one match with \thirdblock/start_screen/color_i5.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_col_i0_i5 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_col_i0_i4 will be ignored.
 WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/game_state__i2 will be ignored.
 INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 155 of 5280 (2 % )
+Number of register bits => 162 of 5280 (3 % )
 EBR_B => 18
-CCU2 => 78
-FD1P3XZ => 155
+CCU2 => 84
+FD1P3XZ => 162
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 1
-LUT4 => 366
-OB => 20
+LUT4 => 467
+OB => 21
 PLL_B => 1
 ################### End Area Report ##################
 Number of odd-length carry chains : 2
-Number of even-length carry chains : 11
+Number of even-length carry chains : 12
 
 ################### Begin Clock Report ######################
 Clock Nets
@@ -415,19 +416,19 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/game_state[1], loads : 79
-  Net : thirdblock/game_state[2], loads : 77
-  Net : thirdblock/game_state[0], loads : 31
+  Net : thirdblock/game_state[2], loads : 82
+  Net : thirdblock/game_state[1], loads : 78
+  Net : thirdblock/game_state[0], loads : 38
   Net : secondblock/col_0__N_50, loads : 20
-  Net : thirdblock/falling_counter_0__N_593, loads : 18
-  Net : thirdblock/n632, loads : 18
-  Net : thirdblock/falling_counter_0__N_594, loads : 17
+  Net : thirdblock/n20, loads : 18
+  Net : thirdblock/n3041, loads : 17
+  Net : thirdblock/n17, loads : 17
   Net : nesblock/clk, loads : 17
-  Net : thirdblock/n5, loads : 16
-  Net : thirdblock/n2194, loads : 16
+  Net : thirdblock/n2348, loads : 16
+  Net : thirdblock/n4261, loads : 15
 ################### End Clock Report ##################
 
-Peak Memory Usage: 148 MB
+Peak Memory Usage: 150 MB
 
 --------------------------------------------------------------
 Total CPU Time: 4 secs 
