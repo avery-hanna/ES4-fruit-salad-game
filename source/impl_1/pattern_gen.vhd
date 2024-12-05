@@ -153,7 +153,6 @@ begin
 					falling_counter <= 17d"0";
 				end if;
 
-				-- TODO update to active fruit logic
 				if fruit_1_RGB /= "000000" and active_fruit_RGB /= "000000" then -- collision with fruit 1
 					if fruit_1_type = active_fruit_type then
 						 -- fruit 1 goes offscreen
