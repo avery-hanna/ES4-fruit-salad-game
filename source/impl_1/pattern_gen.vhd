@@ -36,10 +36,14 @@ component startscreenROM is
   );
 end component;
 
-type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, SWAP, RESET, HOLD, GAME_OVER); --SWAP: move offscreen foot to actives location RESET: move active fruit up top
+type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, SWAP, HOLD, GAME_OVER);
 signal game_state : GAMESTATE := START;
 
-signal swap_fruit : unsigned (3 downto 0); -- state variable of which fruit we're swapping in 
+-- state to track which fruit is next to swap in for the active fruit
+type SWAPSTATE is (FRUIT1, FRUIT2, FRUIT3, FRUIT4, FRUIT5, FRUIT6, FRUIT7, FRUIT8, FRUIT9, FRUIT10);
+signal swap_state : SWAPSTATE := FRUIT1;
+
+signal swap_fruit : unsigned(2 downto 0);
 
 signal startscreenRGB : std_logic_vector(5 downto 0);
 
@@ -47,37 +51,37 @@ signal active_fruit_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50
 signal active_fruit_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
 signal active_fruit_type : unsigned(2 downto 0);
 signal active_fruit_RGB : std_logic_vector(5 downto 0); -- we will get these values from all the different ROM and compare to decide what to render
-signal active_fruit_row : std_logic_vector (9 downto 0);
-signal active_fruit_col : std_logic_vector (9 downto 0);
-signal get_row_active : std_logic_vector (4 downto 0) := "00000";
-signal get_col_active : std_logic_vector (4 downto 0) := "00000";
+signal active_fruit_relative_row : std_logic_vector (9 downto 0);
+signal active_fruit_relative_col : std_logic_vector (9 downto 0);
+signal active_fruit_rom_row : std_logic_vector (4 downto 0) := "00000";
+signal active_fruit_rom_col : std_logic_vector (4 downto 0) := "00000";
 
 signal fruit_1_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
 signal fruit_1_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
 signal fruit_1_type : unsigned(2 downto 0);
 signal fruit_1_RGB : std_logic_vector(5 downto 0); -- we will get these values from all the different ROM and compare to decide what to render
-signal fruit_1_row : std_logic_vector (9 downto 0);
-signal fruit_1_col : std_logic_vector (9 downto 0);
-signal get_row_1 : std_logic_vector (4 downto 0) := "00000";
-signal get_col_1 : std_logic_vector (4 downto 0) := "00000";
+signal fruit_1_relative_row : std_logic_vector (9 downto 0);
+signal fruit_1_relative_col : std_logic_vector (9 downto 0);
+signal fruit_1_rom_row : std_logic_vector (4 downto 0) := "00000";
+signal fruit_1_rom_col : std_logic_vector (4 downto 0) := "00000";
 
 signal fruit_2_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
 signal fruit_2_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47  
 signal fruit_2_type : unsigned(2 downto 0);
 signal fruit_2_RGB : std_logic_vector(5 downto 0); -- we will get these values from all the different ROM and compare to decide what to render
-signal fruit_2_row : std_logic_vector (9 downto 0);
-signal fruit_2_col : std_logic_vector (9 downto 0);
-signal get_row_2 : std_logic_vector (4 downto 0) := "00000";
-signal get_col_2 : std_logic_vector (4 downto 0) := "00000";
+signal fruit_2_relative_row : std_logic_vector (9 downto 0);
+signal fruit_2_relative_col : std_logic_vector (9 downto 0);
+signal fruit_2_rom_row : std_logic_vector (4 downto 0) := "00000";
+signal fruit_2_rom_col : std_logic_vector (4 downto 0) := "00000";
 
 signal fruit_3_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
 signal fruit_3_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47  
 signal fruit_3_type : unsigned(2 downto 0);
 signal fruit_3_RGB : std_logic_vector(5 downto 0); -- we will get these values from all the different ROM and compare to decide what to render
-signal fruit_3_row : std_logic_vector (9 downto 0);
-signal fruit_3_col : std_logic_vector (9 downto 0);
-signal get_row_3 : std_logic_vector (4 downto 0) := "00000";
-signal get_col_3 : std_logic_vector (4 downto 0) := "00000";
+signal fruit_3_relative_row : std_logic_vector (9 downto 0);
+signal fruit_3_relative_col : std_logic_vector (9 downto 0);
+signal fruit_3_rom_row : std_logic_vector (4 downto 0) := "00000";
+signal fruit_3_rom_col : std_logic_vector (4 downto 0) := "00000";
 
 signal fruit_RGB : std_logic_vector(5 downto 0);
 
@@ -92,37 +96,40 @@ begin
 	
 	start_screen : startscreenROM port map(row(9 downto 2), col(9 downto 2), clk, startscreenRGB);
 	
-	active_fruit_row <= std_logic_vector(unsigned(row) - active_fruit_tl_row);
-	active_fruit_col <= std_logic_vector(unsigned(col) - active_fruit_tl_col);
+	active_fruit_relative_row <= std_logic_vector(unsigned(row) - active_fruit_tl_row);
+	active_fruit_relative_col <= std_logic_vector(unsigned(col) - active_fruit_tl_col);
 	
-	get_row_active <= active_fruit_row(5 downto 1) when active_fruit_row(9 downto 6) = "0000" else "11111";
-	get_col_active <= active_fruit_col(5 downto 1) when active_fruit_col(9 downto 6) = "0000" else "11111";
+	active_fruit_rom_row <= active_fruit_relative_row(5 downto 1) when active_fruit_relative_row(9 downto 6) = "0000" else "11111";
+	active_fruit_rom_col <= active_fruit_relative_col(5 downto 1) when active_fruit_relative_col(9 downto 6) = "0000" else "11111";
 	
-	active_fruit : fruitROM port map(get_row_active , get_col_active, std_logic_vector(active_fruit_type), clk, active_fruit_RGB);
+	active_fruit : fruitROM port map(active_fruit_rom_row , active_fruit_rom_col, std_logic_vector(active_fruit_type), clk, active_fruit_RGB);
 	
-	fruit_1_row <= std_logic_vector(unsigned(row) - fruit_1_tl_row);
-	fruit_1_col <= std_logic_vector(unsigned(col) - fruit_1_tl_col);
 	
-	get_row_1 <= fruit_1_row(5 downto 1) when fruit_1_row(9 downto 6) = "0000" else "11111";
-	get_col_1 <= fruit_1_col(5 downto 1) when fruit_1_col(9 downto 6) = "0000" else "11111";
+	fruit_1_relative_row <= std_logic_vector(unsigned(row) - fruit_1_tl_row);
+	fruit_1_relative_col <= std_logic_vector(unsigned(col) - fruit_1_tl_col);
 	
-	fruit_1 : fruitROM port map(get_row_1 , get_col_1, std_logic_vector(fruit_1_type), clk, fruit_1_RGB);
+	fruit_1_rom_row <= fruit_1_relative_row(5 downto 1) when fruit_1_relative_row(9 downto 6) = "0000" else "11111";
+	fruit_1_rom_col <= fruit_1_relative_col(5 downto 1) when fruit_1_relative_col(9 downto 6) = "0000" else "11111";
 	
-	fruit_2_row <= std_logic_vector(unsigned(row) - fruit_2_tl_row);
-	fruit_2_col <= std_logic_vector(unsigned(col) - fruit_2_tl_col);
+	fruit_1 : fruitROM port map(fruit_1_rom_row , fruit_1_rom_col, std_logic_vector(fruit_1_type), clk, fruit_1_RGB);
 	
-	get_row_2 <= fruit_2_row(5 downto 1) when fruit_2_row(9 downto 6) = "0000" else "11111";
-	get_col_2 <= fruit_2_col(5 downto 1) when fruit_2_col(9 downto 6) = "0000" else "11111";
 	
-	fruit_2 : fruitROM port map(get_row_2 , get_col_2, std_logic_vector(fruit_2_type), clk, fruit_2_RGB);
+	fruit_2_relative_row <= std_logic_vector(unsigned(row) - fruit_2_tl_row);
+	fruit_2_relative_col <= std_logic_vector(unsigned(col) - fruit_2_tl_col);
 	
-	fruit_3_row <= std_logic_vector(unsigned(row) - fruit_3_tl_row);
-	fruit_3_col <= std_logic_vector(unsigned(col) - fruit_3_tl_col);
+	fruit_2_rom_row <= fruit_2_relative_row(5 downto 1) when fruit_2_relative_row(9 downto 6) = "0000" else "11111";
+	fruit_2_rom_col <= fruit_2_relative_col(5 downto 1) when fruit_2_relative_col(9 downto 6) = "0000" else "11111";
 	
-	get_row_3 <= fruit_3_row(5 downto 1) when fruit_3_row(9 downto 6) = "0000" else "11111";
-	get_col_3 <= fruit_3_col(5 downto 1) when fruit_3_col(9 downto 6) = "0000" else "11111";
+	fruit_2 : fruitROM port map(fruit_2_rom_row , fruit_2_rom_col, std_logic_vector(fruit_2_type), clk, fruit_2_RGB);
 	
-	fruit_3 : fruitROM port map(get_row_3 , get_col_3, std_logic_vector(fruit_3_type), clk, fruit_3_RGB);
+	
+	fruit_3_relative_row <= std_logic_vector(unsigned(row) - fruit_3_tl_row);
+	fruit_3_relative_col <= std_logic_vector(unsigned(col) - fruit_3_tl_col);
+	
+	fruit_3_rom_row <= fruit_3_relative_row(5 downto 1) when fruit_3_relative_row(9 downto 6) = "0000" else "11111";
+	fruit_3_rom_col <= fruit_3_relative_col(5 downto 1) when fruit_3_relative_col(9 downto 6) = "0000" else "11111";
+	
+	fruit_3 : fruitROM port map(fruit_3_rom_row , fruit_3_rom_col, std_logic_vector(fruit_3_type), clk, fruit_3_RGB);
 	
 	
 	fruit_RGB <= active_fruit_RGB when (active_fruit_RGB /= "000000") else fruit_3_RGB when (fruit_3_RGB /= "000000") else fruit_2_RGB when (fruit_2_RGB /= "000000") else fruit_1_RGB;
@@ -139,20 +146,20 @@ begin
 			button_prev <= button;
 			
 			if game_state = START then
+				-- Position active fruit in center of top row of screen
 				active_fruit_tl_row <= 10d"0";
 				active_fruit_tl_col <= 10d"307";
 				active_fruit_type <= "000";
-				
-				swap_fruit <= "000";
 		
-				-- start all fruits off screen
+				-- Position all other fruits off screen
 				fruit_1_tl_row <= 10d"700";
 				fruit_1_tl_col <= 10d"700";
 				fruit_2_tl_row <= 10d"700";
 				fruit_2_tl_col <= 10d"700";
 				fruit_3_tl_row <= 10d"700";
 				fruit_3_tl_col <= 10d"700";
-				--put every fruit except 1 offscreen
+				
+				swap_state <= FRUIT1;
 				
 				-- move state forward when button = start and button_prev is off
 				if button = "11101111" and button_prev = "11111111" then
@@ -191,7 +198,7 @@ begin
 					end if;
 				end if;
 			
-				-- button A pressed
+				-- button A pressed - drop
 				if button = "01111111" and button_prev = "11111111" then
 					game_state <= FRUIT_FALLING;
 				end if;
@@ -203,6 +210,7 @@ begin
 					counter <= 17d"0";
 				end if;
 				
+				-- Check for collisions and merges
 				if fruit_1_RGB /= "000000" and active_fruit_RGB /= "000000" then -- collision with fruit 1
 					if fruit_1_type = active_fruit_type then
 						 -- fruit 1 goes offscreen
@@ -216,10 +224,11 @@ begin
 						 -- update active fruit type
 						active_fruit_type <= active_fruit_type + 3d"1" when active_fruit_type /= 3d"4" else active_fruit_type;
 					else
-						game_state <= RESET;
+						game_state <= SWAP;
 					end if;
 				elsif fruit_2_RGB /= "000000" and active_fruit_RGB /= "000000" then
 					if fruit_2_type = active_fruit_type then
+						-- fruit 2 goes offscreen
 						fruit_2_tl_row <= 10d"700";
 						fruit_2_tl_col <= 10d"700";
 						
@@ -229,28 +238,49 @@ begin
 						
 						 -- update active fruit type
 						active_fruit_type <= active_fruit_type + 3d"1" when active_fruit_type /= 3d"4" else active_fruit_type;
-
-						game_state <= FRUIT_FALLING; -- trying to force the game state to restart the if statments
-
 					else
-						game_state <= RESET;
+						game_state <= SWAP;
 					end if;
+				elsif fruit_3_RGB /= "000000" and active_fruit_RGB /= "000000" then
+					if fruit_3_type = active_fruit_type then
+						 --fruit 3 goes offscreen
+						fruit_3_tl_row <= 10d"700";
+						fruit_3_tl_col <= 10d"700";
 						
-				elsif active_fruit_tl_row > 417 then
-					game_state <= RESET;
+						 --active fruit gets fruit 3's position
+						active_fruit_tl_row <= fruit_3_tl_row;
+						active_fruit_tl_col <= fruit_3_tl_col;
+						
+						  --update active fruit type
+						active_fruit_type <= active_fruit_type + 3d"1" when active_fruit_type /= 3d"4" else active_fruit_type;
+					else
+						game_state <= SWAP;
+					end if;
+				elsif active_fruit_tl_row > 417 then -- fruit has reached bottom row without collisions
+					game_state <= SWAP;
 				end if;
-			elsif game_state = RESET then
+			elsif game_state = SWAP then
 				if swap_fruit = "000" then
 					-- the next fruit we'll swap in is fruit 1
 					fruit_1_tl_row <= active_fruit_tl_row;
 					fruit_1_tl_col <= active_fruit_tl_col;
 					fruit_1_type <= active_fruit_type;
-				elsif swap_fruit = "001" then
+				end if;
+				if swap_fruit = "001" then
 					-- the next fruit we'll swap in is fruit 2
 					fruit_2_tl_row <= active_fruit_tl_row;
 					fruit_2_tl_col <= active_fruit_tl_col;
 					fruit_2_type <= active_fruit_type;
 				end if;
+				--if swap_fruit = "010" then
+					 --the next fruit we'll swap in is fruit 3
+					--fruit_3_tl_row <= active_fruit_tl_row;
+					--fruit_3_tl_col <= active_fruit_tl_col;
+					--fruit_3_type <= active_fruit_type;
+					--game_state <= HOLD;
+				
+					
+				--end if;
 			
 				active_fruit_tl_row <= 10d"0";
 				active_fruit_tl_col <= 10d"307";

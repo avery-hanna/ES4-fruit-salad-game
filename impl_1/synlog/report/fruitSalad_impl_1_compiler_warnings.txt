@@ -1,0 +1,21 @@
+@W: CD433 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\top.vhd":54:9:54:9|No design units in file
+@W: CD433 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\update_color.vhd":41:7:41:7|No design units in file
+@W: CD433 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\top.vhd":54:9:54:9|No design units in file
+@W: CD433 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\update_color.vhd":41:7:41:7|No design units in file
+@W: CD638 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":80:8:80:16|Signal ref_clk_i is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":81:8:81:14|Signal rst_n_i is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":82:8:82:18|Signal outglobal_o is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":84:8:84:16|Signal outcore_o is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":88:8:88:18|Signal patterndata is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":91:8:91:14|Signal counter is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\pattern_gen.vhd":89:7:89:12|Signal output is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CL260 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\blueberryROM.vhd":19:2:19:3|Pruning register bit 5 of color(5 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\blueberryROM.vhd":19:2:19:3|Pruning register bit 3 of color(5 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL279 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\startscreenROM.vhd":19:2:19:3|Pruning register bits 5 to 4 of color(5 downto 0). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL117 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\nesclk_top.vhd":80:10:80:11|Latch generated from process for signal output(7 downto 0); possible missing assignment in an if or case statement.
+@W: CL249 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\pattern_gen.vhd":143:2:143:3|Initial value is not supported on state machine game_state
+@W: CL249 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\pattern_gen.vhd":143:2:143:3|Initial value is not supported on state machine swap_state
+@W: CG781 :"Z:\ES4\ES4-fruit-salad-game\mypll\rtl\mypll.v":46:23:46:23|Input sclk_i on instance lscc_pll_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"Z:\ES4\ES4-fruit-salad-game\mypll\rtl\mypll.v":47:22:47:22|Input sdi_i on instance lscc_pll_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: Z198 :"z:\es4\es4-fruit-salad-game\source\impl_1\nesclk_top.vhd":44:8:44:18|Unbound component HSOSC of instance instanceosc 
+

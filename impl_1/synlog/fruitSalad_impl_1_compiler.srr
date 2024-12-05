@@ -1,0 +1,473 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03LR-1
+Install: C:\lscc\radiant\2023.1\synpbase
+OS: Windows 10 or later
+Hostname: LAB223J
+
+Implementation : impl_1
+Synopsys HDL Compiler, Version comp202303synp1, Build 100R, Built May 29 2023 11:23:06, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03LR-1
+Install: C:\lscc\radiant\2023.1\synpbase
+OS: Windows 10 or later
+Hostname: LAB223J
+
+Implementation : impl_1
+Synopsys VHDL Compiler, Version comp202303synp1, Build 100R, Built May 29 2023 11:23:06, @
+
+@N|Running in 64-bit mode
+@N:"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":6:7:6:20|Top entity is set to vga_controller.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\shift8.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\top.vhd'.
+@W: CD433 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\top.vhd":54:9:54:9|No design units in file
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\update_color.vhd'.
+@W: CD433 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\update_color.vhd":41:7:41:7|No design units in file
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\blueberryROM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\grapefruitROM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\cherryROM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\orangeROM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\watermelonROM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\startscreenROM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\fruit_rom.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\nesclk_top.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\pattern_gen.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd'.
+VHDL syntax check successful!
+@N: CD231 :"C:\lscc\radiant\2023.1\synpbase\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 96MB peak: 96MB)
+
+
+Process completed successfully.
+# Thu Dec  5 11:43:34 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03LR-1
+Install: C:\lscc\radiant\2023.1\synpbase
+OS: Windows 10 or later
+Hostname: LAB223J
+
+Implementation : impl_1
+Synopsys Verilog Compiler, Version comp202303synp1, Build 100R, Built May 29 2023 11:23:06, @
+
+@N|Running in 64-bit mode
+@I::"C:\lscc\radiant\2023.1\synpbase\lib\generic\ice40up.v" (library work)
+@I::"C:\lscc\radiant\2023.1\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\radiant\2023.1\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\radiant\2023.1\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_addsub.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_addsub.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/adder_subtractor/rtl\lscc_add_sub.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../common/adder_subtractor/rtl\lscc_add_sub.v":313:13:313:25|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../common/adder_subtractor/rtl\lscc_add_sub.v":333:13:333:24|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_add.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_add.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/adder/rtl\lscc_adder.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_complex_mult.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_complex_mult.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/complex_mult/rtl\lscc_complex_mult.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_complex_mult.v":92:11:92:23|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_complex_mult.v":101:11:101:22|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_counter.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_counter.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/counter/rtl\lscc_cntr.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../common/counter/rtl\lscc_cntr.v":129:13:129:25|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../common/counter/rtl\lscc_cntr.v":143:13:143:24|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_fifo.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_fifo.v":"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo/rtl\lscc_fifo.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo/rtl\lscc_fifo.v":3267:17:3267:29|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo/rtl\lscc_fifo.v":3274:17:3274:28|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_fifo_dc.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_fifo_dc.v":"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo_dc/rtl\lscc_fifo_dc.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo_dc/rtl\lscc_fifo_dc.v":4907:25:4907:37|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo_dc/rtl\lscc_fifo_dc.v":4911:25:4911:36|Read directive translate_on.
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo_dc/rtl\lscc_fifo_dc.v":4942:29:4942:41|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo_dc/rtl\lscc_fifo_dc.v":4946:29:4946:40|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_mac.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_mac.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/mult_accumulate/rtl\lscc_mult_accumulate.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_mac.v":94:11:94:23|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_mac.v":109:11:109:22|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsubsum.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsubsum.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/mult_add_sub_sum/rtl\lscc_mult_add_sub_sum.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../common/mult_add_sub_sum/rtl\lscc_mult_add_sub_sum.v":210:13:210:25|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../common/mult_add_sub_sum/rtl\lscc_mult_add_sub_sum.v":227:13:227:24|Read directive translate_on.
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsubsum.v":84:11:84:23|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsubsum.v":93:11:93:22|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsub.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsub.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/mult_add_sub/rtl\lscc_mult_add_sub.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsub.v":91:11:91:23|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsub.v":100:11:100:22|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_mult.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_mult.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/multiplier/rtl\lscc_multiplier.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_mult.v":87:11:87:23|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_mult.v":96:11:96:22|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dp.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dp.v":"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dp/rtl\lscc_ram_dp.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dp/rtl\lscc_ram_dp.v":1059:25:1059:37|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dp/rtl\lscc_ram_dp.v":1063:25:1063:36|Read directive translate_on.
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dp/rtl\lscc_ram_dp.v":1094:29:1094:41|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dp/rtl\lscc_ram_dp.v":1098:29:1098:40|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dq.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dq.v":"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dq/rtl\lscc_ram_dq.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dq/rtl\lscc_ram_dq.v":1481:25:1481:37|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dq/rtl\lscc_ram_dq.v":1487:25:1487:36|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_rom.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_rom.v":"C:\lscc\radiant\2023.1\ip\pmi\../avant/rom/rtl\lscc_rom.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/rom/rtl\lscc_rom.v":969:25:969:37|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/rom/rtl\lscc_rom.v":975:25:975:36|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_sub.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_sub.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/subtractor/rtl\lscc_subtractor.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dp_be.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dp_be.v":146:11:146:23|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dp_be.v":155:11:155:22|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dq_be.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dq_be.v":87:11:87:23|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dq_be.v":95:11:95:22|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_dsp.v" (library work)
+@I::"Z:\ES4\ES4-fruit-salad-game\mypll\rtl\mypll.v" (library work)
+Verilog syntax check successful!
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 111MB)
+
+
+Process completed successfully.
+# Thu Dec  5 11:43:35 2024
+
+###########################################################]
+###########################################################[
+@N:"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":6:7:6:20|Top entity is set to vga_controller.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\shift8.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\top.vhd'.
+@W: CD433 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\top.vhd":54:9:54:9|No design units in file
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\update_color.vhd'.
+@W: CD433 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\update_color.vhd":41:7:41:7|No design units in file
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\blueberryROM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\grapefruitROM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\cherryROM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\orangeROM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\watermelonROM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\startscreenROM.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\fruit_rom.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\nesclk_top.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\pattern_gen.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd'.
+VHDL syntax check successful!
+@N: CD231 :"C:\lscc\radiant\2023.1\synpbase\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":6:7:6:20|Synthesizing work.vga_controller.synth.
+@W: CD638 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":80:8:80:16|Signal ref_clk_i is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":81:8:81:14|Signal rst_n_i is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":82:8:82:18|Signal outglobal_o is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":84:8:84:16|Signal outcore_o is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":88:8:88:18|Signal patterndata is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga_controller.vhd":91:8:91:14|Signal counter is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD630 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\pattern_gen.vhd":6:7:6:17|Synthesizing work.pattern_gen.synth.
+@N: CD231 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\pattern_gen.vhd":39:15:39:16|Using onehot encoding for type gamestate. For example, enumeration start is mapped to "100000".
+@N: CD231 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\pattern_gen.vhd":43:15:43:16|Using onehot encoding for type swapstate. For example, enumeration fruit1 is mapped to "10000000000".
+@W: CD638 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\pattern_gen.vhd":89:7:89:12|Signal output is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD630 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\fruit_rom.vhd":5:7:5:14|Synthesizing work.fruitrom.synth.
+@N: CD630 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\cherryROM.vhd":5:7:5:15|Synthesizing work.cherryrom.synth.
+Post processing for work.cherryrom.synth
+Running optimization stage 1 on cherryROM .......
+Finished optimization stage 1 on cherryROM (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 102MB)
+@N: CD630 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\orangeROM.vhd":5:7:5:15|Synthesizing work.orangerom.synth.
+Post processing for work.orangerom.synth
+Running optimization stage 1 on orangeROM .......
+Finished optimization stage 1 on orangeROM (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 103MB)
+@N: CD630 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\grapefruitROM.vhd":5:7:5:19|Synthesizing work.grapefruitrom.synth.
+Post processing for work.grapefruitrom.synth
+Running optimization stage 1 on grapefruitROM .......
+Finished optimization stage 1 on grapefruitROM (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 105MB)
+@N: CD630 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\blueberryROM.vhd":5:7:5:18|Synthesizing work.blueberryrom.synth.
+Post processing for work.blueberryrom.synth
+Running optimization stage 1 on blueberryROM .......
+@N: CL189 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\blueberryROM.vhd":19:2:19:3|Register bit color(5) is always 0.
+@N: CL189 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\blueberryROM.vhd":19:2:19:3|Register bit color(3) is always 0.
+@W: CL260 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\blueberryROM.vhd":19:2:19:3|Pruning register bit 5 of color(5 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\blueberryROM.vhd":19:2:19:3|Pruning register bit 3 of color(5 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Finished optimization stage 1 on blueberryROM (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 106MB)
+Post processing for work.fruitrom.synth
+Running optimization stage 1 on fruitROM .......
+Finished optimization stage 1 on fruitROM (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 107MB)
+@N: CD630 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\startscreenROM.vhd":5:7:5:20|Synthesizing work.startscreenrom.synth.
+Post processing for work.startscreenrom.synth
+Running optimization stage 1 on startscreenROM .......
+@N: CL189 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\startscreenROM.vhd":19:2:19:3|Register bit color(5) is always 0.
+@W: CL279 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\startscreenROM.vhd":19:2:19:3|Pruning register bits 5 to 4 of color(5 downto 0). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on startscreenROM (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 107MB)
+Post processing for work.pattern_gen.synth
+Running optimization stage 1 on pattern_gen .......
+Finished optimization stage 1 on pattern_gen (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 111MB)
+@N: CD630 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\nesclk_top.vhd":6:7:6:16|Synthesizing work.nesclk_top.synth.
+Running optimization stage 1 on HSOSC .......
+Finished optimization stage 1 on HSOSC (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 111MB)
+@N: CD630 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\shift8.vhd":4:7:4:12|Synthesizing work.shift8.synth.
+Post processing for work.shift8.synth
+Running optimization stage 1 on shift8 .......
+Finished optimization stage 1 on shift8 (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 111MB)
+Post processing for work.nesclk_top.synth
+Running optimization stage 1 on nesclk_top .......
+@W: CL117 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\nesclk_top.vhd":80:10:80:11|Latch generated from process for signal output(7 downto 0); possible missing assignment in an if or case statement.
+Finished optimization stage 1 on nesclk_top (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 111MB)
+@N: CD630 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\vga.vhd":5:7:5:9|Synthesizing work.vga.synth.
+Post processing for work.vga.synth
+Running optimization stage 1 on vga .......
+Finished optimization stage 1 on vga (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 111MB)
+Running optimization stage 1 on mypll .......
+Finished optimization stage 1 on mypll (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 111MB)
+Post processing for work.vga_controller.synth
+Running optimization stage 1 on vga_controller .......
+Finished optimization stage 1 on vga_controller (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 111MB)
+Running optimization stage 2 on mypll .......
+Finished optimization stage 2 on mypll (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 111MB)
+Running optimization stage 2 on vga .......
+Finished optimization stage 2 on vga (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 111MB)
+Running optimization stage 2 on shift8 .......
+Finished optimization stage 2 on shift8 (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 111MB)
+Running optimization stage 2 on HSOSC .......
+Finished optimization stage 2 on HSOSC (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 111MB)
+Running optimization stage 2 on nesclk_top .......
+Finished optimization stage 2 on nesclk_top (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 111MB)
+Running optimization stage 2 on startscreenROM .......
+Finished optimization stage 2 on startscreenROM (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 111MB)
+Running optimization stage 2 on blueberryROM .......
+Finished optimization stage 2 on blueberryROM (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 111MB)
+Running optimization stage 2 on grapefruitROM .......
+Finished optimization stage 2 on grapefruitROM (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 111MB)
+Running optimization stage 2 on orangeROM .......
+Finished optimization stage 2 on orangeROM (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 111MB)
+Running optimization stage 2 on cherryROM .......
+Finished optimization stage 2 on cherryROM (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 111MB)
+Running optimization stage 2 on fruitROM .......
+Finished optimization stage 2 on fruitROM (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 111MB)
+Running optimization stage 2 on pattern_gen .......
+@N: CL201 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\pattern_gen.vhd":143:2:143:3|Trying to extract state machine for register game_state.
+Extracted state machine for register game_state
+State machine has 5 reachable states with original encodings of:
+   000001
+   000010
+   000100
+   001000
+   010000
+@W: CL249 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\pattern_gen.vhd":143:2:143:3|Initial value is not supported on state machine game_state
+@N: CL201 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\pattern_gen.vhd":143:2:143:3|Trying to extract state machine for register swap_state.
+Extracted state machine for register swap_state
+State machine has 4 reachable states with original encodings of:
+   00000000001
+   00000000010
+   00000000100
+   10000000000
+@W: CL249 :"Z:\ES4\ES4-fruit-salad-game\source\impl_1\pattern_gen.vhd":143:2:143:3|Initial value is not supported on state machine swap_state
+Finished optimization stage 2 on pattern_gen (CPU Time 0h:00m:00s, Memory Used current: 122MB peak: 122MB)
+Running optimization stage 2 on vga_controller .......
+Finished optimization stage 2 on vga_controller (CPU Time 0h:00m:00s, Memory Used current: 122MB peak: 122MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: Z:\ES4\ES4-fruit-salad-game\impl_1\synwork\layer0.duruntime
+
+
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 122MB peak: 122MB)
+
+
+Process completed successfully.
+# Thu Dec  5 11:43:38 2024
+
+###########################################################]
+###########################################################[
+@I::"C:\lscc\radiant\2023.1\synpbase\lib\generic\ice40up.v" (library work)
+@I::"C:\lscc\radiant\2023.1\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\radiant\2023.1\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\radiant\2023.1\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_addsub.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_addsub.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/adder_subtractor/rtl\lscc_add_sub.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../common/adder_subtractor/rtl\lscc_add_sub.v":313:13:313:25|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../common/adder_subtractor/rtl\lscc_add_sub.v":333:13:333:24|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_add.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_add.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/adder/rtl\lscc_adder.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_complex_mult.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_complex_mult.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/complex_mult/rtl\lscc_complex_mult.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_complex_mult.v":92:11:92:23|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_complex_mult.v":101:11:101:22|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_counter.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_counter.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/counter/rtl\lscc_cntr.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../common/counter/rtl\lscc_cntr.v":129:13:129:25|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../common/counter/rtl\lscc_cntr.v":143:13:143:24|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_fifo.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_fifo.v":"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo/rtl\lscc_fifo.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo/rtl\lscc_fifo.v":3267:17:3267:29|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo/rtl\lscc_fifo.v":3274:17:3274:28|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_fifo_dc.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_fifo_dc.v":"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo_dc/rtl\lscc_fifo_dc.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo_dc/rtl\lscc_fifo_dc.v":4907:25:4907:37|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo_dc/rtl\lscc_fifo_dc.v":4911:25:4911:36|Read directive translate_on.
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo_dc/rtl\lscc_fifo_dc.v":4942:29:4942:41|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/fifo_dc/rtl\lscc_fifo_dc.v":4946:29:4946:40|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_mac.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_mac.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/mult_accumulate/rtl\lscc_mult_accumulate.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_mac.v":94:11:94:23|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_mac.v":109:11:109:22|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsubsum.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsubsum.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/mult_add_sub_sum/rtl\lscc_mult_add_sub_sum.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../common/mult_add_sub_sum/rtl\lscc_mult_add_sub_sum.v":210:13:210:25|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../common/mult_add_sub_sum/rtl\lscc_mult_add_sub_sum.v":227:13:227:24|Read directive translate_on.
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsubsum.v":84:11:84:23|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsubsum.v":93:11:93:22|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsub.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsub.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/mult_add_sub/rtl\lscc_mult_add_sub.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsub.v":91:11:91:23|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_multaddsub.v":100:11:100:22|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_mult.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_mult.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/multiplier/rtl\lscc_multiplier.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_mult.v":87:11:87:23|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_mult.v":96:11:96:22|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dp.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dp.v":"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dp/rtl\lscc_ram_dp.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dp/rtl\lscc_ram_dp.v":1059:25:1059:37|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dp/rtl\lscc_ram_dp.v":1063:25:1063:36|Read directive translate_on.
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dp/rtl\lscc_ram_dp.v":1094:29:1094:41|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dp/rtl\lscc_ram_dp.v":1098:29:1098:40|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dq.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dq.v":"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dq/rtl\lscc_ram_dq.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dq/rtl\lscc_ram_dq.v":1481:25:1481:37|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/ram_dq/rtl\lscc_ram_dq.v":1487:25:1487:36|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_rom.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_rom.v":"C:\lscc\radiant\2023.1\ip\pmi\../avant/rom/rtl\lscc_rom.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/rom/rtl\lscc_rom.v":969:25:969:37|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\../avant/rom/rtl\lscc_rom.v":975:25:975:36|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_sub.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_sub.v":"C:\lscc\radiant\2023.1\ip\pmi\../common/subtractor/rtl\lscc_subtractor.v" (library work)
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dp_be.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dp_be.v":146:11:146:23|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dp_be.v":155:11:155:22|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dq_be.v" (library work)
+@N: CG334 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dq_be.v":87:11:87:23|Read directive translate_off.
+@N: CG333 :"C:\lscc\radiant\2023.1\ip\pmi\pmi_ram_dq_be.v":95:11:95:22|Read directive translate_on.
+@I:"C:\lscc\radiant\2023.1\ip\pmi\pmi_iCE40UP.v":"C:\lscc\radiant\2023.1\ip\pmi\pmi_dsp.v" (library work)
+@I::"Z:\ES4\ES4-fruit-salad-game\mypll\rtl\mypll.v" (library work)
+Verilog syntax check successful!
+@N: CG364 :"C:\lscc\radiant\2023.1\synpbase\lib\generic\ice40up.v":438:7:438:11|Synthesizing module PLL_B in library work.
+Running optimization stage 1 on PLL_B .......
+Finished optimization stage 1 on PLL_B (CPU Time 0h:00m:00s, Memory Used current: 112MB peak: 113MB)
+@N: CG364 :"Z:\ES4\ES4-fruit-salad-game\mypll\rtl\mypll.v":105:7:105:26|Synthesizing module mypll_ipgen_lscc_pll in library work.
+
+	DIVR=8'b00110000
+	DIVF=16'b0011011000110110
+	DIVQ=8'b00110101
+	DELAY_PORT_WIDTH=32'b00000000000000000000000000000100
+	FEEDBACK_PATH=48'b010100110100100101001101010100000100110001000101
+	FILTER_RANGE=8'b00110001
+	DELAY_ADJUSTMENT_MODE_FEEDBACK=40'b0100011001001001010110000100010101000100
+	FDA_FEEDBACK=8'b00110000
+	DELAY_ADJUSTMENT_MODE_RELATIVE=40'b0100011001001001010110000100010101000100
+	FDA_RELATIVE=8'b00110000
+	SHIFTREG_DIV_MODE=8'b00110000
+	PLLOUT_SELECT_PORTA=48'b010001110100010101001110010000110100110001001011
+	PLLOUT_SELECT_PORTB=48'b010001110100010101001110010000110100110001001011
+	EXTERNAL_DIVIDE_FACTOR=32'b01001110010011110100111001000101
+	ENABLE_ICEGATE_PORTA=8'b00110000
+	ENABLE_ICEGATE_PORTB=8'b00110000
+	FREQUENCY_PIN_REFERENCECLK=72'b001100010011001000101110001100000011000000110000001100000011000000110000
+   Generated name = mypll_ipgen_lscc_pll_Z1_layer1
+Running optimization stage 1 on mypll_ipgen_lscc_pll_Z1_layer1 .......
+Finished optimization stage 1 on mypll_ipgen_lscc_pll_Z1_layer1 (CPU Time 0h:00m:00s, Memory Used current: 113MB peak: 113MB)
+@N: CG364 :"Z:\ES4\ES4-fruit-salad-game\mypll\rtl\mypll.v":11:7:11:11|Synthesizing module mypll in library work.
+@W: CG781 :"Z:\ES4\ES4-fruit-salad-game\mypll\rtl\mypll.v":46:23:46:23|Input sclk_i on instance lscc_pll_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"Z:\ES4\ES4-fruit-salad-game\mypll\rtl\mypll.v":47:22:47:22|Input sdi_i on instance lscc_pll_inst is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+Running optimization stage 1 on mypll .......
+Finished optimization stage 1 on mypll (CPU Time 0h:00m:00s, Memory Used current: 113MB peak: 113MB)
+Running optimization stage 2 on mypll .......
+Finished optimization stage 2 on mypll (CPU Time 0h:00m:00s, Memory Used current: 113MB peak: 113MB)
+Running optimization stage 2 on mypll_ipgen_lscc_pll_Z1_layer1 .......
+@N: CL159 :"Z:\ES4\ES4-fruit-salad-game\mypll\rtl\mypll.v":130:10:130:19|Input feedback_i is unused.
+@N: CL159 :"Z:\ES4\ES4-fruit-salad-game\mypll\rtl\mypll.v":131:37:131:51|Input dynamic_delay_i is unused.
+Finished optimization stage 2 on mypll_ipgen_lscc_pll_Z1_layer1 (CPU Time 0h:00m:00s, Memory Used current: 113MB peak: 113MB)
+Running optimization stage 2 on PLL_B .......
+Finished optimization stage 2 on PLL_B (CPU Time 0h:00m:00s, Memory Used current: 113MB peak: 113MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: Z:\ES4\ES4-fruit-salad-game\impl_1\synwork\layer1.duruntime
+
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 113MB)
+
+
+Process completed successfully.
+# Thu Dec  5 11:43:39 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03LR-1
+Install: C:\lscc\radiant\2023.1\synpbase
+OS: Windows 10 or later
+Hostname: LAB223J
+
+Implementation : impl_1
+Synopsys Synopsys Netlist Linker, Version comp202303synp1, Build 100R, Built May 29 2023 11:23:06, @
+
+@N|Running in 64-bit mode
+@W: Z198 :"z:\es4\es4-fruit-salad-game\source\impl_1\nesclk_top.vhd":44:8:44:18|Unbound component HSOSC of instance instanceosc 
+
+=======================================================================================
+For a summary of linker messages for components that did not bind, please see log file:
+@L: Z:\ES4\ES4-fruit-salad-game\impl_1\synwork\fruitSalad_impl_1_comp.linkerlog
+=======================================================================================
+
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 92MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Dec  5 11:43:40 2024
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: Z:\ES4\ES4-fruit-salad-game\impl_1\synwork\fruitSalad_impl_1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:03s; Memory used current: 31MB peak: 33MB)
+
+Process took 0h:00m:06s realtime, 0h:00m:03s cputime
+
+Process completed successfully.
+# Thu Dec  5 11:43:40 2024
+
+###########################################################]

@@ -1,0 +1,4 @@
+ckid0_22:@|S:firstblock.lscc_pll_inst.u_PLL_B.OUTGLOBAL@|E:secondblock.vertical[9:0]@|F:@syn_dgcc_clockid0_22==1@|M:ClockId_0_22
+ckid0_23:@|S:nesblock.CTRLclk.OUT@|E:nesblock.instanceshift.in7@|F:@syn_dgcc_clockid0_23==1@|M:ClockId_0_23
+ckid0_24:@|S:nesblock.instanceosc.CLKHF@|E:nesblock.counter[16:0]@|F:@syn_dgcc_clockid0_24==1@|M:ClockId_0_24
+ckid0_25:@|S:nesblock.un1_output.OUT@|E:nesblock.output[7:0]@|F:@syn_dgcc_clockid0_25==1@|M:ClockId_0_25
