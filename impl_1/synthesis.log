@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Dec  5 21:36:39 2024
+Thu Dec  5 23:34:59 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
@@ -185,8 +185,8 @@ Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd
 
 INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(6): analyzing entity pattern_gen. VHDL-1012
 INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(19): analyzing architecture synth. VHDL-1010
-WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(115): possible infinite loop process does not have a wait statement. VHDL-1196
-WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(127): possible infinite loop process does not have a wait statement. VHDL-1196
+WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(118): possible infinite loop process does not have a wait statement. VHDL-1196
+WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(130): possible infinite loop process does not have a wait statement. VHDL-1196
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/shift8.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/shift8.vhd
 
@@ -257,101 +257,150 @@ Top module name (VHDL, mixed language): vga_controller
                                                          
 
 
-WARNING <35001771> - synthesis: Initial value found on net active_fruit_rom_row[4] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net active_fruit_rom_row[3] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net active_fruit_rom_row[2] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net active_fruit_rom_row[1] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net active_fruit_rom_row[0] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net active_fruit_rom_col[4] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net active_fruit_rom_col[3] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net active_fruit_rom_col[2] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net active_fruit_rom_col[1] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net active_fruit_rom_col[0] will be ignored due to unrecognized driver type
 WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
 WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
 WARNING <35931002> - synthesis: z:/es4/finalproj/fruitsalad/mypll/rtl/mypll.v(139): net \firstblock/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
 WARNING <35931002> - synthesis: z:/es4/finalproj/fruitsalad/mypll/rtl/mypll.v(140): net \firstblock/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
 ######## Missing driver on net \firstblock/lscc_pll_inst/sclk_i. Patching with GND.
 ######## Missing driver on net \firstblock/lscc_pll_inst/sdi_i. Patching with GND.
+INFO <35001774> - synthesis: Extracted state machine for register '\thirdblock/swap_fruit' with one-hot encoding
+State machine has 16 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+ 0011 
+
+ 0100 
+
+ 0101 
+
+ 0110 
+
+ 0111 
+
+ 1000 
+
+ 1001 
+
+ 1010 
+
+ 1011 
+
+ 1100 
+
+ 1101 
+
+ 1110 
+
+ 1111 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0000000000000001
+
+ 0001 -> 0000000000000010
+
+ 0010 -> 0000000000000100
+
+ 0011 -> 0000000000001000
+
+ 0100 -> 0000000000010000
+
+ 0101 -> 0000000000100000
+
+ 0110 -> 0000000001000000
+
+ 0111 -> 0000000010000000
+
+ 1000 -> 0000000100000000
+
+ 1001 -> 0000001000000000
+
+ 1010 -> 0000010000000000
+
+ 1011 -> 0000100000000000
+
+ 1100 -> 0001000000000000
+
+ 1101 -> 0010000000000000
+
+ 1110 -> 0100000000000000
+
+ 1111 -> 1000000000000000
+
 
 
 
 CRITICAL <35001747> - synthesis: Bit 5 of Register \thirdblock/start_screen/color is stuck at Zero
 Combinational loop found : 1
 
- Net output[1] 
-
- Instance \nesblock/mux_24_i2 
-
-Combinational loop found : 2
-
  Net output[0] 
 
  Instance \nesblock/mux_24_i1 
 
+Combinational loop found : 2
+
+ Net output[1] 
+
+ Instance \nesblock/mux_24_i2 
+
 Combinational loop found : 3
-
- Net output[7] 
-
- Instance \nesblock/mux_24_i8 
-
-Combinational loop found : 4
 
  Net output[4] 
 
  Instance \nesblock/mux_24_i5 
 
+Combinational loop found : 4
+
+ Net output[7] 
+
+ Instance \nesblock/mux_24_i8 
+
 Combinational loop found : 5
-
- Net output[2] 
-
- Instance \nesblock/mux_24_i3 
-
-Combinational loop found : 6
-
- Net output[3] 
-
- Instance \nesblock/mux_24_i4 
-
-Combinational loop found : 7
-
- Net output[5] 
-
- Instance \nesblock/mux_24_i6 
-
-Combinational loop found : 8
 
  Net output[6] 
 
  Instance \nesblock/mux_24_i7 
 
+Combinational loop found : 6
+
+ Net output[5] 
+
+ Instance \nesblock/mux_24_i6 
+
+Combinational loop found : 7
+
+ Net output[3] 
+
+ Instance \nesblock/mux_24_i4 
+
+Combinational loop found : 8
+
+ Net output[2] 
+
+ Instance \nesblock/mux_24_i3 
+
 Duplicate register/latch removal. \thirdblock/start_screen/color_i2 is a one-to-one match with \thirdblock/start_screen/color_i5.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i0 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i1 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i2 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i3 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i4 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i5 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i6 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i7 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i8 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i9 will be ignored.
 INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 165 of 5280 (3 % )
+Number of register bits => 232 of 5280 (4 % )
 EBR_B => 12
-CCU2 => 72
-FD1P3XZ => 165
+CCU2 => 95
+FD1P3XZ => 232
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 1
-LUT4 => 350
+LUT4 => 433
 OB => 21
 PLL_B => 1
 ################### End Area Report ##################
 Number of odd-length carry chains : 2
-Number of even-length carry chains : 10
+Number of even-length carry chains : 13
 
 ################### Begin Clock Report ######################
 Clock Nets
@@ -364,21 +413,21 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/game_state[0], loads : 64
-  Net : thirdblock/game_state[1], loads : 38
-  Net : thirdblock/fruit_tl_col_2__0__N_326, loads : 21
-  Net : thirdblock/fruit_tl_col_1__0__N_306, loads : 21
+  Net : thirdblock/game_state[0], loads : 56
+  Net : thirdblock/game_state[1], loads : 41
+  Net : thirdblock/RGB_c_0_N_780, loads : 26
+  Net : thirdblock/flashing_counter_23__N_762, loads : 24
+  Net : thirdblock/n1037, loads : 23
+  Net : thirdblock/game_state[2], loads : 21
+  Net : thirdblock/fruit_tl_col_1__0__N_317, loads : 21
   Net : col_0__N_50, loads : 20
-  Net : thirdblock/counter_0__N_631, loads : 19
-  Net : thirdblock/n332, loads : 17
-  Net : nesblock/clk, loads : 17
-  Net : thirdblock/counter_1__N_629, loads : 16
-  Net : thirdblock/n338, loads : 15
+  Net : thirdblock/fruit_tl_col_1__1__N_316, loads : 20
+  Net : thirdblock/fruit_tl_col_3__0__N_357, loads : 20
 ################### End Clock Report ##################
 
-Peak Memory Usage: 139 MB
+Peak Memory Usage: 124 MB
 
 --------------------------------------------------------------
-Total CPU Time: 3 secs 
-Total REAL Time: 7 secs 
+Total CPU Time: 4 secs 
+Total REAL Time: 9 secs 
 --------------------------------------------------------------

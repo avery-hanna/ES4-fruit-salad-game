@@ -6,7 +6,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2023.1.0.43.3
-Mapped on: Thu Dec  5 21:36:47 2024
+Mapped on: Thu Dec  5 23:35:09 2024
 
 Design Information
 ------------------
@@ -18,13 +18,13 @@ Command line:   map -i fruitSalad_impl_1_syn.udb -pdc
 Design Summary
 --------------
 
-   Number of slice registers: 165 out of  5280 (3%)
+   Number of slice registers: 232 out of  5280 (4%)
    Number of I/O registers:      1 out of   117 (1%)
-   Number of LUT4s:           534 out of  5280 (10%)
-      Number of logic LUT4s:             351
-      Number of inserted feedthru LUT4s:  29
+   Number of LUT4s:           708 out of  5280 (13%)
+      Number of logic LUT4s:             434
+      Number of inserted feedthru LUT4s:  74
       Number of replicated LUT4s:         10
-      Number of ripple logic:             72 (144 LUT4s)
+      Number of ripple logic:             95 (190 LUT4s)
    Number of IO sites used:   23 out of 39 (59%)
       Number of IO sites used for general PIO: 23
       Number of IO sites used for I3C: 0 out of 2 (0%)
@@ -47,18 +47,18 @@ Design Summary
    Number of EBRs:             12 out of 30 (40%)
    Number of PLLs:             1 out of 1 (100%)
    Number of Clocks:  4
-      Net clk: 137 loads, 137 rising, 0 falling (Driver: Pin
+      Net clk: 193 loads, 193 rising, 0 falling (Driver: Pin
      firstblock.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
       Net external_osc_c: 1 loads, 1 rising, 0 falling (Driver: Port
      external_osc)
       Net nesblock.clk: 9 loads, 9 rising, 0 falling (Driver: Pin
      nesblock.instanceosc/CLKHF)
       Net CTRLclk_c: 8 loads, 8 rising, 0 falling (Driver: Pin
-     nesblock.NEScount_3__I_0/Z)
-   Number of Clock Enables:  10
-      Net thirdblock.fruit_type_2__0__N_333: 3 loads, 3 SLICEs
-      Net thirdblock.fruit_type_1__0__N_330: 3 loads, 3 SLICEs
-      Net RGB_pad[4].vcc: 37 loads, 0 SLICEs
+     nesblock.CTRLclk_c_I_0/Z)
+   Number of Clock Enables:  15
+      Net thirdblock.counter_0__N_759: 9 loads, 9 SLICEs
+      Net thirdblock.fruit_tl_col_1__0__N_317: 20 loads, 20 SLICEs
+      Net thirdblock.active_fruit_tl_col_0__N_122: 10 loads, 10 SLICEs
 
                                     Page 1
 
@@ -68,46 +68,44 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net thirdblock.fruit_tl_col_1__0__N_306: 20 loads, 20 SLICEs
-      Net thirdblock.counter_0__N_631: 9 loads, 9 SLICEs
-      Net thirdblock.fruit_tl_col_2__0__N_326: 20 loads, 20 SLICEs
-      Net thirdblock.active_fruit_tl_col_0__N_121: 10 loads, 10 SLICEs
-      Net thirdblock.game_state_0__N_70: 2 loads, 2 SLICEs
-      Net thirdblock.swap_fruit_1__N_74: 3 loads, 3 SLICEs
+      Net thirdblock.game_state_1__N_70: 2 loads, 2 SLICEs
+      Net thirdblock.game_state_0__N_72: 1 loads, 1 SLICEs
+      Net RGB_pad[3].vcc: 37 loads, 0 SLICEs
+      Net thirdblock.active_fruit_tl_row_0__N_101: 10 loads, 10 SLICEs
+      Net thirdblock.fruit_tl_col_3__0__N_357: 20 loads, 20 SLICEs
+      Net n3709: 16 loads, 16 SLICEs
+      Net thirdblock.fruit_type_1__0__N_361: 3 loads, 3 SLICEs
+      Net thirdblock.fruit_type_2__0__N_364: 3 loads, 3 SLICEs
+      Net thirdblock.fruit_type_3__0__N_367: 3 loads, 3 SLICEs
+      Net thirdblock.fruit_tl_col_2__0__N_337: 20 loads, 20 SLICEs
+      Net thirdblock.flashing_counter_23__N_762: 13 loads, 13 SLICEs
       Net col_0__N_50: 6 loads, 6 SLICEs
-   Number of LSRs:  21
-      Net thirdblock.active_fruit_tl_row_0__N_101: 1 loads, 1 SLICEs
-      Net thirdblock.active_fruit_type_0__N_127: 1 loads, 1 SLICEs
-      Net led_c: 3 loads, 3 SLICEs
-      Net thirdblock.fruit_tl_col_1__0__N_307: 8 loads, 8 SLICEs
-      Net thirdblock.counter_1__N_629: 8 loads, 8 SLICEs
-      Net thirdblock.fruit_tl_col_2__0__N_327: 8 loads, 8 SLICEs
+   Number of LSRs:  14
+      Net thirdblock.counter_1__N_757: 8 loads, 8 SLICEs
+      Net thirdblock.fruit_tl_col_1__1__N_316: 20 loads, 20 SLICEs
+      Net thirdblock.game_state_0__N_73: 1 loads, 1 SLICEs
+      Net thirdblock.counter_0__N_760: 1 loads, 1 SLICEs
+      Net thirdblock.fruit_tl_col_3__0__N_358: 14 loads, 14 SLICEs
+      Net RGB_c_0_N_780: 16 loads, 16 SLICEs
+      Net thirdblock.active_fruit_type_0__N_128: 1 loads, 1 SLICEs
+      Net thirdblock.fruit_tl_col_2__0__N_338: 8 loads, 8 SLICEs
+      Net thirdblock.active_fruit_tl_row_0__N_102: 4 loads, 4 SLICEs
+      Net thirdblock.active_fruit_type_1__N_126: 1 loads, 1 SLICEs
+      Net thirdblock.active_fruit_type_2__N_124: 1 loads, 1 SLICEs
+      Net startscreenRGB_0__N_78: 1 loads, 1 SLICEs
       Net row_0__N_30: 6 loads, 6 SLICEs
-      Net thirdblock.active_fruit_tl_row_1__N_99: 1 loads, 1 SLICEs
-      Net thirdblock.active_fruit_tl_row_2__N_97: 1 loads, 1 SLICEs
-      Net thirdblock.active_fruit_tl_row_3__N_95: 1 loads, 1 SLICEs
-      Net thirdblock.active_fruit_tl_row_4__N_93: 1 loads, 1 SLICEs
-      Net thirdblock.active_fruit_tl_row_5__N_91: 1 loads, 1 SLICEs
-      Net thirdblock.active_fruit_tl_row_6__N_89: 1 loads, 1 SLICEs
-      Net thirdblock.active_fruit_tl_row_7__N_87: 1 loads, 1 SLICEs
-      Net thirdblock.active_fruit_tl_row_8__N_85: 1 loads, 1 SLICEs
-      Net thirdblock.active_fruit_tl_row_9__N_83: 1 loads, 1 SLICEs
-      Net thirdblock.active_fruit_type_1__N_125: 1 loads, 1 SLICEs
-      Net thirdblock.active_fruit_type_2__N_123: 1 loads, 1 SLICEs
-      Net thirdblock.counter_0__N_632: 1 loads, 1 SLICEs
-      Net startscreenRGB_0__N_81: 1 loads, 1 SLICEs
       Net col_0__N_50: 6 loads, 6 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net thirdblock.game_state[0]: 64 loads
-      Net RGB_pad[4].vcc: 43 loads
-      Net thirdblock.game_state[1]: 39 loads
-      Net thirdblock.fruit_tl_col_1__0__N_306: 21 loads
-      Net thirdblock.fruit_tl_col_2__0__N_326: 20 loads
-      Net nesblock.output_0__N_58: 16 loads
-      Net thirdblock.n332: 15 loads
-      Net thirdblock.n2404: 14 loads
-      Net thirdblock.n338: 14 loads
-      Net thirdblock.n5: 13 loads
+      Net game_state[0]: 61 loads
+      Net game_state[1]: 46 loads
+      Net RGB_pad[3].vcc: 43 loads
+      Net game_state[2]: 30 loads
+      Net RGB_c_0_N_780: 25 loads
+      Net thirdblock.n1037: 23 loads
+      Net thirdblock.fruit_tl_col_1__0__N_317: 20 loads
+      Net thirdblock.fruit_tl_col_1__1__N_316: 20 loads
+      Net thirdblock.fruit_tl_col_2__0__N_337: 20 loads
+      Net thirdblock.fruit_tl_col_3__0__N_357: 20 loads
 
 
 
@@ -125,6 +123,8 @@ IO (PIO) Attributes
 
 +---------------------+-----------+-----------+-------+-------+-----------+
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
+|                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
++---------------------+-----------+-----------+-------+-------+-----------+
 
                                     Page 2
 
@@ -134,53 +134,51 @@ IO (PIO) Attributes
 
 IO (PIO) Attributes (cont)
 --------------------------
-|                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
+| RGB[3]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| RGB[2]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | RGB[4]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[3]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
 | RGB[5]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| data                | INPUT     |           | I     |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| external_osc        | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| led                 | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| buttonout[0]        | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| buttonout[1]        | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| buttonout[2]        | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| buttonout[3]        | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| buttonout[4]        | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| buttonout[5]        | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| buttonout[6]        | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| buttonout[7]        | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| latch               | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| NESclk              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| CTRLclk             | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| ext_osc_test        | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| VSYNC               | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| HSYNC               | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[0]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | RGB[1]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[2]              | OUTPUT    |           |       |       |           |
+| RGB[0]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| HSYNC               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| VSYNC               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| ext_osc_test        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| CTRLclk             | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| NESclk              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| latch               | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[7]        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[6]        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[5]        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[4]        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[3]        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[2]        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[1]        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| buttonout[0]        | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| led                 | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| external_osc        | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| data                | INPUT     |           | I     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
 Removed logic
@@ -188,9 +186,11 @@ Removed logic
 
 Block i1 was optimized away.
 
+PLL/DLL Summary
+---------------
 
-
-
+PLL 1:                                 Pin/Node Value
+  PLL Instance Name:                            firstblock/lscc_pll_inst/u_PLL_B
 
                                     Page 3
 
@@ -198,11 +198,8 @@ Block i1 was optimized away.
 
 
 
-PLL/DLL Summary
----------------
-
-PLL 1:                                 Pin/Node Value
-  PLL Instance Name:                            firstblock/lscc_pll_inst/u_PLL_B
+PLL/DLL Summary (cont)
+----------------------
   Input Reference Clock:               PIN      external_osc_c
   Output Clock(CoreA):                 PIN      ext_osc_test_c
   Output Clock(GlobalA):               NODE     clk
@@ -238,25 +235,28 @@ OSC Summary
 
 OSC 1:                                 Pin/Node Value
   OSC Instance Name:                            nesblock/instanceosc
-  Power UP:                            NODE     RGB_pad[4].vcc
-  Enable Signal:                       NODE     RGB_pad[4].vcc
+  Power UP:                            NODE     RGB_pad[3].vcc
+  Enable Signal:                       NODE     RGB_pad[3].vcc
   OSC Output:                          NODE     nesblock.clk
   DIV Setting:                                  00
 
 ASIC Components
 ---------------
 
+Instance Name: thirdblock/gen_fruit_roms[3].fruit_rom_instance/watermelon/fruit_
+     rom_col_3__0__I_0
+         Type: EBR
+Instance Name: thirdblock/gen_fruit_roms[3].fruit_rom_instance/cherry/fruit_rom_
+     row_3__0__I_0
+         Type: EBR
+Instance Name: thirdblock/gen_fruit_roms[3].fruit_rom_instance/blueberry/fruit_r
+     om_row_3__0__I_0_2
+         Type: EBR
 Instance Name: thirdblock/gen_fruit_roms[2].fruit_rom_instance/watermelon/fruit_
      rom_col_2__0__I_0
          Type: EBR
-Instance Name: thirdblock/gen_fruit_roms[2].fruit_rom_instance/watermelon/fruit_
-     rom_col_2__0__I_0_2
-         Type: EBR
-Instance Name: thirdblock/gen_fruit_roms[2].fruit_rom_instance/blueberry/fruit_r
-     om_row_2__0__I_0
-         Type: EBR
-Instance Name: thirdblock/gen_fruit_roms[2].fruit_rom_instance/blueberry/fruit_r
-     om_row_2__0__I_0_2
+Instance Name: thirdblock/gen_fruit_roms[2].fruit_rom_instance/cherry/fruit_rom_
+     row_2__0__I_0
 
                                     Page 4
 
@@ -267,23 +267,21 @@ Instance Name: thirdblock/gen_fruit_roms[2].fruit_rom_instance/blueberry/fruit_r
 ASIC Components (cont)
 ----------------------
          Type: EBR
+Instance Name: thirdblock/gen_fruit_roms[2].fruit_rom_instance/blueberry/fruit_r
+     om_row_2__0__I_0_2
+         Type: EBR
 Instance Name: thirdblock/gen_fruit_roms[1].fruit_rom_instance/watermelon/fruit_
      rom_col_1__0__I_0
          Type: EBR
-Instance Name: thirdblock/gen_fruit_roms[1].fruit_rom_instance/watermelon/fruit_
-     rom_col_1__0__I_0_2
-         Type: EBR
-Instance Name: thirdblock/gen_fruit_roms[1].fruit_rom_instance/blueberry/fruit_r
-     om_row_1__0__I_0
+Instance Name: thirdblock/gen_fruit_roms[1].fruit_rom_instance/cherry/fruit_rom_
+     row_1__0__I_0
          Type: EBR
 Instance Name: thirdblock/gen_fruit_roms[1].fruit_rom_instance/blueberry/fruit_r
      om_row_1__0__I_0_2
          Type: EBR
 Instance Name: thirdblock/active_fruit/watermelon/active_fruit_rom_col_0__I_0
          Type: EBR
-Instance Name: thirdblock/active_fruit/watermelon/active_fruit_rom_col_0__I_0_2
-         Type: EBR
-Instance Name: thirdblock/active_fruit/blueberry/active_fruit_rom_row_0__I_0
+Instance Name: thirdblock/active_fruit/cherry/active_fruit_rom_row_0__I_0
          Type: EBR
 Instance Name: thirdblock/active_fruit/blueberry/active_fruit_rom_row_0__I_0_2
          Type: EBR
@@ -305,7 +303,9 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 65 MB
+   Peak Memory Usage: 68 MB
+
+
 
 
 

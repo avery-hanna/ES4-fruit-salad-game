@@ -43,13 +43,13 @@ Bitstream generation complete!
 
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 118 MB
+Peak Memory Usage: 120 MB
 
 
 ibisgen "fruitSalad_impl_1.udb" "C:/lscc/radiant/2023.1/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 2023.1.0.43.3
 
-Thu Dec  5 21:37:10 2024
+Thu Dec  5 23:35:33 2024
 
 Loading fruitSalad_impl_1.udb ...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2023.1/ispfpga.
@@ -100,4 +100,4 @@ Writing SDF timing to file fruitSalad_impl_1_vo.sdf
 Backanno finished with 0 posted error messages.
 Total CPU Time: 1 secs 
 Total REAL Time: 2 secs 
-Peak Memory Usage: 102 MB
+Peak Memory Usage: 107 MB

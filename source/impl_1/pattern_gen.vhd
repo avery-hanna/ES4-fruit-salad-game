@@ -19,8 +19,8 @@ end entity pattern_gen;
 architecture synth of pattern_gen is
 component fruitROM is
   port(
-	  row : in std_logic_vector(4 downto 0);
-	  col : in std_logic_vector(4 downto 0);
+	  row : in std_logic_vector(3 downto 0);
+	  col : in std_logic_vector(3 downto 0);
 	  fruit_type : in std_logic_vector(2 downto 0);
 	  clk : in std_logic;
 	  color : out std_logic_vector(5 downto 0)
@@ -43,7 +43,7 @@ signal game_state : GAMESTATE := START;
 type SWAPSTATE is (FRUIT1, FRUIT2, FRUIT3, FRUIT4, FRUIT5, FRUIT6, FRUIT7, FRUIT8, FRUIT9, FRUIT10);
 signal swap_state : SWAPSTATE := FRUIT1;
 
-signal swap_fruit : unsigned(2 downto 0);
+signal swap_fruit : unsigned(3 downto 0);
 
 signal startscreenRGB : std_logic_vector(5 downto 0);
 
@@ -53,15 +53,15 @@ signal active_fruit_type : unsigned(2 downto 0);
 signal active_fruit_RGB : std_logic_vector(5 downto 0); -- we will get these values from all the different ROM and compare to decide what to render
 signal active_fruit_relative_row : std_logic_vector (9 downto 0);
 signal active_fruit_relative_col : std_logic_vector (9 downto 0);
-signal active_fruit_rom_row : std_logic_vector (4 downto 0) := "00000";
-signal active_fruit_rom_col : std_logic_vector (4 downto 0) := "00000";
+signal active_fruit_rom_row : std_logic_vector (3 downto 0);
+signal active_fruit_rom_col : std_logic_vector (3 downto 0);
 
-constant NUM_FRUITS : integer := 2;
+constant NUM_FRUITS : integer := 3;
 type unsigned_coord_array is array(1 to NUM_FRUITS) of unsigned(9 downto 0);
 type type_array is array(1 to NUM_FRUITS) of unsigned(2 downto 0);
 type rgb_array is array(1 to NUM_FRUITS) of std_logic_vector(5 downto 0);
 type vector_coord_array is array(1 to NUM_FRUITS) of std_logic_vector(9 downto 0);
-type rom_coord_array is array(1 to NUM_FRUITS) of std_logic_vector(4 downto 0);
+type rom_coord_array is array(1 to NUM_FRUITS) of std_logic_vector(3 downto 0);
 
 signal fruit_tl_row : unsigned_coord_array;
 signal fruit_tl_col : unsigned_coord_array;
@@ -79,17 +79,20 @@ signal button_prev : std_logic_vector(7 downto 0);
 signal counter : unsigned(16 downto 0);
 signal output: std_logic_vector(7 downto 0);
 
+--signal flashing_screen_RGB : std_logic_vector(5 downto 0);
+signal flashing_counter : unsigned(23 downto 0);
+
 
 begin
-	led <= '1' when game_state = START else '0';
+	led <= '1' when game_state = GAME_OVER else '0';
 	
 	start_screen : startscreenROM port map(row(9 downto 2), col(9 downto 2), clk, startscreenRGB);
 	
 	active_fruit_relative_row <= std_logic_vector(unsigned(row) - active_fruit_tl_row);
 	active_fruit_relative_col <= std_logic_vector(unsigned(col) - active_fruit_tl_col);
 	
-	active_fruit_rom_row <= active_fruit_relative_row(5 downto 1) when active_fruit_relative_row(9 downto 6) = "0000" else "11111";
-	active_fruit_rom_col <= active_fruit_relative_col(5 downto 1) when active_fruit_relative_col(9 downto 6) = "0000" else "11111";
+	active_fruit_rom_row <= active_fruit_relative_row(5 downto 2) when active_fruit_relative_row(9 downto 6) = "0000" else "1111";
+	active_fruit_rom_col <= active_fruit_relative_col(5 downto 2) when active_fruit_relative_col(9 downto 6) = "0000" else "1111";
 	
 	active_fruit : fruitROM port map(active_fruit_rom_row , active_fruit_rom_col, std_logic_vector(active_fruit_type), clk, active_fruit_RGB);
 	
@@ -109,8 +112,8 @@ begin
             fruit_relative_row(i) <= std_logic_vector(unsigned(row) - fruit_tl_row(i));
             fruit_relative_col(i) <= std_logic_vector(unsigned(col) - fruit_tl_col(i));
 
-            fruit_rom_row(i) <= fruit_relative_row(i)(5 downto 1) when fruit_relative_row(i)(9 downto 6) = "0000" else "11111";
-            fruit_rom_col(i) <= fruit_relative_col(i)(5 downto 1) when fruit_relative_col(i)(9 downto 6) = "0000" else "11111";
+            fruit_rom_row(i) <= fruit_relative_row(i)(5 downto 2) when fruit_relative_row(i)(9 downto 6) = "0000" else "1111";
+            fruit_rom_col(i) <= fruit_relative_col(i)(5 downto 2) when fruit_relative_col(i)(9 downto 6) = "0000" else "1111";
         end loop;
     end process;	
 	
@@ -128,7 +131,7 @@ begin
 	
 	RGB <= "000000" when valid = '0' -- can be changed here and below
 			else startscreenRGB when game_state = START
-			else "110011" when game_state = GAME_OVER
+			else ("000000" when flashing_counter(23) = '0' else fruit_RGB) when game_state = GAME_OVER
 			else fruit_RGB;
 
 		
@@ -149,7 +152,7 @@ begin
 				end loop;
 				
 				swap_state <= FRUIT1;
-				swap_fruit <= "001";
+				swap_fruit <= "0001";
 				
 				-- move state forward when button = start and button_prev is off
 				if button(4) = '0' and button_prev = "11111111" then
@@ -212,7 +215,7 @@ begin
 							active_fruit_tl_col <= fruit_tl_col(i);
 							
 							 -- update active fruit type
-							active_fruit_type <= active_fruit_type + 3d"1" when active_fruit_type /= 3d"4" else active_fruit_type;
+							active_fruit_type <= active_fruit_type + 3d"1" when active_fruit_type /= 3d"1" else active_fruit_type;
 						else
 							game_state <= SWAP;
 						end if;
@@ -231,18 +234,29 @@ begin
 					end if;
 				end loop;
 				
-				active_fruit_tl_row <= 10d"0";
-				active_fruit_tl_col <= 10d"307";
+				
 				active_fruit_type <= "000"; -- TODO update to randomize new fruit type
 
-				swap_fruit <= swap_fruit + "001"; -- increment swap_fruit state
-				game_state <= FRUIT_POS;
+				swap_fruit <= swap_fruit + "0001"; -- increment swap_fruit state
+				if swap_fruit = NUM_FRUITS then
+					game_state <= GAME_OVER;
+					active_fruit_tl_row <= 10d"700";
+					active_fruit_tl_col <= 10d"700";
+				else
+					game_state <= FRUIT_POS;
+					active_fruit_tl_row <= 10d"0";
+					active_fruit_tl_col <= 10d"307";
+				end if;
 			elsif game_state = HOLD then
 				game_state <= HOLD;
 			elsif game_state = GAME_OVER then
-				if button /= 8b"0" and button_prev = 8b"0" then
+				flashing_counter <= flashing_counter + 1;
+				if button(4) = '0' and button_prev = "11111111" then
 					game_state <= START;
 				end if;
+				--if button /= 8b"0" and button_prev = 8b"0" then
+					--game_state <= START;
+				--end if;
 			else
 				game_state <= START;
 			end if;
