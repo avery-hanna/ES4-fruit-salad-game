@@ -106,13 +106,33 @@ begin
 
     process begin
         for i in 1 to NUM_FRUITS loop
-            fruit_relative_row(i) <= std_logic_vector(unsigned(row) - fruit_tl_row(i));
-            fruit_relative_col(i) <= std_logic_vector(unsigned(col) - fruit_tl_col(i));
+            blueberry_relative_row(i) <= std_logic_vector(unsigned(row) - fruit_tl_row(i));
+            blueberry_relative_col(i) <= std_logic_vector(unsigned(col) - fruit_tl_col(i));
 
-            fruit_rom_row(i) <= fruit_relative_row(i)(5 downto 1) when fruit_relative_row(i)(9 downto 6) = "0000" else "11111";
-            fruit_rom_col(i) <= fruit_relative_col(i)(5 downto 1) when fruit_relative_col(i)(9 downto 6) = "0000" else "11111";
+            blueberry_rom_row(i) <= fruit_relative_row(i)(5 downto 1) when fruit_relative_row(i)(9 downto 6) = "0000" else "11111";
+            blueberry_rom_col(i) <= fruit_relative_col(i)(5 downto 1) when fruit_relative_col(i)(9 downto 6) = "0000" else "11111";
         end loop;
     end process;	
+
+	process begin
+        for i in 1 to NUM_FRUITS loop
+            watermelon_relative_row(i) <= std_logic_vector(unsigned(row) - fruit_tl_row(i));
+            watermelon_relative_col(i) <= std_logic_vector(unsigned(col) - fruit_tl_col(i));
+
+            watermelon_rom_row(i) <= fruit_relative_row(i)(5 downto 1) when fruit_relative_row(i)(9 downto 6) = "0000" else "11111";
+            watermelon_rom_col(i) <= fruit_relative_col(i)(5 downto 1) when fruit_relative_col(i)(9 downto 6) = "0000" else "11111";
+        end loop;
+    end process;
+
+	process begin
+        for i in 1 to NUM_FRUITS loop
+            cherry_relative_row(i) <= std_logic_vector(unsigned(row) - fruit_tl_row(i));
+            cherry_relative_col(i) <= std_logic_vector(unsigned(col) - fruit_tl_col(i));
+
+            cherry_rom_row(i) <= fruit_relative_row(i)(5 downto 1) when fruit_relative_row(i)(9 downto 6) = "0000" else "11111";
+            cherry_rom_col(i) <= fruit_relative_col(i)(5 downto 1) when fruit_relative_col(i)(9 downto 6) = "0000" else "11111";
+        end loop;
+    end process;
 	
 	--fruit_RGB <= active_fruit_RGB when (active_fruit_RGB /= "000000") else fruit_3_RGB when (fruit_3_RGB /= "000000") else fruit_2_RGB when (fruit_2_RGB /= "000000") else fruit_1_RGB;
 	
