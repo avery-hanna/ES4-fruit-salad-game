@@ -48,7 +48,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2023.1.0.43.3
-Mapped on: Thu Dec  5 20:38:53 2024
+Mapped on: Thu Dec  5 21:36:47 2024
 
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
@@ -58,13 +58,13 @@ Command line:   map -i fruitSalad_impl_1_syn.udb -pdc
      fruitSalad_impl_1.mrp -hierrpt -gui
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of slice registers: 171 out of  5280 (3%)
+   Number of slice registers: 165 out of  5280 (3%)
    Number of I/O registers:      1 out of   117 (1%)
-   Number of LUT4s:           611 out of  5280 (12%)
-      Number of logic LUT4s:             402
-      Number of inserted feedthru LUT4s:  35
+   Number of LUT4s:           534 out of  5280 (10%)
+      Number of logic LUT4s:             351
+      Number of inserted feedthru LUT4s:  29
       Number of replicated LUT4s:         10
-      Number of ripple logic:             82 (164 LUT4s)
+      Number of ripple logic:             72 (144 LUT4s)
    Number of IO sites used:   23 out of 39 (59%)
       Number of IO sites used for general PIO: 23
       Number of IO sites used for I3C: 0 out of 2 (0%)
@@ -84,37 +84,37 @@ Command line:   map -i fruitSalad_impl_1_syn.udb -pdc
    Number of SRAMs:            0 out of 4 (0%)
    Number of WARMBOOTs:        0 out of 1 (0%)
    Number of SPIs:             0 out of 2 (0%)
-   Number of EBRs:             26 out of 30 (86%)
+   Number of EBRs:             12 out of 30 (40%)
    Number of PLLs:             1 out of 1 (100%)
    Number of Clocks:  4
-      Net clk: 157 loads, 157 rising, 0 falling (Driver: Pin
+      Net clk: 137 loads, 137 rising, 0 falling (Driver: Pin
      firstblock.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
       Net external_osc_c: 1 loads, 1 rising, 0 falling (Driver: Port
      external_osc)
-      Net CTRLclk_c: 8 loads, 8 rising, 0 falling (Driver: Pin
-     nesblock.NESclk_c_I_0/Z)
       Net nesblock.clk: 9 loads, 9 rising, 0 falling (Driver: Pin
      nesblock.instanceosc/CLKHF)
-   Number of Clock Enables:  11
-      Net RGB_pad[2].vcc: 79 loads, 0 SLICEs
-      Net thirdblock.counter_0__N_705: 9 loads, 9 SLICEs
-      Net thirdblock.fruit_1_tl_col_0__N_286: 20 loads, 20 SLICEs
+      Net CTRLclk_c: 8 loads, 8 rising, 0 falling (Driver: Pin
+     nesblock.NEScount_3__I_0/Z)
+   Number of Clock Enables:  10
+      Net thirdblock.fruit_type_2__0__N_333: 3 loads, 3 SLICEs
+      Net thirdblock.fruit_type_1__0__N_330: 3 loads, 3 SLICEs
+      Net RGB_pad[4].vcc: 37 loads, 0 SLICEs
 
-      Net thirdblock.fruit_2_tl_col_0__N_449: 20 loads, 20 SLICEs
-      Net thirdblock.fruit_1_type_0__N_290: 3 loads, 3 SLICEs
-      Net thirdblock.fruit_2_type_0__N_453: 3 loads, 3 SLICEs
-      Net thirdblock.game_state_0__N_70: 1 loads, 1 SLICEs
-      Net thirdblock.swap_fruit_0__N_76: 3 loads, 3 SLICEs
+      Net thirdblock.fruit_tl_col_1__0__N_306: 20 loads, 20 SLICEs
+      Net thirdblock.counter_0__N_631: 9 loads, 9 SLICEs
+      Net thirdblock.fruit_tl_col_2__0__N_326: 20 loads, 20 SLICEs
       Net thirdblock.active_fruit_tl_col_0__N_121: 10 loads, 10 SLICEs
-      Net thirdblock.game_state_1__N_68: 1 loads, 1 SLICEs
-      Net secondblock.col_0__N_50: 6 loads, 6 SLICEs
-   Number of LSRs:  20
-      Net thirdblock.counter_1__N_703: 8 loads, 8 SLICEs
+      Net thirdblock.game_state_0__N_70: 2 loads, 2 SLICEs
+      Net thirdblock.swap_fruit_1__N_74: 3 loads, 3 SLICEs
+      Net col_0__N_50: 6 loads, 6 SLICEs
+   Number of LSRs:  21
       Net thirdblock.active_fruit_tl_row_0__N_101: 1 loads, 1 SLICEs
-      Net thirdblock.fruit_2_tl_col_0__N_450: 8 loads, 8 SLICEs
       Net thirdblock.active_fruit_type_0__N_127: 1 loads, 1 SLICEs
-      Net thirdblock.fruit_1_tl_col_0__N_287: 8 loads, 8 SLICEs
-      Net thirdblock.counter_0__N_706: 1 loads, 1 SLICEs
+      Net led_c: 3 loads, 3 SLICEs
+      Net thirdblock.fruit_tl_col_1__0__N_307: 8 loads, 8 SLICEs
+      Net thirdblock.counter_1__N_629: 8 loads, 8 SLICEs
+      Net thirdblock.fruit_tl_col_2__0__N_327: 8 loads, 8 SLICEs
+      Net row_0__N_30: 6 loads, 6 SLICEs
       Net thirdblock.active_fruit_tl_row_1__N_99: 1 loads, 1 SLICEs
       Net thirdblock.active_fruit_tl_row_2__N_97: 1 loads, 1 SLICEs
       Net thirdblock.active_fruit_tl_row_3__N_95: 1 loads, 1 SLICEs
@@ -126,20 +126,20 @@ Command line:   map -i fruitSalad_impl_1_syn.udb -pdc
       Net thirdblock.active_fruit_tl_row_9__N_83: 1 loads, 1 SLICEs
       Net thirdblock.active_fruit_type_1__N_125: 1 loads, 1 SLICEs
       Net thirdblock.active_fruit_type_2__N_123: 1 loads, 1 SLICEs
+      Net thirdblock.counter_0__N_632: 1 loads, 1 SLICEs
       Net startscreenRGB_0__N_81: 1 loads, 1 SLICEs
-      Net secondblock.col_0__N_50: 6 loads, 6 SLICEs
-      Net secondblock.row_0__N_30: 6 loads, 6 SLICEs
+      Net col_0__N_50: 6 loads, 6 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net RGB_pad[2].vcc: 91 loads
-      Net thirdblock.game_state[0]: 72 loads
-      Net thirdblock.game_state[1]: 48 loads
-      Net thirdblock.fruit_1_tl_col_0__N_286: 20 loads
-      Net thirdblock.fruit_2_tl_col_0__N_449: 20 loads
+      Net thirdblock.game_state[0]: 64 loads
+      Net RGB_pad[4].vcc: 43 loads
+      Net thirdblock.game_state[1]: 39 loads
+      Net thirdblock.fruit_tl_col_1__0__N_306: 21 loads
+      Net thirdblock.fruit_tl_col_2__0__N_326: 20 loads
       Net nesblock.output_0__N_58: 16 loads
-      Net thirdblock.n3661: 15 loads
-      Net thirdblock.n5_adj_730: 15 loads
-      Net thirdblock.n3655: 14 loads
-      Net thirdblock.n4240: 14 loads
+      Net thirdblock.n332: 15 loads
+      Net thirdblock.n2404: 14 loads
+      Net thirdblock.n338: 14 loads
+      Net thirdblock.n5: 13 loads
 
 
 
@@ -163,11 +163,9 @@ Command line:   map -i fruitSalad_impl_1_syn.udb -pdc
 
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[2]              | OUTPUT    |           |       |       |           |
+| RGB[4]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | RGB[3]              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| RGB[4]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | RGB[5]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
@@ -208,6 +206,8 @@ Command line:   map -i fruitSalad_impl_1_syn.udb -pdc
 | RGB[0]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | RGB[1]              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| RGB[2]              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
 
@@ -262,8 +262,8 @@ OSC Summary
 
 OSC 1:                                 Pin/Node Value
   OSC Instance Name:                            nesblock/instanceosc
-  Power UP:                            NODE     RGB_pad[2].vcc
-  Enable Signal:                       NODE     RGB_pad[2].vcc
+  Power UP:                            NODE     RGB_pad[4].vcc
+  Enable Signal:                       NODE     RGB_pad[4].vcc
   OSC Output:                          NODE     nesblock.clk
   DIV Setting:                                  00
 
@@ -272,58 +272,38 @@ OSC 1:                                 Pin/Node Value
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 ---------------
 
-Instance Name: thirdblock/fruit_3/blueberry/fruit_3_rom_row_0__I_0
+Instance Name: thirdblock/gen_fruit_roms[2].fruit_rom_instance/watermelon/fruit_
+     rom_col_2__0__I_0
          Type: EBR
-Instance Name: thirdblock/fruit_3/blueberry/fruit_3_rom_row_0__I_0_2
+Instance Name: thirdblock/gen_fruit_roms[2].fruit_rom_instance/watermelon/fruit_
+     rom_col_2__0__I_0_2
          Type: EBR
-Instance Name: thirdblock/fruit_2/orange/fruit_2_rom_col_0__I_0
+Instance Name: thirdblock/gen_fruit_roms[2].fruit_rom_instance/blueberry/fruit_r
+     om_row_2__0__I_0
          Type: EBR
-Instance Name: thirdblock/fruit_2/orange/fruit_2_rom_col_0__I_0_4
-         Type: EBR
-Instance Name: thirdblock/fruit_2/grapefruit/fruit_2_rom_col_0__I_0_3
-         Type: EBR
-Instance Name: thirdblock/fruit_2/grapefruit/fruit_2_rom_col_0__I_0_2
+Instance Name: thirdblock/gen_fruit_roms[2].fruit_rom_instance/blueberry/fruit_r
+     om_row_2__0__I_0_2
 
          Type: EBR
-Instance Name: thirdblock/fruit_2/cherry/fruit_2_rom_row_0__I_0
+Instance Name: thirdblock/gen_fruit_roms[1].fruit_rom_instance/watermelon/fruit_
+     rom_col_1__0__I_0
          Type: EBR
-Instance Name: thirdblock/fruit_2/cherry/fruit_2_rom_row_0__I_0_4
+Instance Name: thirdblock/gen_fruit_roms[1].fruit_rom_instance/watermelon/fruit_
+     rom_col_1__0__I_0_2
          Type: EBR
-Instance Name: thirdblock/fruit_2/blueberry/fruit_2_rom_row_0__I_0_3
+Instance Name: thirdblock/gen_fruit_roms[1].fruit_rom_instance/blueberry/fruit_r
+     om_row_1__0__I_0
          Type: EBR
-Instance Name: thirdblock/fruit_2/blueberry/fruit_2_rom_row_0__I_0_2
+Instance Name: thirdblock/gen_fruit_roms[1].fruit_rom_instance/blueberry/fruit_r
+     om_row_1__0__I_0_2
          Type: EBR
-Instance Name: thirdblock/fruit_1/orange/fruit_1_rom_col_0__I_0
+Instance Name: thirdblock/active_fruit/watermelon/active_fruit_rom_col_0__I_0
          Type: EBR
-Instance Name: thirdblock/fruit_1/orange/fruit_1_rom_col_0__I_0_4
+Instance Name: thirdblock/active_fruit/watermelon/active_fruit_rom_col_0__I_0_2
          Type: EBR
-Instance Name: thirdblock/fruit_1/grapefruit/fruit_1_rom_col_0__I_0_3
-         Type: EBR
-Instance Name: thirdblock/fruit_1/grapefruit/fruit_1_rom_col_0__I_0_2
-         Type: EBR
-Instance Name: thirdblock/fruit_1/cherry/fruit_1_rom_row_0__I_0
-         Type: EBR
-Instance Name: thirdblock/fruit_1/cherry/fruit_1_rom_row_0__I_0_4
-         Type: EBR
-Instance Name: thirdblock/fruit_1/blueberry/fruit_1_rom_row_0__I_0_3
-         Type: EBR
-Instance Name: thirdblock/fruit_1/blueberry/fruit_1_rom_row_0__I_0_2
-         Type: EBR
-Instance Name: thirdblock/active_fruit/orange/active_fruit_rom_col_0__I_0
-         Type: EBR
-Instance Name: thirdblock/active_fruit/orange/active_fruit_rom_col_0__I_0_4
-         Type: EBR
-Instance Name: thirdblock/active_fruit/grapefruit/active_fruit_rom_col_0__I_0_3
-         Type: EBR
-Instance Name: thirdblock/active_fruit/grapefruit/active_fruit_rom_col_0__I_0_2
-         Type: EBR
-Instance Name: thirdblock/active_fruit/cherry/active_fruit_rom_row_0__I_0_4
-         Type: EBR
-Instance Name: thirdblock/active_fruit/cherry/active_fruit_rom_row_0__I_0
+Instance Name: thirdblock/active_fruit/blueberry/active_fruit_rom_row_0__I_0
          Type: EBR
 Instance Name: thirdblock/active_fruit/blueberry/active_fruit_rom_row_0__I_0_2
-         Type: EBR
-Instance Name: thirdblock/active_fruit/blueberry/active_fruit_rom_row_0__I_0_3
          Type: EBR
 Instance Name: firstblock/lscc_pll_inst/u_PLL_B
          Type: PLL
@@ -342,52 +322,12 @@ Instance Name: nesblock/instanceosc
 
 
 
-
-
-
-
 <A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
 -------------------------
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 67 MB
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   Peak Memory Usage: 65 MB
 
 
 

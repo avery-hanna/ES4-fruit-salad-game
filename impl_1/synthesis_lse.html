@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Dec  5 20:38:42 2024
+Thu Dec  5 21:36:39 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
@@ -228,6 +228,8 @@ Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd
 
 INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(6): analyzing entity pattern_gen. VHDL-1012
 INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(19): analyzing architecture synth. VHDL-1010
+WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(115): possible infinite loop process does not have a wait statement. VHDL-1196
+WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(127): possible infinite loop process does not have a wait statement. VHDL-1196
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/shift8.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/shift8.vhd
 
@@ -308,56 +310,6 @@ WARNING <35001771> - synthesis: Initial value found on net active_fruit_rom_col[
 WARNING <35001771> - synthesis: Initial value found on net active_fruit_rom_col[2] will be ignored due to unrecognized driver type
 WARNING <35001771> - synthesis: Initial value found on net active_fruit_rom_col[1] will be ignored due to unrecognized driver type
 WARNING <35001771> - synthesis: Initial value found on net active_fruit_rom_col[0] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_1_rom_row[4] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_1_rom_row[3] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_1_rom_row[2] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_1_rom_row[1] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_1_rom_row[0] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_1_rom_col[4] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_1_rom_col[3] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_1_rom_col[2] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_1_rom_col[1] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_1_rom_col[0] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_2_rom_row[4] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_2_rom_row[3] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_2_rom_row[2] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_2_rom_row[1] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_2_rom_row[0] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_2_rom_col[4] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_2_rom_col[3] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_2_rom_col[2] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_2_rom_col[1] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_2_rom_col[0] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_3_rom_row[4] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_3_rom_row[3] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_3_rom_row[2] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_3_rom_row[1] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_3_rom_row[0] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_3_rom_col[4] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_3_rom_col[3] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_3_rom_col[2] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_3_rom_col[1] will be ignored due to unrecognized driver type
-WARNING <35001771> - synthesis: Initial value found on net fruit_3_rom_col[0] will be ignored due to unrecognized driver type
-CRITICAL <35001748> - synthesis: Bit 9 of Register fruit_3_tl_row is stuck at One
-CRITICAL <35001747> - synthesis: Bit 8 of Register fruit_3_tl_row is stuck at Zero
-CRITICAL <35001748> - synthesis: Bit 7 of Register fruit_3_tl_row is stuck at One
-CRITICAL <35001747> - synthesis: Bit 6 of Register fruit_3_tl_row is stuck at Zero
-CRITICAL <35001748> - synthesis: Bit 5 of Register fruit_3_tl_row is stuck at One
-CRITICAL <35001748> - synthesis: Bit 4 of Register fruit_3_tl_row is stuck at One
-CRITICAL <35001748> - synthesis: Bit 3 of Register fruit_3_tl_row is stuck at One
-CRITICAL <35001748> - synthesis: Bit 2 of Register fruit_3_tl_row is stuck at One
-CRITICAL <35001747> - synthesis: Bit 1 of Register fruit_3_tl_row is stuck at Zero
-CRITICAL <35001747> - synthesis: Bit 0 of Register fruit_3_tl_row is stuck at Zero
-CRITICAL <35001748> - synthesis: Bit 9 of Register fruit_3_tl_col is stuck at One
-CRITICAL <35001747> - synthesis: Bit 8 of Register fruit_3_tl_col is stuck at Zero
-CRITICAL <35001748> - synthesis: Bit 7 of Register fruit_3_tl_col is stuck at One
-CRITICAL <35001747> - synthesis: Bit 6 of Register fruit_3_tl_col is stuck at Zero
-CRITICAL <35001748> - synthesis: Bit 5 of Register fruit_3_tl_col is stuck at One
-CRITICAL <35001748> - synthesis: Bit 4 of Register fruit_3_tl_col is stuck at One
-CRITICAL <35001748> - synthesis: Bit 3 of Register fruit_3_tl_col is stuck at One
-CRITICAL <35001748> - synthesis: Bit 2 of Register fruit_3_tl_col is stuck at One
-CRITICAL <35001747> - synthesis: Bit 1 of Register fruit_3_tl_col is stuck at Zero
-CRITICAL <35001747> - synthesis: Bit 0 of Register fruit_3_tl_col is stuck at Zero
 WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
 WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
 WARNING <35931002> - synthesis: z:/es4/finalproj/fruitsalad/mypll/rtl/mypll.v(139): net \firstblock/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
@@ -367,10 +319,7 @@ WARNING <35931002> - synthesis: z:/es4/finalproj/fruitsalad/mypll/rtl/mypll.v(14
 
 
 
-WARNING <35001045> - synthesis: No available RAMs found.
-WARNING <35001045> - synthesis: No available RAMs found.
 CRITICAL <35001747> - synthesis: Bit 5 of Register \thirdblock/start_screen/color is stuck at Zero
-WARNING <35001045> - synthesis: No available RAMs found.
 Combinational loop found : 1
 
  Net output[1] 
@@ -385,39 +334,39 @@ Combinational loop found : 2
 
 Combinational loop found : 3
 
- Net output[2] 
+ Net output[7] 
 
- Instance \nesblock/mux_24_i3 
+ Instance \nesblock/mux_24_i8 
 
 Combinational loop found : 4
-
- Net output[3] 
-
- Instance \nesblock/mux_24_i4 
-
-Combinational loop found : 5
 
  Net output[4] 
 
  Instance \nesblock/mux_24_i5 
 
+Combinational loop found : 5
+
+ Net output[2] 
+
+ Instance \nesblock/mux_24_i3 
+
 Combinational loop found : 6
+
+ Net output[3] 
+
+ Instance \nesblock/mux_24_i4 
+
+Combinational loop found : 7
 
  Net output[5] 
 
  Instance \nesblock/mux_24_i6 
 
-Combinational loop found : 7
+Combinational loop found : 8
 
  Net output[6] 
 
  Instance \nesblock/mux_24_i7 
-
-Combinational loop found : 8
-
- Net output[7] 
-
- Instance \nesblock/mux_24_i8 
 
 Duplicate register/latch removal. \thirdblock/start_screen/color_i2 is a one-to-one match with \thirdblock/start_screen/color_i5.
 WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i0 will be ignored.
@@ -436,19 +385,19 @@ INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for Thunde
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 171 of 5280 (3 % )
-EBR_B => 26
-CCU2 => 82
-FD1P3XZ => 171
+Number of register bits => 165 of 5280 (3 % )
+EBR_B => 12
+CCU2 => 72
+FD1P3XZ => 165
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 1
-LUT4 => 401
+LUT4 => 350
 OB => 21
 PLL_B => 1
 ################### End Area Report ##################
 Number of odd-length carry chains : 2
-Number of even-length carry chains : 12
+Number of even-length carry chains : 10
 
 
 <A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
@@ -464,23 +413,23 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/game_state[0], loads : 72
-  Net : thirdblock/game_state[1], loads : 47
-  Net : thirdblock/fruit_1_tl_col_0__N_286, loads : 21
-  Net : thirdblock/fruit_2_tl_col_0__N_449, loads : 20
-  Net : secondblock/col_0__N_50, loads : 20
-  Net : thirdblock/counter_0__N_705, loads : 18
+  Net : thirdblock/game_state[0], loads : 64
+  Net : thirdblock/game_state[1], loads : 38
+  Net : thirdblock/fruit_tl_col_2__0__N_326, loads : 21
+  Net : thirdblock/fruit_tl_col_1__0__N_306, loads : 21
+  Net : col_0__N_50, loads : 20
+  Net : thirdblock/counter_0__N_631, loads : 19
+  Net : thirdblock/n332, loads : 17
   Net : nesblock/clk, loads : 17
-  Net : thirdblock/counter_1__N_703, loads : 16
-  Net : thirdblock/n3661, loads : 15
-  Net : thirdblock/n5_adj_730, loads : 15
+  Net : thirdblock/counter_1__N_629, loads : 16
+  Net : thirdblock/n338, loads : 15
 ################### End Clock Report ##################
 
-Peak Memory Usage: 154 MB
+Peak Memory Usage: 139 MB
 
 --------------------------------------------------------------
-Total CPU Time: 4 secs 
-Total REAL Time: 10 secs 
+Total CPU Time: 3 secs 
+Total REAL Time: 7 secs 
 --------------------------------------------------------------
 
 
