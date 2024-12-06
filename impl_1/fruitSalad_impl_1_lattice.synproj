@@ -50,12 +50,11 @@
 "Z:/es4/finalproj/fruitSalad/source/impl_1/top.vhd"
 "Z:/es4/finalproj/fruitSalad/source/impl_1/update_color.vhd"
 -ver "Z:/es4/finalproj/fruitSalad/mypll/rtl/mypll.v"
--lib "work" -vhd "Z:/es4/finalproj/fruitSalad/source/impl_1/blueberryROM.vhd"
-"Z:/es4/finalproj/fruitSalad/source/impl_1/grapefruitROM.vhd"
-"Z:/es4/finalproj/fruitSalad/source/impl_1/cherryROM.vhd"
+-lib "work" -vhd "Z:/es4/finalproj/fruitSalad/source/impl_1/grapefruitROM.vhd"
 "Z:/es4/finalproj/fruitSalad/source/impl_1/orangeROM.vhd"
 "Z:/es4/finalproj/fruitSalad/source/impl_1/watermelonROM.vhd"
 "Z:/es4/finalproj/fruitSalad/source/impl_1/startscreenROM.vhd"
+"Z:/es4/finalproj/fruitSalad/source/impl_1/blueberryCherryROM.vhd"
 
 
 -path "Z:/es4/finalproj/fruitSalad"

@@ -14,16 +14,9 @@ end fruitROM;
 
 architecture synth of fruitROM is 
 
-component blueberryROM is
+component blueberryCherryROM is
   port(
-	  row : in std_logic_vector(3 downto 0);
-	  col : in std_logic_vector(3 downto 0);
-	  clk : in std_logic;
-	  color : out std_logic_vector(5 downto 0)
-  );
-end component;
-component cherryROM is
-  port(
+	  fruit_type : in std_logic;
 	  row : in std_logic_vector(3 downto 0);
 	  col : in std_logic_vector(3 downto 0);
 	  clk : in std_logic;
@@ -61,8 +54,10 @@ signal orangeRGB : std_logic_vector(5 downto 0);
 signal watermelonRGB : std_logic_vector(5 downto 0);
 
 begin
-	blueberry : blueberryROM port map(row , col, clk, blueberryRGB);
-	cherry : cherryROM port map(row , col, clk, cherryRGB);
+
+
+	blueberryCherry : blueberryCherryROM port map('0' when fruit_type = "000" else '1', row , col, clk, blueberryRGB);
+	--cherry : cherryROM port map(row , col, clk, cherryRGB);
 	--grapefruit : grapefruitROM port map(row , col, clk, grapefruitRGB);
 	--orange : orangeROM port map(row , col, clk, orangeRGB);
 	watermelon : watermelonROM port map(row , col, clk, watermelonRGB);
@@ -74,7 +69,7 @@ begin
 				when "000" => 
 					color <= blueberryRGB;
 				when "001" =>
-					color <= cherryRGB;
+					color <= blueberryRGB;
 				--when "010" =>
 					--color <= grapefruitRGB;
 				--when "011" =>

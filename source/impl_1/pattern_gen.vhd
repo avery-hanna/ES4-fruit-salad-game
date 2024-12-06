@@ -36,12 +36,8 @@ component startscreenROM is
   );
 end component;
 
-type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, SWAP, HOLD, GAME_OVER);
+type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, SWAP, GAME_OVER);
 signal game_state : GAMESTATE := START;
-
--- state to track which fruit is next to swap in for the active fruit
-type SWAPSTATE is (FRUIT1, FRUIT2, FRUIT3, FRUIT4, FRUIT5, FRUIT6, FRUIT7, FRUIT8, FRUIT9, FRUIT10);
-signal swap_state : SWAPSTATE := FRUIT1;
 
 signal swap_fruit : unsigned(3 downto 0);
 
@@ -56,7 +52,7 @@ signal active_fruit_relative_col : std_logic_vector (9 downto 0);
 signal active_fruit_rom_row : std_logic_vector (3 downto 0);
 signal active_fruit_rom_col : std_logic_vector (3 downto 0);
 
-constant NUM_FRUITS : integer := 8;
+constant NUM_FRUITS : integer := 14;
 type unsigned_coord_array is array(1 to NUM_FRUITS) of unsigned(9 downto 0);
 type type_array is array(1 to NUM_FRUITS) of unsigned(2 downto 0);
 type rgb_array is array(1 to NUM_FRUITS) of std_logic_vector(5 downto 0);
@@ -150,8 +146,6 @@ begin
 					fruit_tl_row(i) <= 10d"700";
 					fruit_tl_col(i) <= 10d"700";
 				end loop;
-				
-				swap_state <= FRUIT1;
 				swap_fruit <= "0001";
 				
 				-- move state forward when button = start and button_prev is off
@@ -247,8 +241,6 @@ begin
 					active_fruit_tl_row <= 10d"0";
 					active_fruit_tl_col <= 10d"307";
 				end if;
-			elsif game_state = HOLD then
-				game_state <= HOLD;
 			elsif game_state = GAME_OVER then
 				flashing_counter <= flashing_counter + 1;
 				if button(4) = '0' and button_prev = "11111111" then

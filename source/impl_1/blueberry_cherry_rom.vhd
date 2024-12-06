@@ -2,16 +2,17 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity blueberryROM is
+entity blueberryCherryROM is
   port(
+	  fruit_type : in std_logic; -- 0 for blueberry, 1 for cherry
 	  row : in std_logic_vector(3 downto 0);
 	  col : in std_logic_vector(3 downto 0);
 	  clk : in std_logic;
 	  color : out std_logic_vector(5 downto 0)
   );
-end blueberryROM;
+end blueberryCherryROM;
 
-architecture synth of blueberryROM is 
+architecture synth of blueberryCherryROM is 
 signal address : std_logic_vector(7 downto 0);
 begin
 	process(clk) is
@@ -400,5 +401,5 @@ begin
  	 	 end case; 
      	 end if;  
      end process; 
- address <= col & row; 
+ address <= fruit_type & col & row; 
  end;

@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Dec  6 10:25:35 2024
+Fri Dec  6 11:51:20 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
@@ -139,17 +139,15 @@ VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/top.vhd
 VHDL library = work
 VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/update_color.vhd
 VHDL library = work
-VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/blueberryROM.vhd
-VHDL library = work
 VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/grapefruitROM.vhd
-VHDL library = work
-VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/cherryROM.vhd
 VHDL library = work
 VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/orangeROM.vhd
 VHDL library = work
 VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/watermelonROM.vhd
 VHDL library = work
 VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/startscreenROM.vhd
+VHDL library = work
+VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/blueberryCherryROM.vhd
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
 WARNING <35935050> - synthesis: input port TRIM9 is not connected on this instance. VDB-5050
 WARNING <35935050> - synthesis: input port TRIM8 is not connected on this instance. VDB-5050
@@ -228,8 +226,8 @@ Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd
 
 INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(6): analyzing entity pattern_gen. VHDL-1012
 INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(19): analyzing architecture synth. VHDL-1010
-WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(118): possible infinite loop process does not have a wait statement. VHDL-1196
-WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(130): possible infinite loop process does not have a wait statement. VHDL-1196
+WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(114): possible infinite loop process does not have a wait statement. VHDL-1196
+WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(126): possible infinite loop process does not have a wait statement. VHDL-1196
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/shift8.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/shift8.vhd
 
@@ -241,21 +239,11 @@ Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/top.vhd
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/update_color.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/update_color.vhd
 
-Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/blueberryrom.vhd. VHDL-1481
-Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/blueberryrom.vhd
-
-INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/blueberryrom.vhd(5): analyzing entity blueberryrom. VHDL-1012
-INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/blueberryrom.vhd(14): analyzing architecture synth. VHDL-1010
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/grapefruitrom.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/grapefruitrom.vhd
 
 INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/grapefruitrom.vhd(5): analyzing entity grapefruitrom. VHDL-1012
 INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/grapefruitrom.vhd(14): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/cherryrom.vhd. VHDL-1481
-Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/cherryrom.vhd
-
-INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/cherryrom.vhd(5): analyzing entity cherryrom. VHDL-1012
-INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/cherryrom.vhd(14): analyzing architecture synth. VHDL-1010
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/orangerom.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/orangerom.vhd
 
@@ -271,6 +259,11 @@ Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/startscreenrom.vhd
 
 INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/startscreenrom.vhd(5): analyzing entity startscreenrom. VHDL-1012
 INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/startscreenrom.vhd(14): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/blueberrycherryrom.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/blueberrycherryrom.vhd
+
+INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/blueberrycherryrom.vhd(5): analyzing entity blueberrycherryrom. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/blueberrycherryrom.vhd(15): analyzing architecture synth. VHDL-1010
 INFO <35921504> - synthesis: The default VHDL library search path is now "Z:/es4/finalproj/fruitSalad/impl_1". VHDL-1504
 Top module language type = VHDL.
 WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
@@ -381,27 +374,27 @@ original encoding -> new encoding (one-hot encoding)
 CRITICAL <35001747> - synthesis: Bit 5 of Register \thirdblock/start_screen/color is stuck at Zero
 Combinational loop found : 1
 
- Net output[7] 
+ Net output[1] 
 
- Instance \nesblock/mux_24_i8 
+ Instance \nesblock/mux_24_i2 
 
 Combinational loop found : 2
-
- Net output[4] 
-
- Instance \nesblock/mux_24_i5 
-
-Combinational loop found : 3
 
  Net output[0] 
 
  Instance \nesblock/mux_24_i1 
 
+Combinational loop found : 3
+
+ Net output[7] 
+
+ Instance \nesblock/mux_24_i8 
+
 Combinational loop found : 4
 
- Net output[1] 
+ Net output[4] 
 
- Instance \nesblock/mux_24_i2 
+ Instance \nesblock/mux_24_i5 
 
 Combinational loop found : 5
 
@@ -434,19 +427,19 @@ INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for Thunde
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 377 of 5280 (7 % )
-EBR_B => 27
-CCU2 => 145
-FD1P3XZ => 377
+Number of register bits => 551 of 5280 (10 % )
+EBR_B => 30
+CCU2 => 205
+FD1P3XZ => 551
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 1
-LUT4 => 887
+LUT4 => 1331
 OB => 21
 PLL_B => 1
 ################### End Area Report ##################
 Number of odd-length carry chains : 2
-Number of even-length carry chains : 23
+Number of even-length carry chains : 35
 
 
 <A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
@@ -462,23 +455,23 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/game_state[0], loads : 134
-  Net : thirdblock/game_state[1], loads : 53
-  Net : thirdblock/game_state[2], loads : 38
-  Net : thirdblock/active_fruit_type[1], loads : 31
-  Net : thirdblock/n2077, loads : 30
-  Net : thirdblock/active_fruit_type[2], loads : 27
-  Net : thirdblock/active_fruit_type[0], loads : 26
-  Net : thirdblock/flashing_counter_23__N_1527, loads : 24
-  Net : thirdblock/RGB_c_0_N_1545, loads : 24
-  Net : thirdblock/n5301, loads : 24
+  Net : thirdblock/game_state[0], loads : 205
+  Net : thirdblock/game_state[1], loads : 65
+  Net : thirdblock/active_fruit_type[1], loads : 40
+  Net : thirdblock/active_fruit_type[2], loads : 38
+  Net : thirdblock/game_state[2], loads : 36
+  Net : thirdblock/active_fruit_tl_row_0__N_103, loads : 36
+  Net : thirdblock/active_fruit_type[0], loads : 33
+  Net : RGB_c_0_N_2465, loads : 26
+  Net : thirdblock/n1317, loads : 26
+  Net : thirdblock/n9844, loads : 25
 ################### End Clock Report ##################
 
-Peak Memory Usage: 130 MB
+Peak Memory Usage: 150 MB
 
 --------------------------------------------------------------
-Total CPU Time: 5 secs 
-Total REAL Time: 12 secs 
+Total CPU Time: 7 secs 
+Total REAL Time: 18 secs 
 --------------------------------------------------------------
 
 
