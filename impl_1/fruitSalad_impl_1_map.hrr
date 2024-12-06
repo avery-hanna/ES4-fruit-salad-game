@@ -4,118 +4,117 @@ Report for cell vga_controller
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                  IOLGC	       1.00        100.0
-                                  LUT4	        534        100.0
-                               LUTGATE	        390        100.0
-                                LUTCCU	        144        100.0
+                                  LUT4	        607        100.0
+                               LUTGATE	        443        100.0
+                                LUTCCU	        164        100.0
                                  IOREG	          1        100.0
                                  IOBUF	         23        100.0
-                                PFUREG	        165        100.0
-                                   EBR	         12        100.0
+                                PFUREG	        149        100.0
+                                   EBR	         16        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
                                  mypll	          1         0.0
-                            nesclk_top	          1         6.6
-                           pattern_gen	          1        75.1
-                                   vga	          1         7.5
+                            nesclk_top	          1         5.9
+                           pattern_gen	          1        74.5
+                                   vga	          1         7.2
 ---------------------------------------------------
 Report for cell pattern_gen
    Instance path: vga_controller/thirdblock
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        401        75.1
-                               LUTGATE	        299        76.7
-                                LUTCCU	        102        70.8
-                                PFUREG	        121        73.3
-                                   EBR	         12        100.0
+                                  LUT4	        452        74.5
+                               LUTGATE	        330        74.5
+                                LUTCCU	        122        74.4
+                                PFUREG	        105        70.5
+                                   EBR	         16        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                              fruitROM	          1         1.3
-                           fruitROM_U4	          1         1.3
-                           fruitROM_U5	          1         1.5
-                        startscreenROM	          1         1.1
+                       blueberryROM_U3	          1         0.0
+                       blueberryROM_U4	          1         0.0
+                             cherryROM	          1         0.0
+                          cherryROM_U2	          1         0.0
+                              fruitROM	          1         1.2
+                        startscreenROM	          1         0.5
+                      watermelonROM_U0	          1         0.0
+                      watermelonROM_U1	          1         0.0
 ---------------------------------------------------
 Report for cell startscreenROM
    Instance path: vga_controller/thirdblock/start_screen
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          6         1.1
-                               LUTGATE	          6         1.5
-                                PFUREG	          4         2.4
+                                  LUT4	          3         0.5
+                               LUTGATE	          3         0.7
+                                PFUREG	          4         2.7
 ---------------------------------------------------
-Report for cell fruitROM
-   Instance path: vga_controller/thirdblock/gen_fruit_roms[2].fruit_rom_instance
+Report for cell watermelonROM_U0
+   Instance path: vga_controller/thirdblock/gen_watermelon_roms[2].fruit_rom_instance
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          7         1.3
-                               LUTGATE	          7         1.8
-                                PFUREG	          6         3.6
-                                   EBR	          4        33.3
+                                   EBR	          2        12.5
+---------------------------------------------------
+Report for cell watermelonROM_U1
+   Instance path: vga_controller/thirdblock/gen_watermelon_roms[1].fruit_rom_instance
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          2        12.5
+---------------------------------------------------
+Report for cell cherryROM
+   Instance path: vga_controller/thirdblock/gen_cherry_roms[2].fruit_rom_instance
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          2        12.5
+---------------------------------------------------
+Report for cell cherryROM_U2
+   Instance path: vga_controller/thirdblock/gen_cherry_roms[1].fruit_rom_instance
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          2        12.5
+---------------------------------------------------
+Report for cell blueberryROM_U3
+   Instance path: vga_controller/thirdblock/gen_blueberry_roms[2].fruit_rom_instance
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          2        12.5
+---------------------------------------------------
+Report for cell blueberryROM_U4
+   Instance path: vga_controller/thirdblock/gen_blueberry_roms[1].fruit_rom_instance
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          2        12.5
+---------------------------------------------------
+Report for cell fruitROM
+   Instance path: vga_controller/thirdblock/active_fruit
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         1.2
+                               LUTGATE	          7         1.6
+                                PFUREG	          6         4.0
+                                   EBR	          4        25.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
                           blueberryROM	          1         0.0
                          watermelonROM	          1         0.0
 ---------------------------------------------------
 Report for cell watermelonROM
-   Instance path: vga_controller/thirdblock/gen_fruit_roms[2].fruit_rom_instance/watermelon
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                   EBR	          2        16.7
----------------------------------------------------
-Report for cell blueberryROM
-   Instance path: vga_controller/thirdblock/gen_fruit_roms[2].fruit_rom_instance/blueberry
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                   EBR	          2        16.7
----------------------------------------------------
-Report for cell fruitROM_U4
-   Instance path: vga_controller/thirdblock/gen_fruit_roms[1].fruit_rom_instance
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          7         1.3
-                               LUTGATE	          7         1.8
-                                PFUREG	          6         3.6
-                                   EBR	          4        33.3
-SUB MODULES
-                                  cell	      count    LUT4 Usage(%)
-                       blueberryROM_U1	          1         0.0
-                      watermelonROM_U0	          1         0.0
----------------------------------------------------
-Report for cell watermelonROM_U0
-   Instance path: vga_controller/thirdblock/gen_fruit_roms[1].fruit_rom_instance/watermelon
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                   EBR	          2        16.7
----------------------------------------------------
-Report for cell blueberryROM_U1
-   Instance path: vga_controller/thirdblock/gen_fruit_roms[1].fruit_rom_instance/blueberry
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                   EBR	          2        16.7
----------------------------------------------------
-Report for cell fruitROM_U5
-   Instance path: vga_controller/thirdblock/active_fruit
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	          8         1.5
-                               LUTGATE	          8         2.1
-                                PFUREG	          6         3.6
-                                   EBR	          4        33.3
-SUB MODULES
-                                  cell	      count    LUT4 Usage(%)
-                       blueberryROM_U3	          1         0.0
-                      watermelonROM_U2	          1         0.0
----------------------------------------------------
-Report for cell watermelonROM_U2
    Instance path: vga_controller/thirdblock/active_fruit/watermelon
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                   EBR	          2        16.7
+                                   EBR	          2        12.5
 ---------------------------------------------------
-Report for cell blueberryROM_U3
+Report for cell blueberryROM
    Instance path: vga_controller/thirdblock/active_fruit/blueberry
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                   EBR	          2        16.7
+                                   EBR	          2        12.5
+---------------------------------------------------
+Report for cell vga
+   Instance path: vga_controller/secondblock
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         44         7.2
+                               LUTGATE	         20         4.5
+                                LUTCCU	         24        14.6
+                                PFUREG	         20        13.4
 ---------------------------------------------------
 Report for cell mypll
    Instance path: vga_controller/firstblock
@@ -130,25 +129,16 @@ Report for cell mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1
                      Cell usage:
                                   cell	      count    Res Usage(%)
 ---------------------------------------------------
-Report for cell vga
-   Instance path: vga_controller/secondblock
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	         40         7.5
-                               LUTGATE	         16         4.1
-                                LUTCCU	         24        16.7
-                                PFUREG	         20        12.1
----------------------------------------------------
 Report for cell nesclk_top
    Instance path: vga_controller/nesblock
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                  IOLGC	       1.00        100.0
-                                  LUT4	         35         6.6
-                               LUTGATE	         17         4.4
-                                LUTCCU	         18        12.5
+                                  LUT4	         36         5.9
+                               LUTGATE	         18         4.1
+                                LUTCCU	         18        11.0
                                  IOREG	          1        100.0
-                                PFUREG	         24        14.5
+                                PFUREG	         24        16.1
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
                                 shift8	          1         0.0
@@ -159,4 +149,4 @@ Report for cell shift8
                                   cell	      count    Res Usage(%)
                                  IOLGC	       1.00        100.0
                                  IOREG	          1        100.0
-                                PFUREG	          7         4.2
+                                PFUREG	          7         4.7
