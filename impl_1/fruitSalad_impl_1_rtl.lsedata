@@ -1,8 +1,8 @@
 <top name = "vga_controller"  library = "work"  arch = "RTL"  entry = "VHDL">
 
 <clocks>
-    <clockitem name = "ext_osc_test"  type = "net" />
     <clockitem name = "external_osc"  type = "port" />
+    <clockitem name = "ext_osc_test"  type = "net" />
     <clockitem name = "CTRLclk"  type = "net" />
     <clockitem name = "clk"  type = "net" />
     <clockitem name = "nesblock/clk"  type = "net" />

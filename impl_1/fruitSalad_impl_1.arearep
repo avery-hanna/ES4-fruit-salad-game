@@ -1,16 +1,16 @@
 ----------------------------------------------------------------------
 Report for cell vga_controller.TECH
-Register bits:  551 of 5280 (10.436%)
+Register bits:  552 of 5280 (10.455%)
 I/O cells:      23
                                   Cell usage:
                                cell     count   Res Usage(%)
                               EBR_B        30          100.0
                                CCU2       205          100.0
-                            FD1P3XZ       551          100.0
+                            FD1P3XZ       552          100.0
                          HSOSC_CORE         1          100.0
                                  IB         2          100.0
                               IOL_B         1          100.0
-                               LUT4      1331          100.0
+                               LUT4      1410          100.0
                                  OB        21          100.0
                               PLL_B         1          100.0
 SUB MODULES
@@ -66,7 +66,23 @@ mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_
                    watermelonROM_U4         1
                    watermelonROM_U6         1
                    watermelonROM_U8         1
-                              TOTAL      2195
+                              TOTAL      2275
+----------------------------------------------------------------------
+Report for cell mypll.v1
+Instance Path : firstblock
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              PLL_B         1          100.0
+SUB MODULES
+mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")         1
+                              TOTAL         2
+----------------------------------------------------------------------
+Report for cell mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000").v1
+Instance Path : firstblock.lscc_pll_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              PLL_B         1          100.0
+                              TOTAL         1
 ----------------------------------------------------------------------
 Report for cell vga.v1
 Instance Path : secondblock
@@ -74,7 +90,7 @@ Instance Path : secondblock
                                cell     count   Res Usage(%)
                                 FA2        12            5.9
                             FD1P3XZ        20            3.6
-                               LUT4        16            1.2
+                               LUT4        16            1.1
                               TOTAL        48
 ----------------------------------------------------------------------
 Report for cell pattern_gen.v1
@@ -83,8 +99,8 @@ Instance Path : thirdblock
                                cell     count   Res Usage(%)
                               EBR_B        30          100.0
                                 FA2       184           89.8
-                            FD1P3XZ       507           92.0
-                               LUT4      1284           96.5
+                            FD1P3XZ       508           92.0
+                               LUT4      1364           96.7
 SUB MODULES
                  blueberryCherryROM         1
               blueberryCherryROM_U1         1
@@ -132,7 +148,7 @@ SUB MODULES
                    watermelonROM_U4         1
                    watermelonROM_U6         1
                    watermelonROM_U8         1
-                              TOTAL      2051
+                              TOTAL      2132
 ----------------------------------------------------------------------
 Report for cell startscreenROM.v1
 Instance Path : thirdblock.start_screen
@@ -532,34 +548,18 @@ Instance Path : thirdblock.active_fruit.blueberryCherry
                               EBR_B         1            3.3
                               TOTAL         1
 ----------------------------------------------------------------------
-Report for cell mypll.v1
-Instance Path : firstblock
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              PLL_B         1          100.0
-SUB MODULES
-mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")         1
-                              TOTAL         2
-----------------------------------------------------------------------
-Report for cell mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000").v1
-Instance Path : firstblock.lscc_pll_inst
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              PLL_B         1          100.0
-                              TOTAL         1
-----------------------------------------------------------------------
 Report for cell nesclk_top.v1
 Instance Path : nesblock
                                   Cell usage:
                                cell     count   Res Usage(%)
                                 FA2         9            4.4
-                            FD1P3XZ        24            4.4
+                            FD1P3XZ        24            4.3
                          HSOSC_CORE         1          100.0
                               IOL_B         1          100.0
-                               LUT4        21            1.6
+                               LUT4        15            1.1
 SUB MODULES
                              shift8         1
-                              TOTAL        57
+                              TOTAL        51
 ----------------------------------------------------------------------
 Report for cell shift8.v1
 Instance Path : nesblock.instanceshift

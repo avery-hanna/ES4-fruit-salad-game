@@ -1,0 +1,55 @@
+#Start recording tcl command: 12/5/2024 09:49:38
+#Project Location: Z:/ES4/ES4-fruit-salad-game; Project name: fruitSalad
+prj_open "Z:/ES4/ES4-fruit-salad-game/fruitSalad.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/2023.1"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/2023.1"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/2023.1"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/2023.1"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/2023.1"
+launch_programmer_prj "C:/lscc/radiant/2023.1"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/2023.1"
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_set_impl_opt synthesis "synplify"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/2023.1"
+prj_set_impl_opt synthesis "lse"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/2023.1"
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/2023.1"
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/2023.1"
+#Stop recording: 12/5/2024 12:30:28

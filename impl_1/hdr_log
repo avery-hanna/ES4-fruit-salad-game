@@ -1,3 +1,15 @@
+synthesis:  version Radiant Software (64-bit) 2023.1.0.43.3
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Fri Dec  6 18:15:43 2024
+
+
+Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/ES4/ES4-fruit-salad-game/promote.xml 
+
 Synthesis options:
 The -a option is iCE40UP.
 The -t option is SG48.
