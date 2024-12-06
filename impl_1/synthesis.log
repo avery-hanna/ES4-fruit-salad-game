@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Dec  5 23:34:59 2024
+Fri Dec  6 10:25:35 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
@@ -338,27 +338,27 @@ original encoding -> new encoding (one-hot encoding)
 CRITICAL <35001747> - synthesis: Bit 5 of Register \thirdblock/start_screen/color is stuck at Zero
 Combinational loop found : 1
 
- Net output[0] 
+ Net output[7] 
 
- Instance \nesblock/mux_24_i1 
+ Instance \nesblock/mux_24_i8 
 
 Combinational loop found : 2
-
- Net output[1] 
-
- Instance \nesblock/mux_24_i2 
-
-Combinational loop found : 3
 
  Net output[4] 
 
  Instance \nesblock/mux_24_i5 
 
+Combinational loop found : 3
+
+ Net output[0] 
+
+ Instance \nesblock/mux_24_i1 
+
 Combinational loop found : 4
 
- Net output[7] 
+ Net output[1] 
 
- Instance \nesblock/mux_24_i8 
+ Instance \nesblock/mux_24_i2 
 
 Combinational loop found : 5
 
@@ -388,19 +388,19 @@ Duplicate register/latch removal. \thirdblock/start_screen/color_i2 is a one-to-
 INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 232 of 5280 (4 % )
-EBR_B => 12
-CCU2 => 95
-FD1P3XZ => 232
+Number of register bits => 377 of 5280 (7 % )
+EBR_B => 27
+CCU2 => 145
+FD1P3XZ => 377
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 1
-LUT4 => 433
+LUT4 => 887
 OB => 21
 PLL_B => 1
 ################### End Area Report ##################
 Number of odd-length carry chains : 2
-Number of even-length carry chains : 13
+Number of even-length carry chains : 23
 
 ################### Begin Clock Report ######################
 Clock Nets
@@ -413,21 +413,21 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/game_state[0], loads : 56
-  Net : thirdblock/game_state[1], loads : 41
-  Net : thirdblock/RGB_c_0_N_780, loads : 26
-  Net : thirdblock/flashing_counter_23__N_762, loads : 24
-  Net : thirdblock/n1037, loads : 23
-  Net : thirdblock/game_state[2], loads : 21
-  Net : thirdblock/fruit_tl_col_1__0__N_317, loads : 21
-  Net : col_0__N_50, loads : 20
-  Net : thirdblock/fruit_tl_col_1__1__N_316, loads : 20
-  Net : thirdblock/fruit_tl_col_3__0__N_357, loads : 20
+  Net : thirdblock/game_state[0], loads : 134
+  Net : thirdblock/game_state[1], loads : 53
+  Net : thirdblock/game_state[2], loads : 38
+  Net : thirdblock/active_fruit_type[1], loads : 31
+  Net : thirdblock/n2077, loads : 30
+  Net : thirdblock/active_fruit_type[2], loads : 27
+  Net : thirdblock/active_fruit_type[0], loads : 26
+  Net : thirdblock/flashing_counter_23__N_1527, loads : 24
+  Net : thirdblock/RGB_c_0_N_1545, loads : 24
+  Net : thirdblock/n5301, loads : 24
 ################### End Clock Report ##################
 
-Peak Memory Usage: 124 MB
+Peak Memory Usage: 130 MB
 
 --------------------------------------------------------------
-Total CPU Time: 4 secs 
-Total REAL Time: 9 secs 
+Total CPU Time: 5 secs 
+Total REAL Time: 12 secs 
 --------------------------------------------------------------

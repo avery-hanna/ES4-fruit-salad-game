@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="Export">
+        <Message>
+            <ID>1191031</ID>
+            <Severity>1</Severity>
+        </Message>
+    </Task>
     <Task name="Synthesis">
         <Message>
             <ID>35831026</ID>
@@ -478,12 +484,6 @@
             <ID>70001944</ID>
             <Severity>16</Severity>
             <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-    </Task>
-    <Task name="Export">
-        <Message>
-            <ID>1191031</ID>
-            <Severity>1</Severity>
         </Message>
     </Task>
     <Task name="PAR">
