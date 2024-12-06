@@ -38,7 +38,6 @@ architecture synth of nesclk_top is
 		signal result: std_logic_vector(7 downto 0);
 		signal countshifts: unsigned(7 downto 0);
 		--signal tocopy: unsigned(3 downto 0);
-		signal readdata: std_logic;
 
 begin
         instanceosc: HSOSC
@@ -49,8 +48,6 @@ begin
                 process(clk) begin
                         if rising_edge(clk) then
                                 counter <= counter + 1;
-								output <= result when (NEScount="00001000");
-								readdata <= data;
                         end if;
                 end process;
                 
@@ -73,12 +70,15 @@ begin
 			
 			--readdata <= data;
 			instanceshift: shift8
-			port map(clkshift => CTRLclk, input => readdata, result=>result);
+			port map(clkshift => CTRLclk, input => data, result=>result);
 		
 			--port map(clkshift => NESclk, input => data, result=>result);
 			countshifts <= unsigned(NEScount);
 			--tocopy <= countshifts mod 4d"8";
 			--output <= result when (tocopy="0000");
 			--output <= result when (NEScount="00001000");
+			
+			
+			output <= result when (NEScount="00001000");
 			
 end;

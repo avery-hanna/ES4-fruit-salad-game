@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Dec  5 20:17:35 2024
+Thu Dec  5 20:38:42 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
@@ -328,52 +328,76 @@ WARNING <35001045> - synthesis: No available RAMs found.
 WARNING <35001045> - synthesis: No available RAMs found.
 CRITICAL <35001747> - synthesis: Bit 5 of Register \thirdblock/start_screen/color is stuck at Zero
 WARNING <35001045> - synthesis: No available RAMs found.
+Combinational loop found : 1
+
+ Net output[1] 
+
+ Instance \nesblock/mux_24_i2 
+
+Combinational loop found : 2
+
+ Net output[0] 
+
+ Instance \nesblock/mux_24_i1 
+
+Combinational loop found : 3
+
+ Net output[2] 
+
+ Instance \nesblock/mux_24_i3 
+
+Combinational loop found : 4
+
+ Net output[3] 
+
+ Instance \nesblock/mux_24_i4 
+
+Combinational loop found : 5
+
+ Net output[4] 
+
+ Instance \nesblock/mux_24_i5 
+
+Combinational loop found : 6
+
+ Net output[5] 
+
+ Instance \nesblock/mux_24_i6 
+
+Combinational loop found : 7
+
+ Net output[6] 
+
+ Instance \nesblock/mux_24_i7 
+
+Combinational loop found : 8
+
+ Net output[7] 
+
+ Instance \nesblock/mux_24_i8 
+
 Duplicate register/latch removal. \thirdblock/start_screen/color_i2 is a one-to-one match with \thirdblock/start_screen/color_i5.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i9 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i8 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i7 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i6 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i5 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i4 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i3 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i2 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i1 will be ignored.
 WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i0 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_2_tl_col_i0_i9 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_2_tl_col_i0_i7 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_2_tl_col_i0_i5 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_2_tl_col_i0_i4 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_2_tl_col_i0_i3 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_2_tl_col_i0_i2 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_2_tl_row__i2 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_2_tl_row__i3 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_2_tl_row__i4 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_2_tl_row__i5 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_2_tl_row__i7 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_2_tl_row__i9 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_col__i2 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_col__i3 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_col__i4 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_col__i5 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_col__i7 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_col__i9 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_row__i2 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_row__i3 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_row__i4 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_row__i5 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_row__i7 will be ignored.
-WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/fruit_1_tl_row__i9 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i1 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i2 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i3 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i4 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i5 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i6 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i7 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i8 will be ignored.
+WARNING <35001779> - synthesis: Initial value found on instance \thirdblock/active_fruit_tl_row_i9 will be ignored.
 INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 180 of 5280 (3 % )
+Number of register bits => 171 of 5280 (3 % )
 EBR_B => 26
 CCU2 => 82
-FD1P3XZ => 180
+FD1P3XZ => 171
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 1
-LUT4 => 391
+LUT4 => 401
 OB => 21
 PLL_B => 1
 ################### End Area Report ##################
@@ -391,21 +415,21 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/game_state[0], loads : 51
-  Net : thirdblock/game_state[1], loads : 49
-  Net : nesblock/clk, loads : 26
-  Net : thirdblock/fruit_2_tl_col_0__N_449, loads : 21
-  Net : thirdblock/fruit_1_tl_col_0__N_286, loads : 20
-  Net : thirdblock/fruit_1_tl_col_0__N_287, loads : 20
+  Net : thirdblock/game_state[0], loads : 72
+  Net : thirdblock/game_state[1], loads : 47
+  Net : thirdblock/fruit_1_tl_col_0__N_286, loads : 21
+  Net : thirdblock/fruit_2_tl_col_0__N_449, loads : 20
   Net : secondblock/col_0__N_50, loads : 20
-  Net : thirdblock/counter_0__N_705, loads : 19
+  Net : thirdblock/counter_0__N_705, loads : 18
+  Net : nesblock/clk, loads : 17
   Net : thirdblock/counter_1__N_703, loads : 16
-  Net : thirdblock/n1636, loads : 15
+  Net : thirdblock/n3661, loads : 15
+  Net : thirdblock/n5_adj_730, loads : 15
 ################### End Clock Report ##################
 
-Peak Memory Usage: 155 MB
+Peak Memory Usage: 154 MB
 
 --------------------------------------------------------------
 Total CPU Time: 4 secs 
-Total REAL Time: 9 secs 
+Total REAL Time: 10 secs 
 --------------------------------------------------------------

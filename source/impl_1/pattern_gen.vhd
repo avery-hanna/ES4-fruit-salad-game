@@ -162,13 +162,13 @@ begin
 				swap_state <= FRUIT1;
 				
 				-- move state forward when button = start and button_prev is off
-				if button = "11101111" and button_prev = "11111111" then
+				if button(4) = '0' and button_prev = "11111111" then
 					game_state <= FRUIT_POS;
 				end if;
 			elsif game_state = FRUIT_POS then
 				 --Left button pressed
-				if button = "11111101" then
-					if button_prev = "11111101" then
+				if button(1) = '0' then
+					if button_prev(1) = '0' then
 						counter <= counter + 1;
 					else
 						counter <= 17d"1";
@@ -183,8 +183,8 @@ begin
 				end if;
 				
 				 --Right button pressed
-				if button = "11111110" then
-					if button_prev = "11111110" then
+				if button(0) = '0' then
+					if button_prev(0) = '0' then
 						counter <= counter + 1;
 					else
 						counter <= 17d"1";
@@ -199,7 +199,7 @@ begin
 				end if;
 			
 				-- button A pressed - drop
-				if button = "01111111" and button_prev = "11111111" then
+				if button(7) = '0' and button_prev = "11111111" then
 					game_state <= FRUIT_FALLING;
 				end if;
 			elsif game_state = FRUIT_FALLING then

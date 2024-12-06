@@ -794,42 +794,7 @@
         <Message>
             <ID>35001779</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/active_fruit_tl_row_i9</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/active_fruit_tl_row_i8</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/active_fruit_tl_row_i7</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/active_fruit_tl_row_i6</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/active_fruit_tl_row_i5</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/active_fruit_tl_row_i4</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/active_fruit_tl_row_i3</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/active_fruit_tl_row_i2</Dynamic>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i0</Dynamic>
         </Message>
         <Message>
             <ID>35001779</ID>
@@ -839,127 +804,42 @@
         <Message>
             <ID>35001779</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/active_fruit_tl_row_i0</Dynamic>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i2</Dynamic>
         </Message>
         <Message>
             <ID>35001779</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_col_i0_i9</Dynamic>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i3</Dynamic>
         </Message>
         <Message>
             <ID>35001779</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_col_i0_i7</Dynamic>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i4</Dynamic>
         </Message>
         <Message>
             <ID>35001779</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_col_i0_i5</Dynamic>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i5</Dynamic>
         </Message>
         <Message>
             <ID>35001779</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_col_i0_i4</Dynamic>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i6</Dynamic>
         </Message>
         <Message>
             <ID>35001779</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_col_i0_i3</Dynamic>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i7</Dynamic>
         </Message>
         <Message>
             <ID>35001779</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_col_i0_i2</Dynamic>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i8</Dynamic>
         </Message>
         <Message>
             <ID>35001779</ID>
             <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_row__i2</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_row__i3</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_row__i4</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_row__i5</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_row__i7</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_2_tl_row__i9</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_1_tl_col__i2</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_1_tl_col__i3</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_1_tl_col__i4</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_1_tl_col__i5</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_1_tl_col__i7</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_1_tl_col__i9</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_1_tl_row__i2</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_1_tl_row__i3</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_1_tl_row__i4</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_1_tl_row__i5</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_1_tl_row__i7</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001779</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/fruit_1_tl_row__i9</Dynamic>
+            <Dynamic>\thirdblock/active_fruit_tl_row_i9</Dynamic>
         </Message>
         <Message>
             <ID>35002039</ID>
@@ -977,6 +857,11 @@
         </Message>
     </Task>
     <Task name="Export">
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
         <Message>
             <ID>1191031</ID>
             <Severity>1</Severity>

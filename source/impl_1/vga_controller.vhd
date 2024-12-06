@@ -39,20 +39,8 @@ component nesclk_top is
 		CTRLclk: out std_logic;
 		output: out std_logic_vector(7 downto 0);
 		data: in std_logic
-		--clk: in std_logic
   );
   end component;
-	
-	--component nesclk_top is
-	  --port(
-			--NESclk: out std_logic;
-			--latch: out std_logic;
-			--CTRLclk: out std_logic;
-			--output: out std_logic_vector(7 downto 0);
-			--data: in std_logic
-			--clk: in std_logic
-		  --);
-	--end component;
 	
 	component vga is
 	  port(
