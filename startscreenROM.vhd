@@ -4,8 +4,8 @@ use IEEE.numeric_std.all;
 
 entity ROM is
   port(
-	  row : in std_logic_vector(7 downto 0);
-	  col : in std_logic_vector(7 downto 0);
+	  row : in std_logic_vector(4 downto 0);
+	  col : in std_logic_vector(4 downto 0);
 	  fruit_color : in std_logic_vector(5 downto 0);
 	  clk : in std_logic;
 	  color : out std_logic_vector(5 downto 0)
