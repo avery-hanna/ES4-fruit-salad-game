@@ -122,7 +122,7 @@ nesblock: nesclk_top
 	);
 	
 	button <= output;
-	buttonout <= output;
+	buttonout <= not output;
 	
 	
 thirdblock : pattern_gen

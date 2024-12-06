@@ -49,6 +49,8 @@ begin
                 process(clk) begin
                         if rising_edge(clk) then
                                 counter <= counter + 1;
+								output <= result when (NEScount="00001000");
+								readdata <= data;
                         end if;
                 end process;
                 
@@ -69,7 +71,7 @@ begin
 					
 			
 			
-			readdata <= data;
+			--readdata <= data;
 			instanceshift: shift8
 			port map(clkshift => CTRLclk, input => readdata, result=>result);
 		
@@ -77,6 +79,6 @@ begin
 			countshifts <= unsigned(NEScount);
 			--tocopy <= countshifts mod 4d"8";
 			--output <= result when (tocopy="0000");
-			output <= result when (NEScount="00001000");
+			--output <= result when (NEScount="00001000");
 			
 end;
