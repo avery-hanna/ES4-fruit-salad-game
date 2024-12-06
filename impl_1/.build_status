@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="2" build_time="1733503949">
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1733503949"/>
-            <Task name="IBIS" build_result="2" update_result="0" update_time="1733503952"/>
-            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1733503959"/>
+        <Milestone name="Export" build_result="0" build_time="1733504094">
+            <Task name="Bitgen" build_result="0" update_result="2" update_time="1733504094"/>
+            <Task name="IBIS" build_result="0" update_result="2" update_time="1733504094"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1733504094"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1733503901">
-            <Task name="Map" build_result="2" update_result="0" update_time="1733503901"/>
+        <Milestone name="Map" build_result="0" build_time="1733504093">
+            <Task name="Map" build_result="0" update_result="2" update_time="1733504093"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1733503934">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1733503934"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1733503947"/>
+        <Milestone name="PAR" build_result="0" build_time="1733504093">
+            <Task name="PAR" build_result="0" update_result="2" update_time="1733504093"/>
+            <Task name="PARTrace" build_result="0" update_result="2" update_time="1733504093"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1733503899">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1733503899"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1733503947"/>
+        <Milestone name="Synthesis" build_result="0" build_time="1733504093">
+            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1733504093"/>
+            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1733504093"/>
             <Task name="SynTrace" build_result="0" update_result="2" update_time="1733502382"/>
             <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1733502382"/>
         </Milestone>
@@ -34,4 +34,3 @@
         <Report name="fruitSalad_impl_1_vo.vo" last_build_time="1733503958" last_build_size="1625901"/>
     </Strategy>
 </BuildStatus>
-                                                       

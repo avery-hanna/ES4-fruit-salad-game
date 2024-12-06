@@ -47,6 +47,11 @@ component watermelonROM is
 	  color : out std_logic_vector(5 downto 0)
   );
 end component;
+
+
+-- TODO intermediate signal for rom output which is 3 bits encoding of color
+-- TODO intermediate rom address signal which is fruit type, row, col concatenated
+
 signal blueberryRGB : std_logic_vector(5 downto 0);
 signal cherryRGB : std_logic_vector(5 downto 0);
 signal grapefruitRGB : std_logic_vector(5 downto 0);
@@ -65,18 +70,9 @@ begin
 	process(clk) is
 	begin
 		if rising_edge(clk) then
-			case fruit_type is 
-				when "000" => 
-					color <= blueberryRGB;
-				when "001" =>
-					color <= blueberryRGB;
-				--when "010" =>
-					--color <= grapefruitRGB;
-				--when "011" =>
-					--color <= orangeRGB;
-				when others =>
-					color <= watermelonRGB;
-			end case;
+			-- TODO fruit rom with case statements and address
 		end if;
 	end process;
+	
+	-- TODO outside of process, combinational logic that translates from fruit_type signal and rom_output signal into 6 bit RGB output of final color output
 end;
