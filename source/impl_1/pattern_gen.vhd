@@ -52,7 +52,7 @@ signal active_fruit_relative_col : std_logic_vector (9 downto 0);
 signal active_fruit_rom_row : std_logic_vector (3 downto 0);
 signal active_fruit_rom_col : std_logic_vector (3 downto 0);
 
-constant NUM_FRUITS : integer := 14;
+constant NUM_FRUITS : integer := 10;
 type unsigned_coord_array is array(1 to NUM_FRUITS) of unsigned(9 downto 0);
 type type_array is array(1 to NUM_FRUITS) of unsigned(2 downto 0);
 type rgb_array is array(1 to NUM_FRUITS) of std_logic_vector(5 downto 0);
