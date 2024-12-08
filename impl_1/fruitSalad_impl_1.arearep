@@ -1,49 +1,30 @@
 ----------------------------------------------------------------------
 Report for cell vga_controller.TECH
-Register bits:  551 of 5280 (10.436%)
+Register bits:  369 of 5280 (6.989%)
 I/O cells:      23
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B        30          100.0
-                               CCU2       205          100.0
-                            FD1P3XZ       551          100.0
+                              EBR_B        22          100.0
+                               CCU2       165          100.0
+                            FD1P3XZ       369          100.0
                          HSOSC_CORE         1          100.0
                                  IB         2          100.0
                               IOL_B         1          100.0
-                               LUT4      1331          100.0
+                               LUT4      1136          100.0
                                  OB        21          100.0
                               PLL_B         1          100.0
 SUB MODULES
-                 blueberryCherryROM         1
-              blueberryCherryROM_U1         1
-             blueberryCherryROM_U11         1
-             blueberryCherryROM_U13         1
-             blueberryCherryROM_U15         1
-             blueberryCherryROM_U17         1
-             blueberryCherryROM_U19         1
-             blueberryCherryROM_U21         1
-             blueberryCherryROM_U23         1
-             blueberryCherryROM_U25         1
-             blueberryCherryROM_U27         1
-              blueberryCherryROM_U3         1
-              blueberryCherryROM_U5         1
-              blueberryCherryROM_U7         1
-              blueberryCherryROM_U9         1
                            fruitROM         1
-                       fruitROM_U28         1
-                       fruitROM_U29         1
-                       fruitROM_U30         1
-                       fruitROM_U31         1
-                       fruitROM_U32         1
-                       fruitROM_U33         1
-                       fruitROM_U34         1
-                       fruitROM_U35         1
-                       fruitROM_U36         1
-                       fruitROM_U37         1
-                       fruitROM_U38         1
-                       fruitROM_U39         1
-                       fruitROM_U40         1
-                       fruitROM_U41         1
+                        fruitROM_U0         1
+                        fruitROM_U1         1
+                        fruitROM_U2         1
+                        fruitROM_U3         1
+                        fruitROM_U4         1
+                        fruitROM_U5         1
+                        fruitROM_U6         1
+                        fruitROM_U7         1
+                        fruitROM_U8         1
+                        fruitROM_U9         1
                               mypll         1
 mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")         1
                          nesclk_top         1
@@ -51,486 +32,126 @@ mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_
                              shift8         1
                      startscreenROM         1
                                 vga         1
-                      watermelonROM         1
-                   watermelonROM_U0         1
-                  watermelonROM_U10         1
-                  watermelonROM_U12         1
-                  watermelonROM_U14         1
-                  watermelonROM_U16         1
-                  watermelonROM_U18         1
-                   watermelonROM_U2         1
-                  watermelonROM_U20         1
-                  watermelonROM_U22         1
-                  watermelonROM_U24         1
-                  watermelonROM_U26         1
-                   watermelonROM_U4         1
-                   watermelonROM_U6         1
-                   watermelonROM_U8         1
-                              TOTAL      2195
-----------------------------------------------------------------------
-Report for cell vga.v1
-Instance Path : secondblock
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                                FA2        12            5.9
-                            FD1P3XZ        20            3.6
-                               LUT4        16            1.2
-                              TOTAL        48
+                              TOTAL      1736
 ----------------------------------------------------------------------
 Report for cell pattern_gen.v1
 Instance Path : thirdblock
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B        30          100.0
-                                FA2       184           89.8
-                            FD1P3XZ       507           92.0
-                               LUT4      1284           96.5
+                              EBR_B        22          100.0
+                                FA2       144           87.3
+                            FD1P3XZ       325           88.1
+                               LUT4      1096           96.5
 SUB MODULES
-                 blueberryCherryROM         1
-              blueberryCherryROM_U1         1
-             blueberryCherryROM_U11         1
-             blueberryCherryROM_U13         1
-             blueberryCherryROM_U15         1
-             blueberryCherryROM_U17         1
-             blueberryCherryROM_U19         1
-             blueberryCherryROM_U21         1
-             blueberryCherryROM_U23         1
-             blueberryCherryROM_U25         1
-             blueberryCherryROM_U27         1
-              blueberryCherryROM_U3         1
-              blueberryCherryROM_U5         1
-              blueberryCherryROM_U7         1
-              blueberryCherryROM_U9         1
                            fruitROM         1
-                       fruitROM_U28         1
-                       fruitROM_U29         1
-                       fruitROM_U30         1
-                       fruitROM_U31         1
-                       fruitROM_U32         1
-                       fruitROM_U33         1
-                       fruitROM_U34         1
-                       fruitROM_U35         1
-                       fruitROM_U36         1
-                       fruitROM_U37         1
-                       fruitROM_U38         1
-                       fruitROM_U39         1
-                       fruitROM_U40         1
-                       fruitROM_U41         1
+                        fruitROM_U0         1
+                        fruitROM_U1         1
+                        fruitROM_U2         1
+                        fruitROM_U3         1
+                        fruitROM_U4         1
+                        fruitROM_U5         1
+                        fruitROM_U6         1
+                        fruitROM_U7         1
+                        fruitROM_U8         1
+                        fruitROM_U9         1
                      startscreenROM         1
-                      watermelonROM         1
-                   watermelonROM_U0         1
-                  watermelonROM_U10         1
-                  watermelonROM_U12         1
-                  watermelonROM_U14         1
-                  watermelonROM_U16         1
-                  watermelonROM_U18         1
-                   watermelonROM_U2         1
-                  watermelonROM_U20         1
-                  watermelonROM_U22         1
-                  watermelonROM_U24         1
-                  watermelonROM_U26         1
-                   watermelonROM_U4         1
-                   watermelonROM_U6         1
-                   watermelonROM_U8         1
-                              TOTAL      2051
+                              TOTAL      1599
 ----------------------------------------------------------------------
 Report for cell startscreenROM.v1
 Instance Path : thirdblock.start_screen
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3XZ         4            0.7
-                               LUT4         8            0.6
+                            FD1P3XZ         4            1.1
+                               LUT4         8            0.7
                               TOTAL        12
 ----------------------------------------------------------------------
 Report for cell fruitROM.v1
 Instance Path : thirdblock.gen_fruit_roms[9].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-                 blueberryCherryROM         1
-                      watermelonROM         1
-                              TOTAL        17
+                              EBR_B         2            9.1
+                               LUT4        18            1.6
+                              TOTAL        20
 ----------------------------------------------------------------------
-Report for cell watermelonROM.v1
-Instance Path : thirdblock.gen_fruit_roms[9].fruit_rom_instance.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM.v1
-Instance Path : thirdblock.gen_fruit_roms[9].fruit_rom_instance.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell fruitROM_U28.v1
+Report for cell fruitROM_U0.v1
 Instance Path : thirdblock.gen_fruit_roms[8].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-              blueberryCherryROM_U1         1
-                   watermelonROM_U0         1
-                              TOTAL        17
+                              EBR_B         2            9.1
+                               LUT4        20            1.8
+                              TOTAL        22
 ----------------------------------------------------------------------
-Report for cell watermelonROM_U0.v1
-Instance Path : thirdblock.gen_fruit_roms[8].fruit_rom_instance.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM_U1.v1
-Instance Path : thirdblock.gen_fruit_roms[8].fruit_rom_instance.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell fruitROM_U29.v1
+Report for cell fruitROM_U1.v1
 Instance Path : thirdblock.gen_fruit_roms[7].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-              blueberryCherryROM_U3         1
-                   watermelonROM_U2         1
-                              TOTAL        17
+                              EBR_B         2            9.1
+                               LUT4        18            1.6
+                              TOTAL        20
 ----------------------------------------------------------------------
-Report for cell watermelonROM_U2.v1
-Instance Path : thirdblock.gen_fruit_roms[7].fruit_rom_instance.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM_U3.v1
-Instance Path : thirdblock.gen_fruit_roms[7].fruit_rom_instance.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell fruitROM_U30.v1
+Report for cell fruitROM_U2.v1
 Instance Path : thirdblock.gen_fruit_roms[6].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-              blueberryCherryROM_U5         1
-                   watermelonROM_U4         1
-                              TOTAL        17
+                              EBR_B         2            9.1
+                               LUT4        19            1.7
+                              TOTAL        21
 ----------------------------------------------------------------------
-Report for cell watermelonROM_U4.v1
-Instance Path : thirdblock.gen_fruit_roms[6].fruit_rom_instance.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM_U5.v1
-Instance Path : thirdblock.gen_fruit_roms[6].fruit_rom_instance.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell fruitROM_U31.v1
+Report for cell fruitROM_U3.v1
 Instance Path : thirdblock.gen_fruit_roms[5].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-              blueberryCherryROM_U7         1
-                   watermelonROM_U6         1
-                              TOTAL        17
+                              EBR_B         2            9.1
+                               LUT4        18            1.6
+                              TOTAL        20
 ----------------------------------------------------------------------
-Report for cell watermelonROM_U6.v1
-Instance Path : thirdblock.gen_fruit_roms[5].fruit_rom_instance.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM_U7.v1
-Instance Path : thirdblock.gen_fruit_roms[5].fruit_rom_instance.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell fruitROM_U32.v1
+Report for cell fruitROM_U4.v1
 Instance Path : thirdblock.gen_fruit_roms[4].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-              blueberryCherryROM_U9         1
-                   watermelonROM_U8         1
-                              TOTAL        17
+                              EBR_B         2            9.1
+                               LUT4        18            1.6
+                              TOTAL        20
 ----------------------------------------------------------------------
-Report for cell watermelonROM_U8.v1
-Instance Path : thirdblock.gen_fruit_roms[4].fruit_rom_instance.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM_U9.v1
-Instance Path : thirdblock.gen_fruit_roms[4].fruit_rom_instance.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell fruitROM_U33.v1
+Report for cell fruitROM_U5.v1
 Instance Path : thirdblock.gen_fruit_roms[3].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-             blueberryCherryROM_U11         1
-                  watermelonROM_U10         1
-                              TOTAL        17
+                              EBR_B         2            9.1
+                               LUT4        19            1.7
+                              TOTAL        21
 ----------------------------------------------------------------------
-Report for cell watermelonROM_U10.v1
-Instance Path : thirdblock.gen_fruit_roms[3].fruit_rom_instance.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM_U11.v1
-Instance Path : thirdblock.gen_fruit_roms[3].fruit_rom_instance.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell fruitROM_U34.v1
+Report for cell fruitROM_U6.v1
 Instance Path : thirdblock.gen_fruit_roms[2].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-             blueberryCherryROM_U13         1
-                  watermelonROM_U12         1
-                              TOTAL        17
+                              EBR_B         2            9.1
+                               LUT4        18            1.6
+                              TOTAL        20
 ----------------------------------------------------------------------
-Report for cell watermelonROM_U12.v1
-Instance Path : thirdblock.gen_fruit_roms[2].fruit_rom_instance.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM_U13.v1
-Instance Path : thirdblock.gen_fruit_roms[2].fruit_rom_instance.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell fruitROM_U35.v1
+Report for cell fruitROM_U7.v1
 Instance Path : thirdblock.gen_fruit_roms[1].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-             blueberryCherryROM_U15         1
-                  watermelonROM_U14         1
-                              TOTAL        17
+                              EBR_B         2            9.1
+                               LUT4        18            1.6
+                              TOTAL        20
 ----------------------------------------------------------------------
-Report for cell watermelonROM_U14.v1
-Instance Path : thirdblock.gen_fruit_roms[1].fruit_rom_instance.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM_U15.v1
-Instance Path : thirdblock.gen_fruit_roms[1].fruit_rom_instance.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell fruitROM_U36.v1
-Instance Path : thirdblock.gen_fruit_roms[14].fruit_rom_instance
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-             blueberryCherryROM_U17         1
-                  watermelonROM_U16         1
-                              TOTAL        17
-----------------------------------------------------------------------
-Report for cell watermelonROM_U16.v1
-Instance Path : thirdblock.gen_fruit_roms[14].fruit_rom_instance.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM_U17.v1
-Instance Path : thirdblock.gen_fruit_roms[14].fruit_rom_instance.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell fruitROM_U37.v1
-Instance Path : thirdblock.gen_fruit_roms[13].fruit_rom_instance
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-             blueberryCherryROM_U19         1
-                  watermelonROM_U18         1
-                              TOTAL        17
-----------------------------------------------------------------------
-Report for cell watermelonROM_U18.v1
-Instance Path : thirdblock.gen_fruit_roms[13].fruit_rom_instance.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM_U19.v1
-Instance Path : thirdblock.gen_fruit_roms[13].fruit_rom_instance.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell fruitROM_U38.v1
-Instance Path : thirdblock.gen_fruit_roms[12].fruit_rom_instance
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-             blueberryCherryROM_U21         1
-                  watermelonROM_U20         1
-                              TOTAL        17
-----------------------------------------------------------------------
-Report for cell watermelonROM_U20.v1
-Instance Path : thirdblock.gen_fruit_roms[12].fruit_rom_instance.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM_U21.v1
-Instance Path : thirdblock.gen_fruit_roms[12].fruit_rom_instance.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell fruitROM_U39.v1
-Instance Path : thirdblock.gen_fruit_roms[11].fruit_rom_instance
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-             blueberryCherryROM_U23         1
-                  watermelonROM_U22         1
-                              TOTAL        17
-----------------------------------------------------------------------
-Report for cell watermelonROM_U22.v1
-Instance Path : thirdblock.gen_fruit_roms[11].fruit_rom_instance.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM_U23.v1
-Instance Path : thirdblock.gen_fruit_roms[11].fruit_rom_instance.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell fruitROM_U40.v1
+Report for cell fruitROM_U8.v1
 Instance Path : thirdblock.gen_fruit_roms[10].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-             blueberryCherryROM_U25         1
-                  watermelonROM_U24         1
-                              TOTAL        17
+                              EBR_B         2            9.1
+                               LUT4        24            2.1
+                              TOTAL        26
 ----------------------------------------------------------------------
-Report for cell watermelonROM_U24.v1
-Instance Path : thirdblock.gen_fruit_roms[10].fruit_rom_instance.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM_U25.v1
-Instance Path : thirdblock.gen_fruit_roms[10].fruit_rom_instance.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell fruitROM_U41.v1
+Report for cell fruitROM_U9.v1
 Instance Path : thirdblock.active_fruit
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              EBR_B         2            6.7
-                            FD1P3XZ         6            1.1
-                               LUT4         7            0.5
-SUB MODULES
-             blueberryCherryROM_U27         1
-                  watermelonROM_U26         1
-                              TOTAL        17
-----------------------------------------------------------------------
-Report for cell watermelonROM_U26.v1
-Instance Path : thirdblock.active_fruit.watermelon
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
-----------------------------------------------------------------------
-Report for cell blueberryCherryROM_U27.v1
-Instance Path : thirdblock.active_fruit.blueberryCherry
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              EBR_B         1            3.3
-                              TOTAL         1
+                              EBR_B         2            9.1
+                               LUT4        14            1.2
+                              TOTAL        16
 ----------------------------------------------------------------------
 Report for cell mypll.v1
 Instance Path : firstblock
@@ -552,19 +173,28 @@ Report for cell nesclk_top.v1
 Instance Path : nesblock
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2         9            4.4
-                            FD1P3XZ        24            4.4
+                                FA2         9            5.5
+                            FD1P3XZ        24            6.5
                          HSOSC_CORE         1          100.0
                               IOL_B         1          100.0
-                               LUT4        21            1.6
+                               LUT4        16            1.4
 SUB MODULES
                              shift8         1
-                              TOTAL        57
+                              TOTAL        52
 ----------------------------------------------------------------------
 Report for cell shift8.v1
 Instance Path : nesblock.instanceshift
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3XZ         7            1.3
+                            FD1P3XZ         7            1.9
                               IOL_B         1          100.0
                               TOTAL         8
+----------------------------------------------------------------------
+Report for cell vga.v1
+Instance Path : secondblock
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        12            7.3
+                            FD1P3XZ        20            5.4
+                               LUT4        16            1.4
+                              TOTAL        48

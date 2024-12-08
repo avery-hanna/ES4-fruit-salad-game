@@ -21,11 +21,21 @@ component fruitROM is
   port(
 	  row : in std_logic_vector(3 downto 0);
 	  col : in std_logic_vector(3 downto 0);
-	  fruit_type : in std_logic_vector(2 downto 0);
+	  fruit_type : in std_logic_vector(1 downto 0);
 	  clk : in std_logic;
 	  color : out std_logic_vector(5 downto 0)
   );
 end component;
+
+component getRandomFruit is
+	port(
+		clk: in std_logic;
+		fruitout: out unsigned(1 downto 0);
+		reset: in std_logic
+	);
+end component;
+	
+	
 
 component startscreenROM is
   port(
@@ -45,16 +55,18 @@ signal startscreenRGB : std_logic_vector(5 downto 0);
 
 signal active_fruit_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
 signal active_fruit_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
-signal active_fruit_type : unsigned(2 downto 0);
+signal active_fruit_type : unsigned(1 downto 0);
 signal active_fruit_RGB : std_logic_vector(5 downto 0); -- we will get these values from all the different ROM and compare to decide what to render
 signal active_fruit_relative_row : std_logic_vector (9 downto 0);
 signal active_fruit_relative_col : std_logic_vector (9 downto 0);
 signal active_fruit_rom_row : std_logic_vector (3 downto 0);
 signal active_fruit_rom_col : std_logic_vector (3 downto 0);
 
+signal reset_random : std_logic;
+
 constant NUM_FRUITS : integer := 10;
 type unsigned_coord_array is array(1 to NUM_FRUITS) of unsigned(9 downto 0);
-type type_array is array(1 to NUM_FRUITS) of unsigned(2 downto 0);
+type type_array is array(1 to NUM_FRUITS) of unsigned(1 downto 0);
 type rgb_array is array(1 to NUM_FRUITS) of std_logic_vector(5 downto 0);
 type vector_coord_array is array(1 to NUM_FRUITS) of std_logic_vector(9 downto 0);
 type rom_coord_array is array(1 to NUM_FRUITS) of std_logic_vector(3 downto 0);
@@ -141,6 +153,8 @@ begin
 				active_fruit_tl_col <= 10d"307";
 				active_fruit_type <= "000";
 		
+				reset_random <= '1';
+				
 				-- Position all other fruits off screen
 				for i in 1 to NUM_FRUITS loop
 					fruit_tl_row(i) <= 10d"700";
