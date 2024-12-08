@@ -14,7 +14,7 @@ end fruitROM;
 
 architecture synth of fruitROM is 
 
-signal address: std_logic_vector(10 downto 0);
+signal address: std_logic_vector(9 downto 0);
 signal color3: std_logic_vector(2 downto 0);
 
 begin
@@ -776,22 +776,24 @@ begin
 					color3 <= "101"; 
 				--watermelon
 				when "1000000101" => 
-					color3 <= "100"; 
+					color3 <= "111"; 
 				when "1000000110" => 
 					color3 <= "110"; 
 				when "1000000111" => 
-					color3 <= "111"; 
+					color3 <= "011"; 
 				when "1000001000" => 
 					color3 <= "110"; 
 				when "1000001001" => 
-					color3 <= "111"; 
+					color3 <= "100"; 
 				when "1000010011" => 
-					color3 <= "111"; 
+					color3 <= "100"; 
 				when "1000010100" => 
 					color3 <= "101"; 
 				when "1000010101" => 
 					color3 <= "011"; 
 				when "1000010110" => 
+					color3 <= "011"; 
+				when "1000010111" => 
 					color3 <= "011"; 
 				when "1000011000" => 
 					color3 <= "011"; 
@@ -800,10 +802,12 @@ begin
 				when "1000011010" => 
 					color3 <= "101"; 
 				when "1000011011" => 
-					color3 <= "111"; 
+					color3 <= "100"; 
 				when "1000100010" => 
 					color3 <= "110"; 
 				when "1000100011" => 
+					color3 <= "011"; 
+				when "1000100100" => 
 					color3 <= "011"; 
 				when "1000100101" => 
 					color3 <= "010"; 
@@ -815,14 +819,14 @@ begin
 					color3 <= "010"; 
 				when "1000101001" => 
 					color3 <= "001"; 
-				when "1000101001" => 
-					color3 <= "001"; 
+				when "1000101010" => 
+					color3 <= "011"; 
 				when "1000101011" => 
 					color3 <= "011"; 
 				when "1000101100" => 
-					color3 <= "111"; 
+					color3 <= "011"; 
 				when "1000110001" => 
-					color3 <= "111"; 
+					color3 <= "100"; 
 				when "1000110010" => 
 					color3 <= "011"; 
 				when "1000110011" => 
@@ -847,12 +851,12 @@ begin
 					color3 <= "011"; 
 				when "1000111101" => 
 					color3 <= "110"; 
-				when "1000111110"=> 
-					color3 <= "111"; 
+				when "1000111110" => 
+					color3 <= "100"; 
 				when "1001000001" => 
 					color3 <= "101"; 
-				when "1001000001" => 
-					color3 <= "101"; 
+				when "1001000010" => 
+					color3 <= "011"; 
 				when "1001000011" => 
 					color3 <= "001"; 
 				when "1001000100" => 
@@ -876,9 +880,9 @@ begin
 				when "1001001101" => 
 					color3 <= "101"; 
 				when "1001001110" => 
-					color3 <= "100"; 
+					color3 <= "111"; 
 				when "1001010000" => 
-					color3 <= "100"; 
+					color3 <= "111"; 
 				when "1001010001" => 
 					color3 <= "011"; 
 				when "1001010010" => 
@@ -908,7 +912,7 @@ begin
 				when "1001011110" => 
 					color3 <= "110"; 
 				when "1001100000" => 
-					color3 <= "111"; 
+					color3 <= "100"; 
 				when "1001100001" => 
 					color3 <= "011"; 
 				when "1001100010" => 
@@ -933,14 +937,14 @@ begin
 					color3 <= "010"; 
 				when "1001101100" => 
 					color3 <= "001"; 
-				when "1001101100" => 
-					color3 <= "001"; 
+				when "1001101101" => 
+					color3 <= "011"; 
 				when "1001101110" => 
-					color3 <= "111"; 
+					color3 <= "011"; 
 				when "1001110000" => 
 					color3 <= "110"; 
-				when "1001110000" => 
-					color3 <= "110"; 
+				when "1001110001" => 
+					color3 <= "011"; 
 				when "1001110010" => 
 					color3 <= "001"; 
 				when "1001110011" => 
@@ -963,8 +967,8 @@ begin
 					color3 <= "001"; 
 				when "1001111100" => 
 					color3 <= "010"; 
-				when "1001111100" => 
-					color3 <= "010"; 
+				when "1001111101" => 
+					color3 <= "011"; 
 				when "1001111110" => 
 					color3 <= "101"; 
 				when "1010000000" => 
@@ -993,12 +997,12 @@ begin
 					color3 <= "001"; 
 				when "1010001100" => 
 					color3 <= "001"; 
-				when "1010001100" => 
-					color3 <= "001"; 
+				when "1010001101" => 
+					color3 <= "011"; 
 				when "1010001110" => 
 					color3 <= "101"; 
 				when "1010010000" => 
-					color3 <= "100"; 
+					color3 <= "111"; 
 				when "1010010001" => 
 					color3 <= "011"; 
 				when "1010010010" => 
@@ -1029,8 +1033,8 @@ begin
 					color3 <= "110"; 
 				when "1010100001" => 
 					color3 <= "101"; 
-				when "1010100001" => 
-					color3 <= "101"; 
+				when "1010100010" => 
+					color3 <= "011"; 
 				when "1010100011" => 
 					color3 <= "001"; 
 				when "1010100100" => 
@@ -1054,9 +1058,9 @@ begin
 				when "1010101101" => 
 					color3 <= "101"; 
 				when "1010101110" => 
-					color3 <= "100"; 
-				when "1010110001" => 
 					color3 <= "111"; 
+				when "1010110001" => 
+					color3 <= "100"; 
 				when "1010110010" => 
 					color3 <= "011"; 
 				when "1010110011" => 
@@ -1080,14 +1084,14 @@ begin
 				when "1010111100" => 
 					color3 <= "011"; 
 				when "1010111101" => 
-					color3 <= "111"; 
-				when "1010111110"=> 
-					color3 <= "111"; 
+					color3 <= "011"; 
+				when "1010111110" => 
+					color3 <= "100"; 
 				when "1011000010" => 
-					color3 <= "111"; 
-				when "1011000011" => 
 					color3 <= "011"; 
 				when "1011000011" => 
+					color3 <= "011"; 
+				when "1011000100" => 
 					color3 <= "011"; 
 				when "1011000101" => 
 					color3 <= "001"; 
@@ -1104,47 +1108,48 @@ begin
 				when "1011001011" => 
 					color3 <= "011"; 
 				when "1011001100" => 
-					color3 <= "111"; 
-				when "1011001101"=> 
-					color3 <= "111"; 
+					color3 <= "011"; 
+				when "1011001101" => 
+					color3 <= "100"; 
 				when "1011010011" => 
 					color3 <= "110"; 
 				when "1011010100" => 
 					color3 <= "101"; 
 				when "1011010101" => 
 					color3 <= "011"; 
-				when "1011010101" => 
+				when "1011010110" => 
 					color3 <= "011"; 
-				when "1011010101" => 
+				when "1011010111" => 
 					color3 <= "011"; 
-				when "1011010101" => 
+				when "1011011000" => 
 					color3 <= "011"; 
 				when "1011011001" => 
 					color3 <= "011"; 
 				when "1011011010" => 
 					color3 <= "101"; 
 				when "1011011011" => 
-					color3 <= "111"; 
-				when "1011011100"=> 
-					color3 <= "111"; 
-				when "1011100011"=> 
-					color3 <= "111"; 
-				when "1011100100" => 
+					color3 <= "011"; 
+				when "1011011100" => 
 					color3 <= "100"; 
+				when "1011100011" => 
+					color3 <= "100"; 
+				when "1011100100" => 
+					color3 <= "111"; 
 				when "1011100101" => 
-					color3 <= "111"; 
+					color3 <= "100"; 
 				when "1011100110" => 
-					color3 <= "111"; 
+					color3 <= "011"; 
 				when "1011100111" => 
 					color3 <= "101"; 
 				when "1011101000" => 
-					color3 <= "111"; 
+					color3 <= "011"; 
 				when "1011101001" => 
 					color3 <= "110"; 
 				when "1011101010" => 
-					color3 <= "100"; 
-				when "1011101011"=> 
 					color3 <= "111"; 
+				when "1011101011" => 
+					color3 <= "100"; 
+ 
 				--grapefruit
 				when "1100000101" => 
 						color3 <= "010"; 
@@ -1520,7 +1525,8 @@ begin
 						color3 <= "111"; 
 				when "1111101011" => 
 						color3 <= "100"; 
-				when others => color3 <= "000";
+				when others =>
+					color3 <= "000";
 				end case;
 			end if;
 	end process;
@@ -1534,21 +1540,21 @@ begin
 	else "000110" when (fruit_type="00" and color3="100")
 	else "010101" when (fruit_type="00" and color3="101")
 	--cherry
-	else "010000" when (fruit_type="10" and color3="001")
-	else "100000" when (fruit_type="10" and color3 = "010")
-	else "100100" when (fruit_type="10" and color3 = "011")
-	else "110101" when (fruit_type="10" and color3 = "100")
-	else "010101" when (fruit_type="10" and color3 = "101")
-	else "111010" when (fruit_type="10" and color3 = "110")
-	else "111111" when (fruit_type="10" and color3 = "111")
+	else "010000" when (fruit_type="01" and color3="001")
+	else "100000" when (fruit_type="01" and color3 = "010")
+	else "100100" when (fruit_type="01" and color3 = "011")
+	else "110101" when (fruit_type="01" and color3 = "100")
+	else "010101" when (fruit_type="01" and color3 = "101")
+	else "111010" when (fruit_type="01" and color3 = "110")
+	else "111111" when (fruit_type="01" and color3 = "111")
 	--watermelon
 	else "110001" when (fruit_type="10" and color3="001")
 	else "100000" when (fruit_type="10" and color3 = "010")
 	else "111001" when (fruit_type="10" and color3 = "011")
-	else "000100" when (fruit_type="10" and color3 = "100")
+	else "010100" when (fruit_type="10" and color3 = "100")
 	else "101001" when (fruit_type="10" and color3 = "101")
 	else "011000" when (fruit_type="10" and color3 = "110")
-	else "011001" when (fruit_type="10" and color3 = "111")
+	else "000100" when (fruit_type="10" and color3 = "111")
 
 	--grapefruit
 	else "111010" when (fruit_type="11" and color3="001")
