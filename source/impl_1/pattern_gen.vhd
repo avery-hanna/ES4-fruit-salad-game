@@ -242,7 +242,7 @@ begin
 					fruit_tl_row(swap_fruit) <= active_fruit_tl_row;
 					fruit_tl_col(swap_fruit) <= active_fruit_tl_col;
 					fruit_type(swap_fruit) <= active_fruit_type;
-					score <= score + 5d"1";
+				
 					game_state <= SWAP;
 				else
 					game_state <= FALL_LOOP;
@@ -259,6 +259,19 @@ begin
 						-- fruit goes offscreen
 						fruit_tl_row(to_integer(falloop_counter)) <= 10d"700";
 						fruit_tl_col(to_integer(falloop_counter)) <= 10d"700";
+						if active_fruit_type = "00" then
+							score <= score + 5d"1";
+							scoring_first_digit <= score mod 5d"10";
+							scoring_tensplace <= score * 7d"52";
+							scoring_second_digit <= scoring_tensplace (12 downto 9);
+							scoring_first_digitROM <=
+						elsif "01" then
+							score <= score + 5d"2";
+						elsif "10" then
+							score <= score + 5d"3";
+						elsif "11" then
+							score <= score + 5d"4";
+						end if;
 				
 						-- active fruit gets fruit 1's position
 						active_fruit_tl_row <= fruit_tl_row(to_integer(falloop_counter));
@@ -276,7 +289,6 @@ begin
 						fruit_tl_row(swap_fruit) <= active_fruit_tl_row;
 						fruit_tl_col(swap_fruit) <= active_fruit_tl_col;
 						fruit_type(swap_fruit) <= active_fruit_type;
-						score <= score + 5d"3";
 						game_state <= SWAP;
 					end if;
 				else
