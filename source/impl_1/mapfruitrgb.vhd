@@ -10,6 +10,9 @@ entity maprgb is
   );
 end maprgb;
 
+architecture synth of maprgb is
+begin
+
 --blueberry
 color <= "000001" when (fruit_type="00" and color3="001")
 else "010110" when (fruit_type="00" and color3="010")
@@ -42,3 +45,5 @@ else "111110" when (fruit_type="11" and color3 = "101")
 else "111001" when (fruit_type="11" and color3 = "110")
 else "010000" when (fruit_type="11" and color3 = "111")
 else "000000"; 
+
+end;

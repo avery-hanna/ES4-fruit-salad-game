@@ -5,10 +5,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Dec  8 21:32:59 2024
+Mon Dec  9 01:48:56 2024
 
 
-Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/final-proj/ES4-fruit-salad-game/promote.xml 
+Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/Es4/ES4-fruit-salad-game/promote.xml 
 
 Synthesis options:
 The -a option is iCE40UP.
@@ -71,42 +71,44 @@ The -syn option is FALSE.
 -vh2008
 
 -path C:/lscc/radiant/2023.1/ispfpga/ice40tp/data (searchpath added)
--path Z:/final-proj/ES4-fruit-salad-game (searchpath added)
--path Z:/final-proj/ES4-fruit-salad-game/impl_1 (searchpath added)
--path Z:/final-proj/ES4-fruit-salad-game/mypll (searchpath added)
+-path Z:/Es4/ES4-fruit-salad-game (searchpath added)
+-path Z:/Es4/ES4-fruit-salad-game/impl_1 (searchpath added)
+-path Z:/Es4/ES4-fruit-salad-game/mypll (searchpath added)
 Mixed language design
 Verilog design file = C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.v
-Verilog design file = Z:/final-proj/ES4-fruit-salad-game/mypll/rtl/mypll.v
+Verilog design file = Z:/Es4/ES4-fruit-salad-game/mypll/rtl/mypll.v
 VHDL library = pmi
 VHDL design file = C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.vhd
 VHDL library = work
-VHDL design file = Z:/final-proj/ES4-fruit-salad-game/source/impl_1/vga.vhd
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/vga.vhd
 VHDL library = work
-VHDL design file = Z:/final-proj/ES4-fruit-salad-game/source/impl_1/vga_controller.vhd
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/vga_controller.vhd
 VHDL library = work
-VHDL design file = Z:/final-proj/ES4-fruit-salad-game/source/impl_1/fruit_rom.vhd
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/fruit_rom.vhd
 VHDL library = work
-VHDL design file = Z:/final-proj/ES4-fruit-salad-game/source/impl_1/nesclk_top.vhd
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/nesclk_top.vhd
 VHDL library = work
-VHDL design file = Z:/final-proj/ES4-fruit-salad-game/source/impl_1/pattern_gen.vhd
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/pattern_gen.vhd
 VHDL library = work
-VHDL design file = Z:/final-proj/ES4-fruit-salad-game/source/impl_1/shift8.vhd
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/shift8.vhd
 VHDL library = work
-VHDL design file = Z:/final-proj/ES4-fruit-salad-game/source/impl_1/top.vhd
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/top.vhd
 VHDL library = work
-VHDL design file = Z:/final-proj/ES4-fruit-salad-game/source/impl_1/update_color.vhd
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/update_color.vhd
 VHDL library = work
-VHDL design file = Z:/final-proj/ES4-fruit-salad-game/source/impl_1/grapefruitROM.vhd
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/grapefruitROM.vhd
 VHDL library = work
-VHDL design file = Z:/final-proj/ES4-fruit-salad-game/source/impl_1/orangeROM.vhd
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/orangeROM.vhd
 VHDL library = work
-VHDL design file = Z:/final-proj/ES4-fruit-salad-game/source/impl_1/watermelonROM.vhd
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/watermelonROM.vhd
 VHDL library = work
-VHDL design file = Z:/final-proj/ES4-fruit-salad-game/source/impl_1/startscreenROM.vhd
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/startscreenROM.vhd
 VHDL library = work
-VHDL design file = Z:/final-proj/ES4-fruit-salad-game/source/impl_1/blueberryCherryROM.vhd
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/blueberryCherryROM.vhd
 VHDL library = work
-VHDL design file = Z:/final-proj/ES4-fruit-salad-game/source/impl_1/get_randomfruit.vhd
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/get_randomfruit.vhd
+VHDL library = work
+VHDL design file = Z:/Es4/ES4-fruit-salad-game/source/impl_1/mapfruitrgb.vhd
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
 WARNING <35935050> - synthesis: input port TRIM9 is not connected on this instance. VDB-5050
 WARNING <35935050> - synthesis: input port TRIM8 is not connected on this instance. VDB-5050
@@ -155,78 +157,85 @@ INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dp_be.v(49): 
 INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(16): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dq_be.v. VERI-1328
 INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dq_be.v(45): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
 INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(17): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_dsp.v. VERI-1328
-Analyzing Verilog file z:/final-proj/es4-fruit-salad-game/mypll/rtl/mypll.v. VERI-1482
+Analyzing Verilog file z:/es4/es4-fruit-salad-game/mypll/rtl/mypll.v. VERI-1482
 Analyzing VHDL file c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.vhd. VHDL-1481
 Analyzing VHDL file c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.vhd
 
 INFO <35921014> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/vga.vhd. VHDL-1481
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/vga.vhd
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/vga.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/vga.vhd
 
-INFO <35921012> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/vga.vhd(5): analyzing entity vga. VHDL-1012
-INFO <35921010> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/vga.vhd(17): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/vga_controller.vhd. VHDL-1481
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/vga_controller.vhd
+INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/vga.vhd(5): analyzing entity vga. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/vga.vhd(17): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/vga_controller.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/vga_controller.vhd
 
-INFO <35921012> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(6): analyzing entity vga_controller. VHDL-1012
-INFO <35921010> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(23): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd. VHDL-1481
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd
+INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(6): analyzing entity vga_controller. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(23): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd
 
-INFO <35921012> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd(5): analyzing entity fruitrom. VHDL-1012
-INFO <35921010> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd(15): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd. VHDL-1481
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd
+INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd(5): analyzing entity fruitrom. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd(15): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd
 
-INFO <35921012> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd(6): analyzing entity nesclk_top. VHDL-1012
-INFO <35921010> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd(17): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd. VHDL-1481
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd
+INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd(6): analyzing entity nesclk_top. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd(17): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd
 
-INFO <35921012> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(6): analyzing entity pattern_gen. VHDL-1012
-INFO <35921010> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(19): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/shift8.vhd. VHDL-1481
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/shift8.vhd
+INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(6): analyzing entity pattern_gen. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(19): analyzing architecture synth. VHDL-1010
+WARNING <35921196> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(149): possible infinite loop process does not have a wait statement. VHDL-1196
+WARNING <35921196> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(161): possible infinite loop process does not have a wait statement. VHDL-1196
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/shift8.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/shift8.vhd
 
-INFO <35921012> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/shift8.vhd(4): analyzing entity shift8. VHDL-1012
-INFO <35921010> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/shift8.vhd(12): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/top.vhd. VHDL-1481
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/top.vhd
+INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/shift8.vhd(4): analyzing entity shift8. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/shift8.vhd(12): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/top.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/top.vhd
 
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/update_color.vhd. VHDL-1481
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/update_color.vhd
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/update_color.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/update_color.vhd
 
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd. VHDL-1481
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd
 
-INFO <35921012> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd(5): analyzing entity grapefruitrom. VHDL-1012
-INFO <35921010> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd(14): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/orangerom.vhd. VHDL-1481
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/orangerom.vhd
+INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd(5): analyzing entity grapefruitrom. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd(14): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/orangerom.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/orangerom.vhd
 
-INFO <35921012> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/orangerom.vhd(5): analyzing entity orangerom. VHDL-1012
-INFO <35921010> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/orangerom.vhd(14): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd. VHDL-1481
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd
+INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/orangerom.vhd(5): analyzing entity orangerom. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/orangerom.vhd(14): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd
 
-INFO <35921012> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd(5): analyzing entity watermelonrom. VHDL-1012
-INFO <35921010> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd(14): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd. VHDL-1481
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd
+INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd(5): analyzing entity watermelonrom. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd(14): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd
 
-INFO <35921012> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(5): analyzing entity startscreenrom. VHDL-1012
-INFO <35921010> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(14): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd. VHDL-1481
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd
+INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(5): analyzing entity startscreenrom. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(14): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd
 
-INFO <35921012> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd(5): analyzing entity blueberrycherryrom. VHDL-1012
-INFO <35921010> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd(15): analyzing architecture synth. VHDL-1010
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd. VHDL-1481
-Analyzing VHDL file z:/final-proj/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd
+INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd(5): analyzing entity blueberrycherryrom. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd(15): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd
 
-INFO <35921012> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd(6): analyzing entity getrandomfruit. VHDL-1012
-INFO <35921010> - synthesis: z:/final-proj/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd(14): analyzing architecture synth. VHDL-1010
-INFO <35921504> - synthesis: The default VHDL library search path is now "Z:/final-proj/ES4-fruit-salad-game/impl_1". VHDL-1504
+INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd(6): analyzing entity getrandomfruit. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd(14): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/mapfruitrgb.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/mapfruitrgb.vhd
+
+INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/mapfruitrgb.vhd(5): analyzing entity maprgb. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/mapfruitrgb.vhd(13): analyzing architecture synth. VHDL-1010
+INFO <35921504> - synthesis: The default VHDL library search path is now "Z:/Es4/ES4-fruit-salad-game/impl_1". VHDL-1504
 Top module language type = VHDL.
 WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
 WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
@@ -257,81 +266,77 @@ Top module name (VHDL, mixed language): vga_controller
 
 WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
 WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
-WARNING <35931002> - synthesis: z:/final-proj/es4-fruit-salad-game/mypll/rtl/mypll.v(139): net \firstblock/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
-WARNING <35931002> - synthesis: z:/final-proj/es4-fruit-salad-game/mypll/rtl/mypll.v(140): net \firstblock/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
+WARNING <35931002> - synthesis: z:/es4/es4-fruit-salad-game/mypll/rtl/mypll.v(139): net \firstblock/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
+WARNING <35931002> - synthesis: z:/es4/es4-fruit-salad-game/mypll/rtl/mypll.v(140): net \firstblock/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
 ######## Missing driver on net \firstblock/lscc_pll_inst/sclk_i. Patching with GND.
 ######## Missing driver on net \firstblock/lscc_pll_inst/sdi_i. Patching with GND.
-WARNING <35935040> - synthesis: Register \thirdblock/reset_random clock is stuck at One. VDB-5040
 
 
 
-CRITICAL <35001747> - synthesis: Bit 1 of Register \thirdblock/randomfruit/randgenerator is stuck at Zero
-CRITICAL <35001747> - synthesis: Bit 0 of Register \thirdblock/randomfruit/randgenerator is stuck at Zero
-CRITICAL <35001748> - synthesis: Bit 3 of Register \thirdblock/randomfruit/randgenerator is stuck at One
 Combinational loop found : 1
-
- Net output[0] 
-
- Instance \nesblock/mux_24_i1 
-
-Combinational loop found : 2
 
  Net output[7] 
 
  Instance \nesblock/mux_24_i8 
 
-Combinational loop found : 3
+Combinational loop found : 2
 
  Net output[6] 
 
  Instance \nesblock/mux_24_i7 
 
-Combinational loop found : 4
+Combinational loop found : 3
 
  Net output[5] 
 
  Instance \nesblock/mux_24_i6 
 
-Combinational loop found : 5
+Combinational loop found : 4
 
  Net output[4] 
 
  Instance \nesblock/mux_24_i5 
 
-Combinational loop found : 6
+Combinational loop found : 5
 
  Net output[3] 
 
  Instance \nesblock/mux_24_i4 
 
-Combinational loop found : 7
+Combinational loop found : 6
 
  Net output[2] 
 
  Instance \nesblock/mux_24_i3 
 
-Combinational loop found : 8
+Combinational loop found : 7
 
  Net output[1] 
 
  Instance \nesblock/mux_24_i2 
 
+Combinational loop found : 8
+
+ Net output[0] 
+
+ Instance \nesblock/mux_24_i1 
+
 INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 621 of 5280 (11 % )
-EBR_B => 11
-CCU2 => 182
-FD1P3XZ => 621
+Number of register bits => 493 of 5280 (9 % )
+EBR_B => 22
+CCU2 => 236
+FD1P3XZ => 493
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 1
-LUT4 => 2319
+LUT4 => 3496
 OB => 21
 PLL_B => 1
 ################### End Area Report ##################
 Number of odd-length carry chains : 2
-Number of even-length carry chains : 28
+Number of even-length carry chains : 39
 
 ################### Begin Clock Report ######################
 Clock Nets
@@ -344,21 +349,21 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/n3, loads : 212
-  Net : thirdblock/game_state[0], loads : 178
-  Net : thirdblock/game_state[1], loads : 160
-  Net : thirdblock/n1384, loads : 130
-  Net : thirdblock/falloop_counter[0], loads : 122
-  Net : thirdblock/n6_adj_1588, loads : 52
-  Net : thirdblock/n6143, loads : 42
-  Net : thirdblock/game_state[2], loads : 42
-  Net : thirdblock/gen_fruit_roms[10].fruit_rom_instance/color3[1], loads : 41
-  Net : thirdblock/gen_fruit_roms[7].fruit_rom_instance/color3[1], loads : 40
+  Net : thirdblock/n3, loads : 314
+  Net : thirdblock/game_state[0], loads : 280
+  Net : thirdblock/game_state[1], loads : 255
+  Net : thirdblock/n1406, loads : 185
+  Net : thirdblock/falloop_counter[1], loads : 103
+  Net : thirdblock/falloop_counter[0], loads : 92
+  Net : thirdblock/falloop_counter[2], loads : 78
+  Net : thirdblock/n8004, loads : 60
+  Net : thirdblock/clock_counter_0__N_382, loads : 47
+  Net : thirdblock/game_state[2], loads : 46
 ################### End Clock Report ##################
 
-Peak Memory Usage: 309 MB
+Peak Memory Usage: 225 MB
 
 --------------------------------------------------------------
-Total CPU Time: 12 secs 
-Total REAL Time: 24 secs 
+Total CPU Time: 15 secs 
+Total REAL Time: 31 secs 
 --------------------------------------------------------------

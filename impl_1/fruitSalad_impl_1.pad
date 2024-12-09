@@ -6,7 +6,7 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Sun Dec  8 21:33:56 2024
+Mon Dec  9 01:50:22 2024
 
 Pinout by Port Name:
 +--------------+----------+--------------+-------+------------------------------------------+
@@ -14,7 +14,7 @@ Pinout by Port Name:
 +--------------+----------+--------------+-------+------------------------------------------+
 | CTRLclk      | 23/0     | LVCMOS33_OUT | PR20A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | HSYNC        | 35/0     | LVCMOS33_OUT | PR13B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| NESclk       | 12/1     | LVCMOS33_OUT | PL19A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| NESclk       | 25/0     | LVCMOS33_OUT | PR20B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | RGB[0]       | 3/2      | LVCMOS33_OUT | PL10B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | RGB[1]       | 48/2     | LVCMOS33_OUT | PL8A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 | RGB[2]       | 45/2     | LVCMOS33_OUT | PL8B  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
@@ -57,7 +57,7 @@ Pinout by Pin Number:
 | 9/1      |     unused, PULL:UP |            |              | PL16A |                  |
 | 10/1     |     unused, PULL:UP |            |              | PL17A |                  |
 | 11/1     |     unused, PULL:UP |            |              | PL18A |                  |
-| 12/1     | NESclk              |            | LVCMOS33_OUT | PL19A |                  |
+| 12/1     |     unused, PULL:UP |            |              | PL19A |                  |
 | 13/1     |     unused, PULL:UP |            |              | PL20A |                  |
 | 14/1     |     unused, PULL:UP |            |              | PL24A | SPI_SO           |
 | 15/1     |     unused, PULL:UP |            |              | PL25A | SPISCK           |
@@ -68,7 +68,7 @@ Pinout by Pin Number:
 | 20/1     | external_osc        | LOCATED    | LVCMOS33_IN  | PL20B | PCLKT1_0         |
 | 21/1     | led                 | LOCATED    | LVCMOS33_OUT | PL19B |                  |
 | 23/0     | CTRLclk             | LOCATED    | LVCMOS33_OUT | PR20A |                  |
-| 25/0     |     unused, PULL:UP |            |              | PR20B |                  |
+| 25/0     | NESclk              |            | LVCMOS33_OUT | PR20B |                  |
 | 26/0     | buttonout[2]        | LOCATED    | LVCMOS33_OUT | PR19A |                  |
 | 27/0     | ext_osc_test        |            | LVCMOS33_OUT | PR19B |                  |
 | 28/0     | buttonout[7]        | LOCATED    | LVCMOS33_OUT | PR18A |                  |
@@ -113,7 +113,7 @@ Locate Constraints for each Pin:
 
 ldc_set_location -site {23} [ get_ports {CTRLclk} ]
 ldc_set_location -site {35} [ get_ports {HSYNC} ]
-ldc_set_location -site {12} [ get_ports {NESclk} ]
+ldc_set_location -site {25} [ get_ports {NESclk} ]
 ldc_set_location -site {3} [ get_ports {RGB[0]} ]
 ldc_set_location -site {48} [ get_ports {RGB[1]} ]
 ldc_set_location -site {45} [ get_ports {RGB[2]} ]
@@ -141,5 +141,5 @@ ldc_set_location -site {21} [ get_ports {led} ]
 
 Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
 
-Sun Dec  8 21:33:56 2024
+Mon Dec  9 01:50:22 2024
 

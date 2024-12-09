@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="PAR">
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
+        </Message>
+        <Message>
+            <ID>70001944</ID>
+            <Severity>16</Severity>
+            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
+        </Message>
+    </Task>
+    <Task name="Export">
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
+        <Message>
+            <ID>1191031</ID>
+            <Severity>1</Severity>
+        </Message>
+    </Task>
     <Task name="Synthesis">
         <Message>
             <ID>35831026</ID>
@@ -63,17 +126,17 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>Z:/final-proj/ES4-fruit-salad-game/mypll/rtl/mypll.v(11): </Dynamic>
+            <Dynamic>Z:/Es4/ES4-fruit-salad-game/mypll/rtl/mypll.v(11): </Dynamic>
             <Dynamic>mypll</Dynamic>
-            <Navigation>Z:/final-proj/ES4-fruit-salad-game/mypll/rtl/mypll.v</Navigation>
+            <Navigation>Z:/Es4/ES4-fruit-salad-game/mypll/rtl/mypll.v</Navigation>
             <Navigation>11</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
-            <Dynamic>Z:/final-proj/ES4-fruit-salad-game/mypll/rtl/mypll.v(105): </Dynamic>
+            <Dynamic>Z:/Es4/ES4-fruit-salad-game/mypll/rtl/mypll.v(105): </Dynamic>
             <Dynamic>mypll_ipgen_lscc_pll(DIVR=&quot;0&quot;,DIVF=&quot;66&quot;,DIVQ=&quot;5&quot;,FILTER_RANGE=&quot;1&quot;,PLLOUT_SELECT_PORTA=&quot;GENCLK&quot;,PLLOUT_SELECT_PORTB=&quot;GENCLK&quot;,FREQUENCY_PIN_REFERENCECLK=&quot;12.000000&quot;)</Dynamic>
-            <Navigation>Z:/final-proj/ES4-fruit-salad-game/mypll/rtl/mypll.v</Navigation>
+            <Navigation>Z:/Es4/ES4-fruit-salad-game/mypll/rtl/mypll.v</Navigation>
             <Navigation>105</Navigation>
         </Message>
         <Message>
@@ -244,196 +307,212 @@
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/vga.vhd(5): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/vga.vhd(5): </Dynamic>
             <Dynamic>vga</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/vga.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/vga.vhd</Navigation>
             <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/vga.vhd(17): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/vga.vhd(17): </Dynamic>
             <Dynamic>synth</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/vga.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/vga.vhd</Navigation>
             <Navigation>17</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(6): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(6): </Dynamic>
             <Dynamic>vga_controller</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/vga_controller.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/vga_controller.vhd</Navigation>
             <Navigation>6</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(23): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(23): </Dynamic>
             <Dynamic>synth</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/vga_controller.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/vga_controller.vhd</Navigation>
             <Navigation>23</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd(5): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd(5): </Dynamic>
             <Dynamic>fruitrom</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd</Navigation>
             <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd(15): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd(15): </Dynamic>
             <Dynamic>synth</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/fruit_rom.vhd</Navigation>
             <Navigation>15</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd(6): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd(6): </Dynamic>
             <Dynamic>nesclk_top</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd</Navigation>
             <Navigation>6</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd(17): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd(17): </Dynamic>
             <Dynamic>synth</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/nesclk_top.vhd</Navigation>
             <Navigation>17</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(6): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(6): </Dynamic>
             <Dynamic>pattern_gen</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd</Navigation>
             <Navigation>6</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(19): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(19): </Dynamic>
             <Dynamic>synth</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd</Navigation>
             <Navigation>19</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/shift8.vhd(4): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/shift8.vhd(4): </Dynamic>
             <Dynamic>shift8</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/shift8.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/shift8.vhd</Navigation>
             <Navigation>4</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/shift8.vhd(12): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/shift8.vhd(12): </Dynamic>
             <Dynamic>synth</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/shift8.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/shift8.vhd</Navigation>
             <Navigation>12</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd(5): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd(5): </Dynamic>
             <Dynamic>grapefruitrom</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd</Navigation>
             <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd(14): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd(14): </Dynamic>
             <Dynamic>synth</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/grapefruitrom.vhd</Navigation>
             <Navigation>14</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/orangerom.vhd(5): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/orangerom.vhd(5): </Dynamic>
             <Dynamic>orangerom</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/orangerom.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/orangerom.vhd</Navigation>
             <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/orangerom.vhd(14): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/orangerom.vhd(14): </Dynamic>
             <Dynamic>synth</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/orangerom.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/orangerom.vhd</Navigation>
             <Navigation>14</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd(5): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd(5): </Dynamic>
             <Dynamic>watermelonrom</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd</Navigation>
             <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd(14): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd(14): </Dynamic>
             <Dynamic>synth</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/watermelonrom.vhd</Navigation>
             <Navigation>14</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(5): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(5): </Dynamic>
             <Dynamic>startscreenrom</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd</Navigation>
             <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(14): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd(14): </Dynamic>
             <Dynamic>synth</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/startscreenrom.vhd</Navigation>
             <Navigation>14</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd(5): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd(5): </Dynamic>
             <Dynamic>blueberrycherryrom</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd</Navigation>
             <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd(15): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd(15): </Dynamic>
             <Dynamic>synth</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/blueberrycherryrom.vhd</Navigation>
             <Navigation>15</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd(6): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd(6): </Dynamic>
             <Dynamic>getrandomfruit</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd</Navigation>
             <Navigation>6</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/final-proj/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd(14): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd(14): </Dynamic>
             <Dynamic>synth</Dynamic>
-            <Navigation>z:/final-proj/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd</Navigation>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/get_randomfruit.vhd</Navigation>
             <Navigation>14</Navigation>
         </Message>
         <Message>
+            <ID>35921012</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/mapfruitrgb.vhd(5): </Dynamic>
+            <Dynamic>maprgb</Dynamic>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/mapfruitrgb.vhd</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/mapfruitrgb.vhd(13): </Dynamic>
+            <Dynamic>synth</Dynamic>
+            <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/mapfruitrgb.vhd</Navigation>
+            <Navigation>13</Navigation>
+        </Message>
+        <Message>
             <ID>35935049</ID>
             <Severity>16</Severity>
             <Dynamic>sclk_i</Dynamic>
@@ -452,30 +531,6 @@
             <ID>35935049</ID>
             <Severity>16</Severity>
             <Dynamic>sdi_i</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/reset_random</Dynamic>
-            <Dynamic>One</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>1</Dynamic>
-            <Dynamic>\thirdblock/randomfruit/randgenerator</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>0</Dynamic>
-            <Dynamic>\thirdblock/randomfruit/randgenerator</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>256</Severity>
-            <Dynamic>3</Dynamic>
-            <Dynamic>\thirdblock/randomfruit/randgenerator</Dynamic>
         </Message>
         <Message>
             <ID>35002039</ID>
@@ -490,64 +545,6 @@
             <ID>70001944</ID>
             <Severity>16</Severity>
             <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-    </Task>
-    <Task name="PAR">
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] </Dynamic>
-        </Message>
-        <Message>
-            <ID>70001944</ID>
-            <Severity>16</Severity>
-            <Dynamic>create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] </Dynamic>
-        </Message>
-    </Task>
-    <Task name="Export">
-        <Message>
-            <ID>1191031</ID>
-            <Severity>1</Severity>
         </Message>
     </Task>
 </BaliMessageLog>
