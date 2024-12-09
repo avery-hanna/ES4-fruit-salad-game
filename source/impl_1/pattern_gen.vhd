@@ -11,6 +11,7 @@ entity pattern_gen is
 	col : in std_logic_vector(9 downto 0); -- col of pixel we want to get color for
 	clk : in std_logic;
 	RGB : out std_logic_vector(5 downto 0);
+	gameclock: in std_logic;
 	led : out std_logic
 );
 end entity pattern_gen;
@@ -46,13 +47,16 @@ component startscreenROM is
   );
 end component;
 
-type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, SWAP, GAME_OVER, FALL_LOOP);
+type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, SWAP, GAME_OVER, FALL_LOOP, START_FRUIT);
 signal game_state : GAMESTATE := START;
 
 signal swap_fruit : integer;
 signal falloop_counter: unsigned(4 downto 0);
 
+signal startloop_counter: unsigned(4 downto 0);
+
 signal startscreenRGB : std_logic_vector(5 downto 0);
+signal flashstartscreenRGB : std_logic_vector(5 downto 0);
 
 signal active_fruit_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
 signal active_fruit_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
@@ -68,7 +72,7 @@ signal score: unsigned(5 downto 0);
 
 signal reset_random : std_logic;
 
-constant NUM_FRUITS : integer := 15;
+constant NUM_FRUITS : integer := 10;
 
 type unsigned_coord_array is array(1 to NUM_FRUITS) of unsigned(9 downto 0);
 type type_array is array(1 to NUM_FRUITS) of unsigned(1 downto 0);
@@ -94,26 +98,49 @@ signal output: std_logic_vector(7 downto 0);
 
 signal startscreenrow: std_logic_vector(4 downto 0);
 signal startscreencol: std_logic_vector(6 downto 0);
+
+signal flash_startscreenrow: std_logic_vector(4 downto 0);
+signal flash_startscreencol: std_logic_vector(6 downto 0);
+
 signal startscreen_relativerow: std_logic_vector(9 downto 0);
 signal startscreen_relativecol: std_logic_vector(9 downto 0);
 
+signal startscreen_flashrow: std_logic_vector(9 downto 0);
+signal startscreen_flashcol: std_logic_vector(9 downto 0);
+
 --signal flashing_screen_RGB : std_logic_vector(5 downto 0);
 signal flashing_counter : unsigned(23 downto 0);
-
+signal flashingstart_counter : unsigned(23 downto 0);
 signal randomoutput: unsigned(1 downto 0);
+
+--signal gameclock: std_logic;
 
 
 begin
-	led <= '1' when game_state = GAME_OVER else '0';
+	led <= '1' when gameclock = '1' else '0';
 	
-	startscreen_relativerow <= std_logic_vector(unsigned(row) - 9d"7"); 
-	startscreen_relativecol <= std_logic_vector(unsigned(col) - 9d"14");
+	--gameclock <= '1' when row > 9d"480" else '0';
+	
+	startscreen_relativerow <= std_logic_vector(unsigned(row) - "001011000"); 
+	startscreen_relativecol <= std_logic_vector(unsigned(col) - "001000100");
+	
+	startscreen_flashrow <= std_logic_vector(unsigned(row) - "001000000"); 
+	startscreen_flashcol <= std_logic_vector(unsigned(col) - "000111000");
 
-	startscreenrow <= startscreen_relativerow(7 downto 3) when (startscreen_relativerow(9 downto 8))="00" else "00000";
+	startscreenrow <= startscreen_relativerow(7 downto 3) when startscreen_relativerow(9 downto 8)="00" 
+	else "00000";
 	
-	startscreencol <= startscreen_relativecol(8 downto 2) when startscreen_relativecol(9)='0' else "0000000";
+	startscreencol <= startscreen_relativecol(8 downto 2) when startscreen_relativecol(9)='0' 
+	else "0000000";
+	
+	flash_startscreenrow <= startscreen_flashrow(7 downto 3) when startscreen_flashrow(9 downto 8)="00" 
+	else "00000";
+	
+	flash_startscreencol <= startscreen_relativecol(8 downto 2) when startscreen_relativecol(9)='0' 
+	else "0000000";
 	
 	start_screen : startscreenROM port map(startscreenrow, startscreencol, clk, startscreenRGB);
+	flashstart_screen : startscreenROM port map(flash_startscreenrow,flash_startscreencol, clk, flashstartscreenRGB);
 	
 	active_fruit_relative_row <= std_logic_vector(unsigned(row) - active_fruit_tl_row);
 	active_fruit_relative_col <= std_logic_vector(unsigned(col) - active_fruit_tl_col);
@@ -143,15 +170,65 @@ begin
 		
 
 
-    process begin
-			for i in 1 to NUM_FRUITS loop
-				fruit_relative_row(i) <= std_logic_vector(unsigned(row) - fruit_tl_row(i));
-				fruit_relative_col(i) <= std_logic_vector(unsigned(col) - fruit_tl_col(i));
+    --process begin
+			--for i in 1 to NUM_FRUITS loop
+				--fruit_relative_row(i) <= std_logic_vector(unsigned(row) - fruit_tl_row(i));
+				--fruit_relative_col(i) <= std_logic_vector(unsigned(col) - fruit_tl_col(i));
 
-				fruit_rom_row(i) <= fruit_relative_row(i)(5 downto 2) when fruit_relative_row(i)(9 downto 6) = "0000" else "1111";
-				fruit_rom_col(i) <= fruit_relative_col(i)(5 downto 2) when fruit_relative_col(i)(9 downto 6) = "0000" else "1111";
-			end loop;
-    end process;
+				--fruit_rom_row(i) <= fruit_relative_row(i)(5 downto 2) when fruit_relative_row(i)(9 downto 6) = "0000" else "1111";
+				--fruit_rom_col(i) <= fruit_relative_col(i)(5 downto 2) when fruit_relative_col(i)(9 downto 6) = "0000" else "1111";
+			--end loop;
+    --end process;
+	
+	fruit_relative_row(1) <= std_logic_vector(unsigned(row) - fruit_tl_row(1));
+	fruit_relative_col(1) <= std_logic_vector(unsigned(col) - fruit_tl_col(1));
+	fruit_rom_row(1) <= fruit_relative_row(1)(5 downto 2) when fruit_relative_row(1)(9 downto 6) = "0000" else "1111";
+	fruit_rom_col(1) <= fruit_relative_col(1)(5 downto 2) when fruit_relative_col(1)(9 downto 6) = "0000" else "1111";
+	
+	fruit_relative_row(2) <= std_logic_vector(unsigned(row) - fruit_tl_row(2));
+	fruit_relative_col(2) <= std_logic_vector(unsigned(col) - fruit_tl_col(2));
+	fruit_rom_row(2) <= fruit_relative_row(2)(5 downto 2) when fruit_relative_row(2)(9 downto 6) = "0000" else "1111";
+	fruit_rom_col(2) <= fruit_relative_col(2)(5 downto 2) when fruit_relative_col(2)(9 downto 6) = "0000" else "1111";
+	
+	fruit_relative_row(3) <= std_logic_vector(unsigned(row) - fruit_tl_row(3));
+	fruit_relative_col(3) <= std_logic_vector(unsigned(col) - fruit_tl_col(3));
+	fruit_rom_row(3) <= fruit_relative_row(3)(5 downto 2) when fruit_relative_row(3)(9 downto 6) = "0000" else "1111";
+	fruit_rom_col(3) <= fruit_relative_col(3)(5 downto 2) when fruit_relative_col(3)(9 downto 6) = "0000" else "1111";
+
+	fruit_relative_row(4) <= std_logic_vector(unsigned(row) - fruit_tl_row(4));
+	fruit_relative_col(4) <= std_logic_vector(unsigned(col) - fruit_tl_col(4));
+	fruit_rom_row(4) <= fruit_relative_row(4)(5 downto 2) when fruit_relative_row(4)(9 downto 6) = "0000" else "1111";
+	fruit_rom_col(4) <= fruit_relative_col(4)(5 downto 2) when fruit_relative_col(4)(9 downto 6) = "0000" else "1111";
+	
+	fruit_relative_row(5) <= std_logic_vector(unsigned(row) - fruit_tl_row(5));
+	fruit_relative_col(5) <= std_logic_vector(unsigned(col) - fruit_tl_col(5));
+	fruit_rom_row(5) <= fruit_relative_row(5)(5 downto 2) when fruit_relative_row(5)(9 downto 6) = "0000" else "1111";
+	fruit_rom_col(5) <= fruit_relative_col(5)(5 downto 2) when fruit_relative_col(5)(9 downto 6) = "0000" else "1111";
+	
+	fruit_relative_row(6) <= std_logic_vector(unsigned(row) - fruit_tl_row(6));
+	fruit_relative_col(6) <= std_logic_vector(unsigned(col) - fruit_tl_col(6));
+	fruit_rom_row(6) <= fruit_relative_row(6)(5 downto 2) when fruit_relative_row(6)(9 downto 6) = "0000" else "1111";
+	fruit_rom_col(6) <= fruit_relative_col(6)(5 downto 2) when fruit_relative_col(6)(9 downto 6) = "0000" else "1111";
+	
+	fruit_relative_row(7) <= std_logic_vector(unsigned(row) - fruit_tl_row(7));
+	fruit_relative_col(7) <= std_logic_vector(unsigned(col) - fruit_tl_col(7));
+	fruit_rom_row(7) <= fruit_relative_row(7)(5 downto 2) when fruit_relative_row(7)(9 downto 6) = "0000" else "1111";
+	fruit_rom_col(7) <= fruit_relative_col(7)(5 downto 2) when fruit_relative_col(7)(9 downto 6) = "0000" else "1111";
+	
+	fruit_relative_row(8) <= std_logic_vector(unsigned(row) - fruit_tl_row(8));
+	fruit_relative_col(8) <= std_logic_vector(unsigned(col) - fruit_tl_col(8));
+	fruit_rom_row(8) <= fruit_relative_row(8)(5 downto 2) when fruit_relative_row(8)(9 downto 6) = "0000" else "1111";
+	fruit_rom_col(8) <= fruit_relative_col(8)(5 downto 2) when fruit_relative_col(8)(9 downto 6) = "0000" else "1111";
+
+	fruit_relative_row(9) <= std_logic_vector(unsigned(row) - fruit_tl_row(9));
+	fruit_relative_col(9) <= std_logic_vector(unsigned(col) - fruit_tl_col(9));
+	fruit_rom_row(9) <= fruit_relative_row(9)(5 downto 2) when fruit_relative_row(9)(9 downto 6) = "0000" else "1111";
+	fruit_rom_col(9) <= fruit_relative_col(9)(5 downto 2) when fruit_relative_col(9)(9 downto 6) = "0000" else "1111";
+	
+	fruit_relative_row(10) <= std_logic_vector(unsigned(row) - fruit_tl_row(10));
+	fruit_relative_col(10) <= std_logic_vector(unsigned(col) - fruit_tl_col(10));
+	fruit_rom_row(10) <= fruit_relative_row(10)(5 downto 2) when fruit_relative_row(10)(9 downto 6) = "0000" else "1111";
+	fruit_rom_col(10) <= fruit_relative_col(10)(5 downto 2) when fruit_relative_col(10)(9 downto 6) = "0000" else "1111";
 	
 	--fruit_RGB <= active_fruit_RGB when (active_fruit_RGB /= "000000") else fruit_3_RGB when (fruit_3_RGB /= "000000") else fruit_2_RGB when (fruit_2_RGB /= "000000") else fruit_1_RGB;
 	
@@ -166,23 +243,25 @@ begin
     end process;
 	
 	RGB <= "000000" when valid = '0' -- can be changed here and below
-			else startscreenRGB when game_state = START
+			else  flashstartscreenRGB when (flashingstart_counter(6)='0' and game_state=START) 
+			else startscreenRGB when (game_state = START and flashingstart_counter(6)='1')
 			--else "100010" when game_state = START
-			else ("000000" when flashing_counter(23) = '0' else fruit_RGB) when game_state = GAME_OVER
+			else ("000000" when flashing_counter(6) = '0' else fruit_RGB) when game_state = GAME_OVER
 			else fruit_RGB;
 
 		
 	process(clk) begin
 		if rising_edge(clk) then
-			clock_counter <= clock_counter + 1;
-			if clock_counter = "01" then
-				clock_counter <= "00";
+			--if row = 9d"481" and col = 9d"10" then
+				--clock_counter <= "00";
 				button_prev <= button;
 				
 				if game_state = START then
 					-- Position active fruit in center of top row of screen
 					active_fruit_tl_row <= 10d"0";
 					active_fruit_tl_col <= 10d"307";
+					flashingstart_counter <= flashingstart_counter + 1;
+					startloop_counter <= 5d"1";
 			
 					reset_random <= '1';
 					
@@ -191,14 +270,22 @@ begin
 					active_fruit_type <= randomoutput;
 					
 					-- Position all other fruits off screen
-					for i in 1 to NUM_FRUITS loop
-						fruit_tl_row(i) <= 10d"700";
-						fruit_tl_col(i) <= 10d"700";
-					end loop;
+					--for i in 1 to NUM_FRUITS loop
+						--fruit_tl_row(i) <= 10d"700";
+						--fruit_tl_col(i) <= 10d"700";
+					--end loop;
 					swap_fruit <= 1;
 					
 					-- move state forward when button = start and button_prev is off
 					if button(4) = '0' and button_prev = "11111111" then
+						--game_state <= FRUIT_POS;
+						game_state <= START_FRUIT;
+					end if;
+				elsif game_state = START_FRUIT then
+					fruit_tl_row(to_integer(startloop_counter)) <= 10d"700";
+					fruit_tl_col(to_integer(startloop_counter)) <= 10d"700";
+					startloop_counter <= startloop_counter + 5d"1";
+					if startloop_counter = NUM_FRUITS then
 						game_state <= FRUIT_POS;
 					end if;
 				elsif game_state = FRUIT_POS then
@@ -210,7 +297,7 @@ begin
 							counter <= 17d"1";
 						end if;
 						
-						if counter = 17d"100000" then
+						if counter = 17d"30" then
 							if active_fruit_tl_col > 0 then
 								active_fruit_tl_col <= active_fruit_tl_col - 1;
 							end if;
@@ -226,7 +313,7 @@ begin
 							counter <= 17d"1";
 						end if;
 						
-						if counter = 17d"100000" then
+						if counter = 17d"30" then
 							if active_fruit_tl_col < 576 then
 								active_fruit_tl_col <= active_fruit_tl_col + 1;
 							end if;
@@ -240,13 +327,13 @@ begin
 					end if;
 				elsif game_state = FRUIT_FALLING then
 					-- Falling counter logic
-					counter <= counter + 1;
-					if counter = 17d"001100" then
-						active_fruit_tl_row <= active_fruit_tl_row + 1;
-						counter <= 17d"0";
+					--counter <= counter + 1;
+					--if counter = 17d"1" then
+					active_fruit_tl_row <= active_fruit_tl_row + 15;
+						--counter <= 17d"0";
 						
 						
-					end if;
+					--end if;
 					
 					falloop_counter <= 5d"1";
 
@@ -264,7 +351,7 @@ begin
 				elsif game_state = FALL_LOOP then
 					
 					falloop_counter <= falloop_counter + 5d"1";
-					if falloop_counter > NUM_FRUITS then
+					if falloop_counter = NUM_FRUITS then
 						game_state <= FRUIT_FALLING;
 					elsif fruit_rgb_vals(to_integer(falloop_counter)) /= "000000" and active_fruit_RGB /= "000000" then -- collision
 						if fruit_type(to_integer(falloop_counter)) = active_fruit_type then
@@ -329,8 +416,8 @@ begin
 				else
 					game_state <= START;
 				end if;
+			--end if;
 			end if;
-		end if;
 	end process;
 
 end;

@@ -79,6 +79,6 @@ begin
 			--output <= result when (NEScount="00001000");
 			
 			
-			output <= result when (NEScount="00001000");
+			output <= result when (NEScount="00000111");
 			
 end;

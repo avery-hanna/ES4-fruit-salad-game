@@ -18,7 +18,7 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>../../impl_1/fruitSalad_impl_1.bin</File>
-			<FileTime>12/08/24 23:29:51</FileTime>
+			<FileTime>12/09/24 11:37:17</FileTime>
 			<JedecChecksum>0xD6D8</JedecChecksum>
 			<MemoryType>External SPI Flash Memory (SPI FLASH)</MemoryType>
 			<Operation>Erase,Program,Verify</Operation>

@@ -315,10 +315,10 @@
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/vga.vhd(17): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/vga.vhd(18): </Dynamic>
             <Dynamic>synth</Dynamic>
             <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/vga.vhd</Navigation>
-            <Navigation>17</Navigation>
+            <Navigation>18</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
@@ -331,10 +331,10 @@
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(23): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/vga_controller.vhd(24): </Dynamic>
             <Dynamic>synth</Dynamic>
             <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/vga_controller.vhd</Navigation>
-            <Navigation>23</Navigation>
+            <Navigation>24</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
@@ -379,10 +379,10 @@
         <Message>
             <ID>35921010</ID>
             <Severity>1</Severity>
-            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(19): </Dynamic>
+            <Dynamic>z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(20): </Dynamic>
             <Dynamic>synth</Dynamic>
             <Navigation>z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd</Navigation>
-            <Navigation>19</Navigation>
+            <Navigation>20</Navigation>
         </Message>
         <Message>
             <ID>35921012</ID>
