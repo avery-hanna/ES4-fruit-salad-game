@@ -64,7 +64,7 @@ component digitROM is
   );
 end component;
 
-type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, SWAP, GAME_OVER, FALL_LOOP);
+type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, MERGE, SWAP, GAME_OVER, FALL_LOOP);
 signal game_state : GAMESTATE := START;
 
 signal swap_fruit : integer;
@@ -338,20 +338,39 @@ begin
 					fruit_tl_row(swap_fruit) <= active_fruit_tl_row;
 					fruit_tl_col(swap_fruit) <= active_fruit_tl_col;
 					fruit_type(swap_fruit) <= active_fruit_type;
-				
-					game_state <= SWAP;
+						active_fruit_type <= randomoutput;
+					
+						--falloop_counter <= 0;
+					
+								
+						reset_random <= '0';
+
+						swap_fruit <= swap_fruit + 1; -- increment swap_fruit state
+						if swap_fruit = NUM_FRUITS then
+							game_state <= GAME_OVER;
+							active_fruit_tl_row <= 10d"700";
+							active_fruit_tl_col <= 10d"700";
+						else
+							game_state <= FRUIT_POS;
+							active_fruit_tl_row <= 10d"0";
+							active_fruit_tl_col <= 10d"307";
+						end if;
 				else
 					game_state <= FALL_LOOP;
 				end if;
 				
 				
 			elsif game_state = FALL_LOOP then
-				
-				falloop_counter <= falloop_counter + 5d"1";
 				if falloop_counter > NUM_FRUITS then
 					game_state <= FRUIT_FALLING;
 				elsif fruit_rgb_vals(to_integer(falloop_counter)) /= "000000" and active_fruit_RGB /= "000000" then -- collision
-					if fruit_type(to_integer(falloop_counter)) = active_fruit_type then
+					game_state <= MERGE;
+				else
+					game_state <= FALL_LOOP;
+					falloop_counter <= falloop_counter + 5d"1";
+				end if;
+			elsif game_state = MERGE then
+				if fruit_type(to_integer(falloop_counter)) = active_fruit_type then
 						-- fruit goes offscreen
 						fruit_tl_row(to_integer(falloop_counter)) <= 10d"700";
 						fruit_tl_col(to_integer(falloop_counter)) <= 10d"700";
@@ -381,35 +400,24 @@ begin
 						fruit_tl_row(swap_fruit) <= active_fruit_tl_row;
 						fruit_tl_col(swap_fruit) <= active_fruit_tl_col;
 						fruit_type(swap_fruit) <= active_fruit_type;
-						game_state <= SWAP;
-					end if;
-				else
-					game_state <= FALL_LOOP;
-				end if;
-				
-			elsif game_state = SWAP then
-				--fruit_tl_row(swap_fruit) <= active_fruit_tl_row;
-				--fruit_tl_col(swap_fruit) <= active_fruit_tl_col;
-				--fruit_type(swap_fruit) <= active_fruit_type;
-				
-				active_fruit_type <= randomoutput;
-				active_fruit_type <= "00";
-			
-				--falloop_counter <= 0;
-			
-						
-				reset_random <= '0';
+						active_fruit_type <= randomoutput;
+					
+						--falloop_counter <= 0;
+					
+								
+						reset_random <= '0';
 
-				swap_fruit <= swap_fruit + 1; -- increment swap_fruit state
-				if swap_fruit = NUM_FRUITS then
-					game_state <= GAME_OVER;
-					active_fruit_tl_row <= 10d"700";
-					active_fruit_tl_col <= 10d"700";
-				else
-					game_state <= FRUIT_POS;
-					active_fruit_tl_row <= 10d"0";
-					active_fruit_tl_col <= 10d"307";
-				end if;
+						swap_fruit <= swap_fruit + 1; -- increment swap_fruit state
+						if swap_fruit = NUM_FRUITS then
+							game_state <= GAME_OVER;
+							active_fruit_tl_row <= 10d"700";
+							active_fruit_tl_col <= 10d"700";
+						else
+							game_state <= FRUIT_POS;
+							active_fruit_tl_row <= 10d"0";
+							active_fruit_tl_col <= 10d"307";
+						end if;
+					end if;
 			elsif game_state = GAME_OVER then
 				flashing_counter <= flashing_counter + 1;
 				if button(4) = '0' and button_prev = "11111111" then

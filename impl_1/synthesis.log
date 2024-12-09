@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Dec  9 17:41:12 2024
+Mon Dec  9 18:04:36 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
@@ -279,7 +279,7 @@ WARNING <35931002> - synthesis: z:/es4/finalproj/fruitsalad/mypll/rtl/mypll.v(14
 
 
 
-Duplicate register/latch removal. i105 is a one-to-one match with i95.
+Duplicate register/latch removal. i103 is a one-to-one match with i93.
 Mapped 1 multiplier(s)
 
 
@@ -297,27 +297,27 @@ Combinational loop found : 2
 
 Combinational loop found : 3
 
+ Net output[4] 
+
+ Instance \nesblock/mux_24_i5 
+
+Combinational loop found : 4
+
  Net output[7] 
 
  Instance \nesblock/mux_24_i8 
 
-Combinational loop found : 4
+Combinational loop found : 5
 
  Net output[6] 
 
  Instance \nesblock/mux_24_i7 
 
-Combinational loop found : 5
+Combinational loop found : 6
 
  Net output[5] 
 
  Instance \nesblock/mux_24_i6 
-
-Combinational loop found : 6
-
- Net output[4] 
-
- Instance \nesblock/mux_24_i5 
 
 Combinational loop found : 7
 
@@ -341,7 +341,7 @@ FD1P3XZ => 413
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 1
-LUT4 => 2533
+LUT4 => 2555
 MAC16 => 1
 OB => 21
 PLL_B => 1
@@ -360,21 +360,21 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/n3_adj_2317, loads : 216
-  Net : thirdblock/game_state[0], loads : 180
-  Net : thirdblock/game_state[1], loads : 161
-  Net : thirdblock/n1300, loads : 130
-  Net : thirdblock/falloop_counter[0], loads : 128
-  Net : thirdblock/falloop_counter[2], loads : 44
-  Net : thirdblock/n5892, loads : 42
-  Net : thirdblock/game_state[2], loads : 41
-  Net : thirdblock/gen_fruit_roms[8].fruit_rom_instance/color3[1], loads : 40
-  Net : thirdblock/gen_fruit_roms[3].fruit_rom_instance/color3[1], loads : 40
+  Net : thirdblock/n3, loads : 212
+  Net : thirdblock/game_state[0], loads : 178
+  Net : thirdblock/game_state[1], loads : 165
+  Net : thirdblock/n1300, loads : 140
+  Net : thirdblock/falloop_counter[0], loads : 130
+  Net : thirdblock/n17856, loads : 91
+  Net : thirdblock/active_fruit_type[1], loads : 48
+  Net : thirdblock/n5752, loads : 47
+  Net : thirdblock/active_fruit_type[0], loads : 46
+  Net : thirdblock/gen_fruit_roms[10].fruit_rom_instance/color3[1], loads : 41
 ################### End Clock Report ##################
 
-Peak Memory Usage: 216 MB
+Peak Memory Usage: 213 MB
 
 --------------------------------------------------------------
-Total CPU Time: 13 secs 
-Total REAL Time: 26 secs 
+Total CPU Time: 11 secs 
+Total REAL Time: 25 secs 
 --------------------------------------------------------------
