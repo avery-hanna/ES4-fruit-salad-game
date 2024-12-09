@@ -43,14 +43,14 @@ Saving bit stream in "Z:\Es4\ES4-fruit-salad-game\impl_1\fruitSalad_impl_1.bin".
 Bitstream generation complete!
 
 Total CPU Time: 1 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 150 MB
+Total REAL Time: 0 secs 
+Peak Memory Usage: 143 MB
 
 
 ibisgen "fruitSalad_impl_1.udb" "C:/lscc/radiant/2023.1/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 2023.1.0.43.3
 
-Mon Dec  9 17:00:05 2024
+Mon Dec  9 18:08:45 2024
 
 Loading fruitSalad_impl_1.udb ...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2023.1/ispfpga.
@@ -100,5 +100,5 @@ Writing Verilog netlist to file fruitSalad_impl_1_vo.vo
 Writing SDF timing to file fruitSalad_impl_1_vo.sdf
 Backanno finished with 0 posted error messages.
 Total CPU Time: 7 secs 
-Total REAL Time: 9 secs 
-Peak Memory Usage: 184 MB
+Total REAL Time: 8 secs 
+Peak Memory Usage: 169 MB

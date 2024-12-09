@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Dec  9 16:58:25 2024
+Mon Dec  9 18:07:10 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/Es4/ES4-fruit-salad-game/promote.xml 
@@ -230,8 +230,7 @@ Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd
 
 INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(6): analyzing entity pattern_gen. VHDL-1012
 INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(20): analyzing architecture synth. VHDL-1010
-WARNING <35921196> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(180): possible infinite loop process does not have a wait statement. VHDL-1196
-WARNING <35921196> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(192): possible infinite loop process does not have a wait statement. VHDL-1196
+WARNING <35921196> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(181): possible infinite loop process does not have a wait statement. VHDL-1196
 Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/shift8.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/shift8.vhd
 
@@ -316,6 +315,7 @@ WARNING <35931002> - synthesis: z:/es4/es4-fruit-salad-game/mypll/rtl/mypll.v(14
 
 
 
+Duplicate register/latch removal. i111 is a one-to-one match with i101.
 Combinational loop found : 1
 
  Net output[0] 
@@ -330,21 +330,21 @@ Combinational loop found : 2
 
 Combinational loop found : 3
 
- Net output[2] 
+ Net output[7] 
 
- Instance \nesblock/mux_24_i3 
+ Instance \nesblock/mux_24_i8 
 
 Combinational loop found : 4
-
- Net output[3] 
-
- Instance \nesblock/mux_24_i4 
-
-Combinational loop found : 5
 
  Net output[4] 
 
  Instance \nesblock/mux_24_i5 
+
+Combinational loop found : 5
+
+ Net output[6] 
+
+ Instance \nesblock/mux_24_i7 
 
 Combinational loop found : 6
 
@@ -354,15 +354,15 @@ Combinational loop found : 6
 
 Combinational loop found : 7
 
- Net output[6] 
+ Net output[3] 
 
- Instance \nesblock/mux_24_i7 
+ Instance \nesblock/mux_24_i4 
 
 Combinational loop found : 8
 
- Net output[7] 
+ Net output[2] 
 
- Instance \nesblock/mux_24_i8 
+ Instance \nesblock/mux_24_i3 
 
 INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
@@ -370,19 +370,19 @@ INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for Thunde
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 491 of 5280 (9 % )
-EBR_B => 16
-CCU2 => 232
-FD1P3XZ => 491
+Number of register bits => 389 of 5280 (7 % )
+EBR_B => 23
+CCU2 => 194
+FD1P3XZ => 389
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 1
-LUT4 => 2635
+LUT4 => 2109
 OB => 21
 PLL_B => 1
 ################### End Area Report ##################
-Number of odd-length carry chains : 2
-Number of even-length carry chains : 38
+Number of odd-length carry chains : 5
+Number of even-length carry chains : 28
 
 
 <A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
@@ -399,23 +399,23 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/n3, loads : 328
-  Net : thirdblock/game_state[0], loads : 251
-  Net : thirdblock/game_state[1], loads : 222
-  Net : thirdblock/n1455, loads : 192
-  Net : thirdblock/falloop_counter[1], loads : 112
-  Net : thirdblock/falloop_counter[0], loads : 101
-  Net : thirdblock/falloop_counter[2], loads : 70
-  Net : thirdblock/n7541, loads : 52
-  Net : thirdblock/n15966, loads : 52
-  Net : thirdblock/n5_adj_2875, loads : 52
+  Net : thirdblock/game_state[0], loads : 164
+  Net : thirdblock/n22949, loads : 130
+  Net : thirdblock/game_state[2], loads : 120
+  Net : thirdblock/game_state[1], loads : 116
+  Net : thirdblock/startloop_counter_1__N_2087, loads : 43
+  Net : thirdblock/active_fruit_type[0], loads : 32
+  Net : thirdblock/active_fruit_type[1], loads : 32
+  Net : thirdblock/active_fruit_tl_row[9], loads : 32
+  Net : thirdblock/swap_fruit_1__N_167, loads : 32
+  Net : thirdblock/n7, loads : 28
 ################### End Clock Report ##################
 
-Peak Memory Usage: 183 MB
+Peak Memory Usage: 230 MB
 
 --------------------------------------------------------------
-Total CPU Time: 10 secs 
-Total REAL Time: 24 secs 
+Total CPU Time: 14 secs 
+Total REAL Time: 26 secs 
 --------------------------------------------------------------
 
 
