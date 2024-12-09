@@ -50,7 +50,7 @@ type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, SWAP, GAME_OVER, FALL_LOOP);
 signal game_state : GAMESTATE := START;
 
 signal swap_fruit : integer;
-signal falloop_counter: integer;
+signal falloop_counter: unsigned(4 downto 0);
 
 signal startscreenRGB : std_logic_vector(5 downto 0);
 
@@ -130,28 +130,30 @@ begin
 		
 
 
-    process  begin
-	
-		
-        for i in 1 to NUM_FRUITS loop
-            fruit_relative_row(i) <= std_logic_vector(unsigned(row) - fruit_tl_row(i));
-            fruit_relative_col(i) <= std_logic_vector(unsigned(col) - fruit_tl_col(i));
+    process(clk)  begin
+		if rising_edge(clk) then
+			for i in 1 to NUM_FRUITS loop
+				fruit_relative_row(i) <= std_logic_vector(unsigned(row) - fruit_tl_row(i));
+				fruit_relative_col(i) <= std_logic_vector(unsigned(col) - fruit_tl_col(i));
 
-            fruit_rom_row(i) <= fruit_relative_row(i)(5 downto 2) when fruit_relative_row(i)(9 downto 6) = "0000" else "1111";
-            fruit_rom_col(i) <= fruit_relative_col(i)(5 downto 2) when fruit_relative_col(i)(9 downto 6) = "0000" else "1111";
-        end loop;
-    end process;	
+				fruit_rom_row(i) <= fruit_relative_row(i)(5 downto 2) when fruit_relative_row(i)(9 downto 6) = "0000" else "1111";
+				fruit_rom_col(i) <= fruit_relative_col(i)(5 downto 2) when fruit_relative_col(i)(9 downto 6) = "0000" else "1111";
+			end loop;
+		end if;
+    end process;
 	
 	--fruit_RGB <= active_fruit_RGB when (active_fruit_RGB /= "000000") else fruit_3_RGB when (fruit_3_RGB /= "000000") else fruit_2_RGB when (fruit_2_RGB /= "000000") else fruit_1_RGB;
 	
-	process  begin
-        fruit_RGB <= active_fruit_RGB;
-        for i in NUM_FRUITS downto 1 loop
-            if fruit_rgb_vals(i) /= "000000" then
-                fruit_RGB <= fruit_rgb_vals(i);
-                exit;
-            end if;
-        end loop;
+	process(clk)  begin
+		if rising_edge(clk) then
+			fruit_RGB <= active_fruit_RGB;
+			for i in NUM_FRUITS downto 1 loop
+				if fruit_rgb_vals(i) /= "000000" then
+					fruit_RGB <= fruit_rgb_vals(i);
+					exit;
+				end if;
+			end loop;
+		end if;
     end process;
 	
 	RGB <= "000000" when valid = '0' -- can be changed here and below
@@ -230,8 +232,11 @@ begin
 				if counter = 17d"011100" then
 					active_fruit_tl_row <= active_fruit_tl_row + 1;
 					counter <= 17d"0";
+					
+					
 				end if;
-				falloop_counter <= 0;
+				
+				falloop_counter <= 5d"1";
 
 				if active_fruit_tl_row > 417 then -- fruit has reached bottom row without collisions
 					fruit_tl_row(swap_fruit) <= active_fruit_tl_row;
@@ -239,24 +244,34 @@ begin
 					fruit_type(swap_fruit) <= active_fruit_type;
 					score <= score + 5d"1";
 					game_state <= SWAP;
-				else game_state <= FALL_LOOP;
+				else
+					game_state <= FALL_LOOP;
 				end if;
+				
 				
 			elsif game_state = FALL_LOOP then
 				
-				falloop_counter <= falloop_counter + 1;
-				if fruit_rgb_vals(falloop_counter) /= "000000" and active_fruit_RGB /= "000000" then -- collision
-					if fruit_type(falloop_counter) = active_fruit_type then
-							-- fruit 1 goes offscreen
-						fruit_tl_row(falloop_counter) <= 10d"700";
-						fruit_tl_col(falloop_counter) <= 10d"700";
+				falloop_counter <= falloop_counter + 5d"1";
+				if falloop_counter > NUM_FRUITS then
+					game_state <= FRUIT_FALLING;
+				elsif fruit_rgb_vals(to_integer(falloop_counter)) /= "000000" and active_fruit_RGB /= "000000" then -- collision
+					if fruit_type(to_integer(falloop_counter)) = active_fruit_type then
+						-- fruit goes offscreen
+						fruit_tl_row(to_integer(falloop_counter)) <= 10d"700";
+						fruit_tl_col(to_integer(falloop_counter)) <= 10d"700";
 				
 						-- active fruit gets fruit 1's position
-						active_fruit_tl_row <= fruit_tl_row(falloop_counter);
-						active_fruit_tl_col <= fruit_tl_col(falloop_counter);
+						active_fruit_tl_row <= fruit_tl_row(to_integer(falloop_counter));
+						active_fruit_tl_col <= fruit_tl_col(to_integer(falloop_counter));
+						
+						
+						--active_fruit_tl_row <= 10d"200";
+						--active_fruit_tl_col <= 10d"200";
 						
 							-- update active fruit type
 						active_fruit_type <= active_fruit_type + 2d"1" when active_fruit_type /= 2d"3" else active_fruit_type;
+						
+						game_state <= FRUIT_FALLING;
 					else
 						fruit_tl_row(swap_fruit) <= active_fruit_tl_row;
 						fruit_tl_col(swap_fruit) <= active_fruit_tl_col;
@@ -264,8 +279,8 @@ begin
 						score <= score + 5d"3";
 						game_state <= SWAP;
 					end if;
-				elsif falloop_counter = (NUM_FRUITS - 1) then
-					game_state <= FRUIT_FALLING;
+				else
+					game_state <= FALL_LOOP;
 				end if;
 				
 			elsif game_state = SWAP then
@@ -273,12 +288,13 @@ begin
 				--fruit_tl_col(swap_fruit) <= active_fruit_tl_col;
 				--fruit_type(swap_fruit) <= active_fruit_type;
 				
-				active_fruit_type <= randomoutput;
+				--active_fruit_type <= randomoutput;
+				active_fruit_type <= "00";
 			
-				falloop_counter <= 0;
+				--falloop_counter <= 0;
 			
 						
-				reset_random <= '0';
+				--reset_random <= '0';
 
 				swap_fruit <= swap_fruit + 1; -- increment swap_fruit state
 				if swap_fruit = NUM_FRUITS then
