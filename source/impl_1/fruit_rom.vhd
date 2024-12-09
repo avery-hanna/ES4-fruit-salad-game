@@ -14,14 +14,6 @@ end fruitROM;
 
 architecture synth of fruitROM is 
 
-component  maprgb is
-	port(
-		color3 : in std_logic_vector(2 downto 0);
-		fruit_type: in std_logic_vector(1 downto 0);
-		color : out std_logic_vector(5 downto 0)
-	);
-  end component;
-
 signal address: std_logic_vector(9 downto 0);
 signal color3: std_logic_vector(2 downto 0);
 
@@ -1541,42 +1533,37 @@ begin
 
 	address <= fruit_type & col & row;
 
-	mappingrgb: maprgb
-	port map(
-		color3 => color3, fruit_type => fruit_type, color=>color
-	);
+	--blueberry
+	color <= "000001" when (fruit_type="00" and color3="001")
+	else "010110" when (fruit_type="00" and color3="010")
+	else "000101" when (fruit_type="00" and color3="011")
+	else "000110" when (fruit_type="00" and color3="100")
+	else "010101" when (fruit_type="00" and color3="101")
+	--cherry
+	else "010000" when (fruit_type="01" and color3="001")
+	else "100000" when (fruit_type="01" and color3 = "010")
+	else "100100" when (fruit_type="01" and color3 = "011")
+	else "110101" when (fruit_type="01" and color3 = "100")
+	else "010101" when (fruit_type="01" and color3 = "101")
+	else "111010" when (fruit_type="01" and color3 = "110")
+	else "111111" when (fruit_type="01" and color3 = "111")
+	--watermelon
+	else "110001" when (fruit_type="10" and color3="001")
+	else "100000" when (fruit_type="10" and color3 = "010")
+	else "111001" when (fruit_type="10" and color3 = "011")
+	else "010100" when (fruit_type="10" and color3 = "100")
+	else "101001" when (fruit_type="10" and color3 = "101")
+	else "011000" when (fruit_type="10" and color3 = "110")
+	else "000100" when (fruit_type="10" and color3 = "111")
 
-	-- --blueberry
-	-- color <= "000001" when (fruit_type="00" and color3="001")
-	-- else "010110" when (fruit_type="00" and color3="010")
-	-- else "000101" when (fruit_type="00" and color3="011")
-	-- else "000110" when (fruit_type="00" and color3="100")
-	-- else "010101" when (fruit_type="00" and color3="101")
-	-- --cherry
-	-- else "010000" when (fruit_type="01" and color3="001")
-	-- else "100000" when (fruit_type="01" and color3 = "010")
-	-- else "100100" when (fruit_type="01" and color3 = "011")
-	-- else "110101" when (fruit_type="01" and color3 = "100")
-	-- else "010101" when (fruit_type="01" and color3 = "101")
-	-- else "111010" when (fruit_type="01" and color3 = "110")
-	-- else "111111" when (fruit_type="01" and color3 = "111")
-	-- --watermelon
-	-- else "110001" when (fruit_type="10" and color3="001")
-	-- else "100000" when (fruit_type="10" and color3 = "010")
-	-- else "111001" when (fruit_type="10" and color3 = "011")
-	-- else "010100" when (fruit_type="10" and color3 = "100")
-	-- else "101001" when (fruit_type="10" and color3 = "101")
-	-- else "011000" when (fruit_type="10" and color3 = "110")
-	-- else "000100" when (fruit_type="10" and color3 = "111")
-
-	-- --grapefruit
-	-- else "111010" when (fruit_type="11" and color3="001")
-	-- else "100100" when (fruit_type="11" and color3 = "010")
-	-- else "111001" when (fruit_type="11" and color3 = "011")
-	-- else "010101" when (fruit_type="11" and color3 = "100")
-	-- else "111110" when (fruit_type="11" and color3 = "101")
-	-- else "111001" when (fruit_type="11" and color3 = "110")
-	-- else "010000" when (fruit_type="11" and color3 = "111")
-	-- else "000000"; 
+	--grapefruit
+	else "111010" when (fruit_type="11" and color3="001")
+	else "100100" when (fruit_type="11" and color3 = "010")
+	else "111001" when (fruit_type="11" and color3 = "011")
+	else "010101" when (fruit_type="11" and color3 = "100")
+	else "111110" when (fruit_type="11" and color3 = "101")
+	else "111001" when (fruit_type="11" and color3 = "110")
+	else "010000" when (fruit_type="11" and color3 = "111")
+	else "000000"; 
 
 end;
