@@ -94,6 +94,8 @@ signal output: std_logic_vector(7 downto 0);
 
 signal startscreenrow: std_logic_vector(4 downto 0);
 signal startscreencol: std_logic_vector(6 downto 0);
+signal startscreen_relativerow: std_logic_vector(9 downto 0);
+signal startscreen_relativecol: std_logic_vector(9 downto 0);
 
 --signal flashing_screen_RGB : std_logic_vector(5 downto 0);
 signal flashing_counter : unsigned(23 downto 0);
@@ -104,11 +106,14 @@ signal randomoutput: unsigned(1 downto 0);
 begin
 	led <= '1' when game_state = GAME_OVER else '0';
 	
-	startscreenrow <= row(7 downto 3) when (row(9 downto 8)="00" and unsigned(row(7 downto 3))> "00110") or (row(9 downto 8)="01" and unsigned(row(7 downto 3)) < "01001") else "00111";
+	startscreen_relativerow <= std_logic_vector(unsigned(row) - 9d"7"); 
+	startscreen_relativecol <= std_logic_vector(unsigned(col) - 9d"14");
+
+	startscreenrow <= startscreen_relativerow(7 downto 3) when (startscreen_relativerow(9 downto 8))="00" else "00000";
 	
-	startscreencol <= col(8 downto 2) when col(9)='0' else "0000000";
+	startscreencol <= startscreen_relativecol(8 downto 2) when startscreen_relativecol(9)='0' else "0000000";
 	
-	start_screen : startscreenROM port map(std_logic_vector(unsigned(startscreenrow) - "00111"), std_logic_vector(unsigned(startscreencol) - "0001110"), clk, startscreenRGB);
+	start_screen : startscreenROM port map(startscreenrow, startscreencol, clk, startscreenRGB);
 	
 	active_fruit_relative_row <= std_logic_vector(unsigned(row) - active_fruit_tl_row);
 	active_fruit_relative_col <= std_logic_vector(unsigned(col) - active_fruit_tl_col);
