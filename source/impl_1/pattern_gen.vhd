@@ -46,6 +46,24 @@ component startscreenROM is
   );
 end component;
 
+component dddd is
+  port(
+    value : in unsigned(5 downto 0);    
+    tensdigit : out std_logic_vector(3 downto 0);    
+    onesdigit : out std_logic_vector(3 downto 0)
+  );
+end component;
+
+component digitROM is
+  port(
+	  digit: in std_logic_vector(3 downto 0);
+	  row : in std_logic_vector(2 downto 0);
+	  col : in std_logic_vector(2 downto 0);
+	  clk : in std_logic;
+	  color : out std_logic
+  );
+end component;
+
 type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, SWAP, GAME_OVER, FALL_LOOP);
 signal game_state : GAMESTATE := START;
 
@@ -53,6 +71,14 @@ signal swap_fruit : integer;
 signal falloop_counter: unsigned(4 downto 0);
 
 signal startscreenRGB : std_logic_vector(5 downto 0);
+
+signal score: unsigned(5 downto 0);
+signal score_tens_digit : std_logic_vector(3 downto 0);
+signal score_ones_digit : std_logic_vector(3 downto 0);
+signal score_color_tens : std_logic;
+signal score_color_ones : std_logic;
+signal score_col_RGB : std_logic_vector(5 downto 0);
+
 
 signal active_fruit_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
 signal active_fruit_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
@@ -62,8 +88,6 @@ signal active_fruit_relative_row : std_logic_vector (9 downto 0);
 signal active_fruit_relative_col : std_logic_vector (9 downto 0);
 signal active_fruit_rom_row : std_logic_vector (3 downto 0);
 signal active_fruit_rom_col : std_logic_vector (3 downto 0);
-
-signal score: unsigned(5 downto 0);
 
 signal reset_random : std_logic;
 
@@ -86,6 +110,8 @@ signal fruit_rom_col : rom_coord_array;
 
 signal fruit_RGB : std_logic_vector(5 downto 0);
 
+signal gameplay_RGB : std_logic_vector(5 downto 0);
+
 
 signal button_prev : std_logic_vector(7 downto 0);
 signal counter : unsigned(16 downto 0);
@@ -101,6 +127,16 @@ begin
 	led <= '1' when game_state = GAME_OVER else '0';
 	
 	start_screen : startscreenROM port map(row(9 downto 3), col(9 downto 3), clk, startscreenRGB);
+	
+	dddd_instance : dddd port map(score, score_tens_digit, score_ones_digit);
+	
+	ones_place_rom : digitROM port map(score_ones_digit, row(4 downto 2), col(4 downto 2), clk, score_color_ones);
+	tens_place_rom : digitROM port map(score_tens_digit, row(4 downto 2), col(4 downto 2), clk, score_color_tens);
+	
+	score_col_RGB <= ("111111" when score_color_tens = '1' else "000000") when row < 10d"32" and col < 10d"32"
+					  else ("111111" when score_color_ones = '1' else "000000") when row < 10d"32" and col < 10d"64"
+					  else "000000";
+	
 	
 	active_fruit_relative_row <= std_logic_vector(unsigned(row) - active_fruit_tl_row);
 	active_fruit_relative_col <= std_logic_vector(unsigned(col) - active_fruit_tl_col);
@@ -130,37 +166,35 @@ begin
 		
 
 
-    process(clk)  begin
-		if rising_edge(clk) then
-			for i in 1 to NUM_FRUITS loop
-				fruit_relative_row(i) <= std_logic_vector(unsigned(row) - fruit_tl_row(i));
-				fruit_relative_col(i) <= std_logic_vector(unsigned(col) - fruit_tl_col(i));
+    process begin
+		for i in 1 to NUM_FRUITS loop
+			fruit_relative_row(i) <= std_logic_vector(unsigned(row) - fruit_tl_row(i));
+			fruit_relative_col(i) <= std_logic_vector(unsigned(col) - fruit_tl_col(i));
 
-				fruit_rom_row(i) <= fruit_relative_row(i)(5 downto 2) when fruit_relative_row(i)(9 downto 6) = "0000" else "1111";
-				fruit_rom_col(i) <= fruit_relative_col(i)(5 downto 2) when fruit_relative_col(i)(9 downto 6) = "0000" else "1111";
-			end loop;
-		end if;
+			fruit_rom_row(i) <= fruit_relative_row(i)(5 downto 2) when fruit_relative_row(i)(9 downto 6) = "0000" else "1111";
+			fruit_rom_col(i) <= fruit_relative_col(i)(5 downto 2) when fruit_relative_col(i)(9 downto 6) = "0000" else "1111";
+		end loop;
     end process;
 	
 	--fruit_RGB <= active_fruit_RGB when (active_fruit_RGB /= "000000") else fruit_3_RGB when (fruit_3_RGB /= "000000") else fruit_2_RGB when (fruit_2_RGB /= "000000") else fruit_1_RGB;
 	
 	process(clk)  begin
-		if rising_edge(clk) then
-			fruit_RGB <= active_fruit_RGB;
-			for i in NUM_FRUITS downto 1 loop
-				if fruit_rgb_vals(i) /= "000000" then
-					fruit_RGB <= fruit_rgb_vals(i);
-					exit;
-				end if;
-			end loop;
-		end if;
+		fruit_RGB <= active_fruit_RGB;
+		for i in NUM_FRUITS downto 1 loop
+			if fruit_rgb_vals(i) /= "000000" then
+				fruit_RGB <= fruit_rgb_vals(i);
+				exit;
+			end if;
+		end loop;
     end process;
+	
+	gameplay_RGB <= fruit_RGB when col >= 10d"64" else score_col_RGB;
 	
 	RGB <= "000000" when valid = '0' -- can be changed here and below
 			--else startscreenRGB when game_state = START
 			else "100010" when game_state = START
-			else ("000000" when flashing_counter(23) = '0' else fruit_RGB) when game_state = GAME_OVER
-			else fruit_RGB;
+			else ("000000" when flashing_counter(23) = '0' else gameplay_RGB) when game_state = GAME_OVER
+			else gameplay_RGB;
 
 		
 	process(clk) begin
@@ -174,7 +208,7 @@ begin
 		
 				reset_random <= '1';
 				
-				score <= 5d"0";
+				score <= 6d"0";
 
 				active_fruit_type <= randomoutput;
 				
@@ -260,17 +294,13 @@ begin
 						fruit_tl_row(to_integer(falloop_counter)) <= 10d"700";
 						fruit_tl_col(to_integer(falloop_counter)) <= 10d"700";
 						if active_fruit_type = "00" then
-							score <= score + 5d"1";
-							scoring_first_digit <= score mod 5d"10";
-							scoring_tensplace <= score * 7d"52";
-							scoring_second_digit <= scoring_tensplace (12 downto 9);
-							scoring_first_digitROM <=
-						elsif "01" then
-							score <= score + 5d"2";
-						elsif "10" then
-							score <= score + 5d"3";
-						elsif "11" then
-							score <= score + 5d"4";
+							score <= score + 6d"1";
+						elsif active_fruit_type = "01" then
+							score <= score + 6d"2";
+						elsif active_fruit_type = "10" then
+							score <= score + 6d"3";
+						elsif active_fruit_type = "11" then
+							score <= score + 6d"4";
 						end if;
 				
 						-- active fruit gets fruit 1's position
@@ -323,9 +353,6 @@ begin
 				if button(4) = '0' and button_prev = "11111111" then
 					game_state <= START;
 				end if;
-				--if button /= 8b"0" and button_prev = 8b"0" then
-					--game_state <= START;
-				--end if;
 			else
 				game_state <= START;
 			end if;

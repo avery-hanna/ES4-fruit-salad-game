@@ -32788,7 +32788,7 @@ begin
 			color <= "000000";
 	  when "11111111111111" => 
 			color <= "000000";
-		when others => color <= "00000000";
+		when others => color <= "000000";
 	end case;
 	end if;
 	end process;

@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Dec  8 21:34:26 2024
+Mon Dec  9 14:56:38 2024
 
 
 Command: bitgen -w -freq 0 -gui fruitSalad_impl_1.udb 
@@ -21,5 +21,6 @@ Preference Summary:
 
 
 Creating bit map...
-Saving bit stream in "Z:\final-proj\ES4-fruit-salad-game\impl_1\fruitSalad_impl_1.bin".
+Saving bit stream in "Z:\es4\finalproj\fruitSalad\impl_1\fruitSalad_impl_1.bin".
+INFO <1081100> - Bitstream authenticated.
 Bitstream generation complete!

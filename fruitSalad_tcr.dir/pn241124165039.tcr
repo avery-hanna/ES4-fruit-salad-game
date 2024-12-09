@@ -1,5 +1,0 @@
-#Start recording tcl command: 11/24/2024 16:49:32
-#Project Location: Z:/es4/finalproj/fruitSalad; Project name: fruitSalad
-prj_create -name "fruitSalad" -impl "impl_1" -dev iCE40UP5K-SG48I -performance "High-Performance_1.2V" -synthesis "lse"
-prj_save 
-#Stop recording: 11/24/2024 16:50:39
