@@ -108,6 +108,9 @@ signal startscreen_relativecol: std_logic_vector(9 downto 0);
 signal startscreen_flashrow: std_logic_vector(9 downto 0);
 signal startscreen_flashcol: std_logic_vector(9 downto 0);
 
+signal startRGB1: std_logic_vector(5 downto 0);
+signal startRGB2: std_logic_vector(5 downto 0);
+
 --signal flashing_screen_RGB : std_logic_vector(5 downto 0);
 signal flashing_counter : unsigned(23 downto 0);
 signal flashingstart_counter : unsigned(23 downto 0);

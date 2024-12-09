@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Dec  9 16:28:43 2024
+Mon Dec  9 17:09:42 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/Es4/ES4-fruit-salad-game/promote.xml 
@@ -230,7 +230,7 @@ Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd
 
 INFO <35921012> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(6): analyzing entity pattern_gen. VHDL-1012
 INFO <35921010> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(20): analyzing architecture synth. VHDL-1010
-WARNING <35921196> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(243): possible infinite loop process does not have a wait statement. VHDL-1196
+WARNING <35921196> - synthesis: z:/es4/es4-fruit-salad-game/source/impl_1/pattern_gen.vhd(246): possible infinite loop process does not have a wait statement. VHDL-1196
 Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/shift8.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/es4-fruit-salad-game/source/impl_1/shift8.vhd
 
@@ -318,51 +318,51 @@ WARNING <35931002> - synthesis: z:/es4/es4-fruit-salad-game/mypll/rtl/mypll.v(14
 Duplicate register/latch removal. i113 is a one-to-one match with i103.
 Combinational loop found : 1
 
+ Net output[0] 
+
+ Instance \nesblock/mux_24_i1 
+
+Combinational loop found : 2
+
  Net output[1] 
 
  Instance \nesblock/mux_24_i2 
 
-Combinational loop found : 2
+Combinational loop found : 3
 
  Net output[2] 
 
  Instance \nesblock/mux_24_i3 
 
-Combinational loop found : 3
+Combinational loop found : 4
 
  Net output[3] 
 
  Instance \nesblock/mux_24_i4 
 
-Combinational loop found : 4
+Combinational loop found : 5
 
  Net output[4] 
 
  Instance \nesblock/mux_24_i5 
 
-Combinational loop found : 5
+Combinational loop found : 6
 
  Net output[5] 
 
  Instance \nesblock/mux_24_i6 
 
-Combinational loop found : 6
+Combinational loop found : 7
 
  Net output[6] 
 
  Instance \nesblock/mux_24_i7 
 
-Combinational loop found : 7
+Combinational loop found : 8
 
  Net output[7] 
 
  Instance \nesblock/mux_24_i8 
-
-Combinational loop found : 8
-
- Net output[0] 
-
- Instance \nesblock/mux_24_i1 
 
 INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
@@ -377,7 +377,7 @@ FD1P3XZ => 376
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 2
-LUT4 => 1914
+LUT4 => 2001
 OB => 22
 PLL_B => 1
 ################### End Area Report ##################
@@ -398,23 +398,23 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/n3_adj_2212, loads : 216
-  Net : thirdblock/game_state[0], loads : 185
-  Net : thirdblock/game_state[2], loads : 143
-  Net : thirdblock/falloop_counter[0], loads : 125
-  Net : thirdblock/game_state[1], loads : 45
-  Net : thirdblock/falloop_counter[1], loads : 43
-  Net : thirdblock/n6332, loads : 42
-  Net : thirdblock/startloop_counter_1__N_193, loads : 41
-  Net : thirdblock/falloop_counter[2], loads : 41
-  Net : swap_fruit_1__N_167, loads : 31
+  Net : thirdblock/n3, loads : 218
+  Net : thirdblock/game_state[2], loads : 151
+  Net : thirdblock/game_state[0], loads : 151
+  Net : thirdblock/falloop_counter[0], loads : 128
+  Net : thirdblock/game_state[1], loads : 106
+  Net : thirdblock/n38, loads : 57
+  Net : thirdblock/startloop_counter_1__N_193, loads : 54
+  Net : thirdblock/falloop_counter[2], loads : 43
+  Net : thirdblock/falloop_counter[1], loads : 42
+  Net : thirdblock/n6396, loads : 41
 ################### End Clock Report ##################
 
-Peak Memory Usage: 207 MB
+Peak Memory Usage: 208 MB
 
 --------------------------------------------------------------
 Total CPU Time: 9 secs 
-Total REAL Time: 20 secs 
+Total REAL Time: 21 secs 
 --------------------------------------------------------------
 
 
