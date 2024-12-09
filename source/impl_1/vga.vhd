@@ -9,6 +9,7 @@ entity vga is
     VSYNC : out std_logic;
 	valid : out std_logic;
 	row : out std_logic_vector(9 downto 0);
+	gameclock: out std_logic;
 	col : out std_logic_vector(9 downto 0)
 	
   );
@@ -34,6 +35,10 @@ begin
 		else
 			vertical <= vertical + 1;			
 			horizontal <= "0000000000";
+		end if;
+		if vertical = 480 then
+			gameclock <= '1';
+			else gameclock <= '0';
 		end if;
 	end if;
 end process;

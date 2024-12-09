@@ -49,6 +49,7 @@ component nesclk_top is
 	    VSYNC : out std_logic;
 		valid : out std_logic;
 		row : out std_logic_vector(9 downto 0);
+		gameclock: out std_logic;
 		col : out std_logic_vector(9 downto 0)
     );
 end component;
@@ -60,6 +61,7 @@ component pattern_gen is
 		row : in std_logic_vector(9 downto 0); -- row of pixel we want to get color for
 		col : in std_logic_vector(9 downto 0); -- col of pixel we want to get color for
 		clk : in std_logic;
+		gameclock: out std_logic;
 		RGB : out std_logic_vector(5 downto 0); -- color for pixel (curr_row, curr_col);
 		led : out std_logic
 );
@@ -77,6 +79,7 @@ end component;
 	signal output: std_logic_vector(7 downto 0);
 	signal button: std_logic_vector(7 downto 0);
 	signal counter: unsigned(2 downto 0);
+	signal gameclock: std_logic;
 begin
  
 
@@ -97,6 +100,7 @@ secondblock : vga
 		VSYNC => VSYNC,
 		valid => valid,
 		row => row,
+		gameclock=>gameclock,
 		col => col
 	);
 
@@ -118,6 +122,7 @@ thirdblock : pattern_gen
 		button => button,
 		valid => valid,
 		row => row,
+		gameclock => gameclock,
 		col => col,
 		RGB => RGB,
 		clk => clk,

@@ -10,6 +10,7 @@ entity pattern_gen is
 	row : in std_logic_vector(9 downto 0); -- row of pixel we want to get color for
 	col : in std_logic_vector(9 downto 0); -- col of pixel we want to get color for
 	clk : in std_logic;
+	gameclock: in std_logic;
 	RGB : out std_logic_vector(5 downto 0);
 	led : out std_logic
 );
@@ -53,6 +54,7 @@ signal swap_fruit : integer;
 signal falloop_counter: unsigned(4 downto 0);
 
 signal startscreenRGB : std_logic_vector(5 downto 0);
+signal flashstartscreenRGB : std_logic_vector(5 downto 0);
 
 signal active_fruit_tl_row : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
 signal active_fruit_tl_col : unsigned (9 downto 0) := 10d"0"; -- TODO update: 50 wide , 2 to 47 
@@ -92,28 +94,52 @@ signal button_prev : std_logic_vector(7 downto 0);
 signal counter : unsigned(16 downto 0);
 signal output: std_logic_vector(7 downto 0);
 
+
 signal startscreenrow: std_logic_vector(4 downto 0);
 signal startscreencol: std_logic_vector(6 downto 0);
+
+signal flash_startscreenrow: std_logic_vector(4 downto 0);
+signal flash_startscreencol: std_logic_vector(6 downto 0);
+
 signal startscreen_relativerow: std_logic_vector(9 downto 0);
 signal startscreen_relativecol: std_logic_vector(9 downto 0);
+
+signal startscreen_flashrow: std_logic_vector(9 downto 0);
+signal startscreen_flashcol: std_logic_vector(9 downto 0);
+
+--signal flashing_screen_RGB : std_logic_vector(5 downto 0);
+signal flashingstart_counter : unsigned(23 downto 0);
+signal randomoutput: unsigned(1 downto 0);
 
 --signal flashing_screen_RGB : std_logic_vector(5 downto 0);
 signal flashing_counter : unsigned(23 downto 0);
 
-signal randomoutput: unsigned(1 downto 0);
+--signal randomoutput: unsigned(1 downto 0);
 
 
 begin
 	led <= '1' when game_state = GAME_OVER else '0';
 	
-	startscreen_relativerow <= std_logic_vector(unsigned(row) - 9d"7"); 
-	startscreen_relativecol <= std_logic_vector(unsigned(col) - 9d"14");
-
-	startscreenrow <= startscreen_relativerow(7 downto 3) when (startscreen_relativerow(9 downto 8))="00" else "00000";
+	startscreen_relativerow <= std_logic_vector(unsigned(row) - "001011000"); 
+	startscreen_relativecol <= std_logic_vector(unsigned(col) - "001000100");
 	
-	startscreencol <= startscreen_relativecol(8 downto 2) when startscreen_relativecol(9)='0' else "0000000";
+	startscreen_flashrow <= std_logic_vector(unsigned(row) - "001000000"); 
+	startscreen_flashcol <= std_logic_vector(unsigned(col) - "000111000");
+
+	startscreenrow <= startscreen_relativerow(7 downto 3) when startscreen_relativerow(9 downto 8)="00" 
+	else "00000";
+	
+	startscreencol <= startscreen_relativecol(8 downto 2) when startscreen_relativecol(9)='0' 
+	else "0000000";
+	
+	flash_startscreenrow <= startscreen_flashrow(7 downto 3) when startscreen_flashrow(9 downto 8)="00" 
+	else "00000";
+	
+	flash_startscreencol <= startscreen_relativecol(8 downto 2) when startscreen_relativecol(9)='0' 
+	else "0000000";
 	
 	start_screen : startscreenROM port map(startscreenrow, startscreencol, clk, startscreenRGB);
+	flashstart_screen : startscreenROM port map(flash_startscreenrow,flash_startscreencol, clk, flashstartscreenRGB);
 	
 	active_fruit_relative_row <= std_logic_vector(unsigned(row) - active_fruit_tl_row);
 	active_fruit_relative_col <= std_logic_vector(unsigned(col) - active_fruit_tl_col);
@@ -166,17 +192,17 @@ begin
     end process;
 	
 	RGB <= "000000" when valid = '0' -- can be changed here and below
-			else startscreenRGB when game_state = START
-			--else "100010" when game_state = START
+			else  flashstartscreenRGB when (flashingstart_counter(6)='0' and game_state=START) 
+			else startscreenRGB when (game_state = START and flashingstart_counter(6)='1')
 			else ("000000" when flashing_counter(23) = '0' else fruit_RGB) when game_state = GAME_OVER
 			else fruit_RGB;
 
 		
-	process(clk) begin
-		if rising_edge(clk) then
-			clock_counter <= clock_counter + 1;
-			if clock_counter = "01" then
-				clock_counter <= "00";
+	process(gameclock) begin
+		if rising_edge(gameclock) then
+			--clock_counter <= clock_counter + 1;
+			--if clock_counter = "01" then
+				--clock_counter <= "00";
 				button_prev <= button;
 				
 				if game_state = START then
@@ -210,7 +236,7 @@ begin
 							counter <= 17d"1";
 						end if;
 						
-						if counter = 17d"100000" then
+						if counter = 17d"20" then
 							if active_fruit_tl_col > 0 then
 								active_fruit_tl_col <= active_fruit_tl_col - 1;
 							end if;
@@ -226,7 +252,7 @@ begin
 							counter <= 17d"1";
 						end if;
 						
-						if counter = 17d"100000" then
+						if counter = 17d"20" then
 							if active_fruit_tl_col < 576 then
 								active_fruit_tl_col <= active_fruit_tl_col + 1;
 							end if;
@@ -241,8 +267,8 @@ begin
 				elsif game_state = FRUIT_FALLING then
 					-- Falling counter logic
 					counter <= counter + 1;
-					if counter = 17d"001100" then
-						active_fruit_tl_row <= active_fruit_tl_row + 1;
+					if counter = 17d"0" then
+						active_fruit_tl_row <= active_fruit_tl_row + 15;
 						counter <= 17d"0";
 						
 						
@@ -330,7 +356,7 @@ begin
 					game_state <= START;
 				end if;
 			end if;
-		end if;
+		--end if;
 	end process;
 
 end;

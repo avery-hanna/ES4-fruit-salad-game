@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="2" build_time="1733727065">
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1733727065"/>
-            <Task name="IBIS" build_result="2" update_result="0" update_time="1733727068"/>
-            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1733727080"/>
+        <Milestone name="Export" build_result="2" build_time="1733781605">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1733781605"/>
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1733781607"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1733781616"/>
         </Milestone>
-        <Milestone name="Map" build_result="0" build_time="1733727993">
-            <Task name="Map" build_result="0" update_result="2" update_time="1733727993"/>
+        <Milestone name="Map" build_result="2" build_time="1733781532">
+            <Task name="Map" build_result="2" update_result="0" update_time="1733781532"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="0" build_time="1733727993">
-            <Task name="PAR" build_result="0" update_result="2" update_time="1733727993"/>
-            <Task name="PARTrace" build_result="0" update_result="2" update_time="1733727993"/>
+        <Milestone name="PAR" build_result="2" build_time="1733781588">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1733781588"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1733781603"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="0" build_time="1733727993">
-            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1733727993"/>
-            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1733727993"/>
-            <Task name="SynTrace" build_result="0" update_result="2" update_time="1733715656"/>
-            <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1733715656"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1733781530">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1733781530"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1733781603"/>
+            <Task name="SynTrace" build_result="0" update_result="2" update_time="1733760183"/>
+            <Task name="SynVerilogSimFile" build_result="0" update_result="2" update_time="1733760183"/>
         </Milestone>
-        <Report name="IBIS/fruitSalad_impl_1.ibs" last_build_time="1733727067" last_build_size="55049"/>
-        <Report name="fruitSalad_impl_1.bgn" last_build_time="1733727065" last_build_size="1026"/>
-        <Report name="fruitSalad_impl_1.bin" last_build_time="1733727065" last_build_size="104156"/>
+        <Report name="IBIS/fruitSalad_impl_1.ibs" last_build_time="1733781606" last_build_size="55049"/>
+        <Report name="fruitSalad_impl_1.bgn" last_build_time="1733781605" last_build_size="1026"/>
+        <Report name="fruitSalad_impl_1.bin" last_build_time="1733781605" last_build_size="104156"/>
         <Report name="fruitSalad_impl_1.lsedata" last_build_time="0" last_build_size="0"/>
-        <Report name="fruitSalad_impl_1.twr.html" last_build_time="1733727062" last_build_size="288830"/>
-        <Report name="fruitSalad_impl_1.udb" last_build_time="1733727046" last_build_size="515122"/>
-        <Report name="fruitSalad_impl_1_map.udb" last_build_time="1733726971" last_build_size="268534"/>
-        <Report name="fruitSalad_impl_1_rtl.udb" last_build_time="1733726940" last_build_size="191664"/>
-        <Report name="fruitSalad_impl_1_syn.udb" last_build_time="1733726968" last_build_size="169414"/>
-        <Report name="fruitSalad_impl_1_vo.sdf" last_build_time="1733727079" last_build_size="3548608"/>
-        <Report name="fruitSalad_impl_1_vo.vo" last_build_time="1733727078" last_build_size="3181435"/>
+        <Report name="fruitSalad_impl_1.twr.html" last_build_time="1733781603" last_build_size="287711"/>
+        <Report name="fruitSalad_impl_1.udb" last_build_time="1733781588" last_build_size="416359"/>
+        <Report name="fruitSalad_impl_1_map.udb" last_build_time="1733781532" last_build_size="221304"/>
+        <Report name="fruitSalad_impl_1_rtl.udb" last_build_time="1733781509" last_build_size="178261"/>
+        <Report name="fruitSalad_impl_1_syn.udb" last_build_time="1733781530" last_build_size="140279"/>
+        <Report name="fruitSalad_impl_1_vo.sdf" last_build_time="1733781616" last_build_size="2564820"/>
+        <Report name="fruitSalad_impl_1_vo.vo" last_build_time="1733781615" last_build_size="2347664"/>
     </Strategy>
 </BuildStatus>
+                          
