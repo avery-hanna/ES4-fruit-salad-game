@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Dec  9 14:55:04 2024
+Mon Dec  9 16:58:34 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
@@ -232,7 +232,7 @@ Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd
 
 INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(6): analyzing entity pattern_gen. VHDL-1012
 INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(19): analyzing architecture synth. VHDL-1010
-WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(177): possible infinite loop process does not have a wait statement. VHDL-1196
+WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(182): possible infinite loop process does not have a wait statement. VHDL-1196
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/shift8.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/shift8.vhd
 
@@ -319,13 +319,9 @@ WARNING <35931002> - synthesis: z:/es4/finalproj/fruitsalad/mypll/rtl/mypll.v(13
 WARNING <35931002> - synthesis: z:/es4/finalproj/fruitsalad/mypll/rtl/mypll.v(140): net \firstblock/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
 ######## Missing driver on net \firstblock/lscc_pll_inst/sclk_i. Patching with GND.
 ######## Missing driver on net \firstblock/lscc_pll_inst/sdi_i. Patching with GND.
-WARNING <35935040> - synthesis: Register \thirdblock/reset_random clock is stuck at One. VDB-5040
 
 
 
-CRITICAL <35001747> - synthesis: Bit 1 of Register \thirdblock/randomfruit/randgenerator is stuck at Zero
-CRITICAL <35001747> - synthesis: Bit 0 of Register \thirdblock/randomfruit/randgenerator is stuck at Zero
-CRITICAL <35001748> - synthesis: Bit 3 of Register \thirdblock/randomfruit/randgenerator is stuck at One
 Mapped 1 multiplier(s)
 
 
@@ -343,27 +339,27 @@ Combinational loop found : 2
 
 Combinational loop found : 3
 
- Net output[4] 
-
- Instance \nesblock/mux_24_i5 
-
-Combinational loop found : 4
-
  Net output[7] 
 
  Instance \nesblock/mux_24_i8 
 
-Combinational loop found : 5
+Combinational loop found : 4
 
  Net output[6] 
 
  Instance \nesblock/mux_24_i7 
 
-Combinational loop found : 6
+Combinational loop found : 5
 
  Net output[5] 
 
  Instance \nesblock/mux_24_i6 
+
+Combinational loop found : 6
+
+ Net output[4] 
+
+ Instance \nesblock/mux_24_i5 
 
 Combinational loop found : 7
 
@@ -383,14 +379,14 @@ INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for Thunde
 <A name="lse_area"></A><B><U><big>Area Report</big></U></B>
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 383 of 5280 (7 % )
+Number of register bits => 388 of 5280 (7 % )
 EBR_B => 11
 CCU2 => 186
-FD1P3XZ => 383
+FD1P3XZ => 388
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 1
-LUT4 => 2499
+LUT4 => 2473
 MAC16 => 1
 OB => 21
 PLL_B => 1
@@ -412,22 +408,22 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/n3, loads : 216
-  Net : thirdblock/game_state[0], loads : 183
-  Net : thirdblock/game_state[1], loads : 166
-  Net : thirdblock/n1135, loads : 132
+  Net : thirdblock/n3_adj_2186, loads : 216
+  Net : thirdblock/game_state[0], loads : 185
+  Net : thirdblock/game_state[1], loads : 167
+  Net : thirdblock/n1158, loads : 130
   Net : thirdblock/falloop_counter[0], loads : 126
-  Net : thirdblock/game_state[2], loads : 49
+  Net : thirdblock/n6_adj_2223, loads : 52
+  Net : thirdblock/game_state[2], loads : 45
   Net : thirdblock/falloop_counter[2], loads : 43
-  Net : thirdblock/gen_fruit_roms[8].fruit_rom_instance/color3[1], loads : 43
-  Net : thirdblock/n5648, loads : 42
-  Net : thirdblock/gen_fruit_roms[1].fruit_rom_instance/color3[1], loads : 41
+  Net : thirdblock/n5675, loads : 42
+  Net : thirdblock/gen_fruit_roms[9].fruit_rom_instance/color3[1], loads : 40
 ################### End Clock Report ##################
 
-Peak Memory Usage: 309 MB
+Peak Memory Usage: 310 MB
 
 --------------------------------------------------------------
-Total CPU Time: 14 secs 
+Total CPU Time: 13 secs 
 Total REAL Time: 26 secs 
 --------------------------------------------------------------
 

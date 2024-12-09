@@ -75,6 +75,8 @@ signal startscreenRGB : std_logic_vector(5 downto 0);
 signal score: unsigned(5 downto 0);
 signal score_tens_digit : std_logic_vector(3 downto 0);
 signal score_ones_digit : std_logic_vector(3 downto 0);
+signal score_row : std_logic_vector(9 downto 0);
+signal score_col : std_logic_vector(9 downto 0);
 signal score_color_tens : std_logic;
 signal score_color_ones : std_logic;
 signal score_col_RGB : std_logic_vector(5 downto 0);
@@ -130,11 +132,14 @@ begin
 	
 	dddd_instance : dddd port map(score, score_tens_digit, score_ones_digit);
 	
-	ones_place_rom : digitROM port map(score_ones_digit, row(4 downto 2), col(4 downto 2), clk, score_color_ones);
-	tens_place_rom : digitROM port map(score_tens_digit, row(4 downto 2), col(4 downto 2), clk, score_color_tens);
+	score_row <= std_logic_vector(unsigned(row) - 10d"20");
+	score_col <= std_logic_vector(unsigned(col) - 10d"10");
 	
-	score_col_RGB <= ("111111" when score_color_tens = '1' else "000000") when row < 10d"32" and col < 10d"32"
-					  else ("111111" when score_color_ones = '1' else "000000") when row < 10d"32" and col < 10d"64"
+	ones_place_rom : digitROM port map(score_ones_digit, score_row(4 downto 2), score_col(4 downto 2), clk, score_color_ones);
+	tens_place_rom : digitROM port map(score_tens_digit, score_row(4 downto 2), score_col(4 downto 2), clk, score_color_tens);
+	
+	score_col_RGB <= ("111111" when score_color_tens = '1' else "000000") when row >= 10d"20" and row < 10d"52" and col >= 10d"10" and col < 10d"42"
+					  else ("111111" when score_color_ones = '1' else "000000") when row >= 10d"20" and row < 10d"52" and col >= 10d"42" and col < 10d"74"
 					  else "000000";
 	
 	
@@ -176,19 +181,29 @@ begin
 		end loop;
     end process;
 	
-	--fruit_RGB <= active_fruit_RGB when (active_fruit_RGB /= "000000") else fruit_3_RGB when (fruit_3_RGB /= "000000") else fruit_2_RGB when (fruit_2_RGB /= "000000") else fruit_1_RGB;
+	fruit_RGB <= active_fruit_RGB when (active_fruit_RGB /= "000000")
+				 else fruit_rgb_vals(10) when (fruit_rgb_vals(10) /= "000000")
+				 else fruit_rgb_vals(9) when (fruit_rgb_vals(9) /= "000000")
+				 else fruit_rgb_vals(8) when (fruit_rgb_vals(8) /= "000000")
+				 else fruit_rgb_vals(7) when (fruit_rgb_vals(7) /= "000000")
+				 else fruit_rgb_vals(6) when (fruit_rgb_vals(6) /= "000000")
+				 else fruit_rgb_vals(5) when (fruit_rgb_vals(5) /= "000000")
+				 else fruit_rgb_vals(4) when (fruit_rgb_vals(4) /= "000000")
+				 else fruit_rgb_vals(3) when (fruit_rgb_vals(3) /= "000000")
+				 else fruit_rgb_vals(2) when (fruit_rgb_vals(2) /= "000000")
+				 else fruit_rgb_vals(1);
 	
-	process(clk)  begin
-		fruit_RGB <= active_fruit_RGB;
-		for i in NUM_FRUITS downto 1 loop
-			if fruit_rgb_vals(i) /= "000000" then
-				fruit_RGB <= fruit_rgb_vals(i);
-				exit;
-			end if;
-		end loop;
-    end process;
+	--process(clk)  begin
+		--fruit_RGB <= active_fruit_RGB;
+		--for i in NUM_FRUITS downto 1 loop
+			--if fruit_rgb_vals(i) /= "000000" then
+				--fruit_RGB <= fruit_rgb_vals(i);
+				--exit;
+			--end if;
+		--end loop;
+    --end process;
 	
-	gameplay_RGB <= fruit_RGB when col >= 10d"64" else score_col_RGB;
+	gameplay_RGB <= fruit_RGB when col >= 10d"74" else score_col_RGB;
 	
 	RGB <= "000000" when valid = '0' -- can be changed here and below
 			--else startscreenRGB when game_state = START
@@ -330,13 +345,13 @@ begin
 				--fruit_tl_col(swap_fruit) <= active_fruit_tl_col;
 				--fruit_type(swap_fruit) <= active_fruit_type;
 				
-				--active_fruit_type <= randomoutput;
+				active_fruit_type <= randomoutput;
 				active_fruit_type <= "00";
 			
 				--falloop_counter <= 0;
 			
 						
-				--reset_random <= '0';
+				reset_random <= '0';
 
 				swap_fruit <= swap_fruit + 1; -- increment swap_fruit state
 				if swap_fruit = NUM_FRUITS then

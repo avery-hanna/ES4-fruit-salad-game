@@ -486,30 +486,6 @@
             <Dynamic>sdi_i</Dynamic>
         </Message>
         <Message>
-            <ID>35935040</ID>
-            <Severity>16</Severity>
-            <Dynamic>\thirdblock/reset_random</Dynamic>
-            <Dynamic>One</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>1</Dynamic>
-            <Dynamic>\thirdblock/randomfruit/randgenerator</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>256</Severity>
-            <Dynamic>0</Dynamic>
-            <Dynamic>\thirdblock/randomfruit/randgenerator</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001748</ID>
-            <Severity>256</Severity>
-            <Dynamic>3</Dynamic>
-            <Dynamic>\thirdblock/randomfruit/randgenerator</Dynamic>
-        </Message>
-        <Message>
             <ID>35002039</ID>
             <Severity>1</Severity>
         </Message>
@@ -577,11 +553,6 @@
         </Message>
     </Task>
     <Task name="Export">
-        <Message>
-            <ID>1081100</ID>
-            <Severity>1</Severity>
-            <Dynamic>Bitstream authenticated.</Dynamic>
-        </Message>
         <Message>
             <ID>1191031</ID>
             <Severity>1</Severity>
