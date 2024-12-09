@@ -241,10 +241,22 @@ begin
 				end if;
 			end loop;
     end process;
+
+	startRGB1 <= fruit_rgb_vals(1) when fruit_rgb_vals(1)  /= "000000" else 
+				fruit_rgb_vals(2) when fruit_rgb_vals(2)  /= "000000" else 
+				fruit_rgb_vals(3) when fruit_rgb_vals(3)  /= "000000" else 
+				fruit_rgb_vals(4) when fruit_rgb_vals(4)  /= "000000" else 
+				flashstartscreenRGB;
+
+	startRGB2 <= fruit_rgb_vals(1) when fruit_rgb_vals(1)  /= "000000" else 
+				fruit_rgb_vals(2) when fruit_rgb_vals(2)  /= "000000" else 
+				fruit_rgb_vals(3) when fruit_rgb_vals(3)  /= "000000" else 
+				fruit_rgb_vals(4) when fruit_rgb_vals(4)  /= "000000" else 
+				startscreenRGB;
 	
 	RGB <= "000000" when valid = '0' -- can be changed here and below
-			else  flashstartscreenRGB when (flashingstart_counter(6)='0' and game_state=START) 
-			else startscreenRGB when (game_state = START and flashingstart_counter(6)='1')
+			else  startRGB1 when (flashingstart_counter(6)='0' and game_state=START) 
+			else startRGB2 when (game_state = START and flashingstart_counter(6)='1')
 			--else "100010" when game_state = START
 			else ("000000" when flashing_counter(6) = '0' else fruit_RGB) when game_state = GAME_OVER
 			else fruit_RGB;
@@ -269,7 +281,15 @@ begin
 
 					active_fruit_type <= randomoutput;
 					
-					-- Position all other fruits off screen
+					-- Position other fruits at bottom of screen
+					fruit_tl_row(1) <= 10d"400";
+					fruit_tl_col(1) <= 10d"10";
+					fruit_tl_row(2) <= 10d"400";
+					fruit_tl_col(2) <= 10d"80";
+					fruit_tl_row(3) <= 10d"400";
+					fruit_tl_col(3) <= 10d"150";
+					fruit_tl_row(4) <= 10d"400";
+					fruit_tl_col(4) <= 10d"410";
 					--for i in 1 to NUM_FRUITS loop
 						--fruit_tl_row(i) <= 10d"700";
 						--fruit_tl_col(i) <= 10d"700";
