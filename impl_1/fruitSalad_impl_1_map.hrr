@@ -4,8 +4,8 @@ Report for cell vga_controller
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                  IOLGC	       1.00        100.0
-                                  LUT4	       2588        100.0
-                               LUTGATE	       2172        100.0
+                                  LUT4	       2597        100.0
+                               LUTGATE	       2181        100.0
                                 LUTCCU	        416        100.0
                                  IOREG	          1        100.0
                                  IOBUF	         23        100.0
@@ -16,15 +16,15 @@ SUB MODULES
                                   cell	      count    LUT4 Usage(%)
                                  mypll	          1         0.0
                             nesclk_top	          1         1.3
-                           pattern_gen	          1        82.3
-                                   vga	          1         2.2
+                           pattern_gen	          1        84.3
+                                   vga	          1         2.0
 ---------------------------------------------------
 Report for cell pattern_gen
    Instance path: vga_controller/thirdblock
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	       2130        82.3
-                               LUTGATE	       1756        80.8
+                                  LUT4	       2189        84.3
+                               LUTGATE	       1815        83.2
                                 LUTCCU	        374        89.9
                                 PFUREG	        369        89.3
                                    EBR	         23        100.0
@@ -33,21 +33,21 @@ SUB MODULES
                                   cell	      count    LUT4 Usage(%)
                                   dddd	          1         0.4
                               digitROM	          1         0.3
-                          digitROM_U10	          1         1.0
+                           digitROM_U9	          1         1.0
                               fruitROM	          1         1.3
-                          fruitROM_U11	          1         1.3
+                          fruitROM_U10	          1         1.4
+                          fruitROM_U11	          1         1.4
                           fruitROM_U12	          1         1.5
-                          fruitROM_U13	          1         1.7
-                          fruitROM_U14	          1         1.5
-                          fruitROM_U15	          1         1.4
-                          fruitROM_U16	          1         1.6
-                          fruitROM_U17	          1         1.4
-                          fruitROM_U18	          1         1.3
-                          fruitROM_U19	          1         1.3
-                          fruitROM_U21	          1         0.7
+                          fruitROM_U13	          1         1.3
+                          fruitROM_U14	          1         0.3
+                          fruitROM_U15	          1         1.5
+                          fruitROM_U16	          1         1.2
+                          fruitROM_U17	          1         1.3
+                          fruitROM_U18	          1         1.5
+                          fruitROM_U20	          1         1.0
                         getRandomFruit	          1         0.0
                         startscreenROM	          1         0.0
-                    startscreenROM_U20	          1         0.2
+                    startscreenROM_U19	          1         0.2
 ---------------------------------------------------
 Report for cell digitROM
    Instance path: vga_controller/thirdblock/tens_place_rom
@@ -71,7 +71,7 @@ Report for cell getRandomFruit
                                LUTGATE	          1         0.0
                                 PFUREG	          4         1.0
 ---------------------------------------------------
-Report for cell digitROM_U10
+Report for cell digitROM_U9
    Instance path: vga_controller/thirdblock/ones_place_rom
                      Cell usage:
                                   cell	      count    Res Usage(%)
@@ -83,147 +83,137 @@ Report for cell fruitROM
    Instance path: vga_controller/thirdblock/gen_fruit_roms[9].fruit_rom_instance
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         34         1.3
-                               LUTGATE	         34         1.6
+                                  LUT4	         35         1.3
+                               LUTGATE	         35         1.6
                                    EBR	          1         4.3
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                                maprgb	          1         1.2
+                                maprgb	          1         1.3
 ---------------------------------------------------
 Report for cell maprgb
    Instance path: vga_controller/thirdblock/gen_fruit_roms[9].fruit_rom_instance/mappingrgb
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         31         1.2
-                               LUTGATE	         31         1.4
+                                  LUT4	         35         1.3
+                               LUTGATE	         35         1.6
 ---------------------------------------------------
-Report for cell fruitROM_U11
+Report for cell fruitROM_U10
    Instance path: vga_controller/thirdblock/gen_fruit_roms[8].fruit_rom_instance
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         33         1.3
-                               LUTGATE	         33         1.5
+                                  LUT4	         37         1.4
+                               LUTGATE	         37         1.7
                                    EBR	          1         4.3
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                             maprgb_U0	          1         0.1
+                             maprgb_U0	          1         1.4
 ---------------------------------------------------
 Report for cell maprgb_U0
    Instance path: vga_controller/thirdblock/gen_fruit_roms[8].fruit_rom_instance/mappingrgb
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	          2         0.1
-                               LUTGATE	          2         0.1
+                                  LUT4	         37         1.4
+                               LUTGATE	         37         1.7
 ---------------------------------------------------
-Report for cell fruitROM_U12
+Report for cell fruitROM_U11
    Instance path: vga_controller/thirdblock/gen_fruit_roms[7].fruit_rom_instance
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         40         1.5
-                               LUTGATE	         40         1.8
+                                  LUT4	         37         1.4
+                               LUTGATE	         37         1.7
                                    EBR	          1         4.3
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                             maprgb_U1	          1         1.5
+                             maprgb_U1	          1         1.4
 ---------------------------------------------------
 Report for cell maprgb_U1
    Instance path: vga_controller/thirdblock/gen_fruit_roms[7].fruit_rom_instance/mappingrgb
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         40         1.5
-                               LUTGATE	         40         1.8
+                                  LUT4	         37         1.4
+                               LUTGATE	         37         1.7
 ---------------------------------------------------
-Report for cell fruitROM_U13
+Report for cell fruitROM_U12
    Instance path: vga_controller/thirdblock/gen_fruit_roms[6].fruit_rom_instance
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         44         1.7
-                               LUTGATE	         44         2.0
+                                  LUT4	         38         1.5
+                               LUTGATE	         38         1.7
                                    EBR	          1         4.3
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                             maprgb_U2	          1         1.7
+                             maprgb_U2	          1         1.5
 ---------------------------------------------------
 Report for cell maprgb_U2
    Instance path: vga_controller/thirdblock/gen_fruit_roms[6].fruit_rom_instance/mappingrgb
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         44         1.7
-                               LUTGATE	         44         2.0
+                                  LUT4	         38         1.5
+                               LUTGATE	         38         1.7
 ---------------------------------------------------
-Report for cell fruitROM_U14
+Report for cell fruitROM_U13
    Instance path: vga_controller/thirdblock/gen_fruit_roms[5].fruit_rom_instance
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         38         1.5
-                               LUTGATE	         38         1.7
+                                  LUT4	         34         1.3
+                               LUTGATE	         34         1.6
                                    EBR	          1         4.3
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                             maprgb_U3	          1         1.5
+                             maprgb_U3	          1         1.1
 ---------------------------------------------------
 Report for cell maprgb_U3
    Instance path: vga_controller/thirdblock/gen_fruit_roms[5].fruit_rom_instance/mappingrgb
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         38         1.5
-                               LUTGATE	         38         1.7
+                                  LUT4	         28         1.1
+                               LUTGATE	         28         1.3
 ---------------------------------------------------
-Report for cell fruitROM_U15
+Report for cell fruitROM_U14
    Instance path: vga_controller/thirdblock/gen_fruit_roms[4].fruit_rom_instance
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         37         1.4
-                               LUTGATE	         37         1.7
+                                  LUT4	          7         0.3
+                               LUTGATE	          7         0.3
                                    EBR	          1         4.3
-SUB MODULES
-                                  cell	      count    LUT4 Usage(%)
-                             maprgb_U4	          1         1.4
 ---------------------------------------------------
-Report for cell maprgb_U4
-   Instance path: vga_controller/thirdblock/gen_fruit_roms[4].fruit_rom_instance/mappingrgb
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	         37         1.4
-                               LUTGATE	         37         1.7
----------------------------------------------------
-Report for cell fruitROM_U16
+Report for cell fruitROM_U15
    Instance path: vga_controller/thirdblock/gen_fruit_roms[3].fruit_rom_instance
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         42         1.6
-                               LUTGATE	         42         1.9
+                                  LUT4	         40         1.5
+                               LUTGATE	         40         1.8
                                    EBR	          1         4.3
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                             maprgb_U5	          1         1.6
+                             maprgb_U4	          1         1.5
 ---------------------------------------------------
-Report for cell maprgb_U5
+Report for cell maprgb_U4
    Instance path: vga_controller/thirdblock/gen_fruit_roms[3].fruit_rom_instance/mappingrgb
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         42         1.6
-                               LUTGATE	         42         1.9
+                                  LUT4	         40         1.5
+                               LUTGATE	         40         1.8
 ---------------------------------------------------
-Report for cell fruitROM_U17
+Report for cell fruitROM_U16
    Instance path: vga_controller/thirdblock/gen_fruit_roms[2].fruit_rom_instance
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         35         1.4
-                               LUTGATE	         35         1.6
+                                  LUT4	         32         1.2
+                               LUTGATE	         32         1.5
                                    EBR	          1         4.3
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                             maprgb_U6	          1         1.4
+                             maprgb_U5	          1         1.2
 ---------------------------------------------------
-Report for cell maprgb_U6
+Report for cell maprgb_U5
    Instance path: vga_controller/thirdblock/gen_fruit_roms[2].fruit_rom_instance/mappingrgb
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         35         1.4
-                               LUTGATE	         35         1.6
+                                  LUT4	         32         1.2
+                               LUTGATE	         32         1.5
 ---------------------------------------------------
-Report for cell fruitROM_U18
+Report for cell fruitROM_U17
    Instance path: vga_controller/thirdblock/gen_fruit_roms[1].fruit_rom_instance
                      Cell usage:
                                   cell	      count    Res Usage(%)
@@ -232,34 +222,34 @@ Report for cell fruitROM_U18
                                    EBR	          1         4.3
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                             maprgb_U7	          1         1.3
+                             maprgb_U6	          1         1.3
 ---------------------------------------------------
-Report for cell maprgb_U7
+Report for cell maprgb_U6
    Instance path: vga_controller/thirdblock/gen_fruit_roms[1].fruit_rom_instance/mappingrgb
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	         34         1.3
-                               LUTGATE	         34         1.6
----------------------------------------------------
-Report for cell fruitROM_U19
-   Instance path: vga_controller/thirdblock/gen_fruit_roms[10].fruit_rom_instance
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                   LUT4	         33         1.3
                                LUTGATE	         33         1.5
+---------------------------------------------------
+Report for cell fruitROM_U18
+   Instance path: vga_controller/thirdblock/gen_fruit_roms[10].fruit_rom_instance
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         40         1.5
+                               LUTGATE	         40         1.8
                                    EBR	          1         4.3
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                             maprgb_U8	          1         1.2
+                             maprgb_U7	          1         1.5
 ---------------------------------------------------
-Report for cell maprgb_U8
+Report for cell maprgb_U7
    Instance path: vga_controller/thirdblock/gen_fruit_roms[10].fruit_rom_instance/mappingrgb
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         31         1.2
-                               LUTGATE	         31         1.4
+                                  LUT4	         40         1.5
+                               LUTGATE	         40         1.8
 ---------------------------------------------------
-Report for cell startscreenROM_U20
+Report for cell startscreenROM_U19
    Instance path: vga_controller/thirdblock/flashstart_screen
                      Cell usage:
                                   cell	      count    Res Usage(%)
@@ -276,45 +266,23 @@ Report for cell dddd
                                LUTGATE	         10         0.5
                                    DSP	          1        100.0
 ---------------------------------------------------
-Report for cell fruitROM_U21
+Report for cell fruitROM_U20
    Instance path: vga_controller/thirdblock/active_fruit
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         18         0.7
-                               LUTGATE	         18         0.8
+                                  LUT4	         26         1.0
+                               LUTGATE	         26         1.2
                                    EBR	          1         4.3
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-                             maprgb_U9	          1         0.7
+                             maprgb_U8	          1         0.9
 ---------------------------------------------------
-Report for cell maprgb_U9
+Report for cell maprgb_U8
    Instance path: vga_controller/thirdblock/active_fruit/mappingrgb
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         18         0.7
-                               LUTGATE	         18         0.8
----------------------------------------------------
-Report for cell vga
-   Instance path: vga_controller/secondblock
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	         57         2.2
-                               LUTGATE	         33         1.5
-                                LUTCCU	         24         5.8
-                                PFUREG	         20         4.8
----------------------------------------------------
-Report for cell mypll
-   Instance path: vga_controller/firstblock
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-SUB MODULES
-                                  cell	      count    LUT4 Usage(%)
-mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")	          1         0.0
----------------------------------------------------
-Report for cell mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")
-   Instance path: vga_controller/firstblock/lscc_pll_inst
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
+                                  LUT4	         24         0.9
+                               LUTGATE	         24         1.1
 ---------------------------------------------------
 Report for cell nesclk_top
    Instance path: vga_controller/nesblock
@@ -337,3 +305,25 @@ Report for cell shift8
                                  IOLGC	       1.00        100.0
                                  IOREG	          1        100.0
                                 PFUREG	          7         1.7
+---------------------------------------------------
+Report for cell mypll
+   Instance path: vga_controller/firstblock
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")	          1         0.0
+---------------------------------------------------
+Report for cell mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")
+   Instance path: vga_controller/firstblock/lscc_pll_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell vga
+   Instance path: vga_controller/secondblock
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         51         2.0
+                               LUTGATE	         27         1.2
+                                LUTCCU	         24         5.8
+                                PFUREG	         20         4.8

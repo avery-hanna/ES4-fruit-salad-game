@@ -393,7 +393,7 @@ begin
 				--fruit_type(swap_fruit) <= active_fruit_type;
 				
 				active_fruit_type <= randomoutput;
-				active_fruit_type <= "00";
+				--active_fruit_type <= "00";
 			
 				--falloop_counter <= 0;
 			
