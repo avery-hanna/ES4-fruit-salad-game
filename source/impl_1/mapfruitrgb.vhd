@@ -25,7 +25,7 @@ else "010000" when (fruit_type="01" and color3 = "101")
 else "100100" when (fruit_type="01" and color3 = "110")
 --grapefruit
 else "111001" when (fruit_type="10" and color3="001")
-else "111010" when (fruit_type="10" and color3 = "010")
+else "110101" when (fruit_type="10" and color3 = "010")
 else "111111" when (fruit_type="10" and color3 = "011")
 --watermelon
 else "011001" when (fruit_type="11" and color3="001")

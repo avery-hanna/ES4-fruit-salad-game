@@ -1,0 +1,6 @@
+#Start recording tcl command: 12/9/2024 10:58:13
+#Project Location: Z:/Es4/ES4-fruit-salad-game; Project name: fruitSalad
+prj_open "Z:/Es4/ES4-fruit-salad-game/fruitSalad.rdf"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+#Stop recording: 12/9/2024 11:01:52
