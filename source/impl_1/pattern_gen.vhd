@@ -64,7 +64,7 @@ component digitROM is
   );
 end component;
 
-type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, SWAP, GAME_OVER, FALL_LOOP);
+type GAMESTATE is (START, MOVE_OFF, FRUIT_POS, FRUIT_FALLING, SWAP, GAME_OVER, FALL_LOOP);
 signal game_state : GAMESTATE := START;
 
 signal swap_fruit : integer;
@@ -136,6 +136,9 @@ signal startscreen_flashcol: std_logic_vector(9 downto 0);
 signal flashing_counter : unsigned(23 downto 0);
 signal flashingstart_counter : unsigned(23 downto 0);
 signal randomoutput: unsigned(1 downto 0);
+
+signal startRGB1: std_logic_vector(5 downto 0);
+signal startRGB2: std_logic_vector(5 downto 0);
 
 
 begin
@@ -235,24 +238,24 @@ begin
 		--end loop;
     --end process;
 	
-	--startRGB1 <= fruit_rgb_vals(1) when fruit_rgb_vals(1)  /= "000000" else 
-				--fruit_rgb_vals(2) when fruit_rgb_vals(2)  /= "000000" else 
-				--fruit_rgb_vals(3) when fruit_rgb_vals(3)  /= "000000" else 
-				--fruit_rgb_vals(4) when fruit_rgb_vals(4)  /= "000000" else 
-				--flashstartscreenRGB;
+	startRGB1 <= fruit_rgb_vals(1) when fruit_rgb_vals(1)  /= "000000" else 
+				fruit_rgb_vals(2) when fruit_rgb_vals(2)  /= "000000" else 
+				fruit_rgb_vals(3) when fruit_rgb_vals(3)  /= "000000" else 
+				fruit_rgb_vals(4) when fruit_rgb_vals(4)  /= "000000" else 
+				flashstartscreenRGB;
 
-	--startRGB2 <= fruit_rgb_vals(1) when fruit_rgb_vals(1)  /= "000000" else 
-				--fruit_rgb_vals(2) when fruit_rgb_vals(2)  /= "000000" else 
-				--fruit_rgb_vals(3) when fruit_rgb_vals(3)  /= "000000" else 
-				--fruit_rgb_vals(4) when fruit_rgb_vals(4)  /= "000000" else 
-				--startscreenRGB;
+	startRGB2 <= fruit_rgb_vals(1) when fruit_rgb_vals(1)  /= "000000" else 
+				fruit_rgb_vals(2) when fruit_rgb_vals(2)  /= "000000" else 
+				fruit_rgb_vals(3) when fruit_rgb_vals(3)  /= "000000" else 
+				fruit_rgb_vals(4) when fruit_rgb_vals(4)  /= "000000" else 
+				startscreenRGB;
 	
 	gameplay_RGB <= fruit_RGB when col >= 10d"74" else score_col_RGB;
 	
 	RGB <= "000000" when valid = '0' -- can be changed here and below
 			else gameplay_RGB when game_state=FRUIT_FALLING
-			else  flashstartscreenRGB when (flashingstart_counter(23)='0' and game_state=START) 
-			else startscreenRGB when (game_state = START and flashingstart_counter(23)='1')
+			else  startRGB1 when (flashingstart_counter(23)='0' and game_state=START) 
+			else startRGB2 when (game_state = START and flashingstart_counter(23)='1')
 			else ("000000" when flashing_counter(23) = '0' else gameplay_RGB) when game_state = GAME_OVER
 			else gameplay_RGB;
 
@@ -274,17 +277,27 @@ begin
 
 				active_fruit_type <= randomoutput;
 				
+				fruit_tl_row(1) <= 10d"400";
+				fruit_tl_col(1) <= 10d"10";
+				fruit_tl_row(2) <= 10d"400";
+				fruit_tl_col(2) <= 10d"50";
+				fruit_tl_row(3) <= 10d"400";
+				fruit_tl_col(3) <= 10d"50";
+				
+				swap_fruit <= 1;
+				
+				-- move state forward when button = start and button_prev is off
+				if button(4) = '0' and button_prev = "11111111" then
+					game_state <= MOVE_OFF;
+				end if;
+			elsif game_state = MOVE_OFF then
 				-- Position all other fruits off screen
 				for i in 1 to NUM_FRUITS loop
 					fruit_tl_row(i) <= 10d"700";
 					fruit_tl_col(i) <= 10d"700";
 				end loop;
-				swap_fruit <= 1;
-				
-				-- move state forward when button = start and button_prev is off
-				if button(4) = '0' and button_prev = "11111111" then
-					game_state <= FRUIT_POS;
-				end if;
+
+				game_state <= FRUIT_POS
 			elsif game_state = FRUIT_POS then
 				 --Left button pressed
 				if button(1) = '0' then
