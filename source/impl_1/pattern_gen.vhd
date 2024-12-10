@@ -242,12 +242,16 @@ begin
 				fruit_rgb_vals(2) when fruit_rgb_vals(2)  /= "000000" else 
 				fruit_rgb_vals(3) when fruit_rgb_vals(3)  /= "000000" else 
 				fruit_rgb_vals(4) when fruit_rgb_vals(4)  /= "000000" else 
+				fruit_rgb_vals(5) when fruit_rgb_vals(5)  /= "000000" else 
+				fruit_rgb_vals(6) when fruit_rgb_vals(6)  /= "000000" else 
 				flashstartscreenRGB;
 
 	startRGB2 <= fruit_rgb_vals(1) when fruit_rgb_vals(1)  /= "000000" else 
 				fruit_rgb_vals(2) when fruit_rgb_vals(2)  /= "000000" else 
 				fruit_rgb_vals(3) when fruit_rgb_vals(3)  /= "000000" else 
 				fruit_rgb_vals(4) when fruit_rgb_vals(4)  /= "000000" else 
+				fruit_rgb_vals(5) when fruit_rgb_vals(5)  /= "000000" else 
+				fruit_rgb_vals(6) when fruit_rgb_vals(6)  /= "000000" else 
 				startscreenRGB;
 	
 	gameplay_RGB <= fruit_RGB when col >= 10d"74" else score_col_RGB;
@@ -279,10 +283,27 @@ begin
 				
 				fruit_tl_row(1) <= 10d"400";
 				fruit_tl_col(1) <= 10d"10";
+				fruit_type(1) <= "00";
+				
 				fruit_tl_row(2) <= 10d"400";
-				fruit_tl_col(2) <= 10d"50";
+				fruit_tl_col(2) <= 10d"80";
+				fruit_type(2) <= "10";
+
 				fruit_tl_row(3) <= 10d"400";
-				fruit_tl_col(3) <= 10d"50";
+				fruit_tl_col(3) <= 10d"150";
+				fruit_type(3) <= "01";
+				
+				fruit_tl_row(4) <= 10d"400";
+				fruit_tl_col(4) <= 10d"300";
+				fruit_type(4) <= "11";
+				
+				fruit_tl_row(5) <= 10d"400";
+				fruit_tl_col(5) <= 10d"380";
+				fruit_type(5) <= "10";
+				
+				fruit_tl_row(6) <= 10d"400";
+				fruit_tl_col(6) <= 10d"500";
+				fruit_type(6) <= "01";
 				
 				swap_fruit <= 1;
 				
@@ -297,7 +318,7 @@ begin
 					fruit_tl_col(i) <= 10d"700";
 				end loop;
 
-				game_state <= FRUIT_POS
+				game_state <= FRUIT_POS;
 			elsif game_state = FRUIT_POS then
 				 --Left button pressed
 				if button(1) = '0' then
