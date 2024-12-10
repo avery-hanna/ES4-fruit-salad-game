@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Dec  9 22:50:14 2024
+Tue Dec 10 12:17:48 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
@@ -348,7 +348,7 @@ FD1P3XZ => 413
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 1
-LUT4 => 2062
+LUT4 => 2048
 MAC16 => 1
 OB => 21
 PLL_B => 1
@@ -367,16 +367,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/n3, loads : 215
-  Net : thirdblock/game_state[0], loads : 183
-  Net : thirdblock/game_state[1], loads : 164
+  Net : thirdblock/n3, loads : 216
+  Net : thirdblock/game_state[0], loads : 184
+  Net : thirdblock/game_state[1], loads : 166
   Net : thirdblock/n1300, loads : 130
-  Net : thirdblock/falloop_counter[0], loads : 124
-  Net : thirdblock/game_state[2], loads : 48
+  Net : thirdblock/falloop_counter[0], loads : 120
+  Net : thirdblock/n6_adj_2297, loads : 52
+  Net : thirdblock/game_state[2], loads : 49
   Net : thirdblock/falloop_counter[2], loads : 43
-  Net : thirdblock/n5892, loads : 42
-  Net : thirdblock/falloop_counter[1], loads : 37
-  Net : thirdblock/n5891, loads : 32
+  Net : thirdblock/falloop_counter[1], loads : 41
+  Net : thirdblock/n5892, loads : 41
 ################### End Clock Report ##################
 
 Peak Memory Usage: 209 MB

@@ -23,7 +23,7 @@ entity getRandomFruit is
 				end if;
 			end if;
 		end process;
-		fruitout <= unsigned(randgenerator(3 downto 2));
+		fruitout <= unsigned(randgenerator(3 downto 2)) when unsigned(randgenerator(3 downto 2)) /= "11" else "00";
 		end;
 				
 					
