@@ -466,6 +466,22 @@
             <Navigation>13</Navigation>
         </Message>
         <Message>
+            <ID>35921012</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/mapfruitrgb.vhd(5): </Dynamic>
+            <Dynamic>maprgb</Dynamic>
+            <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/mapfruitrgb.vhd</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>1</Severity>
+            <Dynamic>z:/es4/finalproj/fruitsalad/source/impl_1/mapfruitrgb.vhd(13): </Dynamic>
+            <Dynamic>synth</Dynamic>
+            <Navigation>z:/es4/finalproj/fruitsalad/source/impl_1/mapfruitrgb.vhd</Navigation>
+            <Navigation>13</Navigation>
+        </Message>
+        <Message>
             <ID>35935049</ID>
             <Severity>16</Severity>
             <Dynamic>sclk_i</Dynamic>
@@ -553,6 +569,11 @@
         </Message>
     </Task>
     <Task name="Export">
+        <Message>
+            <ID>1081100</ID>
+            <Severity>1</Severity>
+            <Dynamic>Bitstream authenticated.</Dynamic>
+        </Message>
         <Message>
             <ID>1191031</ID>
             <Severity>1</Severity>

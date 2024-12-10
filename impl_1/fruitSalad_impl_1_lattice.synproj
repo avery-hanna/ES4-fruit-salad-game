@@ -58,6 +58,7 @@
 "Z:/es4/finalproj/fruitSalad/source/impl_1/get_randomfruit.vhd"
 "Z:/es4/finalproj/fruitSalad/source/impl_1/digitROM.vhd"
 "Z:/es4/finalproj/fruitSalad/source/impl_1/dddd.vhd"
+"Z:/es4/finalproj/fruitSalad/source/impl_1/mapfruitrgb.vhd"
 
 
 -path "Z:/es4/finalproj/fruitSalad"

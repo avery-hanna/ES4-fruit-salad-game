@@ -10,35 +10,46 @@ I/O cells:      23
                          HSOSC_CORE         1          100.0
                                  IB         2          100.0
                               IOL_B         1          100.0
-                               LUT4      2533          100.0
+                               LUT4      2055          100.0
                               MAC16         1          100.0
                                  OB        21          100.0
                               PLL_B         1          100.0
 SUB MODULES
                                dddd         1
                            digitROM         1
-                        digitROM_U0         1
+                       digitROM_U10         1
                            fruitROM         1
-                        fruitROM_U1         1
                        fruitROM_U11         1
-                        fruitROM_U2         1
-                        fruitROM_U3         1
-                        fruitROM_U4         1
-                        fruitROM_U5         1
-                        fruitROM_U6         1
-                        fruitROM_U7         1
-                        fruitROM_U8         1
-                        fruitROM_U9         1
+                       fruitROM_U12         1
+                       fruitROM_U13         1
+                       fruitROM_U14         1
+                       fruitROM_U15         1
+                       fruitROM_U16         1
+                       fruitROM_U17         1
+                       fruitROM_U18         1
+                       fruitROM_U19         1
+                       fruitROM_U21         1
                      getRandomFruit         1
+                             maprgb         1
+                          maprgb_U0         1
+                          maprgb_U1         1
+                          maprgb_U2         1
+                          maprgb_U3         1
+                          maprgb_U4         1
+                          maprgb_U5         1
+                          maprgb_U6         1
+                          maprgb_U7         1
+                          maprgb_U8         1
+                          maprgb_U9         1
                               mypll         1
 mypll_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")         1
                          nesclk_top         1
                         pattern_gen         1
                              shift8         1
                      startscreenROM         1
-                 startscreenROM_U10         1
+                 startscreenROM_U20         1
                                 vga         1
-                              TOTAL      3227
+                              TOTAL      2760
 ----------------------------------------------------------------------
 Report for cell pattern_gen.v1
 Instance Path : thirdblock
@@ -47,35 +58,46 @@ Instance Path : thirdblock
                               EBR_B        23          100.0
                                 FA2       187           89.9
                             FD1P3XZ       369           89.3
-                               LUT4      2454           96.9
+                               LUT4      1970           95.9
                               MAC16         1          100.0
 SUB MODULES
                                dddd         1
                            digitROM         1
-                        digitROM_U0         1
+                       digitROM_U10         1
                            fruitROM         1
-                        fruitROM_U1         1
                        fruitROM_U11         1
-                        fruitROM_U2         1
-                        fruitROM_U3         1
-                        fruitROM_U4         1
-                        fruitROM_U5         1
-                        fruitROM_U6         1
-                        fruitROM_U7         1
-                        fruitROM_U8         1
-                        fruitROM_U9         1
+                       fruitROM_U12         1
+                       fruitROM_U13         1
+                       fruitROM_U14         1
+                       fruitROM_U15         1
+                       fruitROM_U16         1
+                       fruitROM_U17         1
+                       fruitROM_U18         1
+                       fruitROM_U19         1
+                       fruitROM_U21         1
                      getRandomFruit         1
+                             maprgb         1
+                          maprgb_U0         1
+                          maprgb_U1         1
+                          maprgb_U2         1
+                          maprgb_U3         1
+                          maprgb_U4         1
+                          maprgb_U5         1
+                          maprgb_U6         1
+                          maprgb_U7         1
+                          maprgb_U8         1
+                          maprgb_U9         1
                      startscreenROM         1
-                 startscreenROM_U10         1
-                              TOTAL      3051
+                 startscreenROM_U20         1
+                              TOTAL      2578
 ----------------------------------------------------------------------
 Report for cell digitROM.v1
 Instance Path : thirdblock.tens_place_rom
                                   Cell usage:
                                cell     count   Res Usage(%)
                             FD1P3XZ         1            0.2
-                               LUT4        21            0.8
-                              TOTAL        22
+                               LUT4         8            0.4
+                              TOTAL         9
 ----------------------------------------------------------------------
 Report for cell startscreenROM.v1
 Instance Path : thirdblock.start_screen
@@ -92,118 +114,217 @@ Instance Path : thirdblock.randomfruit
                                LUT4         1            0.0
                               TOTAL         5
 ----------------------------------------------------------------------
-Report for cell digitROM_U0.v1
+Report for cell digitROM_U10.v1
 Instance Path : thirdblock.ones_place_rom
                                   Cell usage:
                                cell     count   Res Usage(%)
                             FD1P3XZ         1            0.2
-                               LUT4        24            0.9
-                              TOTAL        25
+                               LUT4        28            1.4
+                              TOTAL        29
 ----------------------------------------------------------------------
 Report for cell fruitROM.v1
 Instance Path : thirdblock.gen_fruit_roms[9].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
                               EBR_B         1            4.3
-                               LUT4        83            3.3
-                              TOTAL        84
+                               LUT4        45            2.2
+SUB MODULES
+                             maprgb         1
+                              TOTAL        47
 ----------------------------------------------------------------------
-Report for cell fruitROM_U1.v1
+Report for cell maprgb.v1
+Instance Path : thirdblock.gen_fruit_roms[9].fruit_rom_instance.mappingrgb
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        42            2.0
+                              TOTAL        42
+----------------------------------------------------------------------
+Report for cell fruitROM_U11.v1
 Instance Path : thirdblock.gen_fruit_roms[8].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
                               EBR_B         1            4.3
-                               LUT4        87            3.4
-                              TOTAL        88
+                               LUT4        36            1.8
+SUB MODULES
+                          maprgb_U0         1
+                              TOTAL        38
 ----------------------------------------------------------------------
-Report for cell fruitROM_U2.v1
+Report for cell maprgb_U0.v1
+Instance Path : thirdblock.gen_fruit_roms[8].fruit_rom_instance.mappingrgb
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         3            0.1
+                              TOTAL         3
+----------------------------------------------------------------------
+Report for cell fruitROM_U12.v1
 Instance Path : thirdblock.gen_fruit_roms[7].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
                               EBR_B         1            4.3
-                               LUT4        85            3.4
-                              TOTAL        86
+                               LUT4        44            2.1
+SUB MODULES
+                          maprgb_U1         1
+                              TOTAL        46
 ----------------------------------------------------------------------
-Report for cell fruitROM_U3.v1
+Report for cell maprgb_U1.v1
+Instance Path : thirdblock.gen_fruit_roms[7].fruit_rom_instance.mappingrgb
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        44            2.1
+                              TOTAL        44
+----------------------------------------------------------------------
+Report for cell fruitROM_U13.v1
 Instance Path : thirdblock.gen_fruit_roms[6].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
                               EBR_B         1            4.3
-                               LUT4        87            3.4
-                              TOTAL        88
+                               LUT4        47            2.3
+SUB MODULES
+                          maprgb_U2         1
+                              TOTAL        49
 ----------------------------------------------------------------------
-Report for cell fruitROM_U4.v1
+Report for cell maprgb_U2.v1
+Instance Path : thirdblock.gen_fruit_roms[6].fruit_rom_instance.mappingrgb
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        47            2.3
+                              TOTAL        47
+----------------------------------------------------------------------
+Report for cell fruitROM_U14.v1
 Instance Path : thirdblock.gen_fruit_roms[5].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
                               EBR_B         1            4.3
-                               LUT4        87            3.4
-                              TOTAL        88
+                               LUT4        41            2.0
+SUB MODULES
+                          maprgb_U3         1
+                              TOTAL        43
 ----------------------------------------------------------------------
-Report for cell fruitROM_U5.v1
+Report for cell maprgb_U3.v1
+Instance Path : thirdblock.gen_fruit_roms[5].fruit_rom_instance.mappingrgb
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        41            2.0
+                              TOTAL        41
+----------------------------------------------------------------------
+Report for cell fruitROM_U15.v1
 Instance Path : thirdblock.gen_fruit_roms[4].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
                               EBR_B         1            4.3
-                               LUT4        86            3.4
-                              TOTAL        87
+                               LUT4        41            2.0
+SUB MODULES
+                          maprgb_U4         1
+                              TOTAL        43
 ----------------------------------------------------------------------
-Report for cell fruitROM_U6.v1
+Report for cell maprgb_U4.v1
+Instance Path : thirdblock.gen_fruit_roms[4].fruit_rom_instance.mappingrgb
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        41            2.0
+                              TOTAL        41
+----------------------------------------------------------------------
+Report for cell fruitROM_U16.v1
 Instance Path : thirdblock.gen_fruit_roms[3].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
                               EBR_B         1            4.3
-                               LUT4        87            3.4
-                              TOTAL        88
+                               LUT4        47            2.3
+SUB MODULES
+                          maprgb_U5         1
+                              TOTAL        49
 ----------------------------------------------------------------------
-Report for cell fruitROM_U7.v1
+Report for cell maprgb_U5.v1
+Instance Path : thirdblock.gen_fruit_roms[3].fruit_rom_instance.mappingrgb
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        47            2.3
+                              TOTAL        47
+----------------------------------------------------------------------
+Report for cell fruitROM_U17.v1
 Instance Path : thirdblock.gen_fruit_roms[2].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
                               EBR_B         1            4.3
-                               LUT4        87            3.4
-                              TOTAL        88
+                               LUT4        41            2.0
+SUB MODULES
+                          maprgb_U6         1
+                              TOTAL        43
 ----------------------------------------------------------------------
-Report for cell fruitROM_U8.v1
+Report for cell maprgb_U6.v1
+Instance Path : thirdblock.gen_fruit_roms[2].fruit_rom_instance.mappingrgb
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        41            2.0
+                              TOTAL        41
+----------------------------------------------------------------------
+Report for cell fruitROM_U18.v1
 Instance Path : thirdblock.gen_fruit_roms[1].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
                               EBR_B         1            4.3
-                               LUT4        86            3.4
-                              TOTAL        87
+                               LUT4        37            1.8
+SUB MODULES
+                          maprgb_U7         1
+                              TOTAL        39
 ----------------------------------------------------------------------
-Report for cell fruitROM_U9.v1
+Report for cell maprgb_U7.v1
+Instance Path : thirdblock.gen_fruit_roms[1].fruit_rom_instance.mappingrgb
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        37            1.8
+                              TOTAL        37
+----------------------------------------------------------------------
+Report for cell fruitROM_U19.v1
 Instance Path : thirdblock.gen_fruit_roms[10].fruit_rom_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
                               EBR_B         1            4.3
-                               LUT4        83            3.3
-                              TOTAL        84
+                               LUT4        44            2.1
+SUB MODULES
+                          maprgb_U8         1
+                              TOTAL        46
 ----------------------------------------------------------------------
-Report for cell startscreenROM_U10.v1
+Report for cell maprgb_U8.v1
+Instance Path : thirdblock.gen_fruit_roms[10].fruit_rom_instance.mappingrgb
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        42            2.0
+                              TOTAL        42
+----------------------------------------------------------------------
+Report for cell startscreenROM_U20.v1
 Instance Path : thirdblock.flashstart_screen
                                   Cell usage:
                                cell     count   Res Usage(%)
                               EBR_B         6           26.1
                             FD1P3XZ         1            0.2
-                               LUT4         6            0.2
+                               LUT4         6            0.3
                               TOTAL        13
 ----------------------------------------------------------------------
 Report for cell dddd.v1
 Instance Path : thirdblock.dddd_instance
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4        10            0.4
+                               LUT4        10            0.5
                               MAC16         1          100.0
                               TOTAL        11
 ----------------------------------------------------------------------
-Report for cell fruitROM_U11.v1
+Report for cell fruitROM_U21.v1
 Instance Path : thirdblock.active_fruit
                                   Cell usage:
                                cell     count   Res Usage(%)
                               EBR_B         1            4.3
-                               LUT4        68            2.7
-                              TOTAL        69
+                               LUT4        25            1.2
+SUB MODULES
+                          maprgb_U9         1
+                              TOTAL        27
+----------------------------------------------------------------------
+Report for cell maprgb_U9.v1
+Instance Path : thirdblock.active_fruit.mappingrgb
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        25            1.2
+                              TOTAL        25
 ----------------------------------------------------------------------
 Report for cell vga.v1
 Instance Path : secondblock
@@ -211,8 +332,8 @@ Instance Path : secondblock
                                cell     count   Res Usage(%)
                                 FA2        12            5.8
                             FD1P3XZ        20            4.8
-                               LUT4        26            1.0
-                              TOTAL        58
+                               LUT4        34            1.7
+                              TOTAL        66
 ----------------------------------------------------------------------
 Report for cell mypll.v1
 Instance Path : firstblock
@@ -238,7 +359,7 @@ Instance Path : nesblock
                             FD1P3XZ        24            5.8
                          HSOSC_CORE         1          100.0
                               IOL_B         1          100.0
-                               LUT4        16            0.6
+                               LUT4        16            0.8
 SUB MODULES
                              shift8         1
                               TOTAL        52
