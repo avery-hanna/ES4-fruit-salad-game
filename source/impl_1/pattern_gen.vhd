@@ -78,7 +78,7 @@ signal active_fruit_rom_col : std_logic_vector (3 downto 0);
 
 signal reset_random : std_logic;
 
-constant NUM_FRUITS : integer := 10;
+constant NUM_FRUITS : integer := 15;
 
 type unsigned_coord_array is array(1 to NUM_FRUITS) of unsigned(9 downto 0);
 type type_array is array(1 to NUM_FRUITS) of unsigned(1 downto 0);
@@ -107,13 +107,16 @@ signal startscreenrow: std_logic_vector(4 downto 0);
 signal startscreencol: std_logic_vector(6 downto 0);
 
 signal flash_startscreenrow: std_logic_vector(4 downto 0);
-signal flash_startscreencol: std_logic_vector(6 downto 0);
+--signal flash_startscreencol: std_logic_vector(6 downto 0);
+
+signal startscreen_tl_row: unsigned(9 downto 0);
+--signal startscreen_tl_col: unsigned(9 downto 0);
 
 signal startscreen_relativerow: std_logic_vector(9 downto 0);
 signal startscreen_relativecol: std_logic_vector(9 downto 0);
 
 signal startscreen_flashrow: std_logic_vector(9 downto 0);
-signal startscreen_flashcol: std_logic_vector(9 downto 0);
+--signal startscreen_flashcol: std_logic_vector(9 downto 0);
 
 --signal flashing_screen_RGB : std_logic_vector(5 downto 0);
 signal flashing_counter : unsigned(23 downto 0);
@@ -124,26 +127,26 @@ signal randomoutput: unsigned(1 downto 0);
 begin
 	led <= '1' when game_state = GAME_OVER else '0';
 	
+	--startscreen_tl_row <= "0001011000" when flashingstart_counter(23) = '1' else "0001000000";
+	--startscreen_tl_col <= "0001000100" when flashingstart_counter(23) = '1' else "0000111000";
 	startscreen_relativerow <= std_logic_vector(unsigned(row) - "001011000"); 
-	startscreen_relativecol <= std_logic_vector(unsigned(col) - "001000100");
+	startscreen_relativecol <= std_logic_vector(unsigned(col) - "0001000100");
 	
 	startscreen_flashrow <= std_logic_vector(unsigned(row) - "001000000"); 
-	startscreen_flashcol <= std_logic_vector(unsigned(col) - "000111000");
+	--startscreen_flashcol <= std_logic_vector(unsigned(col) - "000111000");
 
-	startscreenrow <= startscreen_relativerow(7 downto 3) when startscreen_relativerow(9 downto 8)="00" 
-	else "00000";
+	startscreenrow <= startscreen_relativerow(7 downto 3) when startscreen_relativerow(9 downto 8)="00"  else "00000";
 	
-	startscreencol <= startscreen_relativecol(8 downto 2) when startscreen_relativecol(9)='0' 
-	else "0000000";
+	startscreencol <= startscreen_relativecol(8 downto 2) when startscreen_relativecol(9)='0' else "0000000";
 	
 	flash_startscreenrow <= startscreen_flashrow(7 downto 3) when startscreen_flashrow(9 downto 8)="00" 
 	else "00000";
 	
-	flash_startscreencol <= startscreen_relativecol(8 downto 2) when startscreen_relativecol(9)='0' 
-	else "0000000";
+	--flash_startscreencol <= startscreen_relativecol(8 downto 2) when startscreen_relativecol(9)='0' 
+	--else "0000000";
 	
-	start_screen : startscreenROM port map(startscreenrow, startscreencol, clk, startscreenRGB);
-	flashstart_screen : startscreenROM port map(flash_startscreenrow,flash_startscreencol, clk, flashstartscreenRGB);
+	start_screen : startscreenROM port map(startscreenrow when flashingstart_counter(23) = '1' else flash_startscreenrow, startscreencol, clk, startscreenRGB);
+	--flashstart_screen : startscreenROM port map(flash_startscreenrow,flash_startscreencol, clk, flashstartscreenRGB);
 					  
 	score_col_display : score_display port map(score, row, col, clk, score_col_RGB);
 	
@@ -187,6 +190,11 @@ begin
     end process;
 	
 	fruit_RGB <= active_fruit_RGB when (active_fruit_RGB /= "000000")
+				 else fruit_rgb_vals(15) when (fruit_rgb_vals(15) /= "000000")
+				 else fruit_rgb_vals(14) when (fruit_rgb_vals(14) /= "000000")
+				 else fruit_rgb_vals(13) when (fruit_rgb_vals(13) /= "000000")
+				 else fruit_rgb_vals(12) when (fruit_rgb_vals(12) /= "000000")
+				 else fruit_rgb_vals(11) when (fruit_rgb_vals(11) /= "000000")
 				 else fruit_rgb_vals(10) when (fruit_rgb_vals(10) /= "000000")
 				 else fruit_rgb_vals(9) when (fruit_rgb_vals(9) /= "000000")
 				 else fruit_rgb_vals(8) when (fruit_rgb_vals(8) /= "000000")
@@ -224,8 +232,9 @@ begin
 	
 	RGB <= "000000" when valid = '0' -- can be changed here and below
 			else gameplay_RGB when game_state=FRUIT_FALLING
-			else  flashstartscreenRGB when (flashingstart_counter(23)='0' and game_state=START) 
-			else startscreenRGB when (game_state = START and flashingstart_counter(23)='1')
+			--else  flashstartscreenRGB when (flashingstart_counter(23)='0' and game_state=START) 
+			--else startscreenRGB when (game_state = START and flashingstart_counter(23)='1') 
+			else startscreenRGB when game_state = START
 			else ("000000" when flashing_counter(23) = '0' else gameplay_RGB) when game_state = GAME_OVER
 			else gameplay_RGB;
 

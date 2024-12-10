@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2023.1.0.43.3
 
-Tue Dec 10 10:26:29 2024
+Tue Dec 10 11:07:35 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -55,7 +55,7 @@ create_clock -name {nesblock/clk} -period 20.8333 [get_pins {nesblock/instanceos
 
 1.2  Constraint Coverage
 ---------------------------
-Constraint Coverage: 0.909982%
+Constraint Coverage: 0.674134%
 
 
 1.3  Overall Summary
@@ -78,23 +78,24 @@ Clocked but unconstrained timing end points
 -------------------------------------------------------------------
          Listing 10 End Points          |           Type           
 -------------------------------------------------------------------
-thirdblock/flashingstart_counter_3675__i1/D                           
-                                        |    No arrival or required
-thirdblock/flashing_counter_23__I_0/D   |    No arrival or required
-thirdblock/flashing_counter_23__I_0/SP  |    No arrival or required
-thirdblock/flashing_counter_3677__i23/D |    No arrival or required
-thirdblock/flashing_counter_3677__i22/D |    No arrival or required
-{thirdblock/flashing_counter_3677__i22/SP   thirdblock/flashing_counter_3677__i23/SP}                           
-                                        |    No arrival or required
-thirdblock/flashing_counter_3677__i21/D |    No arrival or required
-thirdblock/flashing_counter_3677__i20/D |    No arrival or required
-{thirdblock/flashing_counter_3677__i20/SP   thirdblock/flashing_counter_3677__i21/SP}                           
-                                        |    No arrival or required
-thirdblock/flashing_counter_3677__i19/D |    No arrival or required
+thirdblock/counter_16__I_232/D          |    No arrival or required
+thirdblock/counter_16__I_233/D          |    No arrival or required
+{thirdblock/counter_16__I_233/SP   thirdblock/counter_16__I_232/SP}                           
+                                        |          No required time
+{thirdblock/counter_16__I_233/SR   thirdblock/counter_16__I_232/SR}                           
+                                        |          No required time
+thirdblock/counter_16__I_234/D          |    No arrival or required
+thirdblock/counter_16__I_235/D          |    No arrival or required
+{thirdblock/counter_16__I_235/SP   thirdblock/counter_16__I_234/SP}                           
+                                        |          No required time
+{thirdblock/counter_16__I_235/SR   thirdblock/counter_16__I_234/SR}                           
+                                        |          No required time
+thirdblock/counter_16__I_236/D          |    No arrival or required
+thirdblock/counter_16__I_237/D          |    No arrival or required
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing end poin |                          
-ts                                      |                       682
+ts                                      |                       897
                                         |                          
 -------------------------------------------------------------------
 
@@ -149,28 +150,28 @@ nition                                  |                         1
 Combinational Loops
 -------------------
 ++++ Loop1
-nesblock/output_2__I_0_2/A	->	nesblock/output_2__I_0_2/Z
-
-++++ Loop2
-nesblock/output_1__I_0_2/A	->	nesblock/output_1__I_0_2/Z
-
-++++ Loop3
-nesblock/output_3__I_0_2/A	->	nesblock/output_3__I_0_2/Z
-
-++++ Loop4
-nesblock/output_4__I_0_2/A	->	nesblock/output_4__I_0_2/Z
-
-++++ Loop5
-nesblock/output_5__I_0_2/A	->	nesblock/output_5__I_0_2/Z
-
-++++ Loop6
-nesblock/output_6__I_0_2/A	->	nesblock/output_6__I_0_2/Z
-
-++++ Loop7
 nesblock/output_7__I_0_2/A	->	nesblock/output_7__I_0_2/Z
 
-++++ Loop8
+++++ Loop2
+nesblock/output_4__I_0_2/A	->	nesblock/output_4__I_0_2/Z
+
+++++ Loop3
+nesblock/output_1__I_0_2/A	->	nesblock/output_1__I_0_2/Z
+
+++++ Loop4
 nesblock/output_0__I_0_2/A	->	nesblock/output_0__I_0_2/Z
+
+++++ Loop5
+nesblock/output_2__I_0_2/A	->	nesblock/output_2__I_0_2/Z
+
+++++ Loop6
+nesblock/output_3__I_0_2/A	->	nesblock/output_3__I_0_2/Z
+
+++++ Loop7
+nesblock/output_5__I_0_2/A	->	nesblock/output_5__I_0_2/Z
+
+++++ Loop8
+nesblock/output_6__I_0_2/A	->	nesblock/output_6__I_0_2/Z
 
 
 1.6  Error/Warning Messages
@@ -261,8 +262,8 @@ nesblock/NEScount_7__I_22/D              |   12.143 ns
 nesblock/NEScount_7__I_23/D              |   12.420 ns 
 nesblock/NEScount_7__I_24/D              |   12.697 ns 
 nesblock/NEScount_7__I_25/D              |   12.974 ns 
-nesblock/NEScount_7__I_202/D             |   13.251 ns 
-nesblock/counter_3674_3979__i8/D         |   13.528 ns 
+nesblock/NEScount_7__I_247/D             |   13.251 ns 
+nesblock/counter_5018_5415__i8/D         |   13.528 ns 
 -------------------------------------------------------
                                          |             
 Setup # of endpoints with negative slack:|           0 
@@ -285,8 +286,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : nesblock/counter_3674_3979__i1/Q  (SLICE_R22C25A)
-Path End         : nesblock/NEScount_7__I_0_2/D  (SLICE_R22C27A)
+Path Begin       : nesblock/counter_5018_5415__i1/Q  (SLICE_R25C5A)
+Path End         : nesblock/NEScount_7__I_0_2/D  (SLICE_R25C7A)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 18
@@ -301,65 +302,65 @@ Name                                      Cell/Site Name     Delay Name         
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  10      
 nesblock/clk                                                 NET DELAY               5.499                  5.499  10      
-nesblock/counter_3674_3979__i1/CK                                                    0.000                  5.499  1       
+nesblock/counter_5018_5415__i1/CK                                                    0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-nesblock/counter_3674_3979__i1/CK->nesblock/counter_3674_3979__i1/Q
-                                          SLICE_R22C25A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+nesblock/counter_5018_5415__i1/CK->nesblock/counter_5018_5415__i1/Q
+                                          SLICE_R25C5A       CLK_TO_Q1_DELAY         1.388                  6.887  1       
 nesblock/n17                                                 NET DELAY               2.022                  8.909  1       
-nesblock/counter_3674_3979_add_4_1/C1->nesblock/counter_3674_3979_add_4_1/CO1
-                                          SLICE_R22C25A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-nesblock/n19667                                              NET DELAY               0.000                  9.252  2       
-nesblock/counter_3674_3979_add_4_3/CI0->nesblock/counter_3674_3979_add_4_3/CO0
-                                          SLICE_R22C25B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-nesblock/n31214                                              NET DELAY               0.000                  9.529  2       
-nesblock/counter_3674_3979_add_4_3/CI1->nesblock/counter_3674_3979_add_4_3/CO1
-                                          SLICE_R22C25B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-nesblock/n19669                                              NET DELAY               0.000                  9.806  2       
-nesblock/counter_3674_3979_add_4_5/CI0->nesblock/counter_3674_3979_add_4_5/CO0
-                                          SLICE_R22C25C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-nesblock/n31217                                              NET DELAY               0.000                 10.083  2       
-nesblock/counter_3674_3979_add_4_5/CI1->nesblock/counter_3674_3979_add_4_5/CO1
-                                          SLICE_R22C25C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-nesblock/n19671                                              NET DELAY               0.000                 10.360  2       
-nesblock/counter_3674_3979_add_4_7/CI0->nesblock/counter_3674_3979_add_4_7/CO0
-                                          SLICE_R22C25D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-nesblock/n31220                                              NET DELAY               0.000                 10.637  2       
-nesblock/counter_3674_3979_add_4_7/CI1->nesblock/counter_3674_3979_add_4_7/CO1
-                                          SLICE_R22C25D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-nesblock/n19673                                              NET DELAY               0.555                 11.469  2       
-nesblock/counter_3674_3979_add_4_9/CI0->nesblock/counter_3674_3979_add_4_9/CO0
-                                          SLICE_R22C26A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-nesblock/n31223                                              NET DELAY               0.000                 11.746  2       
-nesblock/counter_3674_3979_add_4_9/CI1->nesblock/counter_3674_3979_add_4_9/CO1
-                                          SLICE_R22C26A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-nesblock/n19675                                              NET DELAY               0.000                 12.023  2       
-nesblock/counter_3674_3979_add_4_11/CI0->nesblock/counter_3674_3979_add_4_11/CO0
-                                          SLICE_R22C26B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
-nesblock/n31226                                              NET DELAY               0.000                 12.300  2       
-nesblock/counter_3674_3979_add_4_11/CI1->nesblock/counter_3674_3979_add_4_11/CO1
-                                          SLICE_R22C26B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
-nesblock/n19677                                              NET DELAY               0.000                 12.577  2       
-nesblock/counter_3674_3979_add_4_13/CI0->nesblock/counter_3674_3979_add_4_13/CO0
-                                          SLICE_R22C26C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
-nesblock/n31229                                              NET DELAY               0.000                 12.854  2       
-nesblock/counter_3674_3979_add_4_13/CI1->nesblock/counter_3674_3979_add_4_13/CO1
-                                          SLICE_R22C26C      CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
-nesblock/n19679                                              NET DELAY               0.000                 13.131  2       
-nesblock/counter_3674_3979_add_4_15/CI0->nesblock/counter_3674_3979_add_4_15/CO0
-                                          SLICE_R22C26D      CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
-nesblock/n31232                                              NET DELAY               0.000                 13.408  2       
-nesblock/counter_3674_3979_add_4_15/CI1->nesblock/counter_3674_3979_add_4_15/CO1
-                                          SLICE_R22C26D      CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
-nesblock/n19681                                              NET DELAY               0.555                 14.240  2       
-nesblock/counter_3674_3979_add_4_17/CI0->nesblock/counter_3674_3979_add_4_17/CO0
-                                          SLICE_R22C27A      CIN0_TO_COUT0_DELAY     0.277                 14.517  2       
-nesblock/n31235                                              NET DELAY               0.661                 15.178  2       
-nesblock/counter_3674_3979_add_4_17/D1->nesblock/counter_3674_3979_add_4_17/S1
-                                          SLICE_R22C27A      D1_TO_F1_DELAY          0.476                 15.654  1       
+nesblock/counter_5018_5415_add_4_1/C1->nesblock/counter_5018_5415_add_4_1/CO1
+                                          SLICE_R25C5A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+nesblock/n22377                                              NET DELAY               0.000                  9.252  2       
+nesblock/counter_5018_5415_add_4_3/CI0->nesblock/counter_5018_5415_add_4_3/CO0
+                                          SLICE_R25C5B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+nesblock/n37180                                              NET DELAY               0.000                  9.529  2       
+nesblock/counter_5018_5415_add_4_3/CI1->nesblock/counter_5018_5415_add_4_3/CO1
+                                          SLICE_R25C5B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+nesblock/n22379                                              NET DELAY               0.000                  9.806  2       
+nesblock/counter_5018_5415_add_4_5/CI0->nesblock/counter_5018_5415_add_4_5/CO0
+                                          SLICE_R25C5C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+nesblock/n37183                                              NET DELAY               0.000                 10.083  2       
+nesblock/counter_5018_5415_add_4_5/CI1->nesblock/counter_5018_5415_add_4_5/CO1
+                                          SLICE_R25C5C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+nesblock/n22381                                              NET DELAY               0.000                 10.360  2       
+nesblock/counter_5018_5415_add_4_7/CI0->nesblock/counter_5018_5415_add_4_7/CO0
+                                          SLICE_R25C5D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+nesblock/n37186                                              NET DELAY               0.000                 10.637  2       
+nesblock/counter_5018_5415_add_4_7/CI1->nesblock/counter_5018_5415_add_4_7/CO1
+                                          SLICE_R25C5D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+nesblock/n22383                                              NET DELAY               0.555                 11.469  2       
+nesblock/counter_5018_5415_add_4_9/CI0->nesblock/counter_5018_5415_add_4_9/CO0
+                                          SLICE_R25C6A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+nesblock/n37189                                              NET DELAY               0.000                 11.746  2       
+nesblock/counter_5018_5415_add_4_9/CI1->nesblock/counter_5018_5415_add_4_9/CO1
+                                          SLICE_R25C6A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+nesblock/n22385                                              NET DELAY               0.000                 12.023  2       
+nesblock/counter_5018_5415_add_4_11/CI0->nesblock/counter_5018_5415_add_4_11/CO0
+                                          SLICE_R25C6B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+nesblock/n37192                                              NET DELAY               0.000                 12.300  2       
+nesblock/counter_5018_5415_add_4_11/CI1->nesblock/counter_5018_5415_add_4_11/CO1
+                                          SLICE_R25C6B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+nesblock/n22387                                              NET DELAY               0.000                 12.577  2       
+nesblock/counter_5018_5415_add_4_13/CI0->nesblock/counter_5018_5415_add_4_13/CO0
+                                          SLICE_R25C6C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+nesblock/n37195                                              NET DELAY               0.000                 12.854  2       
+nesblock/counter_5018_5415_add_4_13/CI1->nesblock/counter_5018_5415_add_4_13/CO1
+                                          SLICE_R25C6C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+nesblock/n22389                                              NET DELAY               0.000                 13.131  2       
+nesblock/counter_5018_5415_add_4_15/CI0->nesblock/counter_5018_5415_add_4_15/CO0
+                                          SLICE_R25C6D       CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+nesblock/n37198                                              NET DELAY               0.000                 13.408  2       
+nesblock/counter_5018_5415_add_4_15/CI1->nesblock/counter_5018_5415_add_4_15/CO1
+                                          SLICE_R25C6D       CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+nesblock/n22391                                              NET DELAY               0.555                 14.240  2       
+nesblock/counter_5018_5415_add_4_17/CI0->nesblock/counter_5018_5415_add_4_17/CO0
+                                          SLICE_R25C7A       CIN0_TO_COUT0_DELAY     0.277                 14.517  2       
+nesblock/n37201                                              NET DELAY               0.661                 15.178  2       
+nesblock/counter_5018_5415_add_4_17/D1->nesblock/counter_5018_5415_add_4_17/S1
+                                          SLICE_R25C7A       D1_TO_F1_DELAY          0.476                 15.654  1       
 nesblock/NEScount_7__N_59[16]                                NET DELAY               0.000                 15.654  1       
 nesblock/NEScount_7__I_0_2/D                                                         0.000                 15.654  1       
 
@@ -385,8 +386,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/counter_3674_3979__i1/Q  (SLICE_R22C25A)
-Path End         : nesblock/NEScount_7__I_19/D  (SLICE_R22C27A)
+Path Begin       : nesblock/counter_5018_5415__i1/Q  (SLICE_R25C5A)
+Path End         : nesblock/NEScount_7__I_19/D  (SLICE_R25C7A)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 17
@@ -401,62 +402,62 @@ Name                                      Cell/Site Name     Delay Name         
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  10      
 nesblock/clk                                                 NET DELAY               5.499                  5.499  10      
-nesblock/counter_3674_3979__i1/CK                                                    0.000                  5.499  1       
+nesblock/counter_5018_5415__i1/CK                                                    0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-nesblock/counter_3674_3979__i1/CK->nesblock/counter_3674_3979__i1/Q
-                                          SLICE_R22C25A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+nesblock/counter_5018_5415__i1/CK->nesblock/counter_5018_5415__i1/Q
+                                          SLICE_R25C5A       CLK_TO_Q1_DELAY         1.388                  6.887  1       
 nesblock/n17                                                 NET DELAY               2.022                  8.909  1       
-nesblock/counter_3674_3979_add_4_1/C1->nesblock/counter_3674_3979_add_4_1/CO1
-                                          SLICE_R22C25A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-nesblock/n19667                                              NET DELAY               0.000                  9.252  2       
-nesblock/counter_3674_3979_add_4_3/CI0->nesblock/counter_3674_3979_add_4_3/CO0
-                                          SLICE_R22C25B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-nesblock/n31214                                              NET DELAY               0.000                  9.529  2       
-nesblock/counter_3674_3979_add_4_3/CI1->nesblock/counter_3674_3979_add_4_3/CO1
-                                          SLICE_R22C25B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-nesblock/n19669                                              NET DELAY               0.000                  9.806  2       
-nesblock/counter_3674_3979_add_4_5/CI0->nesblock/counter_3674_3979_add_4_5/CO0
-                                          SLICE_R22C25C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-nesblock/n31217                                              NET DELAY               0.000                 10.083  2       
-nesblock/counter_3674_3979_add_4_5/CI1->nesblock/counter_3674_3979_add_4_5/CO1
-                                          SLICE_R22C25C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-nesblock/n19671                                              NET DELAY               0.000                 10.360  2       
-nesblock/counter_3674_3979_add_4_7/CI0->nesblock/counter_3674_3979_add_4_7/CO0
-                                          SLICE_R22C25D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-nesblock/n31220                                              NET DELAY               0.000                 10.637  2       
-nesblock/counter_3674_3979_add_4_7/CI1->nesblock/counter_3674_3979_add_4_7/CO1
-                                          SLICE_R22C25D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-nesblock/n19673                                              NET DELAY               0.555                 11.469  2       
-nesblock/counter_3674_3979_add_4_9/CI0->nesblock/counter_3674_3979_add_4_9/CO0
-                                          SLICE_R22C26A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-nesblock/n31223                                              NET DELAY               0.000                 11.746  2       
-nesblock/counter_3674_3979_add_4_9/CI1->nesblock/counter_3674_3979_add_4_9/CO1
-                                          SLICE_R22C26A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-nesblock/n19675                                              NET DELAY               0.000                 12.023  2       
-nesblock/counter_3674_3979_add_4_11/CI0->nesblock/counter_3674_3979_add_4_11/CO0
-                                          SLICE_R22C26B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
-nesblock/n31226                                              NET DELAY               0.000                 12.300  2       
-nesblock/counter_3674_3979_add_4_11/CI1->nesblock/counter_3674_3979_add_4_11/CO1
-                                          SLICE_R22C26B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
-nesblock/n19677                                              NET DELAY               0.000                 12.577  2       
-nesblock/counter_3674_3979_add_4_13/CI0->nesblock/counter_3674_3979_add_4_13/CO0
-                                          SLICE_R22C26C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
-nesblock/n31229                                              NET DELAY               0.000                 12.854  2       
-nesblock/counter_3674_3979_add_4_13/CI1->nesblock/counter_3674_3979_add_4_13/CO1
-                                          SLICE_R22C26C      CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
-nesblock/n19679                                              NET DELAY               0.000                 13.131  2       
-nesblock/counter_3674_3979_add_4_15/CI0->nesblock/counter_3674_3979_add_4_15/CO0
-                                          SLICE_R22C26D      CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
-nesblock/n31232                                              NET DELAY               0.000                 13.408  2       
-nesblock/counter_3674_3979_add_4_15/CI1->nesblock/counter_3674_3979_add_4_15/CO1
-                                          SLICE_R22C26D      CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
-nesblock/n19681                                              NET DELAY               1.216                 14.901  2       
-nesblock/counter_3674_3979_add_4_17/D0->nesblock/counter_3674_3979_add_4_17/S0
-                                          SLICE_R22C27A      D0_TO_F0_DELAY          0.476                 15.377  1       
+nesblock/counter_5018_5415_add_4_1/C1->nesblock/counter_5018_5415_add_4_1/CO1
+                                          SLICE_R25C5A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+nesblock/n22377                                              NET DELAY               0.000                  9.252  2       
+nesblock/counter_5018_5415_add_4_3/CI0->nesblock/counter_5018_5415_add_4_3/CO0
+                                          SLICE_R25C5B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+nesblock/n37180                                              NET DELAY               0.000                  9.529  2       
+nesblock/counter_5018_5415_add_4_3/CI1->nesblock/counter_5018_5415_add_4_3/CO1
+                                          SLICE_R25C5B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+nesblock/n22379                                              NET DELAY               0.000                  9.806  2       
+nesblock/counter_5018_5415_add_4_5/CI0->nesblock/counter_5018_5415_add_4_5/CO0
+                                          SLICE_R25C5C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+nesblock/n37183                                              NET DELAY               0.000                 10.083  2       
+nesblock/counter_5018_5415_add_4_5/CI1->nesblock/counter_5018_5415_add_4_5/CO1
+                                          SLICE_R25C5C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+nesblock/n22381                                              NET DELAY               0.000                 10.360  2       
+nesblock/counter_5018_5415_add_4_7/CI0->nesblock/counter_5018_5415_add_4_7/CO0
+                                          SLICE_R25C5D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+nesblock/n37186                                              NET DELAY               0.000                 10.637  2       
+nesblock/counter_5018_5415_add_4_7/CI1->nesblock/counter_5018_5415_add_4_7/CO1
+                                          SLICE_R25C5D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+nesblock/n22383                                              NET DELAY               0.555                 11.469  2       
+nesblock/counter_5018_5415_add_4_9/CI0->nesblock/counter_5018_5415_add_4_9/CO0
+                                          SLICE_R25C6A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+nesblock/n37189                                              NET DELAY               0.000                 11.746  2       
+nesblock/counter_5018_5415_add_4_9/CI1->nesblock/counter_5018_5415_add_4_9/CO1
+                                          SLICE_R25C6A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+nesblock/n22385                                              NET DELAY               0.000                 12.023  2       
+nesblock/counter_5018_5415_add_4_11/CI0->nesblock/counter_5018_5415_add_4_11/CO0
+                                          SLICE_R25C6B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+nesblock/n37192                                              NET DELAY               0.000                 12.300  2       
+nesblock/counter_5018_5415_add_4_11/CI1->nesblock/counter_5018_5415_add_4_11/CO1
+                                          SLICE_R25C6B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+nesblock/n22387                                              NET DELAY               0.000                 12.577  2       
+nesblock/counter_5018_5415_add_4_13/CI0->nesblock/counter_5018_5415_add_4_13/CO0
+                                          SLICE_R25C6C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+nesblock/n37195                                              NET DELAY               0.000                 12.854  2       
+nesblock/counter_5018_5415_add_4_13/CI1->nesblock/counter_5018_5415_add_4_13/CO1
+                                          SLICE_R25C6C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+nesblock/n22389                                              NET DELAY               0.000                 13.131  2       
+nesblock/counter_5018_5415_add_4_15/CI0->nesblock/counter_5018_5415_add_4_15/CO0
+                                          SLICE_R25C6D       CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+nesblock/n37198                                              NET DELAY               0.000                 13.408  2       
+nesblock/counter_5018_5415_add_4_15/CI1->nesblock/counter_5018_5415_add_4_15/CO1
+                                          SLICE_R25C6D       CIN1_TO_COUT1_DELAY     0.277                 13.685  2       
+nesblock/n22391                                              NET DELAY               1.216                 14.901  2       
+nesblock/counter_5018_5415_add_4_17/D0->nesblock/counter_5018_5415_add_4_17/S0
+                                          SLICE_R25C7A       D0_TO_F0_DELAY          0.476                 15.377  1       
 nesblock/NEScount_7__N_59[15]                                NET DELAY               0.000                 15.377  1       
 nesblock/NEScount_7__I_19/D                                                          0.000                 15.377  1       
 
@@ -482,8 +483,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/counter_3674_3979__i1/Q  (SLICE_R22C25A)
-Path End         : nesblock/NEScount_7__I_20/D  (SLICE_R22C26D)
+Path Begin       : nesblock/counter_5018_5415__i1/Q  (SLICE_R25C5A)
+Path End         : nesblock/NEScount_7__I_20/D  (SLICE_R25C6D)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 16
@@ -498,59 +499,59 @@ Name                                      Cell/Site Name     Delay Name         
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  10      
 nesblock/clk                                                 NET DELAY               5.499                  5.499  10      
-nesblock/counter_3674_3979__i1/CK                                                    0.000                  5.499  1       
+nesblock/counter_5018_5415__i1/CK                                                    0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-nesblock/counter_3674_3979__i1/CK->nesblock/counter_3674_3979__i1/Q
-                                          SLICE_R22C25A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+nesblock/counter_5018_5415__i1/CK->nesblock/counter_5018_5415__i1/Q
+                                          SLICE_R25C5A       CLK_TO_Q1_DELAY         1.388                  6.887  1       
 nesblock/n17                                                 NET DELAY               2.022                  8.909  1       
-nesblock/counter_3674_3979_add_4_1/C1->nesblock/counter_3674_3979_add_4_1/CO1
-                                          SLICE_R22C25A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-nesblock/n19667                                              NET DELAY               0.000                  9.252  2       
-nesblock/counter_3674_3979_add_4_3/CI0->nesblock/counter_3674_3979_add_4_3/CO0
-                                          SLICE_R22C25B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-nesblock/n31214                                              NET DELAY               0.000                  9.529  2       
-nesblock/counter_3674_3979_add_4_3/CI1->nesblock/counter_3674_3979_add_4_3/CO1
-                                          SLICE_R22C25B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-nesblock/n19669                                              NET DELAY               0.000                  9.806  2       
-nesblock/counter_3674_3979_add_4_5/CI0->nesblock/counter_3674_3979_add_4_5/CO0
-                                          SLICE_R22C25C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-nesblock/n31217                                              NET DELAY               0.000                 10.083  2       
-nesblock/counter_3674_3979_add_4_5/CI1->nesblock/counter_3674_3979_add_4_5/CO1
-                                          SLICE_R22C25C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-nesblock/n19671                                              NET DELAY               0.000                 10.360  2       
-nesblock/counter_3674_3979_add_4_7/CI0->nesblock/counter_3674_3979_add_4_7/CO0
-                                          SLICE_R22C25D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-nesblock/n31220                                              NET DELAY               0.000                 10.637  2       
-nesblock/counter_3674_3979_add_4_7/CI1->nesblock/counter_3674_3979_add_4_7/CO1
-                                          SLICE_R22C25D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-nesblock/n19673                                              NET DELAY               0.555                 11.469  2       
-nesblock/counter_3674_3979_add_4_9/CI0->nesblock/counter_3674_3979_add_4_9/CO0
-                                          SLICE_R22C26A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-nesblock/n31223                                              NET DELAY               0.000                 11.746  2       
-nesblock/counter_3674_3979_add_4_9/CI1->nesblock/counter_3674_3979_add_4_9/CO1
-                                          SLICE_R22C26A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-nesblock/n19675                                              NET DELAY               0.000                 12.023  2       
-nesblock/counter_3674_3979_add_4_11/CI0->nesblock/counter_3674_3979_add_4_11/CO0
-                                          SLICE_R22C26B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
-nesblock/n31226                                              NET DELAY               0.000                 12.300  2       
-nesblock/counter_3674_3979_add_4_11/CI1->nesblock/counter_3674_3979_add_4_11/CO1
-                                          SLICE_R22C26B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
-nesblock/n19677                                              NET DELAY               0.000                 12.577  2       
-nesblock/counter_3674_3979_add_4_13/CI0->nesblock/counter_3674_3979_add_4_13/CO0
-                                          SLICE_R22C26C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
-nesblock/n31229                                              NET DELAY               0.000                 12.854  2       
-nesblock/counter_3674_3979_add_4_13/CI1->nesblock/counter_3674_3979_add_4_13/CO1
-                                          SLICE_R22C26C      CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
-nesblock/n19679                                              NET DELAY               0.000                 13.131  2       
-nesblock/counter_3674_3979_add_4_15/CI0->nesblock/counter_3674_3979_add_4_15/CO0
-                                          SLICE_R22C26D      CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
-nesblock/n31232                                              NET DELAY               0.661                 14.069  2       
-nesblock/counter_3674_3979_add_4_15/D1->nesblock/counter_3674_3979_add_4_15/S1
-                                          SLICE_R22C26D      D1_TO_F1_DELAY          0.476                 14.545  1       
+nesblock/counter_5018_5415_add_4_1/C1->nesblock/counter_5018_5415_add_4_1/CO1
+                                          SLICE_R25C5A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+nesblock/n22377                                              NET DELAY               0.000                  9.252  2       
+nesblock/counter_5018_5415_add_4_3/CI0->nesblock/counter_5018_5415_add_4_3/CO0
+                                          SLICE_R25C5B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+nesblock/n37180                                              NET DELAY               0.000                  9.529  2       
+nesblock/counter_5018_5415_add_4_3/CI1->nesblock/counter_5018_5415_add_4_3/CO1
+                                          SLICE_R25C5B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+nesblock/n22379                                              NET DELAY               0.000                  9.806  2       
+nesblock/counter_5018_5415_add_4_5/CI0->nesblock/counter_5018_5415_add_4_5/CO0
+                                          SLICE_R25C5C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+nesblock/n37183                                              NET DELAY               0.000                 10.083  2       
+nesblock/counter_5018_5415_add_4_5/CI1->nesblock/counter_5018_5415_add_4_5/CO1
+                                          SLICE_R25C5C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+nesblock/n22381                                              NET DELAY               0.000                 10.360  2       
+nesblock/counter_5018_5415_add_4_7/CI0->nesblock/counter_5018_5415_add_4_7/CO0
+                                          SLICE_R25C5D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+nesblock/n37186                                              NET DELAY               0.000                 10.637  2       
+nesblock/counter_5018_5415_add_4_7/CI1->nesblock/counter_5018_5415_add_4_7/CO1
+                                          SLICE_R25C5D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+nesblock/n22383                                              NET DELAY               0.555                 11.469  2       
+nesblock/counter_5018_5415_add_4_9/CI0->nesblock/counter_5018_5415_add_4_9/CO0
+                                          SLICE_R25C6A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+nesblock/n37189                                              NET DELAY               0.000                 11.746  2       
+nesblock/counter_5018_5415_add_4_9/CI1->nesblock/counter_5018_5415_add_4_9/CO1
+                                          SLICE_R25C6A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+nesblock/n22385                                              NET DELAY               0.000                 12.023  2       
+nesblock/counter_5018_5415_add_4_11/CI0->nesblock/counter_5018_5415_add_4_11/CO0
+                                          SLICE_R25C6B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+nesblock/n37192                                              NET DELAY               0.000                 12.300  2       
+nesblock/counter_5018_5415_add_4_11/CI1->nesblock/counter_5018_5415_add_4_11/CO1
+                                          SLICE_R25C6B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+nesblock/n22387                                              NET DELAY               0.000                 12.577  2       
+nesblock/counter_5018_5415_add_4_13/CI0->nesblock/counter_5018_5415_add_4_13/CO0
+                                          SLICE_R25C6C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+nesblock/n37195                                              NET DELAY               0.000                 12.854  2       
+nesblock/counter_5018_5415_add_4_13/CI1->nesblock/counter_5018_5415_add_4_13/CO1
+                                          SLICE_R25C6C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+nesblock/n22389                                              NET DELAY               0.000                 13.131  2       
+nesblock/counter_5018_5415_add_4_15/CI0->nesblock/counter_5018_5415_add_4_15/CO0
+                                          SLICE_R25C6D       CIN0_TO_COUT0_DELAY     0.277                 13.408  2       
+nesblock/n37198                                              NET DELAY               0.661                 14.069  2       
+nesblock/counter_5018_5415_add_4_15/D1->nesblock/counter_5018_5415_add_4_15/S1
+                                          SLICE_R25C6D       D1_TO_F1_DELAY          0.476                 14.545  1       
 nesblock/NEScount_7__N_59[14]                                NET DELAY               0.000                 14.545  1       
 nesblock/NEScount_7__I_20/D                                                          0.000                 14.545  1       
 
@@ -576,8 +577,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/counter_3674_3979__i1/Q  (SLICE_R22C25A)
-Path End         : nesblock/NEScount_7__I_21/D  (SLICE_R22C26D)
+Path Begin       : nesblock/counter_5018_5415__i1/Q  (SLICE_R25C5A)
+Path End         : nesblock/NEScount_7__I_21/D  (SLICE_R25C6D)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 15
@@ -592,56 +593,56 @@ Name                                      Cell/Site Name     Delay Name         
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  10      
 nesblock/clk                                                 NET DELAY               5.499                  5.499  10      
-nesblock/counter_3674_3979__i1/CK                                                    0.000                  5.499  1       
+nesblock/counter_5018_5415__i1/CK                                                    0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-nesblock/counter_3674_3979__i1/CK->nesblock/counter_3674_3979__i1/Q
-                                          SLICE_R22C25A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+nesblock/counter_5018_5415__i1/CK->nesblock/counter_5018_5415__i1/Q
+                                          SLICE_R25C5A       CLK_TO_Q1_DELAY         1.388                  6.887  1       
 nesblock/n17                                                 NET DELAY               2.022                  8.909  1       
-nesblock/counter_3674_3979_add_4_1/C1->nesblock/counter_3674_3979_add_4_1/CO1
-                                          SLICE_R22C25A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-nesblock/n19667                                              NET DELAY               0.000                  9.252  2       
-nesblock/counter_3674_3979_add_4_3/CI0->nesblock/counter_3674_3979_add_4_3/CO0
-                                          SLICE_R22C25B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-nesblock/n31214                                              NET DELAY               0.000                  9.529  2       
-nesblock/counter_3674_3979_add_4_3/CI1->nesblock/counter_3674_3979_add_4_3/CO1
-                                          SLICE_R22C25B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-nesblock/n19669                                              NET DELAY               0.000                  9.806  2       
-nesblock/counter_3674_3979_add_4_5/CI0->nesblock/counter_3674_3979_add_4_5/CO0
-                                          SLICE_R22C25C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-nesblock/n31217                                              NET DELAY               0.000                 10.083  2       
-nesblock/counter_3674_3979_add_4_5/CI1->nesblock/counter_3674_3979_add_4_5/CO1
-                                          SLICE_R22C25C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-nesblock/n19671                                              NET DELAY               0.000                 10.360  2       
-nesblock/counter_3674_3979_add_4_7/CI0->nesblock/counter_3674_3979_add_4_7/CO0
-                                          SLICE_R22C25D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-nesblock/n31220                                              NET DELAY               0.000                 10.637  2       
-nesblock/counter_3674_3979_add_4_7/CI1->nesblock/counter_3674_3979_add_4_7/CO1
-                                          SLICE_R22C25D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-nesblock/n19673                                              NET DELAY               0.555                 11.469  2       
-nesblock/counter_3674_3979_add_4_9/CI0->nesblock/counter_3674_3979_add_4_9/CO0
-                                          SLICE_R22C26A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-nesblock/n31223                                              NET DELAY               0.000                 11.746  2       
-nesblock/counter_3674_3979_add_4_9/CI1->nesblock/counter_3674_3979_add_4_9/CO1
-                                          SLICE_R22C26A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-nesblock/n19675                                              NET DELAY               0.000                 12.023  2       
-nesblock/counter_3674_3979_add_4_11/CI0->nesblock/counter_3674_3979_add_4_11/CO0
-                                          SLICE_R22C26B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
-nesblock/n31226                                              NET DELAY               0.000                 12.300  2       
-nesblock/counter_3674_3979_add_4_11/CI1->nesblock/counter_3674_3979_add_4_11/CO1
-                                          SLICE_R22C26B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
-nesblock/n19677                                              NET DELAY               0.000                 12.577  2       
-nesblock/counter_3674_3979_add_4_13/CI0->nesblock/counter_3674_3979_add_4_13/CO0
-                                          SLICE_R22C26C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
-nesblock/n31229                                              NET DELAY               0.000                 12.854  2       
-nesblock/counter_3674_3979_add_4_13/CI1->nesblock/counter_3674_3979_add_4_13/CO1
-                                          SLICE_R22C26C      CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
-nesblock/n19679                                              NET DELAY               0.661                 13.792  2       
-nesblock/counter_3674_3979_add_4_15/D0->nesblock/counter_3674_3979_add_4_15/S0
-                                          SLICE_R22C26D      D0_TO_F0_DELAY          0.476                 14.268  1       
+nesblock/counter_5018_5415_add_4_1/C1->nesblock/counter_5018_5415_add_4_1/CO1
+                                          SLICE_R25C5A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+nesblock/n22377                                              NET DELAY               0.000                  9.252  2       
+nesblock/counter_5018_5415_add_4_3/CI0->nesblock/counter_5018_5415_add_4_3/CO0
+                                          SLICE_R25C5B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+nesblock/n37180                                              NET DELAY               0.000                  9.529  2       
+nesblock/counter_5018_5415_add_4_3/CI1->nesblock/counter_5018_5415_add_4_3/CO1
+                                          SLICE_R25C5B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+nesblock/n22379                                              NET DELAY               0.000                  9.806  2       
+nesblock/counter_5018_5415_add_4_5/CI0->nesblock/counter_5018_5415_add_4_5/CO0
+                                          SLICE_R25C5C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+nesblock/n37183                                              NET DELAY               0.000                 10.083  2       
+nesblock/counter_5018_5415_add_4_5/CI1->nesblock/counter_5018_5415_add_4_5/CO1
+                                          SLICE_R25C5C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+nesblock/n22381                                              NET DELAY               0.000                 10.360  2       
+nesblock/counter_5018_5415_add_4_7/CI0->nesblock/counter_5018_5415_add_4_7/CO0
+                                          SLICE_R25C5D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+nesblock/n37186                                              NET DELAY               0.000                 10.637  2       
+nesblock/counter_5018_5415_add_4_7/CI1->nesblock/counter_5018_5415_add_4_7/CO1
+                                          SLICE_R25C5D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+nesblock/n22383                                              NET DELAY               0.555                 11.469  2       
+nesblock/counter_5018_5415_add_4_9/CI0->nesblock/counter_5018_5415_add_4_9/CO0
+                                          SLICE_R25C6A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+nesblock/n37189                                              NET DELAY               0.000                 11.746  2       
+nesblock/counter_5018_5415_add_4_9/CI1->nesblock/counter_5018_5415_add_4_9/CO1
+                                          SLICE_R25C6A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+nesblock/n22385                                              NET DELAY               0.000                 12.023  2       
+nesblock/counter_5018_5415_add_4_11/CI0->nesblock/counter_5018_5415_add_4_11/CO0
+                                          SLICE_R25C6B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+nesblock/n37192                                              NET DELAY               0.000                 12.300  2       
+nesblock/counter_5018_5415_add_4_11/CI1->nesblock/counter_5018_5415_add_4_11/CO1
+                                          SLICE_R25C6B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+nesblock/n22387                                              NET DELAY               0.000                 12.577  2       
+nesblock/counter_5018_5415_add_4_13/CI0->nesblock/counter_5018_5415_add_4_13/CO0
+                                          SLICE_R25C6C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+nesblock/n37195                                              NET DELAY               0.000                 12.854  2       
+nesblock/counter_5018_5415_add_4_13/CI1->nesblock/counter_5018_5415_add_4_13/CO1
+                                          SLICE_R25C6C       CIN1_TO_COUT1_DELAY     0.277                 13.131  2       
+nesblock/n22389                                              NET DELAY               0.661                 13.792  2       
+nesblock/counter_5018_5415_add_4_15/D0->nesblock/counter_5018_5415_add_4_15/S0
+                                          SLICE_R25C6D       D0_TO_F0_DELAY          0.476                 14.268  1       
 nesblock/NEScount_7__N_59[13]                                NET DELAY               0.000                 14.268  1       
 nesblock/NEScount_7__I_21/D                                                          0.000                 14.268  1       
 
@@ -667,8 +668,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/counter_3674_3979__i1/Q  (SLICE_R22C25A)
-Path End         : nesblock/NEScount_7__I_22/D  (SLICE_R22C26C)
+Path Begin       : nesblock/counter_5018_5415__i1/Q  (SLICE_R25C5A)
+Path End         : nesblock/NEScount_7__I_22/D  (SLICE_R25C6C)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 14
@@ -683,53 +684,53 @@ Name                                      Cell/Site Name     Delay Name         
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  10      
 nesblock/clk                                                 NET DELAY               5.499                  5.499  10      
-nesblock/counter_3674_3979__i1/CK                                                    0.000                  5.499  1       
+nesblock/counter_5018_5415__i1/CK                                                    0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-nesblock/counter_3674_3979__i1/CK->nesblock/counter_3674_3979__i1/Q
-                                          SLICE_R22C25A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+nesblock/counter_5018_5415__i1/CK->nesblock/counter_5018_5415__i1/Q
+                                          SLICE_R25C5A       CLK_TO_Q1_DELAY         1.388                  6.887  1       
 nesblock/n17                                                 NET DELAY               2.022                  8.909  1       
-nesblock/counter_3674_3979_add_4_1/C1->nesblock/counter_3674_3979_add_4_1/CO1
-                                          SLICE_R22C25A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-nesblock/n19667                                              NET DELAY               0.000                  9.252  2       
-nesblock/counter_3674_3979_add_4_3/CI0->nesblock/counter_3674_3979_add_4_3/CO0
-                                          SLICE_R22C25B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-nesblock/n31214                                              NET DELAY               0.000                  9.529  2       
-nesblock/counter_3674_3979_add_4_3/CI1->nesblock/counter_3674_3979_add_4_3/CO1
-                                          SLICE_R22C25B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-nesblock/n19669                                              NET DELAY               0.000                  9.806  2       
-nesblock/counter_3674_3979_add_4_5/CI0->nesblock/counter_3674_3979_add_4_5/CO0
-                                          SLICE_R22C25C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-nesblock/n31217                                              NET DELAY               0.000                 10.083  2       
-nesblock/counter_3674_3979_add_4_5/CI1->nesblock/counter_3674_3979_add_4_5/CO1
-                                          SLICE_R22C25C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-nesblock/n19671                                              NET DELAY               0.000                 10.360  2       
-nesblock/counter_3674_3979_add_4_7/CI0->nesblock/counter_3674_3979_add_4_7/CO0
-                                          SLICE_R22C25D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-nesblock/n31220                                              NET DELAY               0.000                 10.637  2       
-nesblock/counter_3674_3979_add_4_7/CI1->nesblock/counter_3674_3979_add_4_7/CO1
-                                          SLICE_R22C25D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-nesblock/n19673                                              NET DELAY               0.555                 11.469  2       
-nesblock/counter_3674_3979_add_4_9/CI0->nesblock/counter_3674_3979_add_4_9/CO0
-                                          SLICE_R22C26A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-nesblock/n31223                                              NET DELAY               0.000                 11.746  2       
-nesblock/counter_3674_3979_add_4_9/CI1->nesblock/counter_3674_3979_add_4_9/CO1
-                                          SLICE_R22C26A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-nesblock/n19675                                              NET DELAY               0.000                 12.023  2       
-nesblock/counter_3674_3979_add_4_11/CI0->nesblock/counter_3674_3979_add_4_11/CO0
-                                          SLICE_R22C26B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
-nesblock/n31226                                              NET DELAY               0.000                 12.300  2       
-nesblock/counter_3674_3979_add_4_11/CI1->nesblock/counter_3674_3979_add_4_11/CO1
-                                          SLICE_R22C26B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
-nesblock/n19677                                              NET DELAY               0.000                 12.577  2       
-nesblock/counter_3674_3979_add_4_13/CI0->nesblock/counter_3674_3979_add_4_13/CO0
-                                          SLICE_R22C26C      CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
-nesblock/n31229                                              NET DELAY               0.661                 13.515  2       
-nesblock/counter_3674_3979_add_4_13/D1->nesblock/counter_3674_3979_add_4_13/S1
-                                          SLICE_R22C26C      D1_TO_F1_DELAY          0.476                 13.991  1       
+nesblock/counter_5018_5415_add_4_1/C1->nesblock/counter_5018_5415_add_4_1/CO1
+                                          SLICE_R25C5A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+nesblock/n22377                                              NET DELAY               0.000                  9.252  2       
+nesblock/counter_5018_5415_add_4_3/CI0->nesblock/counter_5018_5415_add_4_3/CO0
+                                          SLICE_R25C5B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+nesblock/n37180                                              NET DELAY               0.000                  9.529  2       
+nesblock/counter_5018_5415_add_4_3/CI1->nesblock/counter_5018_5415_add_4_3/CO1
+                                          SLICE_R25C5B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+nesblock/n22379                                              NET DELAY               0.000                  9.806  2       
+nesblock/counter_5018_5415_add_4_5/CI0->nesblock/counter_5018_5415_add_4_5/CO0
+                                          SLICE_R25C5C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+nesblock/n37183                                              NET DELAY               0.000                 10.083  2       
+nesblock/counter_5018_5415_add_4_5/CI1->nesblock/counter_5018_5415_add_4_5/CO1
+                                          SLICE_R25C5C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+nesblock/n22381                                              NET DELAY               0.000                 10.360  2       
+nesblock/counter_5018_5415_add_4_7/CI0->nesblock/counter_5018_5415_add_4_7/CO0
+                                          SLICE_R25C5D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+nesblock/n37186                                              NET DELAY               0.000                 10.637  2       
+nesblock/counter_5018_5415_add_4_7/CI1->nesblock/counter_5018_5415_add_4_7/CO1
+                                          SLICE_R25C5D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+nesblock/n22383                                              NET DELAY               0.555                 11.469  2       
+nesblock/counter_5018_5415_add_4_9/CI0->nesblock/counter_5018_5415_add_4_9/CO0
+                                          SLICE_R25C6A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+nesblock/n37189                                              NET DELAY               0.000                 11.746  2       
+nesblock/counter_5018_5415_add_4_9/CI1->nesblock/counter_5018_5415_add_4_9/CO1
+                                          SLICE_R25C6A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+nesblock/n22385                                              NET DELAY               0.000                 12.023  2       
+nesblock/counter_5018_5415_add_4_11/CI0->nesblock/counter_5018_5415_add_4_11/CO0
+                                          SLICE_R25C6B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+nesblock/n37192                                              NET DELAY               0.000                 12.300  2       
+nesblock/counter_5018_5415_add_4_11/CI1->nesblock/counter_5018_5415_add_4_11/CO1
+                                          SLICE_R25C6B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+nesblock/n22387                                              NET DELAY               0.000                 12.577  2       
+nesblock/counter_5018_5415_add_4_13/CI0->nesblock/counter_5018_5415_add_4_13/CO0
+                                          SLICE_R25C6C       CIN0_TO_COUT0_DELAY     0.277                 12.854  2       
+nesblock/n37195                                              NET DELAY               0.661                 13.515  2       
+nesblock/counter_5018_5415_add_4_13/D1->nesblock/counter_5018_5415_add_4_13/S1
+                                          SLICE_R25C6C       D1_TO_F1_DELAY          0.476                 13.991  1       
 nesblock/NEScount_7__N_59[12]                                NET DELAY               0.000                 13.991  1       
 nesblock/NEScount_7__I_22/D                                                          0.000                 13.991  1       
 
@@ -755,8 +756,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/counter_3674_3979__i1/Q  (SLICE_R22C25A)
-Path End         : nesblock/NEScount_7__I_23/D  (SLICE_R22C26C)
+Path Begin       : nesblock/counter_5018_5415__i1/Q  (SLICE_R25C5A)
+Path End         : nesblock/NEScount_7__I_23/D  (SLICE_R25C6C)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 13
@@ -771,50 +772,50 @@ Name                                      Cell/Site Name     Delay Name         
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  10      
 nesblock/clk                                                 NET DELAY               5.499                  5.499  10      
-nesblock/counter_3674_3979__i1/CK                                                    0.000                  5.499  1       
+nesblock/counter_5018_5415__i1/CK                                                    0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-nesblock/counter_3674_3979__i1/CK->nesblock/counter_3674_3979__i1/Q
-                                          SLICE_R22C25A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+nesblock/counter_5018_5415__i1/CK->nesblock/counter_5018_5415__i1/Q
+                                          SLICE_R25C5A       CLK_TO_Q1_DELAY         1.388                  6.887  1       
 nesblock/n17                                                 NET DELAY               2.022                  8.909  1       
-nesblock/counter_3674_3979_add_4_1/C1->nesblock/counter_3674_3979_add_4_1/CO1
-                                          SLICE_R22C25A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-nesblock/n19667                                              NET DELAY               0.000                  9.252  2       
-nesblock/counter_3674_3979_add_4_3/CI0->nesblock/counter_3674_3979_add_4_3/CO0
-                                          SLICE_R22C25B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-nesblock/n31214                                              NET DELAY               0.000                  9.529  2       
-nesblock/counter_3674_3979_add_4_3/CI1->nesblock/counter_3674_3979_add_4_3/CO1
-                                          SLICE_R22C25B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-nesblock/n19669                                              NET DELAY               0.000                  9.806  2       
-nesblock/counter_3674_3979_add_4_5/CI0->nesblock/counter_3674_3979_add_4_5/CO0
-                                          SLICE_R22C25C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-nesblock/n31217                                              NET DELAY               0.000                 10.083  2       
-nesblock/counter_3674_3979_add_4_5/CI1->nesblock/counter_3674_3979_add_4_5/CO1
-                                          SLICE_R22C25C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-nesblock/n19671                                              NET DELAY               0.000                 10.360  2       
-nesblock/counter_3674_3979_add_4_7/CI0->nesblock/counter_3674_3979_add_4_7/CO0
-                                          SLICE_R22C25D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-nesblock/n31220                                              NET DELAY               0.000                 10.637  2       
-nesblock/counter_3674_3979_add_4_7/CI1->nesblock/counter_3674_3979_add_4_7/CO1
-                                          SLICE_R22C25D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-nesblock/n19673                                              NET DELAY               0.555                 11.469  2       
-nesblock/counter_3674_3979_add_4_9/CI0->nesblock/counter_3674_3979_add_4_9/CO0
-                                          SLICE_R22C26A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-nesblock/n31223                                              NET DELAY               0.000                 11.746  2       
-nesblock/counter_3674_3979_add_4_9/CI1->nesblock/counter_3674_3979_add_4_9/CO1
-                                          SLICE_R22C26A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-nesblock/n19675                                              NET DELAY               0.000                 12.023  2       
-nesblock/counter_3674_3979_add_4_11/CI0->nesblock/counter_3674_3979_add_4_11/CO0
-                                          SLICE_R22C26B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
-nesblock/n31226                                              NET DELAY               0.000                 12.300  2       
-nesblock/counter_3674_3979_add_4_11/CI1->nesblock/counter_3674_3979_add_4_11/CO1
-                                          SLICE_R22C26B      CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
-nesblock/n19677                                              NET DELAY               0.661                 13.238  2       
-nesblock/counter_3674_3979_add_4_13/D0->nesblock/counter_3674_3979_add_4_13/S0
-                                          SLICE_R22C26C      D0_TO_F0_DELAY          0.476                 13.714  1       
+nesblock/counter_5018_5415_add_4_1/C1->nesblock/counter_5018_5415_add_4_1/CO1
+                                          SLICE_R25C5A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+nesblock/n22377                                              NET DELAY               0.000                  9.252  2       
+nesblock/counter_5018_5415_add_4_3/CI0->nesblock/counter_5018_5415_add_4_3/CO0
+                                          SLICE_R25C5B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+nesblock/n37180                                              NET DELAY               0.000                  9.529  2       
+nesblock/counter_5018_5415_add_4_3/CI1->nesblock/counter_5018_5415_add_4_3/CO1
+                                          SLICE_R25C5B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+nesblock/n22379                                              NET DELAY               0.000                  9.806  2       
+nesblock/counter_5018_5415_add_4_5/CI0->nesblock/counter_5018_5415_add_4_5/CO0
+                                          SLICE_R25C5C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+nesblock/n37183                                              NET DELAY               0.000                 10.083  2       
+nesblock/counter_5018_5415_add_4_5/CI1->nesblock/counter_5018_5415_add_4_5/CO1
+                                          SLICE_R25C5C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+nesblock/n22381                                              NET DELAY               0.000                 10.360  2       
+nesblock/counter_5018_5415_add_4_7/CI0->nesblock/counter_5018_5415_add_4_7/CO0
+                                          SLICE_R25C5D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+nesblock/n37186                                              NET DELAY               0.000                 10.637  2       
+nesblock/counter_5018_5415_add_4_7/CI1->nesblock/counter_5018_5415_add_4_7/CO1
+                                          SLICE_R25C5D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+nesblock/n22383                                              NET DELAY               0.555                 11.469  2       
+nesblock/counter_5018_5415_add_4_9/CI0->nesblock/counter_5018_5415_add_4_9/CO0
+                                          SLICE_R25C6A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+nesblock/n37189                                              NET DELAY               0.000                 11.746  2       
+nesblock/counter_5018_5415_add_4_9/CI1->nesblock/counter_5018_5415_add_4_9/CO1
+                                          SLICE_R25C6A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+nesblock/n22385                                              NET DELAY               0.000                 12.023  2       
+nesblock/counter_5018_5415_add_4_11/CI0->nesblock/counter_5018_5415_add_4_11/CO0
+                                          SLICE_R25C6B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+nesblock/n37192                                              NET DELAY               0.000                 12.300  2       
+nesblock/counter_5018_5415_add_4_11/CI1->nesblock/counter_5018_5415_add_4_11/CO1
+                                          SLICE_R25C6B       CIN1_TO_COUT1_DELAY     0.277                 12.577  2       
+nesblock/n22387                                              NET DELAY               0.661                 13.238  2       
+nesblock/counter_5018_5415_add_4_13/D0->nesblock/counter_5018_5415_add_4_13/S0
+                                          SLICE_R25C6C       D0_TO_F0_DELAY          0.476                 13.714  1       
 nesblock/NEScount_7__N_59[11]                                NET DELAY               0.000                 13.714  1       
 nesblock/NEScount_7__I_23/D                                                          0.000                 13.714  1       
 
@@ -840,8 +841,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/counter_3674_3979__i1/Q  (SLICE_R22C25A)
-Path End         : nesblock/NEScount_7__I_24/D  (SLICE_R22C26B)
+Path Begin       : nesblock/counter_5018_5415__i1/Q  (SLICE_R25C5A)
+Path End         : nesblock/NEScount_7__I_24/D  (SLICE_R25C6B)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 12
@@ -856,47 +857,47 @@ Name                                      Cell/Site Name     Delay Name         
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  10      
 nesblock/clk                                                 NET DELAY               5.499                  5.499  10      
-nesblock/counter_3674_3979__i1/CK                                                    0.000                  5.499  1       
+nesblock/counter_5018_5415__i1/CK                                                    0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-nesblock/counter_3674_3979__i1/CK->nesblock/counter_3674_3979__i1/Q
-                                          SLICE_R22C25A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+nesblock/counter_5018_5415__i1/CK->nesblock/counter_5018_5415__i1/Q
+                                          SLICE_R25C5A       CLK_TO_Q1_DELAY         1.388                  6.887  1       
 nesblock/n17                                                 NET DELAY               2.022                  8.909  1       
-nesblock/counter_3674_3979_add_4_1/C1->nesblock/counter_3674_3979_add_4_1/CO1
-                                          SLICE_R22C25A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-nesblock/n19667                                              NET DELAY               0.000                  9.252  2       
-nesblock/counter_3674_3979_add_4_3/CI0->nesblock/counter_3674_3979_add_4_3/CO0
-                                          SLICE_R22C25B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-nesblock/n31214                                              NET DELAY               0.000                  9.529  2       
-nesblock/counter_3674_3979_add_4_3/CI1->nesblock/counter_3674_3979_add_4_3/CO1
-                                          SLICE_R22C25B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-nesblock/n19669                                              NET DELAY               0.000                  9.806  2       
-nesblock/counter_3674_3979_add_4_5/CI0->nesblock/counter_3674_3979_add_4_5/CO0
-                                          SLICE_R22C25C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-nesblock/n31217                                              NET DELAY               0.000                 10.083  2       
-nesblock/counter_3674_3979_add_4_5/CI1->nesblock/counter_3674_3979_add_4_5/CO1
-                                          SLICE_R22C25C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-nesblock/n19671                                              NET DELAY               0.000                 10.360  2       
-nesblock/counter_3674_3979_add_4_7/CI0->nesblock/counter_3674_3979_add_4_7/CO0
-                                          SLICE_R22C25D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-nesblock/n31220                                              NET DELAY               0.000                 10.637  2       
-nesblock/counter_3674_3979_add_4_7/CI1->nesblock/counter_3674_3979_add_4_7/CO1
-                                          SLICE_R22C25D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-nesblock/n19673                                              NET DELAY               0.555                 11.469  2       
-nesblock/counter_3674_3979_add_4_9/CI0->nesblock/counter_3674_3979_add_4_9/CO0
-                                          SLICE_R22C26A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-nesblock/n31223                                              NET DELAY               0.000                 11.746  2       
-nesblock/counter_3674_3979_add_4_9/CI1->nesblock/counter_3674_3979_add_4_9/CO1
-                                          SLICE_R22C26A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-nesblock/n19675                                              NET DELAY               0.000                 12.023  2       
-nesblock/counter_3674_3979_add_4_11/CI0->nesblock/counter_3674_3979_add_4_11/CO0
-                                          SLICE_R22C26B      CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
-nesblock/n31226                                              NET DELAY               0.661                 12.961  2       
-nesblock/counter_3674_3979_add_4_11/D1->nesblock/counter_3674_3979_add_4_11/S1
-                                          SLICE_R22C26B      D1_TO_F1_DELAY          0.476                 13.437  1       
+nesblock/counter_5018_5415_add_4_1/C1->nesblock/counter_5018_5415_add_4_1/CO1
+                                          SLICE_R25C5A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+nesblock/n22377                                              NET DELAY               0.000                  9.252  2       
+nesblock/counter_5018_5415_add_4_3/CI0->nesblock/counter_5018_5415_add_4_3/CO0
+                                          SLICE_R25C5B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+nesblock/n37180                                              NET DELAY               0.000                  9.529  2       
+nesblock/counter_5018_5415_add_4_3/CI1->nesblock/counter_5018_5415_add_4_3/CO1
+                                          SLICE_R25C5B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+nesblock/n22379                                              NET DELAY               0.000                  9.806  2       
+nesblock/counter_5018_5415_add_4_5/CI0->nesblock/counter_5018_5415_add_4_5/CO0
+                                          SLICE_R25C5C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+nesblock/n37183                                              NET DELAY               0.000                 10.083  2       
+nesblock/counter_5018_5415_add_4_5/CI1->nesblock/counter_5018_5415_add_4_5/CO1
+                                          SLICE_R25C5C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+nesblock/n22381                                              NET DELAY               0.000                 10.360  2       
+nesblock/counter_5018_5415_add_4_7/CI0->nesblock/counter_5018_5415_add_4_7/CO0
+                                          SLICE_R25C5D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+nesblock/n37186                                              NET DELAY               0.000                 10.637  2       
+nesblock/counter_5018_5415_add_4_7/CI1->nesblock/counter_5018_5415_add_4_7/CO1
+                                          SLICE_R25C5D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+nesblock/n22383                                              NET DELAY               0.555                 11.469  2       
+nesblock/counter_5018_5415_add_4_9/CI0->nesblock/counter_5018_5415_add_4_9/CO0
+                                          SLICE_R25C6A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+nesblock/n37189                                              NET DELAY               0.000                 11.746  2       
+nesblock/counter_5018_5415_add_4_9/CI1->nesblock/counter_5018_5415_add_4_9/CO1
+                                          SLICE_R25C6A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+nesblock/n22385                                              NET DELAY               0.000                 12.023  2       
+nesblock/counter_5018_5415_add_4_11/CI0->nesblock/counter_5018_5415_add_4_11/CO0
+                                          SLICE_R25C6B       CIN0_TO_COUT0_DELAY     0.277                 12.300  2       
+nesblock/n37192                                              NET DELAY               0.661                 12.961  2       
+nesblock/counter_5018_5415_add_4_11/D1->nesblock/counter_5018_5415_add_4_11/S1
+                                          SLICE_R25C6B       D1_TO_F1_DELAY          0.476                 13.437  1       
 nesblock/NEScount_7__N_59[10]                                NET DELAY               0.000                 13.437  1       
 nesblock/NEScount_7__I_24/D                                                          0.000                 13.437  1       
 
@@ -922,8 +923,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/counter_3674_3979__i1/Q  (SLICE_R22C25A)
-Path End         : nesblock/NEScount_7__I_25/D  (SLICE_R22C26B)
+Path Begin       : nesblock/counter_5018_5415__i1/Q  (SLICE_R25C5A)
+Path End         : nesblock/NEScount_7__I_25/D  (SLICE_R25C6B)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 11
@@ -938,44 +939,44 @@ Name                                      Cell/Site Name     Delay Name         
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  10      
 nesblock/clk                                                 NET DELAY               5.499                  5.499  10      
-nesblock/counter_3674_3979__i1/CK                                                    0.000                  5.499  1       
+nesblock/counter_5018_5415__i1/CK                                                    0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-nesblock/counter_3674_3979__i1/CK->nesblock/counter_3674_3979__i1/Q
-                                          SLICE_R22C25A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+nesblock/counter_5018_5415__i1/CK->nesblock/counter_5018_5415__i1/Q
+                                          SLICE_R25C5A       CLK_TO_Q1_DELAY         1.388                  6.887  1       
 nesblock/n17                                                 NET DELAY               2.022                  8.909  1       
-nesblock/counter_3674_3979_add_4_1/C1->nesblock/counter_3674_3979_add_4_1/CO1
-                                          SLICE_R22C25A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-nesblock/n19667                                              NET DELAY               0.000                  9.252  2       
-nesblock/counter_3674_3979_add_4_3/CI0->nesblock/counter_3674_3979_add_4_3/CO0
-                                          SLICE_R22C25B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-nesblock/n31214                                              NET DELAY               0.000                  9.529  2       
-nesblock/counter_3674_3979_add_4_3/CI1->nesblock/counter_3674_3979_add_4_3/CO1
-                                          SLICE_R22C25B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-nesblock/n19669                                              NET DELAY               0.000                  9.806  2       
-nesblock/counter_3674_3979_add_4_5/CI0->nesblock/counter_3674_3979_add_4_5/CO0
-                                          SLICE_R22C25C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-nesblock/n31217                                              NET DELAY               0.000                 10.083  2       
-nesblock/counter_3674_3979_add_4_5/CI1->nesblock/counter_3674_3979_add_4_5/CO1
-                                          SLICE_R22C25C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-nesblock/n19671                                              NET DELAY               0.000                 10.360  2       
-nesblock/counter_3674_3979_add_4_7/CI0->nesblock/counter_3674_3979_add_4_7/CO0
-                                          SLICE_R22C25D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-nesblock/n31220                                              NET DELAY               0.000                 10.637  2       
-nesblock/counter_3674_3979_add_4_7/CI1->nesblock/counter_3674_3979_add_4_7/CO1
-                                          SLICE_R22C25D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-nesblock/n19673                                              NET DELAY               0.555                 11.469  2       
-nesblock/counter_3674_3979_add_4_9/CI0->nesblock/counter_3674_3979_add_4_9/CO0
-                                          SLICE_R22C26A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-nesblock/n31223                                              NET DELAY               0.000                 11.746  2       
-nesblock/counter_3674_3979_add_4_9/CI1->nesblock/counter_3674_3979_add_4_9/CO1
-                                          SLICE_R22C26A      CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
-nesblock/n19675                                              NET DELAY               0.661                 12.684  2       
-nesblock/counter_3674_3979_add_4_11/D0->nesblock/counter_3674_3979_add_4_11/S0
-                                          SLICE_R22C26B      D0_TO_F0_DELAY          0.476                 13.160  1       
+nesblock/counter_5018_5415_add_4_1/C1->nesblock/counter_5018_5415_add_4_1/CO1
+                                          SLICE_R25C5A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+nesblock/n22377                                              NET DELAY               0.000                  9.252  2       
+nesblock/counter_5018_5415_add_4_3/CI0->nesblock/counter_5018_5415_add_4_3/CO0
+                                          SLICE_R25C5B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+nesblock/n37180                                              NET DELAY               0.000                  9.529  2       
+nesblock/counter_5018_5415_add_4_3/CI1->nesblock/counter_5018_5415_add_4_3/CO1
+                                          SLICE_R25C5B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+nesblock/n22379                                              NET DELAY               0.000                  9.806  2       
+nesblock/counter_5018_5415_add_4_5/CI0->nesblock/counter_5018_5415_add_4_5/CO0
+                                          SLICE_R25C5C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+nesblock/n37183                                              NET DELAY               0.000                 10.083  2       
+nesblock/counter_5018_5415_add_4_5/CI1->nesblock/counter_5018_5415_add_4_5/CO1
+                                          SLICE_R25C5C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+nesblock/n22381                                              NET DELAY               0.000                 10.360  2       
+nesblock/counter_5018_5415_add_4_7/CI0->nesblock/counter_5018_5415_add_4_7/CO0
+                                          SLICE_R25C5D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+nesblock/n37186                                              NET DELAY               0.000                 10.637  2       
+nesblock/counter_5018_5415_add_4_7/CI1->nesblock/counter_5018_5415_add_4_7/CO1
+                                          SLICE_R25C5D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+nesblock/n22383                                              NET DELAY               0.555                 11.469  2       
+nesblock/counter_5018_5415_add_4_9/CI0->nesblock/counter_5018_5415_add_4_9/CO0
+                                          SLICE_R25C6A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+nesblock/n37189                                              NET DELAY               0.000                 11.746  2       
+nesblock/counter_5018_5415_add_4_9/CI1->nesblock/counter_5018_5415_add_4_9/CO1
+                                          SLICE_R25C6A       CIN1_TO_COUT1_DELAY     0.277                 12.023  2       
+nesblock/n22385                                              NET DELAY               0.661                 12.684  2       
+nesblock/counter_5018_5415_add_4_11/D0->nesblock/counter_5018_5415_add_4_11/S0
+                                          SLICE_R25C6B       D0_TO_F0_DELAY          0.476                 13.160  1       
 nesblock/NEScount_7__N_59[9]                                 NET DELAY               0.000                 13.160  1       
 nesblock/NEScount_7__I_25/D                                                          0.000                 13.160  1       
 
@@ -1001,8 +1002,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/counter_3674_3979__i1/Q  (SLICE_R22C25A)
-Path End         : nesblock/NEScount_7__I_202/D  (SLICE_R22C26A)
+Path Begin       : nesblock/counter_5018_5415__i1/Q  (SLICE_R25C5A)
+Path End         : nesblock/NEScount_7__I_247/D  (SLICE_R25C6A)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 10
@@ -1017,43 +1018,43 @@ Name                                      Cell/Site Name     Delay Name         
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  10      
 nesblock/clk                                                 NET DELAY               5.499                  5.499  10      
-nesblock/counter_3674_3979__i1/CK                                                    0.000                  5.499  1       
+nesblock/counter_5018_5415__i1/CK                                                    0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-nesblock/counter_3674_3979__i1/CK->nesblock/counter_3674_3979__i1/Q
-                                          SLICE_R22C25A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+nesblock/counter_5018_5415__i1/CK->nesblock/counter_5018_5415__i1/Q
+                                          SLICE_R25C5A       CLK_TO_Q1_DELAY         1.388                  6.887  1       
 nesblock/n17                                                 NET DELAY               2.022                  8.909  1       
-nesblock/counter_3674_3979_add_4_1/C1->nesblock/counter_3674_3979_add_4_1/CO1
-                                          SLICE_R22C25A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-nesblock/n19667                                              NET DELAY               0.000                  9.252  2       
-nesblock/counter_3674_3979_add_4_3/CI0->nesblock/counter_3674_3979_add_4_3/CO0
-                                          SLICE_R22C25B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-nesblock/n31214                                              NET DELAY               0.000                  9.529  2       
-nesblock/counter_3674_3979_add_4_3/CI1->nesblock/counter_3674_3979_add_4_3/CO1
-                                          SLICE_R22C25B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-nesblock/n19669                                              NET DELAY               0.000                  9.806  2       
-nesblock/counter_3674_3979_add_4_5/CI0->nesblock/counter_3674_3979_add_4_5/CO0
-                                          SLICE_R22C25C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-nesblock/n31217                                              NET DELAY               0.000                 10.083  2       
-nesblock/counter_3674_3979_add_4_5/CI1->nesblock/counter_3674_3979_add_4_5/CO1
-                                          SLICE_R22C25C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-nesblock/n19671                                              NET DELAY               0.000                 10.360  2       
-nesblock/counter_3674_3979_add_4_7/CI0->nesblock/counter_3674_3979_add_4_7/CO0
-                                          SLICE_R22C25D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-nesblock/n31220                                              NET DELAY               0.000                 10.637  2       
-nesblock/counter_3674_3979_add_4_7/CI1->nesblock/counter_3674_3979_add_4_7/CO1
-                                          SLICE_R22C25D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-nesblock/n19673                                              NET DELAY               0.555                 11.469  2       
-nesblock/counter_3674_3979_add_4_9/CI0->nesblock/counter_3674_3979_add_4_9/CO0
-                                          SLICE_R22C26A      CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
-nesblock/n31223                                              NET DELAY               0.661                 12.407  2       
-nesblock/counter_3674_3979_add_4_9/D1->nesblock/counter_3674_3979_add_4_9/S1
-                                          SLICE_R22C26A      D1_TO_F1_DELAY          0.476                 12.883  1       
+nesblock/counter_5018_5415_add_4_1/C1->nesblock/counter_5018_5415_add_4_1/CO1
+                                          SLICE_R25C5A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+nesblock/n22377                                              NET DELAY               0.000                  9.252  2       
+nesblock/counter_5018_5415_add_4_3/CI0->nesblock/counter_5018_5415_add_4_3/CO0
+                                          SLICE_R25C5B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+nesblock/n37180                                              NET DELAY               0.000                  9.529  2       
+nesblock/counter_5018_5415_add_4_3/CI1->nesblock/counter_5018_5415_add_4_3/CO1
+                                          SLICE_R25C5B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+nesblock/n22379                                              NET DELAY               0.000                  9.806  2       
+nesblock/counter_5018_5415_add_4_5/CI0->nesblock/counter_5018_5415_add_4_5/CO0
+                                          SLICE_R25C5C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+nesblock/n37183                                              NET DELAY               0.000                 10.083  2       
+nesblock/counter_5018_5415_add_4_5/CI1->nesblock/counter_5018_5415_add_4_5/CO1
+                                          SLICE_R25C5C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+nesblock/n22381                                              NET DELAY               0.000                 10.360  2       
+nesblock/counter_5018_5415_add_4_7/CI0->nesblock/counter_5018_5415_add_4_7/CO0
+                                          SLICE_R25C5D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+nesblock/n37186                                              NET DELAY               0.000                 10.637  2       
+nesblock/counter_5018_5415_add_4_7/CI1->nesblock/counter_5018_5415_add_4_7/CO1
+                                          SLICE_R25C5D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+nesblock/n22383                                              NET DELAY               0.555                 11.469  2       
+nesblock/counter_5018_5415_add_4_9/CI0->nesblock/counter_5018_5415_add_4_9/CO0
+                                          SLICE_R25C6A       CIN0_TO_COUT0_DELAY     0.277                 11.746  2       
+nesblock/n37189                                              NET DELAY               0.661                 12.407  2       
+nesblock/counter_5018_5415_add_4_9/D1->nesblock/counter_5018_5415_add_4_9/S1
+                                          SLICE_R25C6A       D1_TO_F1_DELAY          0.476                 12.883  1       
 nesblock/NEScount_7__N_59[8]                                 NET DELAY               0.000                 12.883  1       
-nesblock/NEScount_7__I_202/D                                                         0.000                 12.883  1       
+nesblock/NEScount_7__I_247/D                                                         0.000                 12.883  1       
 
 
 Destination Clock Path
@@ -1062,7 +1063,7 @@ Name                                      Cell/Site Name     Delay Name         
                                                              CONSTRAINT              0.000                 20.833  1       
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  10      
 nesblock/clk                                                 NET DELAY               5.499                 26.332  10      
-{nesblock/counter_3674_3979__i8/CK   nesblock/NEScount_7__I_202/CK}
+{nesblock/counter_5018_5415__i8/CK   nesblock/NEScount_7__I_247/CK}
                                                                                      0.000                 26.332  1       
                                                              Uncertainty          -(0.000)                 26.332  
                                                              Setup time           -(0.198)                 26.134  
@@ -1077,8 +1078,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/counter_3674_3979__i1/Q  (SLICE_R22C25A)
-Path End         : nesblock/counter_3674_3979__i8/D  (SLICE_R22C26A)
+Path Begin       : nesblock/counter_5018_5415__i1/Q  (SLICE_R25C5A)
+Path End         : nesblock/counter_5018_5415__i8/D  (SLICE_R25C6A)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 9
@@ -1093,40 +1094,40 @@ Name                                      Cell/Site Name     Delay Name         
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  10      
 nesblock/clk                                                 NET DELAY               5.499                  5.499  10      
-nesblock/counter_3674_3979__i1/CK                                                    0.000                  5.499  1       
+nesblock/counter_5018_5415__i1/CK                                                    0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
-nesblock/counter_3674_3979__i1/CK->nesblock/counter_3674_3979__i1/Q
-                                          SLICE_R22C25A      CLK_TO_Q1_DELAY         1.388                  6.887  1       
+nesblock/counter_5018_5415__i1/CK->nesblock/counter_5018_5415__i1/Q
+                                          SLICE_R25C5A       CLK_TO_Q1_DELAY         1.388                  6.887  1       
 nesblock/n17                                                 NET DELAY               2.022                  8.909  1       
-nesblock/counter_3674_3979_add_4_1/C1->nesblock/counter_3674_3979_add_4_1/CO1
-                                          SLICE_R22C25A      C1_TO_COUT1_DELAY       0.343                  9.252  2       
-nesblock/n19667                                              NET DELAY               0.000                  9.252  2       
-nesblock/counter_3674_3979_add_4_3/CI0->nesblock/counter_3674_3979_add_4_3/CO0
-                                          SLICE_R22C25B      CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
-nesblock/n31214                                              NET DELAY               0.000                  9.529  2       
-nesblock/counter_3674_3979_add_4_3/CI1->nesblock/counter_3674_3979_add_4_3/CO1
-                                          SLICE_R22C25B      CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
-nesblock/n19669                                              NET DELAY               0.000                  9.806  2       
-nesblock/counter_3674_3979_add_4_5/CI0->nesblock/counter_3674_3979_add_4_5/CO0
-                                          SLICE_R22C25C      CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
-nesblock/n31217                                              NET DELAY               0.000                 10.083  2       
-nesblock/counter_3674_3979_add_4_5/CI1->nesblock/counter_3674_3979_add_4_5/CO1
-                                          SLICE_R22C25C      CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
-nesblock/n19671                                              NET DELAY               0.000                 10.360  2       
-nesblock/counter_3674_3979_add_4_7/CI0->nesblock/counter_3674_3979_add_4_7/CO0
-                                          SLICE_R22C25D      CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
-nesblock/n31220                                              NET DELAY               0.000                 10.637  2       
-nesblock/counter_3674_3979_add_4_7/CI1->nesblock/counter_3674_3979_add_4_7/CO1
-                                          SLICE_R22C25D      CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
-nesblock/n19673                                              NET DELAY               1.216                 12.130  2       
-nesblock/counter_3674_3979_add_4_9/D0->nesblock/counter_3674_3979_add_4_9/S0
-                                          SLICE_R22C26A      D0_TO_F0_DELAY          0.476                 12.606  1       
+nesblock/counter_5018_5415_add_4_1/C1->nesblock/counter_5018_5415_add_4_1/CO1
+                                          SLICE_R25C5A       C1_TO_COUT1_DELAY       0.343                  9.252  2       
+nesblock/n22377                                              NET DELAY               0.000                  9.252  2       
+nesblock/counter_5018_5415_add_4_3/CI0->nesblock/counter_5018_5415_add_4_3/CO0
+                                          SLICE_R25C5B       CIN0_TO_COUT0_DELAY     0.277                  9.529  2       
+nesblock/n37180                                              NET DELAY               0.000                  9.529  2       
+nesblock/counter_5018_5415_add_4_3/CI1->nesblock/counter_5018_5415_add_4_3/CO1
+                                          SLICE_R25C5B       CIN1_TO_COUT1_DELAY     0.277                  9.806  2       
+nesblock/n22379                                              NET DELAY               0.000                  9.806  2       
+nesblock/counter_5018_5415_add_4_5/CI0->nesblock/counter_5018_5415_add_4_5/CO0
+                                          SLICE_R25C5C       CIN0_TO_COUT0_DELAY     0.277                 10.083  2       
+nesblock/n37183                                              NET DELAY               0.000                 10.083  2       
+nesblock/counter_5018_5415_add_4_5/CI1->nesblock/counter_5018_5415_add_4_5/CO1
+                                          SLICE_R25C5C       CIN1_TO_COUT1_DELAY     0.277                 10.360  2       
+nesblock/n22381                                              NET DELAY               0.000                 10.360  2       
+nesblock/counter_5018_5415_add_4_7/CI0->nesblock/counter_5018_5415_add_4_7/CO0
+                                          SLICE_R25C5D       CIN0_TO_COUT0_DELAY     0.277                 10.637  2       
+nesblock/n37186                                              NET DELAY               0.000                 10.637  2       
+nesblock/counter_5018_5415_add_4_7/CI1->nesblock/counter_5018_5415_add_4_7/CO1
+                                          SLICE_R25C5D       CIN1_TO_COUT1_DELAY     0.277                 10.914  2       
+nesblock/n22383                                              NET DELAY               1.216                 12.130  2       
+nesblock/counter_5018_5415_add_4_9/D0->nesblock/counter_5018_5415_add_4_9/S0
+                                          SLICE_R25C6A       D0_TO_F0_DELAY          0.476                 12.606  1       
 nesblock/NEScount_7__N_59[7]                                 NET DELAY               0.000                 12.606  1       
-nesblock/counter_3674_3979__i8/D                                                     0.000                 12.606  1       
+nesblock/counter_5018_5415__i8/D                                                     0.000                 12.606  1       
 
 
 Destination Clock Path
@@ -1135,7 +1136,7 @@ Name                                      Cell/Site Name     Delay Name         
                                                              CONSTRAINT              0.000                 20.833  1       
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                 20.833  10      
 nesblock/clk                                                 NET DELAY               5.499                 26.332  10      
-{nesblock/counter_3674_3979__i8/CK   nesblock/NEScount_7__I_202/CK}
+{nesblock/counter_5018_5415__i8/CK   nesblock/NEScount_7__I_247/CK}
                                                                                      0.000                 26.332  1       
                                                              Uncertainty          -(0.000)                 26.332  
                                                              Setup time           -(0.198)                 26.134  
@@ -1165,8 +1166,8 @@ Path Slack  (Passed)                                                            
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-nesblock/counter_3674_3979__i8/D         |    1.913 ns 
-nesblock/NEScount_7__I_202/D             |    1.913 ns 
+nesblock/counter_5018_5415__i8/D         |    1.913 ns 
+nesblock/NEScount_7__I_247/D             |    1.913 ns 
 nesblock/NEScount_7__I_25/D              |    1.913 ns 
 nesblock/NEScount_7__I_24/D              |    1.913 ns 
 nesblock/NEScount_7__I_23/D              |    1.913 ns 
@@ -1197,8 +1198,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
  ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Path Begin       : nesblock/counter_3674_3979__i8/Q  (SLICE_R22C26A)
-Path End         : nesblock/counter_3674_3979__i8/D  (SLICE_R22C26A)
+Path Begin       : nesblock/counter_5018_5415__i8/Q  (SLICE_R25C6A)
+Path End         : nesblock/counter_5018_5415__i8/D  (SLICE_R25C6A)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 2
@@ -1213,20 +1214,20 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  11      
 nesblock/clk                                                 NET DELAY        3.084                  3.084  11      
-{nesblock/counter_3674_3979__i8/CK   nesblock/NEScount_7__I_202/CK}
+{nesblock/counter_5018_5415__i8/CK   nesblock/NEScount_7__I_247/CK}
                                                                               0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-nesblock/counter_3674_3979__i8/CK->nesblock/counter_3674_3979__i8/Q
-                                          SLICE_R22C26A      CLK_TO_Q0_DELAY  0.779                  3.863  1       
+nesblock/counter_5018_5415__i8/CK->nesblock/counter_5018_5415__i8/Q
+                                          SLICE_R25C6A       CLK_TO_Q0_DELAY  0.779                  3.863  1       
 nesblock/n10                                                 NET DELAY        0.882                  4.745  1       
-nesblock/counter_3674_3979_add_4_9/C0->nesblock/counter_3674_3979_add_4_9/S0
-                                          SLICE_R22C26A      C0_TO_F0_DELAY   0.252                  4.997  1       
+nesblock/counter_5018_5415_add_4_9/C0->nesblock/counter_5018_5415_add_4_9/S0
+                                          SLICE_R25C6A       C0_TO_F0_DELAY   0.252                  4.997  1       
 nesblock/NEScount_7__N_59[7]                                 NET DELAY        0.000                  4.997  1       
-nesblock/counter_3674_3979__i8/D                                              0.000                  4.997  1       
+nesblock/counter_5018_5415__i8/D                                              0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -1235,7 +1236,7 @@ Name                                      Cell/Site Name     Delay Name       In
                                                              CONSTRAINT       0.000                  0.000  1       
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  11      
 nesblock/clk                                                 NET DELAY        3.084                  3.084  11      
-{nesblock/counter_3674_3979__i8/CK   nesblock/NEScount_7__I_202/CK}
+{nesblock/counter_5018_5415__i8/CK   nesblock/NEScount_7__I_247/CK}
                                                                               0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1250,8 +1251,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/NEScount_7__I_202/Q  (SLICE_R22C26A)
-Path End         : nesblock/NEScount_7__I_202/D  (SLICE_R22C26A)
+Path Begin       : nesblock/NEScount_7__I_247/Q  (SLICE_R25C6A)
+Path End         : nesblock/NEScount_7__I_247/D  (SLICE_R25C6A)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 2
@@ -1266,20 +1267,20 @@ Name                                      Cell/Site Name     Delay Name       In
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  11      
 nesblock/clk                                                 NET DELAY        3.084                  3.084  11      
-{nesblock/counter_3674_3979__i8/CK   nesblock/NEScount_7__I_202/CK}
+{nesblock/counter_5018_5415__i8/CK   nesblock/NEScount_7__I_247/CK}
                                                                               0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-nesblock/NEScount_7__I_202/CK->nesblock/NEScount_7__I_202/Q
-                                          SLICE_R22C26A      CLK_TO_Q1_DELAY  0.779                  3.863  3       
+nesblock/NEScount_7__I_247/CK->nesblock/NEScount_7__I_247/Q
+                                          SLICE_R25C6A       CLK_TO_Q1_DELAY  0.779                  3.863  3       
 nesblock/NESclk_c                                            NET DELAY        0.882                  4.745  3       
-nesblock/counter_3674_3979_add_4_9/C1->nesblock/counter_3674_3979_add_4_9/S1
-                                          SLICE_R22C26A      C1_TO_F1_DELAY   0.252                  4.997  1       
+nesblock/counter_5018_5415_add_4_9/C1->nesblock/counter_5018_5415_add_4_9/S1
+                                          SLICE_R25C6A       C1_TO_F1_DELAY   0.252                  4.997  1       
 nesblock/NEScount_7__N_59[8]                                 NET DELAY        0.000                  4.997  1       
-nesblock/NEScount_7__I_202/D                                                  0.000                  4.997  1       
+nesblock/NEScount_7__I_247/D                                                  0.000                  4.997  1       
 
 
 Destination Clock Path
@@ -1288,7 +1289,7 @@ Name                                      Cell/Site Name     Delay Name       In
                                                              CONSTRAINT       0.000                  0.000  1       
 nesblock.instanceosc/CLKHF                HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  11      
 nesblock/clk                                                 NET DELAY        3.084                  3.084  11      
-{nesblock/counter_3674_3979__i8/CK   nesblock/NEScount_7__I_202/CK}
+{nesblock/counter_5018_5415__i8/CK   nesblock/NEScount_7__I_247/CK}
                                                                               0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1303,8 +1304,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/NEScount_7__I_25/Q  (SLICE_R22C26B)
-Path End         : nesblock/NEScount_7__I_25/D  (SLICE_R22C26B)
+Path Begin       : nesblock/NEScount_7__I_25/Q  (SLICE_R25C6B)
+Path End         : nesblock/NEScount_7__I_25/D  (SLICE_R25C6B)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 2
@@ -1327,10 +1328,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 nesblock/NEScount_7__I_25/CK->nesblock/NEScount_7__I_25/Q
-                                          SLICE_R22C26B      CLK_TO_Q0_DELAY  0.779                  3.863  3       
+                                          SLICE_R25C6B       CLK_TO_Q0_DELAY  0.779                  3.863  3       
 nesblock/NEScount[0]                                         NET DELAY        0.882                  4.745  3       
-nesblock/counter_3674_3979_add_4_11/C0->nesblock/counter_3674_3979_add_4_11/S0
-                                          SLICE_R22C26B      C0_TO_F0_DELAY   0.252                  4.997  1       
+nesblock/counter_5018_5415_add_4_11/C0->nesblock/counter_5018_5415_add_4_11/S0
+                                          SLICE_R25C6B       C0_TO_F0_DELAY   0.252                  4.997  1       
 nesblock/NEScount_7__N_59[9]                                 NET DELAY        0.000                  4.997  1       
 nesblock/NEScount_7__I_25/D                                                   0.000                  4.997  1       
 
@@ -1356,8 +1357,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/NEScount_7__I_24/Q  (SLICE_R22C26B)
-Path End         : nesblock/NEScount_7__I_24/D  (SLICE_R22C26B)
+Path Begin       : nesblock/NEScount_7__I_24/Q  (SLICE_R25C6B)
+Path End         : nesblock/NEScount_7__I_24/D  (SLICE_R25C6B)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 2
@@ -1380,10 +1381,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 nesblock/NEScount_7__I_24/CK->nesblock/NEScount_7__I_24/Q
-                                          SLICE_R22C26B      CLK_TO_Q1_DELAY  0.779                  3.863  3       
+                                          SLICE_R25C6B       CLK_TO_Q1_DELAY  0.779                  3.863  3       
 nesblock/NEScount[1]                                         NET DELAY        0.882                  4.745  3       
-nesblock/counter_3674_3979_add_4_11/C1->nesblock/counter_3674_3979_add_4_11/S1
-                                          SLICE_R22C26B      C1_TO_F1_DELAY   0.252                  4.997  1       
+nesblock/counter_5018_5415_add_4_11/C1->nesblock/counter_5018_5415_add_4_11/S1
+                                          SLICE_R25C6B       C1_TO_F1_DELAY   0.252                  4.997  1       
 nesblock/NEScount_7__N_59[10]                                NET DELAY        0.000                  4.997  1       
 nesblock/NEScount_7__I_24/D                                                   0.000                  4.997  1       
 
@@ -1409,8 +1410,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/NEScount_7__I_23/Q  (SLICE_R22C26C)
-Path End         : nesblock/NEScount_7__I_23/D  (SLICE_R22C26C)
+Path Begin       : nesblock/NEScount_7__I_23/Q  (SLICE_R25C6C)
+Path End         : nesblock/NEScount_7__I_23/D  (SLICE_R25C6C)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 2
@@ -1433,10 +1434,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 nesblock/NEScount_7__I_23/CK->nesblock/NEScount_7__I_23/Q
-                                          SLICE_R22C26C      CLK_TO_Q0_DELAY  0.779                  3.863  3       
+                                          SLICE_R25C6C       CLK_TO_Q0_DELAY  0.779                  3.863  3       
 nesblock/NEScount[2]                                         NET DELAY        0.882                  4.745  3       
-nesblock/counter_3674_3979_add_4_13/C0->nesblock/counter_3674_3979_add_4_13/S0
-                                          SLICE_R22C26C      C0_TO_F0_DELAY   0.252                  4.997  1       
+nesblock/counter_5018_5415_add_4_13/C0->nesblock/counter_5018_5415_add_4_13/S0
+                                          SLICE_R25C6C       C0_TO_F0_DELAY   0.252                  4.997  1       
 nesblock/NEScount_7__N_59[11]                                NET DELAY        0.000                  4.997  1       
 nesblock/NEScount_7__I_23/D                                                   0.000                  4.997  1       
 
@@ -1462,8 +1463,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/NEScount_7__I_22/Q  (SLICE_R22C26C)
-Path End         : nesblock/NEScount_7__I_22/D  (SLICE_R22C26C)
+Path Begin       : nesblock/NEScount_7__I_22/Q  (SLICE_R25C6C)
+Path End         : nesblock/NEScount_7__I_22/D  (SLICE_R25C6C)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 2
@@ -1486,10 +1487,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 nesblock/NEScount_7__I_22/CK->nesblock/NEScount_7__I_22/Q
-                                          SLICE_R22C26C      CLK_TO_Q1_DELAY  0.779                  3.863  4       
+                                          SLICE_R25C6C       CLK_TO_Q1_DELAY  0.779                  3.863  4       
 nesblock/NEScount[3]                                         NET DELAY        0.882                  4.745  4       
-nesblock/counter_3674_3979_add_4_13/C1->nesblock/counter_3674_3979_add_4_13/S1
-                                          SLICE_R22C26C      C1_TO_F1_DELAY   0.252                  4.997  1       
+nesblock/counter_5018_5415_add_4_13/C1->nesblock/counter_5018_5415_add_4_13/S1
+                                          SLICE_R25C6C       C1_TO_F1_DELAY   0.252                  4.997  1       
 nesblock/NEScount_7__N_59[12]                                NET DELAY        0.000                  4.997  1       
 nesblock/NEScount_7__I_22/D                                                   0.000                  4.997  1       
 
@@ -1515,8 +1516,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/NEScount_7__I_21/Q  (SLICE_R22C26D)
-Path End         : nesblock/NEScount_7__I_21/D  (SLICE_R22C26D)
+Path Begin       : nesblock/NEScount_7__I_21/Q  (SLICE_R25C6D)
+Path End         : nesblock/NEScount_7__I_21/D  (SLICE_R25C6D)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 2
@@ -1539,10 +1540,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 nesblock/NEScount_7__I_21/CK->nesblock/NEScount_7__I_21/Q
-                                          SLICE_R22C26D      CLK_TO_Q0_DELAY  0.779                  3.863  4       
+                                          SLICE_R25C6D       CLK_TO_Q0_DELAY  0.779                  3.863  4       
 nesblock/NEScount[4]                                         NET DELAY        0.882                  4.745  4       
-nesblock/counter_3674_3979_add_4_15/C0->nesblock/counter_3674_3979_add_4_15/S0
-                                          SLICE_R22C26D      C0_TO_F0_DELAY   0.252                  4.997  1       
+nesblock/counter_5018_5415_add_4_15/C0->nesblock/counter_5018_5415_add_4_15/S0
+                                          SLICE_R25C6D       C0_TO_F0_DELAY   0.252                  4.997  1       
 nesblock/NEScount_7__N_59[13]                                NET DELAY        0.000                  4.997  1       
 nesblock/NEScount_7__I_21/D                                                   0.000                  4.997  1       
 
@@ -1568,8 +1569,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/NEScount_7__I_20/Q  (SLICE_R22C26D)
-Path End         : nesblock/NEScount_7__I_20/D  (SLICE_R22C26D)
+Path Begin       : nesblock/NEScount_7__I_20/Q  (SLICE_R25C6D)
+Path End         : nesblock/NEScount_7__I_20/D  (SLICE_R25C6D)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 2
@@ -1592,10 +1593,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 nesblock/NEScount_7__I_20/CK->nesblock/NEScount_7__I_20/Q
-                                          SLICE_R22C26D      CLK_TO_Q1_DELAY  0.779                  3.863  4       
+                                          SLICE_R25C6D       CLK_TO_Q1_DELAY  0.779                  3.863  4       
 nesblock/NEScount[5]                                         NET DELAY        0.882                  4.745  4       
-nesblock/counter_3674_3979_add_4_15/C1->nesblock/counter_3674_3979_add_4_15/S1
-                                          SLICE_R22C26D      C1_TO_F1_DELAY   0.252                  4.997  1       
+nesblock/counter_5018_5415_add_4_15/C1->nesblock/counter_5018_5415_add_4_15/S1
+                                          SLICE_R25C6D       C1_TO_F1_DELAY   0.252                  4.997  1       
 nesblock/NEScount_7__N_59[14]                                NET DELAY        0.000                  4.997  1       
 nesblock/NEScount_7__I_20/D                                                   0.000                  4.997  1       
 
@@ -1621,8 +1622,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/NEScount_7__I_19/Q  (SLICE_R22C27A)
-Path End         : nesblock/NEScount_7__I_19/D  (SLICE_R22C27A)
+Path Begin       : nesblock/NEScount_7__I_19/Q  (SLICE_R25C7A)
+Path End         : nesblock/NEScount_7__I_19/D  (SLICE_R25C7A)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 2
@@ -1645,10 +1646,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 nesblock/NEScount_7__I_19/CK->nesblock/NEScount_7__I_19/Q
-                                          SLICE_R22C27A      CLK_TO_Q0_DELAY  0.779                  3.863  4       
+                                          SLICE_R25C7A       CLK_TO_Q0_DELAY  0.779                  3.863  4       
 nesblock/NEScount[6]                                         NET DELAY        0.882                  4.745  4       
-nesblock/counter_3674_3979_add_4_17/C0->nesblock/counter_3674_3979_add_4_17/S0
-                                          SLICE_R22C27A      C0_TO_F0_DELAY   0.252                  4.997  1       
+nesblock/counter_5018_5415_add_4_17/C0->nesblock/counter_5018_5415_add_4_17/S0
+                                          SLICE_R25C7A       C0_TO_F0_DELAY   0.252                  4.997  1       
 nesblock/NEScount_7__N_59[15]                                NET DELAY        0.000                  4.997  1       
 nesblock/NEScount_7__I_19/D                                                   0.000                  4.997  1       
 
@@ -1674,8 +1675,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : nesblock/NEScount_7__I_0_2/Q  (SLICE_R22C27A)
-Path End         : nesblock/NEScount_7__I_0_2/D  (SLICE_R22C27A)
+Path Begin       : nesblock/NEScount_7__I_0_2/Q  (SLICE_R25C7A)
+Path End         : nesblock/NEScount_7__I_0_2/D  (SLICE_R25C7A)
 Source Clock     : nesblock/clk (R)
 Destination Clock: nesblock/clk (R)
 Logic Level      : 2
@@ -1698,10 +1699,10 @@ Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 nesblock/NEScount_7__I_0_2/CK->nesblock/NEScount_7__I_0_2/Q
-                                          SLICE_R22C27A      CLK_TO_Q1_DELAY  0.779                  3.863  4       
+                                          SLICE_R25C7A       CLK_TO_Q1_DELAY  0.779                  3.863  4       
 nesblock/NEScount[7]                                         NET DELAY        0.882                  4.745  4       
-nesblock/counter_3674_3979_add_4_17/C1->nesblock/counter_3674_3979_add_4_17/S1
-                                          SLICE_R22C27A      C1_TO_F1_DELAY   0.252                  4.997  1       
+nesblock/counter_5018_5415_add_4_17/C1->nesblock/counter_5018_5415_add_4_17/S1
+                                          SLICE_R25C7A       C1_TO_F1_DELAY   0.252                  4.997  1       
 nesblock/NEScount_7__N_59[16]                                NET DELAY        0.000                  4.997  1       
 nesblock/NEScount_7__I_0_2/D                                                  0.000                  4.997  1       
 

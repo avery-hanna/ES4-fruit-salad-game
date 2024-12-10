@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Dec 10 10:25:19 2024
+Tue Dec 10 11:06:01 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
@@ -193,7 +193,7 @@ Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd
 
 INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(6): analyzing entity pattern_gen. VHDL-1012
 INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(19): analyzing architecture synth. VHDL-1010
-WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(199): possible infinite loop process does not have a wait statement. VHDL-1196
+WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(190): possible infinite loop process does not have a wait statement. VHDL-1196
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/shift8.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/shift8.vhd
 
@@ -293,7 +293,6 @@ WARNING <35931002> - synthesis: z:/es4/finalproj/fruitsalad/mypll/rtl/mypll.v(14
 
 
 
-Duplicate register/latch removal. i105 is a one-to-one match with i95.
 Mapped 1 multiplier(s)
 
 
@@ -348,20 +347,20 @@ Combinational loop found : 8
 INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (vga_controller)######################
-Number of register bits => 413 of 5280 (7 % )
-EBR_B => 23
-CCU2 => 208
-FD1P3XZ => 413
+Number of register bits => 523 of 5280 (9 % )
+EBR_B => 22
+CCU2 => 258
+FD1P3XZ => 523
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 1
-LUT4 => 2056
+LUT4 => 2751
 MAC16 => 1
 OB => 21
 PLL_B => 1
 ################### End Area Report ##################
 Number of odd-length carry chains : 3
-Number of even-length carry chains : 31
+Number of even-length carry chains : 41
 
 ################### Begin Clock Report ######################
 Clock Nets
@@ -374,21 +373,21 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/n3_adj_2177, loads : 215
-  Net : thirdblock/game_state[0], loads : 185
-  Net : thirdblock/game_state[1], loads : 168
-  Net : thirdblock/n1229, loads : 129
-  Net : thirdblock/falloop_counter[0], loads : 126
-  Net : thirdblock/n6_adj_2310, loads : 52
+  Net : thirdblock/n3, loads : 318
+  Net : thirdblock/game_state[0], loads : 252
+  Net : thirdblock/game_state[1], loads : 225
+  Net : thirdblock/n1489, loads : 192
+  Net : thirdblock/falloop_index[1], loads : 113
+  Net : thirdblock/falloop_index[0], loads : 87
+  Net : thirdblock/falloop_index[2], loads : 67
+  Net : thirdblock/n7691, loads : 61
   Net : thirdblock/game_state[2], loads : 49
-  Net : thirdblock/falloop_counter[2], loads : 44
-  Net : thirdblock/n5821, loads : 42
-  Net : thirdblock/n5_adj_2309, loads : 39
+  Net : thirdblock/falloop_index[3], loads : 44
 ################### End Clock Report ##################
 
-Peak Memory Usage: 209 MB
+Peak Memory Usage: 213 MB
 
 --------------------------------------------------------------
-Total CPU Time: 10 secs 
-Total REAL Time: 21 secs 
+Total CPU Time: 11 secs 
+Total REAL Time: 29 secs 
 --------------------------------------------------------------

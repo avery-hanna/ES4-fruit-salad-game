@@ -39,18 +39,18 @@ Preference Summary:
 
 Creating bit map...
 Saving bit stream in "Z:\es4\finalproj\fruitSalad\impl_1\fruitSalad_impl_1.bin".
-INFO <1081100> - Bitstream authenticated.
+    <postMsg mid="1081100" type="Info" dynamic="1" navigation="0" arg0="Bitstream authenticated."  />
 Bitstream generation complete!
 
 Total CPU Time: 1 secs 
 Total REAL Time: 2 secs 
-Peak Memory Usage: 141 MB
+Peak Memory Usage: 152 MB
 
 
 ibisgen "fruitSalad_impl_1.udb" "C:/lscc/radiant/2023.1/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 2023.1.0.43.3
 
-Tue Dec 10 10:27:26 2024
+Tue Dec 10 11:07:46 2024
 
 Loading fruitSalad_impl_1.udb ...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2023.1/ispfpga.
@@ -72,8 +72,7 @@ Created design models.
 Generating: Z:\es4\finalproj\fruitSalad\impl_1\IBIS\fruitSalad_impl_1.ibs
 
 
-INFO <1191031> - Design IBIS models are generated for board level analysis.
-
+    <postMsg mid="1191031" type="Info" dynamic="0" navigation="0"  />
 
 backanno "fruitSalad_impl_1.udb"  -o "fruitSalad_impl_1_vo.vo"      -sp "High-Performance_1.2V"  -w -neg
 backanno: version Radiant Software (64-bit) 2023.1.0.43.3
@@ -100,6 +99,6 @@ Writing a verilog netlist based on the fruitSalad_impl_1 design file.
 Writing Verilog netlist to file fruitSalad_impl_1_vo.vo
 Writing SDF timing to file fruitSalad_impl_1_vo.sdf
 Backanno finished with 0 posted error messages.
-Total CPU Time: 6 secs 
-Total REAL Time: 7 secs 
-Peak Memory Usage: 167 MB
+Total CPU Time: 8 secs 
+Total REAL Time: 10 secs 
+Peak Memory Usage: 193 MB
