@@ -328,22 +328,21 @@ begin
 				if counter = 17d"011100" then
 					active_fruit_tl_row <= active_fruit_tl_row + 1;
 					counter <= 17d"0";
-					
-					
 				end if;
 				
-				falloop_counter <= 5d"1";
+				--if counter = 17d"011100" then
 
-				if active_fruit_tl_row > 417 then -- fruit has reached bottom row without collisions
-					fruit_tl_row(swap_fruit) <= active_fruit_tl_row;
-					fruit_tl_col(swap_fruit) <= active_fruit_tl_col;
-					fruit_type(swap_fruit) <= active_fruit_type;
-				
-					game_state <= SWAP;
-				else
-					game_state <= FALL_LOOP;
-				end if;
-				
+					if active_fruit_tl_row > 417 then -- fruit has reached bottom row without collisions
+						fruit_tl_row(swap_fruit) <= active_fruit_tl_row;
+						fruit_tl_col(swap_fruit) <= active_fruit_tl_col;
+						fruit_type(swap_fruit) <= active_fruit_type;
+					
+						game_state <= SWAP;
+					else
+						falloop_counter <= 5d"1";
+						game_state <= FALL_LOOP;
+					end if;
+				--end if;
 				
 			elsif game_state = FALL_LOOP then
 				
@@ -393,7 +392,7 @@ begin
 				--fruit_type(swap_fruit) <= active_fruit_type;
 				
 				active_fruit_type <= randomoutput;
-				active_fruit_type <= "00";
+				--active_fruit_type <= "00";
 			
 				--falloop_counter <= 0;
 			
@@ -416,7 +415,7 @@ begin
 					game_state <= START;
 				end if;
 			else
-				game_state <= START;
+				game_state <= GAME_OVER;
 			end if;
 		end if;
 	end process;

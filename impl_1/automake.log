@@ -1,4 +1,297 @@
 
+par -f "fruitSalad_impl_1.p2t" "fruitSalad_impl_1_map.udb" "fruitSalad_impl_1.udb"
+
+Lattice Place and Route Report for Design "fruitSalad_impl_1_map.udb"
+Mon Dec  9 20:49:05 2024
+
+PAR: Place And Route Radiant Software (64-bit) 2023.1.0.43.3.
+Command Line: par -w -t 1 -cores 1 -exp parPathBased=ON \
+	fruitSalad_impl_1_map.udb fruitSalad_impl_1_par.dir/5_1.udb 
+
+Loading fruitSalad_impl_1_map.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2023.1/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  vga_controller
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+    <postMsg mid="70001944" type="Warning" dynamic="1" navigation="0" arg0="create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] "  />
+    <postMsg mid="70001944" type="Warning" dynamic="1" navigation="0" arg0="create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] "  />
+
+WARNING: Database constraint "create_generated_clock -name {ext_osc_test_c} -source [get_pins firstblock.lscc_pll_inst.u_PLL_B/REFERENCECLK] -divide_by 32 -multiply_by 67 [get_pins firstblock.lscc_pll_inst.u_PLL_B/OUTCORE]" does not have corresponding timing constraint. Please check if the resource objects of the constraint are valid carefully!
+Number of Signals: 3825
+Number of Connections: 11248
+Device utilization summary:
+
+   SLICE (est.)    1676/2640         63% used
+     LUT           3042/5280         58% used
+     REG            407/5280          8% used
+   PIO               23/56           41% used
+                     23/36           63% bonded
+   IOLOGIC            1/56            2% used
+   DSP                0/8             0% used
+   I2C                0/2             0% used
+   HFOSC              1/1           100% used
+   LFOSC              0/1             0% used
+   LEDDA_IP           0/1             0% used
+   RGBA_DRV           0/1             0% used
+   FILTER             0/2             0% used
+   SRAM               0/4             0% used
+   WARMBOOT           0/1             0% used
+   SPI                0/2             0% used
+   EBR               23/30           77% used
+   PLL                1/1           100% used
+   RGBOUTBUF          0/3             0% used
+   I3C                0/2             0% used
+   OPENDRAIN          0/3             0% used
+
+Pin Constraint Summary:
+   21 out of 23 pins locked (91% locked).
+.
+.............
+Finished Placer Phase 0 (HIER). CPU time: 15 secs , REAL time: 15 secs 
+
+
+................
+Finished Placer Phase 0 (AP).  CPU time: 16 secs , REAL time: 17 secs 
+
+Starting Placer Phase 1. CPU time: 16 secs , REAL time: 17 secs 
+..  ..
+....................
+
+Placer score = 777016.
+
+Device SLICE utilization summary after final SLICE packing:
+   SLICE           1619/2640         61% used
+
+    <postMsg mid="70001944" type="Warning" dynamic="1" navigation="0" arg0="create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] "  />
+    <postMsg mid="70001944" type="Warning" dynamic="1" navigation="0" arg0="create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] "  />
+Finished Placer Phase 1. CPU time: 30 secs , REAL time: 30 secs 
+
+Starting Placer Phase 2.
+.
+
+Placer score =  855231
+Finished Placer Phase 2.  CPU time: 31 secs , REAL time: 31 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clocks :
+  PRIMARY "nesblock.clk" from comp "nesblock.instanceosc" on site "HFOSC_R1C32", clk load = 9, ce load = 0, sr load = 0
+  PRIMARY "clk" from OUTGLOBAL on comp "firstblock.lscc_pll_inst.u_PLL_B" on site "PLL_R13C32", clk load = 263, ce load = 0, sr load = 0
+
+  PRIMARY  : 2 out of 8 (25%)
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   23 out of 56 (41.1%) I/O sites used.
+   23 out of 36 (63.9%) bonded I/O sites used.
+   Number of I/O components: 23; differential: 0
+   Number of Vref pins used: 0
+
+I/O Bank Usage Summary:
++----------+----------------+------------+------------+------------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+----------------+------------+------------+------------+
+| 0        | 13 / 14 ( 92%) | 3.3V       |            |            |
+| 1        | 4 / 14 ( 28%)  | 3.3V       |            |            |
+| 2        | 6 / 8 ( 75%)   | 3.3V       |            |            |
++----------+----------------+------------+------------+------------+
+
+Total Placer CPU time: 31 secs , REAL time: 31 secs 
+
+Writing design to file fruitSalad_impl_1_par.dir/5_1.udb ...
+
+
+Start NBR router at 20:49:37 12/09/24
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in timing report. You should always run the timing    
+      tool to verify your design.                                
+*****************************************************************
+
+Starting routing resource preassignment
+Preassignment Summary:
+--------------------------------------------------------------------------------
+743 connections routed with dedicated routing resources
+2 global clock signals routed
+1015 connections routed (of 11032 total) (9.20%)
+---------------------------------------------------------
+Clock routing summary:
+Primary clocks (2 used out of 8 available):
+#4  Signal "nesblock.clk"
+       Clock   loads: 9     out of     9 routed (100.00%)
+#7  Signal "clk"
+       Clock   loads: 263   out of   263 routed (100.00%)
+Other clocks:
+    Signal "CTRLclk_c"
+       Clock   loads: 0     out of     5 routed (  0.00%)
+       Data    loads: 0     out of     1 routed (  0.00%)
+    Signal "external_osc_c"
+       Clock   loads: 0     out of     1 routed (  0.00%)
+    Signal "firstblock.lscc_pll_inst.feedback_w"
+       Clock   loads: 1     out of     1 routed (100.00%)
+---------------------------------------------------------
+--------------------------------------------------------------------------------
+Completed routing resource preassignment
+    <postMsg mid="70001944" type="Warning" dynamic="1" navigation="0" arg0="create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] "  />
+    <postMsg mid="70001944" type="Warning" dynamic="1" navigation="0" arg0="create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] "  />
+    TimerIf::skewscore 0
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Routing in Serial Mode ......
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Start NBR section for initial routing at 20:49:37 12/09/24
+Level 4, iteration 1
+490(0.19%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.480ns/0.000ns; real time: 11 secs 
+
+Info: Initial congestion level at 75.00% usage is 0
+Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 20:49:47 12/09/24
+Level 4, iteration 1
+115(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.480ns/0.000ns; real time: 12 secs 
+Level 4, iteration 2
+76(0.03%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.480ns/0.000ns; real time: 12 secs 
+Level 4, iteration 3
+24(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.480ns/0.000ns; real time: 13 secs 
+Level 4, iteration 4
+5(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.480ns/0.000ns; real time: 13 secs 
+Level 4, iteration 5
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.480ns/0.000ns; real time: 13 secs 
+Level 4, iteration 6
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.480ns/0.000ns; real time: 13 secs 
+Level 4, iteration 7
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.480ns/0.000ns; real time: 13 secs 
+Level 4, iteration 8
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.480ns/0.000ns; real time: 13 secs 
+Level 4, iteration 9
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.480ns/0.000ns; real time: 13 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 20:49:49 12/09/24
+Changing speed to M
+
+Starting full timing analysis...
+Changing speed to M;   changing temperature to -40
+Changing speed to 6;   changing temperature to 100
+
+Start NBR section for post-routing at 20:49:50 12/09/24
+
+End NBR router with 0 unrouted connection
+    <postMsg mid="70001944" type="Warning" dynamic="1" navigation="0" arg0="create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] "  />
+    <postMsg mid="70001944" type="Warning" dynamic="1" navigation="0" arg0="create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] "  />
+Requested speed is the same as database speed
+Changing speed to M
+
+Starting full timing analysis...
+Requested speed is the same as database speed
+Changing speed to 6;   changing temperature to 100
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Estimated worst slack<setup> : 10.480ns
+  Estimated worst slack<hold > : 1.913ns
+  Timing score<setup> : 0
+  Timing score<hold > : 0
+  Number of connections with timing violations<setup> : 0 (0.00%)
+  Number of connections with timing violations<hold > : 0 (0.00%)
+-----------
+
+
+Total CPU time 15 secs 
+Total REAL time: 16 secs 
+Completely routed.
+End of route.  11032 routed (100.00%); 0 unrouted.
+
+Writing design to file fruitSalad_impl_1_par.dir/5_1.udb ...
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 10.480
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 1.913
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  Time: 47 secs 
+Total REAL Time: 47 secs 
+Peak Memory Usage: 173.72 MB
+
+
+par done!
+
+Note: user must run 'timing' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m   -pwrprd -html -rpt "fruitSalad_impl_1.twr" "fruitSalad_impl_1.udb" 
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt fruitSalad_impl_1.twr fruitSalad_impl_1.udb -gui
+Starting design reading...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2023.1/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+Loading udb::Database ...
+Design:  vga_controller
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+
+
+
+Successfully loading udb, 0.19 seconds
+
+Initializing timer
+Starting design annotation....
+    <postMsg mid="70001944" type="Warning" dynamic="1" navigation="0" arg0="create_generated_clock -name {clk} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTGLOBAL }] "  />
+    <postMsg mid="70001944" type="Warning" dynamic="1" navigation="0" arg0="create_generated_clock -name {ext_osc_test_c} -source [get_pins {firstblock/lscc_pll_inst/u_PLL_B/REFERENCECLK}] -multiply_by 67 -divide_by 32 [get_pins {firstblock/lscc_pll_inst/u_PLL_B/OUTCORE }] "  />
+High-Performance_1.2V
+
+Starting full timing analysis...
+Performance Hardware Data Status:   Advanced       Version 1.0.
+Connections ignored  556  counted  8067  covered  65
+Changing speed to m;   changing temperature to -40
+
+STA Runtime and Peak Memory Usage :
+Total CPU Time: 5 secs 
+Total REAL Time: 13 secs 
+Peak Memory Usage: 122 MB
+
+ 13.292869s wall, 5.578125s user + 0.406250s system = 5.984375s CPU (45.0%)
+
+
 tmcheck -par "fruitSalad_impl_1.par" 
 
 bitgen -w "fruitSalad_impl_1.udb" -f "fruitSalad_impl_1.t2b" 
@@ -38,7 +331,8 @@ Preference Summary:
 
 
 Creating bit map...
-Saving bit stream in "Z:\es4\finalproj\fruitSalad\impl_1\fruitSalad_impl_1.bin".
+Saving bit stream in "Z:\ES4\ES4-fruit-salad-game\impl_1\fruitSalad_impl_1.bin".
+    <postMsg mid="1081100" type="Info" dynamic="1" navigation="0" arg0="Bitstream authenticated."  />
 Bitstream generation complete!
 
 Total CPU Time: 1 secs 
@@ -49,7 +343,7 @@ Peak Memory Usage: 147 MB
 ibisgen "fruitSalad_impl_1.udb" "C:/lscc/radiant/2023.1/cae_library/ibis/iCE40UP.ibs"
 IBIS Models Generator: Lattice Radiant Software (64-bit) 2023.1.0.43.3
 
-Mon Dec  9 17:42:48 2024
+Mon Dec  9 20:50:08 2024
 
 Loading fruitSalad_impl_1.udb ...
 Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2023.1/ispfpga.
@@ -68,7 +362,7 @@ Successfully loading design udb and device data from disks and to up-layer in CP
 Created design models.
 
 
-Generating: Z:\es4\finalproj\fruitSalad\impl_1\IBIS\fruitSalad_impl_1.ibs
+Generating: Z:\ES4\ES4-fruit-salad-game\impl_1\IBIS\fruitSalad_impl_1.ibs
 
 
     <postMsg mid="1191031" type="Info" dynamic="0" navigation="0"  />
@@ -99,5 +393,5 @@ Writing Verilog netlist to file fruitSalad_impl_1_vo.vo
 Writing SDF timing to file fruitSalad_impl_1_vo.sdf
 Backanno finished with 0 posted error messages.
 Total CPU Time: 7 secs 
-Total REAL Time: 9 secs 
-Peak Memory Usage: 181 MB
+Total REAL Time: 8 secs 
+Peak Memory Usage: 179 MB
