@@ -10,7 +10,7 @@ entity dddd is
   );
 end dddd;
 
-architecture sim of dddd is
+architecture synth of dddd is
 signal tensplace_intermediate : std_logic_vector(12 downto 0);
 
 begin

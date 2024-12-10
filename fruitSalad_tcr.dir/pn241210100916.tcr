@@ -1,0 +1,17 @@
+#Start recording tcl command: 12/10/2024 09:53:07
+#Project Location: Z:/es4/finalproj/fruitSalad; Project name: fruitSalad
+prj_open "Z:/es4/finalproj/fruitSalad/fruitSalad.rdf"
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/2023.1"
+prj_remove_source "Z:/es4/finalproj/fruitSalad/source/impl_1/grapefruitROM.vhd"
+prj_remove_source "Z:/es4/finalproj/fruitSalad/source/impl_1/orangeROM.vhd"
+prj_remove_source "Z:/es4/finalproj/fruitSalad/source/impl_1/watermelonROM.vhd"
+prj_remove_source "Z:/es4/finalproj/fruitSalad/source/impl_1/blueberryCherryROM.vhd"
+prj_remove_source "Z:/es4/finalproj/fruitSalad/source/impl_1/update_color.vhd"
+prj_remove_source "Z:/es4/finalproj/fruitSalad/source/impl_1/top.vhd"
+prj_run PAR -impl impl_1
+prj_run Export -impl impl_1
+launch_programmer_prj "C:/lscc/radiant/2023.1"
+#Stop recording: 12/10/2024 10:09:16

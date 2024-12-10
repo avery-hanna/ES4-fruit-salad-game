@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Dec  9 22:50:14 2024
+Tue Dec 10 10:25:19 2024
 
 
 Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f fruitSalad_impl_1_lattice.synproj -gui -msgset Z:/es4/finalproj/fruitSalad/promote.xml 
@@ -113,6 +113,8 @@ VHDL library = work
 VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/dddd.vhd
 VHDL library = work
 VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/mapfruitrgb.vhd
+VHDL library = work
+VHDL design file = Z:/es4/finalproj/fruitSalad/source/impl_1/score_display.vhd
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
 WARNING <35935050> - synthesis: input port TRIM9 is not connected on this instance. VDB-5050
 WARNING <35935050> - synthesis: input port TRIM8 is not connected on this instance. VDB-5050
@@ -191,7 +193,7 @@ Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd
 
 INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(6): analyzing entity pattern_gen. VHDL-1012
 INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(19): analyzing architecture synth. VHDL-1010
-WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(214): possible infinite loop process does not have a wait statement. VHDL-1196
+WARNING <35921196> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/pattern_gen.vhd(199): possible infinite loop process does not have a wait statement. VHDL-1196
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/shift8.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/shift8.vhd
 
@@ -242,12 +244,17 @@ Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/dddd.vhd. VHDL-148
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/dddd.vhd
 
 INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/dddd.vhd(5): analyzing entity dddd. VHDL-1012
-INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/dddd.vhd(13): analyzing architecture sim. VHDL-1010
+INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/dddd.vhd(13): analyzing architecture synth. VHDL-1010
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/mapfruitrgb.vhd. VHDL-1481
 Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/mapfruitrgb.vhd
 
 INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/mapfruitrgb.vhd(5): analyzing entity maprgb. VHDL-1012
 INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/mapfruitrgb.vhd(13): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/score_display.vhd. VHDL-1481
+Analyzing VHDL file z:/es4/finalproj/fruitsalad/source/impl_1/score_display.vhd
+
+INFO <35921012> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/score_display.vhd(5): analyzing entity score_display. VHDL-1012
+INFO <35921010> - synthesis: z:/es4/finalproj/fruitsalad/source/impl_1/score_display.vhd(15): analyzing architecture synth. VHDL-1010
 INFO <35921504> - synthesis: The default VHDL library search path is now "Z:/es4/finalproj/fruitSalad/impl_1". VHDL-1504
 Top module language type = VHDL.
 WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
@@ -348,7 +355,7 @@ FD1P3XZ => 413
 HSOSC_CORE => 1
 IB => 2
 IOL_B => 1
-LUT4 => 2062
+LUT4 => 2056
 MAC16 => 1
 OB => 21
 PLL_B => 1
@@ -367,21 +374,21 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : thirdblock/n3, loads : 215
-  Net : thirdblock/game_state[0], loads : 183
-  Net : thirdblock/game_state[1], loads : 164
-  Net : thirdblock/n1300, loads : 130
-  Net : thirdblock/falloop_counter[0], loads : 124
-  Net : thirdblock/game_state[2], loads : 48
-  Net : thirdblock/falloop_counter[2], loads : 43
-  Net : thirdblock/n5892, loads : 42
-  Net : thirdblock/falloop_counter[1], loads : 37
-  Net : thirdblock/n5891, loads : 32
+  Net : thirdblock/n3_adj_2177, loads : 215
+  Net : thirdblock/game_state[0], loads : 185
+  Net : thirdblock/game_state[1], loads : 168
+  Net : thirdblock/n1229, loads : 129
+  Net : thirdblock/falloop_counter[0], loads : 126
+  Net : thirdblock/n6_adj_2310, loads : 52
+  Net : thirdblock/game_state[2], loads : 49
+  Net : thirdblock/falloop_counter[2], loads : 44
+  Net : thirdblock/n5821, loads : 42
+  Net : thirdblock/n5_adj_2309, loads : 39
 ################### End Clock Report ##################
 
 Peak Memory Usage: 209 MB
 
 --------------------------------------------------------------
 Total CPU Time: 10 secs 
-Total REAL Time: 22 secs 
+Total REAL Time: 21 secs 
 --------------------------------------------------------------

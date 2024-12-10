@@ -34,8 +34,6 @@ component getRandomFruit is
 		reset: in std_logic
 	);
 end component;
-	
-	
 
 component startscreenROM is
   port(
@@ -46,21 +44,13 @@ component startscreenROM is
   );
 end component;
 
-component dddd is
+component score_display is
   port(
-    value : in unsigned(5 downto 0);    
-    tensdigit : out std_logic_vector(3 downto 0);    
-    onesdigit : out std_logic_vector(3 downto 0)
-  );
-end component;
-
-component digitROM is
-  port(
-	  digit: in std_logic_vector(3 downto 0);
-	  row : in std_logic_vector(2 downto 0);
-	  col : in std_logic_vector(2 downto 0);
-	  clk : in std_logic;
-	  color : out std_logic
+    score : in unsigned(5 downto 0);
+	row : in std_logic_vector(9 downto 0);
+	col : in std_logic_vector(9 downto 0);
+	clk : in std_logic;
+	score_col_RGB : out std_logic_vector(5 downto 0)
   );
 end component;
 
@@ -68,18 +58,12 @@ type GAMESTATE is (START, FRUIT_POS, FRUIT_FALLING, SWAP, GAME_OVER, FALL_LOOP);
 signal game_state : GAMESTATE := START;
 
 signal swap_fruit : integer;
-signal falloop_counter: unsigned(4 downto 0);
+signal falloop_index: unsigned(4 downto 0);
 
 signal startscreenRGB : std_logic_vector(5 downto 0);
 signal flashstartscreenRGB : std_logic_vector(5 downto 0);
 
 signal score: unsigned(5 downto 0);
-signal score_tens_digit : std_logic_vector(3 downto 0);
-signal score_ones_digit : std_logic_vector(3 downto 0);
-signal score_row : std_logic_vector(9 downto 0);
-signal score_col : std_logic_vector(9 downto 0);
-signal score_color_tens : std_logic;
-signal score_color_ones : std_logic;
 signal score_col_RGB : std_logic_vector(5 downto 0);
 
 
@@ -112,7 +96,6 @@ signal fruit_rom_row : rom_coord_array;
 signal fruit_rom_col : rom_coord_array;
 
 signal fruit_RGB : std_logic_vector(5 downto 0);
-
 signal gameplay_RGB : std_logic_vector(5 downto 0);
 
 
@@ -161,18 +144,8 @@ begin
 	
 	start_screen : startscreenROM port map(startscreenrow, startscreencol, clk, startscreenRGB);
 	flashstart_screen : startscreenROM port map(flash_startscreenrow,flash_startscreencol, clk, flashstartscreenRGB);
-	
-	dddd_instance : dddd port map(score, score_tens_digit, score_ones_digit);
-	
-	score_row <= std_logic_vector(unsigned(row) - 10d"20");
-	score_col <= std_logic_vector(unsigned(col) - 10d"10");
-	
-	ones_place_rom : digitROM port map(score_ones_digit, score_row(4 downto 2), score_col(4 downto 2), clk, score_color_ones);
-	tens_place_rom : digitROM port map(score_tens_digit, score_row(4 downto 2), score_col(4 downto 2), clk, score_color_tens);
-	
-	score_col_RGB <= ("111111" when score_color_tens = '1' else "000000") when row >= 10d"20" and row < 10d"52" and col >= 10d"10" and col < 10d"42"
-					  else ("111111" when score_color_ones = '1' else "000000") when row >= 10d"20" and row < 10d"52" and col >= 10d"42" and col < 10d"74"
-					  else "000000";
+					  
+	score_col_display : score_display port map(score, row, col, clk, score_col_RGB);
 	
 	
 	active_fruit_relative_row <= std_logic_vector(unsigned(row) - active_fruit_tl_row);
@@ -332,7 +305,7 @@ begin
 					
 				end if;
 				
-				falloop_counter <= 5d"1";
+				falloop_index <= 5d"1";
 
 				if active_fruit_tl_row > 417 then -- fruit has reached bottom row without collisions
 					fruit_tl_row(swap_fruit) <= active_fruit_tl_row;
@@ -347,14 +320,14 @@ begin
 				
 			elsif game_state = FALL_LOOP then
 				
-				falloop_counter <= falloop_counter + 5d"1";
-				if falloop_counter > NUM_FRUITS then
+				falloop_index <= falloop_index + 5d"1";
+				if falloop_index > NUM_FRUITS then
 					game_state <= FRUIT_FALLING;
-				elsif fruit_rgb_vals(to_integer(falloop_counter)) /= "000000" and active_fruit_RGB /= "000000" then -- collision
-					if fruit_type(to_integer(falloop_counter)) = active_fruit_type then
+				elsif fruit_rgb_vals(to_integer(falloop_index)) /= "000000" and active_fruit_RGB /= "000000" then -- collision
+					if fruit_type(to_integer(falloop_index)) = active_fruit_type then
 						-- fruit goes offscreen
-						fruit_tl_row(to_integer(falloop_counter)) <= 10d"700";
-						fruit_tl_col(to_integer(falloop_counter)) <= 10d"700";
+						fruit_tl_row(to_integer(falloop_index)) <= 10d"700";
+						fruit_tl_col(to_integer(falloop_index)) <= 10d"700";
 						if active_fruit_type = "00" then
 							score <= score + 6d"1";
 						elsif active_fruit_type = "01" then
@@ -366,8 +339,8 @@ begin
 						end if;
 				
 						-- active fruit gets fruit 1's position
-						active_fruit_tl_row <= fruit_tl_row(to_integer(falloop_counter));
-						active_fruit_tl_col <= fruit_tl_col(to_integer(falloop_counter));
+						active_fruit_tl_row <= fruit_tl_row(to_integer(falloop_index));
+						active_fruit_tl_col <= fruit_tl_col(to_integer(falloop_index));
 						
 						
 						--active_fruit_tl_row <= 10d"200";
@@ -395,7 +368,7 @@ begin
 				active_fruit_type <= randomoutput;
 				--active_fruit_type <= "00";
 			
-				--falloop_counter <= 0;
+				--falloop_index <= 0;
 			
 						
 				reset_random <= '0';

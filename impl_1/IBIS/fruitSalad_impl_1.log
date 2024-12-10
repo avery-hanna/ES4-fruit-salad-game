@@ -1,7 +1,7 @@
 |************************************************************************
 | IBIS Models Generator: Lattice Radiant Software (64-bit) 2023.1.0.43.3
-| Report Generate Date: Dec  9 2024
-| Report Generate Time: 22:51:35
+| Report Generate Date: Dec 10 2024
+| Report Generate Time: 10:27:26
 |************************************************************************
 |IBIS file ice40up.ibs   
 |Lattice Semiconductor Corporation   
@@ -146,7 +146,7 @@ C_pkg          0.2807pF        0.2236pF        0.3481pF
 32            VSYNC                lvc330a080aaaaaaaaou
 37            ext_osc_test         lvc330a080aaaaaaaaou
 23            CTRLclk              lvc330a080aaaaaaaaou
-17            NESclk               lvc330a080aaaaaaaaou
+25            NESclk               lvc330a080aaaaaaaaou
 31            latch                lvc330a080aaaaaaaaou
 28            buttonout[7]         lvc330a080aaaaaaaaou
 38            buttonout[6]         lvc330a080aaaaaaaaou

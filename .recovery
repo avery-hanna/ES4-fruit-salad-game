@@ -57,6 +57,9 @@
         <Source name="source/impl_1/mapfruitrgb.vhd" type="VHDL" type_short="VHDL">
             <Options/>
         </Source>
+        <Source name="source/impl_1/score_display.vhd" type="VHDL" type_short="VHDL">
+            <Options/>
+        </Source>
         <Source name="pin_layout.pdc" type="Physical Constraints File" type_short="PDC">
             <Options/>
         </Source>
