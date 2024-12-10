@@ -1,0 +1,26 @@
+
+fsm_encoding {2214321431} sequential
+
+fsm_state_encoding {2214321431} start {000}
+
+fsm_state_encoding {2214321431} fruit_pos {001}
+
+fsm_state_encoding {2214321431} fruit_falling {010}
+
+fsm_state_encoding {2214321431} swap {011}
+
+fsm_state_encoding {2214321431} hold {100}
+
+fsm_registers {2214321431} {game_state[2]}  {game_state[1]}  {game_state[0]} 
+
+fsm_encoding {2214321432} sequential
+
+fsm_state_encoding {2214321432} fruit1 {00}
+
+fsm_state_encoding {2214321432} fruit2 {01}
+
+fsm_state_encoding {2214321432} fruit3 {10}
+
+fsm_state_encoding {2214321432} out_of_fruit {11}
+
+fsm_registers {2214321432} {swap_state[1]}  {swap_state[0]} 

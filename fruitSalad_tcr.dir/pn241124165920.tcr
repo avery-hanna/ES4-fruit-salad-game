@@ -1,5 +1,0 @@
-#Start recording tcl command: 11/24/2024 16:57:27
-#Project Location: Z:/es4/finalproj/fruitSalad; Project name: fruitSalad
-prj_open "Z:/es4/finalproj/fruitSalad/fruitSalad.rdf"
-prj_add_source "Z:/es4/finalproj/fruitSalad/source/impl_1/fruitROM.vhd" "Z:/es4/finalproj/fruitSalad/source/impl_1/nesclk_top.vhd" "Z:/es4/finalproj/fruitSalad/source/impl_1/pre_drop_control.vhd" "Z:/es4/finalproj/fruitSalad/source/impl_1/shift8.vhd" "Z:/es4/finalproj/fruitSalad/source/impl_1/top.vhd" "Z:/es4/finalproj/fruitSalad/source/impl_1/update_color.vhd"
-#Stop recording: 11/24/2024 16:59:20

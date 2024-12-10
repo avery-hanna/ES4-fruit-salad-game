@@ -1,0 +1,725 @@
+<html><head><title></title></head><body><a name=TopSummary>
+#### START OF AREA REPORT #####[<pre>
+Part:			ICE40UP5KSG48I-6 (Lattice)
+
+Click here to go to specific block report:
+<a href="rpt_vga_controller_areasrr.htm#vga_controller"><h5 align="center">vga_controller</h5></a><br><a href="rpt_vga_controller_areasrr.htm#secondblock"><h5 align="center">vga</h5></a><br><a href="rpt_vga_controller_areasrr.htm#nesblock"><h5 align="center">nesclk_top</h5></a><br><a href="rpt_vga_controller_areasrr.htm#nesblock.instanceshift"><h5 align="center">shift8</h5></a><br><a href="rpt_vga_controller_areasrr.htm#thirdblock"><h5 align="center">pattern_gen</h5></a><br><a href="rpt_vga_controller_areasrr.htm#thirdblock.active_fruit"><h5 align="center">fruitROM</h5></a><br><a href="rpt_vga_controller_areasrr.htm#thirdblock.active_fruit.blueberry"><h5 align="center">blueberryROM_3</h5></a><br><a href="rpt_vga_controller_areasrr.htm#thirdblock.active_fruit.grapefruit"><h5 align="center">grapefruitROM_3</h5></a><br><a href="rpt_vga_controller_areasrr.htm#thirdblock.fruit_1"><h5 align="center">fruitROM_3</h5></a><br><a href="rpt_vga_controller_areasrr.htm#thirdblock.fruit_1.blueberry"><h5 align="center">blueberryROM_3_0</h5></a><br><a href="rpt_vga_controller_areasrr.htm#thirdblock.fruit_1.grapefruit"><h5 align="center">grapefruitROM_3_0</h5></a><br><a href="rpt_vga_controller_areasrr.htm#thirdblock.fruit_2"><h5 align="center">fruitROM_4</h5></a><br><a href="rpt_vga_controller_areasrr.htm#thirdblock.fruit_2.blueberry"><h5 align="center">blueberryROM_3_1</h5></a><br><a href="rpt_vga_controller_areasrr.htm#thirdblock.fruit_2.grapefruit"><h5 align="center">grapefruitROM_3_1</h5></a><br><a href="rpt_vga_controller_areasrr.htm#thirdblock.fruit_3"><h5 align="center">fruitROM_5</h5></a><br><a href="rpt_vga_controller_areasrr.htm#thirdblock.fruit_3.blueberry"><h5 align="center">blueberryROM_3_2</h5></a><br><a href="rpt_vga_controller_areasrr.htm#thirdblock.fruit_3.grapefruit"><h5 align="center">grapefruitROM_3_2</h5></a><br><a href="rpt_vga_controller_areasrr.htm#firstblock"><h5 align="center">mypll</h5></a><br><a href="rpt_vga_controller_areasrr.htm#firstblock.lscc_pll_inst"><h5 align="center">mypll_ipgen_lscc_pll_Z1_layer1</h5></a><br><a name=vga_controller>
+------------------------------------------------------------------------------
+########   Utilization report for  Top level view:   vga_controller   ########
+==============================================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3IZ         36                                      
+FD1P3DZ         157                                     
+                                                        
+Total FLOPS     193                100 %                
+========================================================
+Total SEQUENTIAL ELEMENTS in the block vga_controller:	193 (22.68 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+COMBINATIONAL LOGIC
+Name                   Total elements     Utilization     Notes
+---------------------------------------------------------------
+LUT4                   410                                     
+INV                    72                                      
+CCU2_B                 89                                      
+                                                               
+Total LUTS             482                100 %                
+Total CARRY CHAINS     89                 100 %                
+===============================================================
+Total COMBINATIONAL LOGIC in the block vga_controller:	571 (67.10 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              24                                      
+                                                           
+Total BLOCKRAM     24                 100 %                
+===========================================================
+Total MEMORY ELEMENTS in the block vga_controller:	24 (2.82 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+IO PADS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+IB           2                                       
+OB           21                                      
+                                                     
+TOTAL IO     23                 100 %                
+=====================================================
+Total IO PADS in the block vga_controller:	23 (2.70 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 19                                      
+VHI                 19                                      
+HSOSC               1                                       
+PLL_B               1                                       
+                                                            
+Total BLACK BOX     40                 100 %                
+============================================================
+Total BLACKBOX in the block vga_controller:	40 (4.70 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=firstblock>
+-----------------------------------------------------------
+########   Utilization report for  cell:   mypll   ########
+Instance path:   firstblock                                
+===========================================================
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 2                                       
+VHI                 2                                       
+PLL_B               1                                       
+                                                            
+Total BLACK BOX     5                  12.5 %               
+============================================================
+Total BLACKBOX in the block firstblock:	5 (0.59 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=firstblock.lscc_pll_inst>
+------------------------------------------------------------------------------------
+########   Utilization report for  cell:   mypll_ipgen_lscc_pll_Z1_layer1   ########
+Instance path:   firstblock.lscc_pll_inst                                           
+Parent Instance:   firstblock                                                       
+====================================================================================
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+PLL_B               1                                       
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     3                  7.5 %                
+============================================================
+Total BLACKBOX in the block firstblock.lscc_pll_inst:	3 (0.35 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=nesblock>
+----------------------------------------------------------------
+########   Utilization report for  cell:   nesclk_top   ########
+Instance path:   nesblock                                       
+================================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3DZ         25                                      
+                                                        
+Total FLOPS     25                 13 %                 
+========================================================
+Total SEQUENTIAL ELEMENTS in the block nesblock:	25 (2.94 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+COMBINATIONAL LOGIC
+Name                   Total elements     Utilization     Notes
+---------------------------------------------------------------
+LUT4                   16                                      
+CCU2_B                 9                                       
+                                                               
+Total LUTS             16                 3.32 %               
+Total CARRY CHAINS     9                  10.1 %               
+===============================================================
+Total COMBINATIONAL LOGIC in the block nesblock:	25 (2.94 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+HSOSC               1                                       
+VLO                 2                                       
+VHI                 2                                       
+                                                            
+Total BLACK BOX     5                  12.5 %               
+============================================================
+Total BLACKBOX in the block nesblock:	5 (0.59 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=nesblock.instanceshift>
+------------------------------------------------------------
+########   Utilization report for  cell:   shift8   ########
+Instance path:   nesblock.instanceshift                     
+Parent Instance:   nesblock                                 
+============================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3DZ         8                                       
+                                                        
+Total FLOPS     8                  4.15 %               
+========================================================
+Total SEQUENTIAL ELEMENTS in the block nesblock.instanceshift:	8 (0.94 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+COMBINATIONAL LOGIC
+Name           Total elements     Utilization     Notes
+-------------------------------------------------------
+LUT4           8                                       
+                                                       
+Total LUTS     8                  1.66 %               
+=======================================================
+Total COMBINATIONAL LOGIC in the block nesblock.instanceshift:	8 (0.94 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  5 %                  
+============================================================
+Total BLACKBOX in the block nesblock.instanceshift:	2 (0.24 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=thirdblock>
+-----------------------------------------------------------------
+########   Utilization report for  cell:   pattern_gen   ########
+Instance path:   thirdblock                                      
+=================================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3DZ         132                                     
+FD1P3IZ         16                                      
+                                                        
+Total FLOPS     148                76.7 %               
+========================================================
+Total SEQUENTIAL ELEMENTS in the block thirdblock:	148 (17.39 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+COMBINATIONAL LOGIC
+Name                   Total elements     Utilization     Notes
+---------------------------------------------------------------
+INV                    72                                      
+LUT4                   379                                     
+CCU2_B                 69                                      
+                                                               
+Total LUTS             451                93.6 %               
+Total CARRY CHAINS     69                 77.5 %               
+===============================================================
+Total COMBINATIONAL LOGIC in the block thirdblock:	520 (61.10 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              24                                      
+                                                           
+Total BLOCKRAM     24                 100 %                
+===========================================================
+Total MEMORY ELEMENTS in the block thirdblock:	24 (2.82 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 13                                      
+VHI                 13                                      
+                                                            
+Total BLACK BOX     26                 65 %                 
+============================================================
+Total BLACKBOX in the block thirdblock:	26 (3.06 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=thirdblock.active_fruit>
+--------------------------------------------------------------
+########   Utilization report for  cell:   fruitROM   ########
+Instance path:   thirdblock.active_fruit                      
+Parent Instance:   thirdblock                                 
+==============================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3DZ         6                                       
+                                                        
+Total FLOPS     6                  3.11 %               
+========================================================
+Total SEQUENTIAL ELEMENTS in the block thirdblock.active_fruit:	6 (0.71 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+COMBINATIONAL LOGIC
+Name           Total elements     Utilization     Notes
+-------------------------------------------------------
+LUT4           37                                      
+                                                       
+Total LUTS     37                 7.68 %               
+=======================================================
+Total COMBINATIONAL LOGIC in the block thirdblock.active_fruit:	37 (4.35 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              6                                       
+                                                           
+Total BLOCKRAM     6                  25 %                 
+===========================================================
+Total MEMORY ELEMENTS in the block thirdblock.active_fruit:	6 (0.71 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 3                                       
+VHI                 3                                       
+                                                            
+Total BLACK BOX     6                  15 %                 
+============================================================
+Total BLACKBOX in the block thirdblock.active_fruit:	6 (0.71 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=thirdblock.active_fruit.blueberry>
+--------------------------------------------------------------------
+########   Utilization report for  cell:   blueberryROM_3   ########
+Instance path:   thirdblock.active_fruit.blueberry                  
+Parent Instance:   thirdblock.active_fruit                          
+====================================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              3                                       
+                                                           
+Total BLOCKRAM     3                  12.5 %               
+===========================================================
+Total MEMORY ELEMENTS in the block thirdblock.active_fruit.blueberry:	3 (0.35 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  5 %                  
+============================================================
+Total BLACKBOX in the block thirdblock.active_fruit.blueberry:	2 (0.24 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=thirdblock.active_fruit.grapefruit>
+---------------------------------------------------------------------
+########   Utilization report for  cell:   grapefruitROM_3   ########
+Instance path:   thirdblock.active_fruit.grapefruit                  
+Parent Instance:   thirdblock.active_fruit                           
+=====================================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              3                                       
+                                                           
+Total BLOCKRAM     3                  12.5 %               
+===========================================================
+Total MEMORY ELEMENTS in the block thirdblock.active_fruit.grapefruit:	3 (0.35 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  5 %                  
+============================================================
+Total BLACKBOX in the block thirdblock.active_fruit.grapefruit:	2 (0.24 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=thirdblock.fruit_1>
+----------------------------------------------------------------
+########   Utilization report for  cell:   fruitROM_3   ########
+Instance path:   thirdblock.fruit_1                             
+Parent Instance:   thirdblock                                   
+================================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3DZ         6                                       
+                                                        
+Total FLOPS     6                  3.11 %               
+========================================================
+Total SEQUENTIAL ELEMENTS in the block thirdblock.fruit_1:	6 (0.71 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+COMBINATIONAL LOGIC
+Name           Total elements     Utilization     Notes
+-------------------------------------------------------
+LUT4           32                                      
+                                                       
+Total LUTS     32                 6.64 %               
+=======================================================
+Total COMBINATIONAL LOGIC in the block thirdblock.fruit_1:	32 (3.76 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              6                                       
+                                                           
+Total BLOCKRAM     6                  25 %                 
+===========================================================
+Total MEMORY ELEMENTS in the block thirdblock.fruit_1:	6 (0.71 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 3                                       
+VHI                 3                                       
+                                                            
+Total BLACK BOX     6                  15 %                 
+============================================================
+Total BLACKBOX in the block thirdblock.fruit_1:	6 (0.71 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=thirdblock.fruit_1.blueberry>
+----------------------------------------------------------------------
+########   Utilization report for  cell:   blueberryROM_3_0   ########
+Instance path:   thirdblock.fruit_1.blueberry                         
+Parent Instance:   thirdblock.fruit_1                                 
+======================================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              3                                       
+                                                           
+Total BLOCKRAM     3                  12.5 %               
+===========================================================
+Total MEMORY ELEMENTS in the block thirdblock.fruit_1.blueberry:	3 (0.35 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  5 %                  
+============================================================
+Total BLACKBOX in the block thirdblock.fruit_1.blueberry:	2 (0.24 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=thirdblock.fruit_1.grapefruit>
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   grapefruitROM_3_0   ########
+Instance path:   thirdblock.fruit_1.grapefruit                         
+Parent Instance:   thirdblock.fruit_1                                  
+=======================================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              3                                       
+                                                           
+Total BLOCKRAM     3                  12.5 %               
+===========================================================
+Total MEMORY ELEMENTS in the block thirdblock.fruit_1.grapefruit:	3 (0.35 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  5 %                  
+============================================================
+Total BLACKBOX in the block thirdblock.fruit_1.grapefruit:	2 (0.24 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=thirdblock.fruit_2>
+----------------------------------------------------------------
+########   Utilization report for  cell:   fruitROM_4   ########
+Instance path:   thirdblock.fruit_2                             
+Parent Instance:   thirdblock                                   
+================================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3DZ         6                                       
+                                                        
+Total FLOPS     6                  3.11 %               
+========================================================
+Total SEQUENTIAL ELEMENTS in the block thirdblock.fruit_2:	6 (0.71 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+COMBINATIONAL LOGIC
+Name           Total elements     Utilization     Notes
+-------------------------------------------------------
+LUT4           22                                      
+                                                       
+Total LUTS     22                 4.56 %               
+=======================================================
+Total COMBINATIONAL LOGIC in the block thirdblock.fruit_2:	22 (2.59 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              6                                       
+                                                           
+Total BLOCKRAM     6                  25 %                 
+===========================================================
+Total MEMORY ELEMENTS in the block thirdblock.fruit_2:	6 (0.71 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 3                                       
+VHI                 3                                       
+                                                            
+Total BLACK BOX     6                  15 %                 
+============================================================
+Total BLACKBOX in the block thirdblock.fruit_2:	6 (0.71 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=thirdblock.fruit_2.blueberry>
+----------------------------------------------------------------------
+########   Utilization report for  cell:   blueberryROM_3_1   ########
+Instance path:   thirdblock.fruit_2.blueberry                         
+Parent Instance:   thirdblock.fruit_2                                 
+======================================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              3                                       
+                                                           
+Total BLOCKRAM     3                  12.5 %               
+===========================================================
+Total MEMORY ELEMENTS in the block thirdblock.fruit_2.blueberry:	3 (0.35 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  5 %                  
+============================================================
+Total BLACKBOX in the block thirdblock.fruit_2.blueberry:	2 (0.24 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=thirdblock.fruit_2.grapefruit>
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   grapefruitROM_3_1   ########
+Instance path:   thirdblock.fruit_2.grapefruit                         
+Parent Instance:   thirdblock.fruit_2                                  
+=======================================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              3                                       
+                                                           
+Total BLOCKRAM     3                  12.5 %               
+===========================================================
+Total MEMORY ELEMENTS in the block thirdblock.fruit_2.grapefruit:	3 (0.35 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  5 %                  
+============================================================
+Total BLACKBOX in the block thirdblock.fruit_2.grapefruit:	2 (0.24 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=thirdblock.fruit_3>
+----------------------------------------------------------------
+########   Utilization report for  cell:   fruitROM_5   ########
+Instance path:   thirdblock.fruit_3                             
+Parent Instance:   thirdblock                                   
+================================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3DZ         6                                       
+                                                        
+Total FLOPS     6                  3.11 %               
+========================================================
+Total SEQUENTIAL ELEMENTS in the block thirdblock.fruit_3:	6 (0.71 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+COMBINATIONAL LOGIC
+Name           Total elements     Utilization     Notes
+-------------------------------------------------------
+LUT4           31                                      
+                                                       
+Total LUTS     31                 6.43 %               
+=======================================================
+Total COMBINATIONAL LOGIC in the block thirdblock.fruit_3:	31 (3.64 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              6                                       
+                                                           
+Total BLOCKRAM     6                  25 %                 
+===========================================================
+Total MEMORY ELEMENTS in the block thirdblock.fruit_3:	6 (0.71 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 3                                       
+VHI                 3                                       
+                                                            
+Total BLACK BOX     6                  15 %                 
+============================================================
+Total BLACKBOX in the block thirdblock.fruit_3:	6 (0.71 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=thirdblock.fruit_3.blueberry>
+----------------------------------------------------------------------
+########   Utilization report for  cell:   blueberryROM_3_2   ########
+Instance path:   thirdblock.fruit_3.blueberry                         
+Parent Instance:   thirdblock.fruit_3                                 
+======================================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              3                                       
+                                                           
+Total BLOCKRAM     3                  12.5 %               
+===========================================================
+Total MEMORY ELEMENTS in the block thirdblock.fruit_3.blueberry:	3 (0.35 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  5 %                  
+============================================================
+Total BLACKBOX in the block thirdblock.fruit_3.blueberry:	2 (0.24 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=thirdblock.fruit_3.grapefruit>
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   grapefruitROM_3_2   ########
+Instance path:   thirdblock.fruit_3.grapefruit                         
+Parent Instance:   thirdblock.fruit_3                                  
+=======================================================================
+
+MEMORY ELEMENTS
+Name               Total elements     Utilization     Notes
+-----------------------------------------------------------
+PDP4K              3                                       
+                                                           
+Total BLOCKRAM     3                  12.5 %               
+===========================================================
+Total MEMORY ELEMENTS in the block thirdblock.fruit_3.grapefruit:	3 (0.35 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  5 %                  
+============================================================
+Total BLACKBOX in the block thirdblock.fruit_3.grapefruit:	2 (0.24 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+<a name=secondblock>
+---------------------------------------------------------
+########   Utilization report for  cell:   vga   ########
+Instance path:   secondblock                             
+=========================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3IZ         20                                      
+                                                        
+Total FLOPS     20                 10.4 %               
+========================================================
+Total SEQUENTIAL ELEMENTS in the block secondblock:	20 (2.35 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+COMBINATIONAL LOGIC
+Name                   Total elements     Utilization     Notes
+---------------------------------------------------------------
+LUT4                   15                                      
+CCU2_B                 11                                      
+                                                               
+Total LUTS             15                 3.11 %               
+Total CARRY CHAINS     11                 12.4 %               
+===============================================================
+Total COMBINATIONAL LOGIC in the block secondblock:	26 (3.06 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  5 %                  
+============================================================
+Total BLACKBOX in the block secondblock:	2 (0.24 % Utilization)
+
+<a href="#TopSummary"><h5 align="right">Top</h5></a>
+
+##### END OF AREA REPORT #####]
+</a></body></html>

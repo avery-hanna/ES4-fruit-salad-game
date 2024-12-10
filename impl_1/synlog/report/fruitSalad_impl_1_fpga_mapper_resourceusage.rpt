@@ -1,0 +1,34 @@
+---------------------------------------
+Resource Usage Report for vga_controller 
+
+Mapping to part: ice40up5ksg48i-6
+Cell usage:
+CCU2_B          89 uses
+FD1P3DZ         157 uses
+FD1P3IZ         36 uses
+HSOSC           1 use
+INV             72 uses
+PDP4K           24 uses
+PLL_B           1 use
+VHI             19 uses
+VLO             19 uses
+LUT4            410 uses
+
+I/O ports: 23
+I/O primitives: 23
+IB             2 uses
+OB             21 uses
+
+I/O Register bits:                  0
+Register bits not including I/Os:   193 of 5280 (3%)
+
+RAM/ROM usage summary
+Block Rams : 24 of 30 (80%)
+
+
+@S |Mapping Summary:
+Total  LUTs: 410 (7%)
+
+Distribution of All Consumed LUTs = LUT4 
+Distribution of All Consumed LUTs 410 = 410 
+
