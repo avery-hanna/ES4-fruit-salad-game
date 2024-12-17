@@ -1,7 +1,0 @@
-C:\lscc\radiant\2023.1\synpbase\bin64\syn_nfilter.exe  -link  -top  vga_controller  -multisrs  Z:\ES4\ES4-fruit-salad-game\impl_1\synwork\fruitSalad_impl_1_comp.srs  -osyn  Z:\ES4\ES4-fruit-salad-game\impl_1\synwork\fruitSalad_impl_1_mult.srs  -log  Z:\ES4\ES4-fruit-salad-game\impl_1\synlog\fruitSalad_impl_1_multi_srs_gen.srr 
-relcom:C:\lscc\radiant\2023.1\synpbase\bin64\syn_nfilter.exe -link -top vga_controller -multisrs ..\synwork\fruitSalad_impl_1_comp.srs -osyn ..\synwork\fruitSalad_impl_1_mult.srs -log ..\synlog\fruitSalad_impl_1_multi_srs_gen.srr
-rc:0 success:1 runtime:0
-file:..\synwork\fruitsalad_impl_1_comp.srs|io:i|time:1733417020|size:37500|exec:0|csum:91ACA93A333617300B40C2C690D227A9
-file:..\synwork\fruitsalad_impl_1_mult.srs|io:o|time:1733417022|size:3829|exec:0|csum:
-file:..\synlog\fruitsalad_impl_1_multi_srs_gen.srr|io:o|time:1733417022|size:1041|exec:0|csum:
-file:c:\lscc\radiant\2023.1\synpbase\bin64\syn_nfilter.exe|io:i|time:1685564428|size:10600960|exec:1|csum:5D87BCE07D7E863695AC28DD65895E86

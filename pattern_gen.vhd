@@ -329,7 +329,7 @@ begin
 					end if;
 					
 					if counter = 17d"100000" then
-						if active_fruit_tl_col > 0 then
+						if active_fruit_tl_col > 74 then
 							active_fruit_tl_col <= active_fruit_tl_col - 1;
 						end if;
 						counter <= 17d"0";

@@ -1,7 +1,0 @@
-@N: MF916 |Option synthesis_strategy=base is enabled. 
-@N: MF248 |Running in 64-bit mode.
-@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
-@N: MO225 :"z:\es4\es4-fruit-salad-game\source\impl_1\pattern_gen.vhd":143:2:143:3|There are no possible illegal states for state machine swap_state[0:3] (in view: work.pattern_gen(synth)); safe FSM implementation is not required.
-@N: FX1184 |Applying syn_allowed_resources blockrams=30 on top level netlist vga_controller 
-@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
-@N: BN225 |Writing default property annotation file Z:\ES4\ES4-fruit-salad-game\impl_1\fruitSalad_impl_1.sap.
